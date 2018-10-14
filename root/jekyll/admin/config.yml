@@ -1,35 +1,66 @@
 backend:
+    branch: master
     name: github
     repo: Brightside-Technologies/bgcofcv
-    branch: master
-display_url: https://bgcofcv.netlify.com/
-media_folder: "root/src/assets/images"
-public_folder: "assets/images"
+display_url: "https://bgcofcv.netlify.com/"
+media_folder: root/src/assets/images
+public_folder: assets/images
 collections:
-    - name: metadata
-        Label: "Site Metadata"
-        delete: false
-        description: Site metadata and global settings
-        extension: json
-        files:
-            - name: metadata
-                label: Site Metadata
-                file: src/jekyll/_data/metadata.json
-                editor:
-                preview: false
-                fields:
-                - {label: "Site Title", name: "title", widget: "string"}
-                - {label: "Favicon", name: "favicon", widget: "image", required: false}
-                - {label: "Site Type", name: "type", widget: "string", default: website}
-                - {label: "Site Description", name: "description", widget: "text"}
-                - {label: "Site Thumbnail", name: "image", widget: "image", required: false}
-                - {label: "Site Url", name: "url", widget: "string", required: false}
-                - {label: "Facebook Url", name: "facebookUrl", widget: "string", required: false}
-                - {label: "Twitter Url", name: "twitterUrl", widget: "string", required: false}
-                - {label: "Contact Email", name: "email", widget: "string", required: false}
-                - {label: "Contact Phone Number", name: "phone", widget: "string", required: false}
-                - {label: "Google Analytics ID", name: "googleAnalyticsId", widget: "string", required: false}
-                - label: Site Keywords (for SEO)
-                    name: keywords
-                    widget: list
-                    allow_add: true
+    - delete: false
+      description: "Site metadata and global settings"
+      extension: json
+      files:
+          - editor: ~
+            file: src/jekyll/_data/metadata.json
+            label: "Site Metadata"
+            name: metadata
+            preview: false
+            fields:
+                - label: "Site Title"
+                  name: title
+                  widget: string
+                - label: Favicon
+                  name: favicon
+                  required: false
+                  widget: image
+                - default: website
+                  label: "Site Type"
+                  name: type
+                  widget: string
+                - label: "Site Description"
+                  name: description
+                  widget: text
+                - label: "Site Thumbnail"
+                  name: image
+                  required: false
+                  widget: image
+                - label: "Site Url"
+                  name: url
+                  required: false
+                  widget: string
+                - label: "Facebook Url"
+                  name: facebookUrl
+                  required: false
+                  widget: string
+                - label: "Twitter Url"
+                  name: twitterUrl
+                  required: false
+                  widget: string
+                - label: "Contact Email"
+                  name: email
+                  required: false
+                  widget: string
+                - label: "Contact Phone Number"
+                  name: phone
+                  required: false
+                  widget: string
+                - label: "Google Analytics ID"
+                  name: googleAnalyticsId
+                  required: false
+                  widget: string
+                - allow_add: true
+                  label: "Site Keywords (for SEO)"
+                  name: keywords
+                  widget: list
+      label: "Site Metadata"
+      name: metadata
