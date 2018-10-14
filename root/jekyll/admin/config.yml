@@ -7,29 +7,29 @@ media_folder: "root/src/assets/images"
 public_folder: "assets/images"
 collections:
     - name: metadata
-    Label: "Site Metadata"
-    delete: false
-    description: Site metadata and global settings
-    extension: json
-    files:
-    - name: metadata
-        label: Site Metadata
-        file: src/jekyll/_data/metadata.json
-        editor:
-          preview: false
-        fields:
-          - {label: "Site Title", name: "title", widget: "string"}
-          - {label: "Favicon", name: "favicon", widget: "image", required: false}
-          - {label: "Site Type", name: "type", widget: "string", default: website}
-          - {label: "Site Description", name: "description", widget: "text"}
-          - {label: "Site Thumbnail", name: "image", widget: "image", required: false}
-          - {label: "Site Url", name: "url", widget: "string", required: false}
-          - {label: "Facebook Url", name: "facebookUrl", widget: "string", required: false}
-          - {label: "Twitter Url", name: "twitterUrl", widget: "string", required: false}
-          - {label: "Contact Email", name: "email", widget: "string", required: false}
-          - {label: "Contact Phone Number", name: "phone", widget: "string", required: false}
-          - {label: "Google Analytics ID", name: "googleAnalyticsId", widget: "string", required: false}
-          - label: Site Keywords (for SEO)
-            name: keywords
-            widget: list
-            allow_add: true
+        Label: "Site Metadata"
+        delete: false
+        description: Site metadata and global settings
+        extension: json
+        files:
+            - name: metadata
+                label: Site Metadata
+                file: src/jekyll/_data/metadata.json
+                editor:
+                preview: false
+                fields:
+                - {label: "Site Title", name: "title", widget: "string"}
+                - {label: "Favicon", name: "favicon", widget: "image", required: false}
+                - {label: "Site Type", name: "type", widget: "string", default: website}
+                - {label: "Site Description", name: "description", widget: "text"}
+                - {label: "Site Thumbnail", name: "image", widget: "image", required: false}
+                - {label: "Site Url", name: "url", widget: "string", required: false}
+                - {label: "Facebook Url", name: "facebookUrl", widget: "string", required: false}
+                - {label: "Twitter Url", name: "twitterUrl", widget: "string", required: false}
+                - {label: "Contact Email", name: "email", widget: "string", required: false}
+                - {label: "Contact Phone Number", name: "phone", widget: "string", required: false}
+                - {label: "Google Analytics ID", name: "googleAnalyticsId", widget: "string", required: false}
+                - label: Site Keywords (for SEO)
+                    name: keywords
+                    widget: list
+                    allow_add: true
