@@ -7,7 +7,7 @@ media_folder: "root/src/assets/images"
 public_folder: "assets/images"
 collections:
     - name: metadata
-    label: "Site Metadata"
+    Label: "Site Metadata"
     delete: false
     description: Site metadata and global settings
     extension: json
@@ -19,7 +19,6 @@ collections:
           preview: false
         fields:
           - {label: "Site Title", name: "title", widget: "string"}
-          - {label: "Author", name: "author", widget: "string"}
           - {label: "Favicon", name: "favicon", widget: "image", required: false}
           - {label: "Site Type", name: "type", widget: "string", default: website}
           - {label: "Site Description", name: "description", widget: "text"}
