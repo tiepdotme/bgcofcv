@@ -12,7 +12,7 @@ collections:
     description: Site metadata and global settings
     extension: json
     files:
-        - name: metadata
+    - name: metadata
         label: Site Metadata
         file: src/jekyll/_data/metadata.json
         editor:
