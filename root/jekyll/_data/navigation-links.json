@@ -1,0 +1,38 @@
+[
+    {
+        "url": "who-we-are.html",
+        "label": "Who We Are"
+    },
+    {
+        "url": "our-clubs.html",
+        "label": "Our Clubs"
+    },
+    {
+        "url": "membership.html",
+        "label": "Membership"
+    },
+    {
+        "url": "programs.html",
+        "label": "Programs"
+    },
+    {
+        "url": "community-impact.html",
+        "label": "Community Impact"
+    },
+    {
+        "url": "events.html",
+        "label": "Events"
+    },
+    {
+        "url": "ways-to-give.html",
+        "label": "Ways to Give"
+    },
+    {
+        "url": "college-scholarship-program.html",
+        "label": "College Scholarship Program"
+    },
+    {
+        "url": "contact-us.html",
+        "label": "Contact Us"
+    }
+]

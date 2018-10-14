@@ -1,0 +1,11 @@
+developer: Brightside Tech
+developerUrl: "#"
+url: https://website.com
+markdown: kramdown
+destination: dist
+source: root/jekyll
+include:
+    - _pages
+plugins:
+    - jemoji
+    - jekyll-sitemap
