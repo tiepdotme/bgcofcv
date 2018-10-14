@@ -1,6 +1,6 @@
 developer: Brightside Tech
 developerUrl: "#"
-url: https://website.com
+url: https://bgcofcv.netlify.com/
 markdown: kramdown
 destination: dist
 source: root/jekyll
