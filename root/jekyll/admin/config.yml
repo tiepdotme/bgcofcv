@@ -11,7 +11,7 @@ collections:
       extension: json
       files:
           - editor: ~
-            file: src/jekyll/_data/metadata.json
+            file: root/jekyll/_data/metadata.json
             label: "Site Metadata"
             name: metadata
             preview: false
