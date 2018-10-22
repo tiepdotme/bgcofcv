@@ -4,9 +4,51 @@ title: Home
 permalink: index.html
 ---
 
-<div class="jumbotron jumbotron-fluid">
+<section class="hero bg-image-fill d-flex align-items-end justify-content-center p-5">
+    <button type="button" class="btn btn-primary btn-lg">DONATE</button>
+</section>
+<div class="section py-5">
     <div class="container">
-        <h1 class="display-4">{{page.title}}</h1>
-        <!-- {% include img_srcset.html class="img-blurr" alt="sample" filename="sample.jpg" %} -->
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-center"> Who We Are</h1>
+                <div>
+                    <h2 class="title h4">Our History</h2>
+                    <p>{{site.data.content.history | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                </div>
+                <div>
+                    <h2 class="title h4">Our Mission</h2>
+                    <p>{{site.data.content.mission | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-center">Community Impact</h1>
+                <p>{{site.data.content.impact | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+            </div>
+            <div class="col-sm-12">
+                <img class="img-fluid w-100 py-2" src="https://via.placeholder.com/1000x300/222222/ffffff%20C/O%20https://placeholder.com/">
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img class="img-fluid w-100 py-2" src="https://via.placeholder.com/400x200/222222/ffffff%20C/O%20https://placeholder.com/">
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img class="img-fluid w-100 py-2" src="https://via.placeholder.com/400x200/222222/ffffff%20C/O%20https://placeholder.com/">
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <img class="img-fluid w-100 py-2" src="https://via.placeholder.com/400x200/222222/ffffff%20C/O%20https://placeholder.com/">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img class="img-fluid w-100 py-2" src="https://via.placeholder.com/600x300/222222/ffffff%20C/O%20https://placeholder.com/">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img class="img-fluid w-100 py-2" src="https://via.placeholder.com/600x300/222222/ffffff%20C/O%20https://placeholder.com/">
+            </div>
+        </div>
     </div>
 </div>
