@@ -11,14 +11,14 @@ permalink: index.html
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="text-center"> Who We Are</h1>
+                <h1 class="text-center section-header"> Who We Are</h1>
                 <div>
                     <h2 class="title h4">Our History</h2>
-                    <p>{{site.data.content.history | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                    <p class="lead">{{site.data.content.history | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
                 </div>
                 <div>
                     <h2 class="title h4">Our Mission</h2>
-                    <p>{{site.data.content.mission | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                    <p class="lead">{{site.data.content.mission | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
                 </div>
             </div>
         </div>
@@ -28,8 +28,8 @@ permalink: index.html
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="text-center">Community Impact</h1>
-                <p>{{site.data.content.impact | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                <h1 class="text-center section-header">Community Impact</h1>
+                <p class="lead">{{site.data.content.impact | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
             </div>
             <div class="col-sm-12">
                 <img class="img-fluid w-100 py-2" src="https://via.placeholder.com/1000x300/222222/ffffff%20C/O%20https://placeholder.com/">

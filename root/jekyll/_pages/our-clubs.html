@@ -4,9 +4,37 @@ title: Our Clubs
 permalink: our-clubs.html
 ---
 
-<div class="jumbotron jumbotron-fluid">
+<div class="section py-5">
     <div class="container">
-        <h1 class="display-4">{{page.title}}</h1>
-        <!-- {% include img_srcset.html class="img-blurr" alt="sample" filename="sample.jpg" %} -->
+        <h1 class="text-center section-header">{{page.title}}</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="lead text-justify">{{site.data.content.ourClubs.description}}</p>
+            </div>
+            {% for club in site.data.content.ourClubs.clubs %}
+            <div class="col-sm-12 col-md-12 col-lg-6 py-3">
+                <div class="card shadow h-100">
+                    <div class="card-header py-1">
+                        <span class="font-weight-bold card-text py-1 text-muted"><i class="fas fa-map-marker-alt mr-2"></i>{{club.location.city}}</span>
+                    </div>
+                    {%-capture image-%}{{club.image | split: "/" | last}}{%-endcapture-%}
+                    {% include img_srcset.html class="card-img-top rounded-0" style="height:200px" alt=club.site
+                    filename=image
+                    %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{club.site}}</h5>
+                        <p class="card-text text-muted py-0">
+                            Current Hours &ndash; {{club.hours.school}}
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <a class="card-text py-1 text-muted" href="tel:+{{club.phone | replace: '(' | replace: ')' | replace: '-'}}"><i
+                                class="fas fa-phone mr-2"></i>{{club.phone}}</a>
+                        <a class="card-text font-weight-normal py-1 text-muted" href="mailto:{{club.email}}"><i class="fas fa-envelope mr-2"></i>{{club.email}}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
