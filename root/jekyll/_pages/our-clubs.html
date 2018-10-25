@@ -18,7 +18,7 @@ permalink: our-clubs.html
                         <span class="font-weight-bold card-text py-1 text-muted"><i class="fas fa-map-marker-alt mr-2"></i>{{club.location.city}}</span>
                     </div>
                     {%-capture image-%}{{club.image | split: "/" | last}}{%-endcapture-%}
-                    {% include img_srcset.html class="card-img-top rounded-0" style="height:200px" alt=club.site
+                    {% include img_srcset.html class="card-img-top rounded-0" height="200" alt=club.site
                     filename=image
                     %}
                     <div class="card-body">
