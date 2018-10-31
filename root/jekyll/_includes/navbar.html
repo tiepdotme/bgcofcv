@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav">
             {% for link in site.data.navigation-links %}
-            <a class="nav-item nav-link {% if page.url contains link.url %} active {% endif %}" href="{{link.url}}">{{link.label}}</a>
+            <a class="nav-item nav-link {% if page.url contains link.url %} active {% endif %}" href="{{link.url | absolute_url}}">{{link.label}}</a>
             {%endfor%}
         </div>
     </div>

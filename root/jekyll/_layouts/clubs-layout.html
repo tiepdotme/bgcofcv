@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    {% include head.html %}
+<link href="../site.e008c49179b03082e976.min.css" rel="stylesheet"></head>
+
+<body>
+    {% include navbar.html %}
+    <header class="header position-relative bg-image-fill" style="background:url({{page.image | absolute_url }})">
+        <span class="mask mask-dark"></span>
+        <div class="container position-relative h-100 my-5 py-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <h1 class="text-white">{{page.title}}</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <h1 class="text-center section-header">{{page.city | split: "," | first}} Clubhouse</h1>
+                <p class="text-center text-muted">Open today {{page.schoolHours}}</p>
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <p class="lead text-justify">{{content | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                        <div>
+                            <img class="img-fluid w-100 p-2" src="https://via.placeholder.com/600x300/222222/ffffff%20C/O%20https://placeholder.com/">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="list-group">
+                            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                <h6 class="m-0">{{page.unitDirector}}</h6>
+                                <small class="text-muted">Unit Director</small>
+                            </div>
+                            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                <h6 class="m-0">{{page.address}} {{page.city}}, {{page.zip}}</h6>
+                                <small class="text-muted">Address</small>
+                            </div>
+                            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                <h6 class="m-0">{{page.phone}}</h6>
+                                <small class="text-muted">Phone</small>
+                            </div>
+                            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                <h6 class="m-0">{{page.fax}}</h6>
+                                <small class="text-muted">Fax</small>
+                            </div>
+                            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                <h6 class="m-0">{{page.email}}</h6>
+                                <small class="text-muted">Email</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include footer.html %}
+    {% include scripts.html %}
+<script type="text/javascript" src="../site.eef2a813ef87b073c59d.js"></script></body>
+
+</html>

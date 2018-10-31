@@ -65,19 +65,21 @@ module.exports = {
         // }),
         new HtmlWebpackPlugin({
             inject: true,
-            //hash: true,
             template: "./templates/home-layout.tmpl.html",
             filename: path.resolve(__dirname, "root/jekyll/_layouts/home-layout.html")
         }),
         new HtmlWebpackPlugin({
             inject: true,
-            //hash: true,
             template: "./templates/site-layout.tmpl.html",
             filename: path.resolve(__dirname, "root/jekyll/_layouts/site-layout.html")
         }),
         new HtmlWebpackPlugin({
+            inject: true,
+            template: "./templates/clubs-layout.tmpl.html",
+            filename: path.resolve(__dirname, "root/jekyll/_layouts/clubs-layout.html")
+        }),
+        new HtmlWebpackPlugin({
             inject: false,
-            //hash: true,
             template: "./templates/images-metadata.tmpl.js",
             filename: path.resolve(__dirname, "root/jekyll/_data/images-metadata.json")
         }),
