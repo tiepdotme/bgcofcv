@@ -12,3 +12,5 @@ plugins:
 collections:
     our-clubs:
         output: true
+    program-categories:
+        output: true

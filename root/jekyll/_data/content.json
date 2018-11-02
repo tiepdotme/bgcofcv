@@ -4,5 +4,8 @@
     "impact": "We strive to give our club members and our communities a better and brighter future. We meet kids and teens where they are and help them to take steps forward to reach their potential. By focusing on safety, academic support and character development.",
     "ourClubs": {
         "description": "Provide safe havens and a welcoming atmosphere for thousands of youth across the Coachella Valley. After school activities build leadership skills, encourage good citizenship, keep students engaged academically, promote physical activity, and champion community involvement. For more information on programs and services please contact your local clubhouse."
+    },
+    "programs": {
+        "description": "When given a safe place to learn and play, kids and teens are able to reach their academic potential and begin taking steps toward a positive and successful future."
     }
 }
