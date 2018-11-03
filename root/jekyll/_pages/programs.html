@@ -11,16 +11,54 @@ permalink: programs.html
             <div class="col-sm-12">
                 <p class="lead text-justify">{{site.data.content.programs.description}}</p>
             </div>
-            {% for category in site.program-categories %}
+            {% assign scholarshipsProgram = site.program-categories | where: "title", "College Scholarships" | first %}
+            {% assign categories = site.program-categories | where_exp: "item", "item.title != 'College Scholarships'"
+            %}
+
+            <div class="col-sm-12 py-3">
+                <div class="card border-0 bg-dark text-white shadow h-100">
+                    <span class="mask rounded mask-dark mask-pattern"></span>
+                    {%-capture image-%}{{scholarshipsProgram.hero | split: "/" | last}}{%-endcapture-%}
+                    {% include img_srcset.html class="card-img" style="height:300px" alt=scholarshipsProgram.title
+                    filename=image
+                    %}
+                    <div class="card-img-overlay p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="card-title">{{scholarshipsProgram.title | markdownify | replace: "<p>" |
+                                    replace: "</p>"}}</h3>
+                            <p class="card-text pt-3">
+                                {{scholarshipsProgram.description | markdownify | replace: "<p>" |
+                                    replace: "</p>"}}
+                            </p>
+                        </div>
+
+                        <div>
+                            <a href="{{scholarshipsProgram.url}}" class="btn btn-link font-weight-bold text-warning btn-lg">Read
+                                More <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% for category in categories %}
             <div class="col-sm-12 col-md-12 col-lg-6 py-3">
-                <div class="card bg-dark text-white shadow h-100">
-                    <img class="card-img" src="{{category.hero}}" height="250" alt="{{category.title}}">
-                    <div class="card-img-overlay p-3">
-                        <h3 class="card-title">{{category.title | mardownify | replace: "<p>" | replace: "</p>"}}</h3>
-                        <p class="card-text py-0">
-                            Current Hours &ndash; {{category.description | mardownify | replace: "<p>" | replace: "</p>"}}
-                        </p>
-                        <a href="{{category.url}}" class="btn btn-primary">Check Out</a>
+                <div class="card bg-dark text-white shadow h-100 border-0">
+                    <span class="mask rounded mask-dark mask-pattern"></span>
+                    {%-capture image-%}{{category.thumb | split: "/" | last}}{%-endcapture-%}
+                    {% include img_srcset.html class="card-img" style="height:250px" alt=category.title
+                    filename=image
+                    %}
+                    <div class="card-img-overlay p-3 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="card-title">{{category.title | markdownify | replace: "<p>" | replace: "</p>"}}</h3>
+                            <p class="card-text py-0">
+                                {{category.description | markdownify | replace: "<p>" | replace: "</p>"}}
+                            </p>
+                        </div>
+                        <div>
+                            <a href="{{category.url}}" class="btn btn-link font-weight-bold text-warning btn-lg">Read
+                                More <i class="fa fa-angle-double-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
