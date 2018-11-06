@@ -1,8 +1,9 @@
 ---
+layout: programs-layout
 title: Education &amp; Career
 description: Designed to ensure that all Club members graduate from high school on time, ready for a post-secondary education.
 thumb: assets/images/education-careers-thumb.jpg
-hero: https://via.placeholder.com/1000x300/222222/222222%20C/O%20https://placeholder.com/
+hero: assets/images/education-careers-hero.jpg
 programs:
     - title: Diplomas 2 Degrees
       description: Thanks to Toyota Financial Services, Diplomas to Degrees (D2D) BGCA’s new college readiness program, provides a range of services to guide Club members as they work toward high school graduation and prepare for post-secondary education and career success.

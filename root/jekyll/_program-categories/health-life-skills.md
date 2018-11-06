@@ -1,8 +1,9 @@
 ---
+layout: programs-layout
 title: Health &amp; Life Skills
 description: Enhancing young people’s capacity to engage in positive behaviors to nurture their well-being, set personal goals and grow into self-sufficient adults.
 thumb: assets/images/health-life-skills-thumb.jpg
-hero: https://via.placeholder.com/1000x300/222222/222222%20C/O%20https://placeholder.com/
+hero: assets/images/health-life-skills-hero.jpg
 programs:
     - title: Skills Mastery and Resistance Training
       description: The program uses a team approach involving Club staff, peer leaders, parents and community representatives. More than simply emphasizing a "Say No" message, the program teaches young people ages 6 to 15 how to say no by involving them in discussion and role-playing, practicing resistance and refusal skills, developing assertiveness, strengthening decision-making skills and analyzing media and peer influence. The ultimate goal&colon; to promote abstinence from substance abuse and adolescent sexual involvement through the practice of responsible behavior.

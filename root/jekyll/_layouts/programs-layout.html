@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    {% include head.html %}
+<link href="../site.9f3af99e6359e9c49dad.min.css" rel="stylesheet"></head>
+
+<body>
+    {% include navbar.html %}
+    <header class="header position-relative d-flex flex-column bg-image-fill">
+        <img class="img-fluid w-100" src="{{page.hero | absolute_url }}">
+        <!-- <span class="mask mask-dark mask-pattern"></span> -->
+    </header>
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <h1 class="text-center section-header">{{page.title}}</h1>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="lead text-justify">{{content | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include footer.html %}
+    {% include scripts.html %}
+<script type="text/javascript" src="../site.eef2a813ef87b073c59d.js"></script></body>
+
+</html>

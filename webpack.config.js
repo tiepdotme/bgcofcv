@@ -79,6 +79,11 @@ module.exports = {
             filename: path.resolve(__dirname, "root/jekyll/_layouts/clubs-layout.html")
         }),
         new HtmlWebpackPlugin({
+            inject: true,
+            template: "./templates/programs-layout.tmpl.html",
+            filename: path.resolve(__dirname, "root/jekyll/_layouts/programs-layout.html")
+        }),
+        new HtmlWebpackPlugin({
             inject: false,
             template: "./templates/images-metadata.tmpl.js",
             filename: path.resolve(__dirname, "root/jekyll/_data/images-metadata.json")

@@ -1,8 +1,9 @@
 ---
+layout: programs-layout
 title: The Arts
 description: Fostering creativity in young people, and give them outlets for self-expression.
 thumb: assets/images/arts-thumb.jpg
-hero: https://via.placeholder.com/1000x300/222222/222222%20C/O%20https://placeholder.com/
+hero: assets/images/arts-hero.jpg
 programs:
     - title: Fine Arts
       description: Using the interactive [National Fine Arts Program Guide](), staff can guide youth through the various art projects with step-by- step instructions and instructional videos. A panel of distinguished judges selects works for inclusion in the National Fine Arts Exhibit, which is displayed throughout the ensuing year at BGCA events, including the annual National Conference.

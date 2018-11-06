@@ -1,8 +1,9 @@
 ---
+layout: programs-layout
 title: My.Future
 description: Tech programs aim at building club member’s computer skills and integrating technology in all core areas.
 thumb: assets/images/my-future-thumb.jpg
-hero: https://via.placeholder.com/1000x300/222222/222222%20C/O%20https://placeholder.com/
+hero: assets/images/my-future-hero.jpg
 programs:
     - title: Digital Arts Suite and Festival
       description: In each of the five tutorials (Web Tech, Design Tech, Photo Tech, Music Tech and Movie Tech), members advance through three levels of animated lessons online at [myclubmylife.com](myclubmylife.com) and participate in instructor-led group activities. Club members ages 10 to 18 are invited to submit their artwork to the annual .

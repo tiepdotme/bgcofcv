@@ -1,8 +1,9 @@
 ---
+layout: programs-layout
 title: Sports &amp; Fitness
 description: Develop physical fitness, reduce stress and promote a positive use of leisure time, appreciation for the environment and interpersonal skills.
 thumb: assets/images/sports-fitness-thumb.jpg
-hero: https://via.placeholder.com/1000x300/222222/222222%20C/O%20https://placeholder.com/
+hero: assets/images/sports-fitness-hero.jpg
 programs:
     - title: PGA Sports Academy
       description: The [PGA Sports Academy]() introduces youth, ages 7 to 13, to the sport of golf to help young people build character, and develop healthy and active lifestyles. Golf is a fun, active game that gives young people stamina, focus and skill, while exposing them to a lifelong leisure activity, and an opportunity for personal and professional development..

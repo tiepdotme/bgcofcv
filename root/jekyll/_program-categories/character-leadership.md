@@ -1,8 +1,9 @@
 ---
+layout: programs-layout
 title: Character &amp; Leadership
 description: Enabling youth to become responsible, caring citizens and develop leadership skills and gain opportunities for planning, decision-making, contributing to their Club and community.
 thumb: assets/images/character-leadership-thumb.jpg
-hero: https://via.placeholder.com/1000x300/222222/222222%20C/O%20https://placeholder.com/
+hero: assets/images/character-leadership-hero.jpg
 programs:
     - title: Million Members, Million Hours of Service
       description: Studies show that young people who engage in service do better in school, maintain positive relationships with adults and avoid risky behaviors. BGCA's Million Members, Million Hours of Service efforts will help Boys & Girls Clubs increase the number of youth participating in volunteer and service projects to 1 million members each donating at least one hour of service in a single year.
