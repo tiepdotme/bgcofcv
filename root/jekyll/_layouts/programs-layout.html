@@ -15,11 +15,28 @@
         <section class="py-5">
             <div class="container">
                 <h1 class="text-center section-header">{{page.title}}</h1>
-                <div class="row">
+                <div class="row pb-5">
                     <div class="col-sm-12">
                         <p class="lead text-justify">{{content | markdownify | replace: "<p>" | replace: "</p>"}}</p>
                     </div>
                 </div>
+
+                {% for program in page.programs %}
+                <div class="row py-2">
+                    <div class="col-sm-12 col-md-4 d-flex align-items-center">
+                        <img class="img-fluid" src="{{program.image}}">
+                        <!--{%-capture image-%}{{program.image | split: "/" | last}}{%-endcapture-%}
+                        {% include img_srcset.html class="img-fluid" style="max-height:200px" alt=program.title
+                        filename=image
+                        %}-->
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <h2>{{program.title}}</h2>
+                        <p class="text-justify">{{program.description | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+
             </div>
         </section>
     </main>
