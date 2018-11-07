@@ -2,8 +2,14 @@ module.exports = function(templateParams) {
     const template = `
     {% assign imagesMetaData = site.data.images-metadata %}
     {% assign selectedImage = imagesMetaData | where: "filename", include.filename | first %}
-
-    <img class="{{ include.class }}" alt="{{ include.alt }}" style="{{ include.style }}" srcset="{{ selectedImage.srcSet }}" src="{{ selectedImage.src }}" sizes="(min-width: 300px) 50vw, 100vw" width="300">
+    {% assign absolutePaths = "" | split: ','  %}
+    {% for image in selectedImage.images %}
+        {%-capture widthSuffix-%}{{image.width}}w{%-endcapture-%}
+        {% assign absoluteImagePath = {{image.path | absolute_url | append: ' ' | append: widthSuffix}} %}
+        {% assign absolutePaths = absolutePaths | push: absoluteImagePath %}
+    {% endfor %}
+    {%-capture srcset-%}{{absolutePaths | join: ', '}}{%-endcapture-%}
+    <img class="{{ include.class }}" alt="{{ include.alt }}" style="{{ include.style }}" srcset="{{ srcset }}" src="{{ selectedImage.src | absolute_url }}" sizes="(min-width: 300px) 50vw, 100vw" width="300">
     `;
     return template;
 };
