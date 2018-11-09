@@ -3,14 +3,17 @@ layout: site-layout
 title: Programs
 permalink: programs.html
 ---
-
+<section class="hero-cascade">
+    <div style="background: url({{site.data.content.programs.hero}});" class="hero-view bg-image-fill position-relative p-5">
+    </div>
+    <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
+        <h1 class="text-center section-header">{{page.title}}</h1>
+        <p class="lead text-justify pt-3 px-3">{{site.data.content.programs.description}}</p>
+    </div>
+</section>
 <section class="section py-5">
     <div class="container">
-        <h1 class="text-center section-header">{{page.title}}</h1>
         <div class="row">
-            <div class="col-sm-12">
-                <p class="lead text-justify">{{site.data.content.programs.description}}</p>
-            </div>
             {% assign scholarshipsProgram = site.program-categories | where: "title", "College Scholarships" | first %}
             {% assign categories = site.program-categories | where_exp: "item", "item.title != 'College Scholarships'"
             %}
@@ -56,8 +59,9 @@ permalink: programs.html
                             </p>
                         </div>
                         <div>
-                            <a href="{{category.url}}" class="btn btn-link font-weight-bold text-warning btn-lg">Read
-                                More <i class="fa fa-angle-double-right"></i></a>
+                            <a href="{{category.url}}" class="btn btn-link font-weight-bold text-warning btn-lg">View
+                                Programs
+                                <i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
                 </div>

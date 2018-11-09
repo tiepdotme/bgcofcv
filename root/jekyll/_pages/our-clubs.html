@@ -3,14 +3,12 @@ layout: site-layout
 title: Our Clubs
 permalink: our-clubs.html
 ---
-<section>
-    <div class="position-relative d-flex flex-column">
-        <div style="z-index: 5" class="hero bg-image-fill position-relative p-5">
-        </div>
-        <div style="margin-top: -5rem; z-index: 10" class="shadow container bg-white rounded p-3">
-            <h1 class="text-center section-header">{{page.title}}</h1>
-            <p class="lead text-justify pt-5">{{site.data.content.ourClubs.description}}</p>
-        </div>
+<section class="hero-cascade">
+    <div style="background: url({{site.data.content.ourClubs.hero}});" class="hero-view bg-image-fill position-relative p-5">
+    </div>
+    <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
+        <h1 class="text-center section-header">{{page.title}}</h1>
+        <p class="lead text-justify pt-3 px-3">{{site.data.content.ourClubs.description}}</p>
     </div>
 </section>
 <section class="section py-5">

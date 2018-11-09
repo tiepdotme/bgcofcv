@@ -1,4 +1,18 @@
 .hero {
     height: 300px;
-    background: url(https://via.placeholder.com/1500x300/222222/ffffff%20C/O%20https://placeholder.com/);
+}
+
+.hero-cascade {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .hero-view {
+        height: 300px;
+        z-index: 2;
+    }
+
+    .hero-content {
+        margin-top: -5rem;
+        z-index: 3;
+    }
 }

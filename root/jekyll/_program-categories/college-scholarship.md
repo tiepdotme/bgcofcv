@@ -7,7 +7,7 @@ hero: assets/images/college-scholarships-hero.jpg
 
 Today, the Boys & Girls Clubs of Coachella Valley collaborates with the Coachella Valley Economic Partnership’s Pathways to Success scholarship program. This partnership has doubled the amount of individual scholarships due to matching funds the Pathways to Success program provides. One year scholarships Community College can be up to $2,500. University scholarships can be up to $5,000. Only Members of the Boys & Girls Clubs Valley may specifically apply for a Boys & Girls Clubs of Coachella Valley Scholarship.
 
-# Eligibility Requirements
+<!-- # Eligibility Requirements
 
 -   Be a member who is currently, or has been, an active participant in programs at one of the Boys & Girls Clubs of Coachella Valley’s clubhouses: Indio, La Quinta, Coachella, Mecca or Desert Hot Springs.
 -   You must include an essay discussing your involvement with the Boys & Girls Clubs of Coachella Valley.
@@ -20,4 +20,4 @@ Today, the Boys & Girls Clubs of Coachella Valley collaborates with the Coachell
 -   You must have a high school GPA of 2.0 or above, and meet college/university academic requirements for admissions and continued enrollment.
 -   You must be enrolled full-time and maintain full-time enrollment status (as defined by academic institutions).
 -   You must submit a copy of their 2015-2016 Student Aid Report (SAR) from the FAFSA or the California Aid Report (CAR) from CSAC.
--   You will be expected to sign a contract with CVEP's Pathways to Success program involving you in scheduled leadership events, mentoring, workshops, and web based interactions.
+-   You will be expected to sign a contract with CVEP's Pathways to Success program involving you in scheduled leadership events, mentoring, workshops, and web based interactions. -->

@@ -3,53 +3,48 @@
 
 <head>
     {% include head.html %}
-<link href="../site.9f3af99e6359e9c49dad.min.css" rel="stylesheet"></head>
+<link href="../site.8db2393b94b859bc9f04.min.css" rel="stylesheet"></head>
 
 <body>
     {% include navbar.html %}
-    <header class="header position-relative bg-image-fill" style="background:url({{page.image | absolute_url }})">
+    <!-- <header class="header position-relative bg-image-fill" style="background:url({{page.image | absolute_url }})">
         <span class="mask mask-dark"></span>
         <div class="container position-relative h-100 my-5 py-5">
             <div class="row d-flex justify-content-center align-items-center">
                 <h1 class="text-white">{{page.title}}</h1>
             </div>
         </div>
-    </header>
+    </header> -->
     <main>
-        <section class="py-5">
-            <div class="container">
-                <h1 class="text-center section-header">{{page.city | split: "," | first}} Clubhouse</h1>
+        <section class="hero-cascade pb-5">
+            <div style="background: url({{page.image | absolute_url}});" class="hero-view bg-image-fill position-relative p-5">
+            </div>
+            <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
+                <h1 class="text-center section-header">{{page.title}}</h1>
+                <h2 class="text-center h4 text-muted">{{page.city | split: "," | first}} Clubhouse</h2>
                 <p class="text-center text-muted">Open today {{page.schoolHours}}</p>
-                <div class="row">
-                    <div class="col-sm-12 col-md-8">
-                        <p class="lead text-justify">{{content | markdownify | replace: "<p>" | replace: "</p>"}}</p>
-                        <div>
-                            <img class="img-fluid w-100 p-2" src="https://via.placeholder.com/600x300/222222/ffffff%20C/O%20https://placeholder.com/">
-                        </div>
+                <p class="lead text-justify pt-3 px-3">{{content | smartify | markdownify | replace: "<p>" |
+                        replace: "</p>"}}</p>
+                <div class="list-group">
+                    <div class="list-group-item flex-column align-items-start">
+                        <h6 class="m-0">{{page.unitDirector}}</h6>
+                        <small class="text-muted">Unit Director</small>
                     </div>
-                    <div class="col-sm-12 col-md-4">
-                        <div class="list-group">
-                            <div class="list-group-item list-group-item-action flex-column align-items-start">
-                                <h6 class="m-0">{{page.unitDirector}}</h6>
-                                <small class="text-muted">Unit Director</small>
-                            </div>
-                            <div class="list-group-item list-group-item-action flex-column align-items-start">
-                                <h6 class="m-0">{{page.address}} {{page.city}}, {{page.zip}}</h6>
-                                <small class="text-muted">Address</small>
-                            </div>
-                            <div class="list-group-item list-group-item-action flex-column align-items-start">
-                                <h6 class="m-0">{{page.phone}}</h6>
-                                <small class="text-muted">Phone</small>
-                            </div>
-                            <div class="list-group-item list-group-item-action flex-column align-items-start">
-                                <h6 class="m-0">{{page.fax}}</h6>
-                                <small class="text-muted">Fax</small>
-                            </div>
-                            <div class="list-group-item list-group-item-action flex-column align-items-start">
-                                <h6 class="m-0">{{page.email}}</h6>
-                                <small class="text-muted">Email</small>
-                            </div>
-                        </div>
+                    <div class="list-group-item flex-column align-items-start">
+                        <h6 class="m-0">{{page.address}} {{page.city}}, {{page.zip}}</h6>
+                        <small class="text-muted">Address</small>
+                    </div>
+                    <div class="list-group-item flex-column align-items-start">
+                        <h6 class="m-0">{{page.phone}}</h6>
+                        <small class="text-muted">Phone</small>
+                    </div>
+                    <div class="list-group-item flex-column align-items-start">
+                        <h6 class="m-0">{{page.fax}}</h6>
+                        <small class="text-muted">Fax</small>
+                    </div>
+                    <div class="list-group-item flex-column align-items-start">
+                        <h6 class="m-0">{{page.email}}</h6>
+                        <small class="text-muted">Email</small>
                     </div>
                 </div>
             </div>
