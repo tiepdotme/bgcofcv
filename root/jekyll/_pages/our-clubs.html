@@ -3,14 +3,19 @@ layout: site-layout
 title: Our Clubs
 permalink: our-clubs.html
 ---
-
+<section>
+    <div class="position-relative d-flex flex-column">
+        <div style="z-index: 5" class="hero bg-image-fill position-relative p-5">
+        </div>
+        <div style="margin-top: -5rem; z-index: 10" class="shadow container bg-white rounded p-3">
+            <h1 class="text-center section-header">{{page.title}}</h1>
+            <p class="lead text-justify pt-5">{{site.data.content.ourClubs.description}}</p>
+        </div>
+    </div>
+</section>
 <section class="section py-5">
     <div class="container">
-        <h1 class="text-center section-header">{{page.title}}</h1>
         <div class="row">
-            <div class="col-sm-12">
-                <p class="lead text-justify">{{site.data.content.ourClubs.description}}</p>
-            </div>
             {% for club in site.our-clubs %}
             <div class="col-sm-12 col-md-12 col-lg-6 py-3">
                 <div class="card shadow h-100">
