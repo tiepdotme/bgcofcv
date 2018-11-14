@@ -4,9 +4,59 @@ title: Contact Us
 permalink: contact-us.html
 ---
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">{{page.title}}</h1>
-        <!-- {% include img_srcset.html class="img-blurr" alt="sample" filename="sample.jpg" %} -->
+<section class="hero-cascade">
+    <div
+        style="background: url({{site.data.content.ourClubs.hero}});"
+        class="hero-view bg-image-fill position-relative p-5"
+    ></div>
+    <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
+        <h1 class="text-center section-header">{{ page.title }}</h1>
+        <div class="lead pt-3 px-3">{{ site.data.content.contactUs.description | markdownify}}</div>
     </div>
-</div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex">
+            <div class="py-2">
+                <h2 class="section-header text-center">Contact Us</h2>
+                <div class="list-group">
+                    {% for person in site.data.content.contactUs.peopleToContact %}
+                        <div class="list-group-item d-flex">
+                            {% assign nameArray = person.name | split: " " %}
+                            {% assign firstLetter = nameArray | first | slice: 0 %}
+                            {% assign secondLetter = nameArray | last | slice: 0 %}
+                            {% assign initials = firstLetter | append: secondLetter %}
+                            <div class="avatar text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">{{initials}}</div>
+                            <div class="pl-3 pl-md-5 flex-fill">
+                                <h5 class="m-0">{{ person.name }}</h5>
+                                <p class="m-0 text-muted">{{ person.title }}</p>
+                                <a href="mailto:{{person.email}}">{{ person.email }}</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="flex-fill px-5 py-2">
+                <h2 class="section-header text-center">Leave Us A Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="contact_name">Name</label>
+                        <input type="text" class="form-control form-control-lg" id="contact_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_email">Email</label>
+                        <input type="email" class="form-control form-control-lg" id="contact_email">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact_phone">Phone</label>
+                        <input type="text" class="form-control form-control-lg" id="contact_phone">
+                    </div>
+                     <div class="form-group">
+                        <label for="contact_message">Message</label>
+                        <textarea class="form-control" id="contact_message" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

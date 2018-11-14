@@ -10,5 +10,41 @@
     "programs": {
         "hero": "assets/images/programs-hero.jpg",
         "description": "When given a safe place to learn and play, kids and teens are able to reach their academic potential and begin taking steps toward a positive and successful future."
+    },
+    "contactUs": {
+        "hero": "assets/images/our-clubs-hero.jpg",
+        "description": "Please leave us a message below and we will get back to you as soon as possible. \n\n To inquire about donations please contact **Quinton Egson** at 760-836-1160.",
+        "peopleToContact": [
+            {
+                "name": "Quinton Egson",
+                "title": "Chief Executive Officer",
+                "email": "qegson@bgcofcv.org"
+            },
+            {
+                "name": "Tony Williams",
+                "title": "Director of Operations",
+                "email": "twilliams@bgcofcv.org"
+            },
+            {
+                "name": "Carolina Vasquez",
+                "title": "Director of Development",
+                "email": "cvasquez@bgcofcv.org "
+            },
+            {
+                "name": "Bridget Kerr",
+                "title": "Director of Special Events",
+                "email": "bkerr@bgcofcv.org"
+            },
+            {
+                "name": "Jody Brazil",
+                "title": "Director of Finance",
+                "email": "jbrazil@bgcofcv.org"
+            },
+            {
+                "name": "Cynthia Grier",
+                "title": "Administrative Assistant",
+                "email": "cgrier@bgcofcv.org"
+            }
+        ]
     }
 }

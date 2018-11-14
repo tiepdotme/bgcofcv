@@ -7,6 +7,11 @@
     "url": "https://bgcofcv.netlify.com",
     "email": "",
     "phone": "(760) 836-1160",
+    "location": {
+        "address": "42-600 Cook Street Suite #120",
+        "city": "Palm Desert, CA",
+        "zip": "92211"
+    },
     "twitterUrl": "https://twitter.com/bgcvclubs",
     "facebookUrl": "https://www.facebook.com/bgcvclubs",
     "instagramUrl": "http://instagram.com/bgcvclubs",
