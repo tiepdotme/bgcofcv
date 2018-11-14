@@ -8,23 +8,23 @@
         "label": "Our Clubs"
     },
     {
-        "url": "membership.html",
-        "label": "Membership"
-    },
-    {
         "url": "programs.html",
         "label": "Programs"
+    },
+    {
+        "url": "membership.html",
+        "label": "Membership"
     },
     {
         "url": "ways-to-give.html",
         "label": "Ways to Give"
     },
     {
-        "url": "contact-us.html",
-        "label": "Contact Us"
+        "url": "events.html",
+        "label": "Events"
     },
     {
-        "url": "faq.html",
-        "label": "FAQ"
+        "url": "contact-us.html",
+        "label": "Contact Us"
     }
 ]

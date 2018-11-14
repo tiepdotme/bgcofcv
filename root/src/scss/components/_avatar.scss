@@ -2,4 +2,9 @@
     height: 56px;
     width: 56px;
     font-size: 1.25rem;
+    &-sm {
+        height: 40px;
+        width: 40px;
+        font-size: initial;
+    }
 }

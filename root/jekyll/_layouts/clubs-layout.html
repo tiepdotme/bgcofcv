@@ -3,48 +3,68 @@
 
 <head>
     {% include head.html %}
-<link href="../site.0f6f280263a44a7429c9.min.css" rel="stylesheet"></head>
+<link href="../site.476b0dc0867d4c01dffb.min.css" rel="stylesheet"></head>
 
 <body>
     {% include navbar.html %}
-    <!-- <header class="header position-relative bg-image-fill" style="background:url({{page.image | absolute_url }})">
-        <span class="mask mask-dark"></span>
-        <div class="container position-relative h-100 my-5 py-5">
-            <div class="row d-flex justify-content-center align-items-center">
-                <h1 class="text-white">{{page.title}}</h1>
-            </div>
-        </div>
-    </header> -->
     <main>
         <section class="hero-cascade pb-5">
             <div style="background: url({{page.image | absolute_url}});" class="hero-view bg-image-fill position-relative p-5">
             </div>
             <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
                 <h1 class="text-center section-header">{{page.title}}</h1>
-                <h2 class="text-center h4 text-muted">{{page.city | split: "," | first}} Clubhouse</h2>
-                <p class="text-center text-muted">Open today {{page.schoolHours}}</p>
-                <p class="lead text-justify pt-3 px-3">{{content | smartify | markdownify | replace: "<p>" |
+                <h2 class="text-center h4 text-muted">{{page.city | split: "," | first}}</h2>
+                <p class="text-center text-muted py-3">Open today {{page.schoolHours}}</p>
+                <p class="lead text-justify px-3">{{content | smartify | markdownify | replace: "<p>" |
                         replace: "</p>"}}</p>
                 <div class="list-group">
-                    <div class="list-group-item flex-column align-items-start">
-                        <h6 class="m-0">{{page.unitDirector}}</h6>
-                        <small class="text-muted">Unit Director</small>
+                    <div class="list-group-item border-0 bg-light d-flex">
+                            {% assign nameArray = page.unitDirector | split: " " %} {% assign firstLetter = nameArray | first |
+                                slice: 0 %} {% assign secondLetter = nameArray | last | slice: 0 %} {% assign initials =
+                                firstLetter | append: secondLetter %}
+                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                            {{ initials }}
+                        </div>
+                        <div class="pl-3 flex-fill">
+                            <h5 class="m-0">{{ page.unitDirector }}</h5>
+                            <small class="text-muted">Unit Director</small>
+                        </div>
                     </div>
-                    <div class="list-group-item flex-column align-items-start">
-                        <h6 class="m-0">{{page.address}} {{page.city}}, {{page.zip}}</h6>
-                        <small class="text-muted">Address</small>
+                    <div class="list-group-item border-0 bg-light d-flex">
+                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        <div class="pl-3 flex-fill">
+                            <h5 class="m-0">{{page.address}} {{page.city}}, {{page.zip}}</h5>
+                            <small class="text-muted">Address</small>
+                        </div>
                     </div>
-                    <div class="list-group-item flex-column align-items-start">
-                        <h6 class="m-0">{{page.phone}}</h6>
-                        <small class="text-muted">Phone</small>
+                    <div class="list-group-item border-0 bg-light d-flex">
+                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        <div class="pl-3 flex-fill">
+                            <h5 class="m-0"><a href="tel:{{page.phone | replace: '(' | replace: ')' | prepend: '1-' }}">{{page.phone}}</a></h5>
+                            <small class="text-muted">Phone</small>
+                        </div>
                     </div>
-                    <div class="list-group-item flex-column align-items-start">
-                        <h6 class="m-0">{{page.fax}}</h6>
-                        <small class="text-muted">Fax</small>
+                    <div class="list-group-item border-0 bg-light d-flex">
+                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fas fa-fax"></i>
+                            </div>
+                        <div class="pl-3 flex-fill">
+                            <h5 class="m-0">{{page.fax}}</h5>
+                            <small class="text-muted">Fax</small>
+                        </div>
                     </div>
-                    <div class="list-group-item flex-column align-items-start">
-                        <h6 class="m-0">{{page.email}}</h6>
-                        <small class="text-muted">Email</small>
+                    <div class="list-group-item border-0 bg-light d-flex">
+                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        <div class="pl-3 flex-fill">
+                            <h5 class="m-0"><a href="mailto:{{page.email}}">{{page.email}}</a></h5>
+                            <small class="text-muted">Email</small>
+                        </div>
                     </div>
                 </div>
             </div>

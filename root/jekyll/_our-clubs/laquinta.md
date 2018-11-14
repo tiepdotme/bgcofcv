@@ -13,4 +13,4 @@ summerHours: 7:30am - 5:30pm
 image: assets/images/bgc-laquinta.jpg
 ---
 
-Is a great space that youth have been coming together after school for almost two decades. The programs give each member something to be excited about. The President Gerald R. Ford Clubhouse currently serves 1,584 youth in the LaQuinta community.
+Is a great space that youth have been coming together after school for almost two decades. The programs give each member something to be excited about. The President Gerald R. Ford Clubhouse currently serves 1,584 youth in the La Quinta community.
