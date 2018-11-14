@@ -46,5 +46,23 @@
                 "email": "cgrier@bgcofcv.org"
             }
         ]
+    },
+    "membership": {
+        "hero": "assets/images/our-clubs-hero.jpg",
+        "description": "Our Clubs help kids and teens develop essential skills, make lasting connections and have fun. Club membership fees range based on ability to pay. \n\n Contact any of our [clubs](our-clubs) for more information",
+        "features": [
+            {
+                "icon": "fas fa-user-graduate",
+                "description": "A safe place to learn, play and grow"
+            },
+            {
+                "icon": "fas fa-hands-helping",
+                "description": "Develop supportive relationships with caring mentors"
+            },
+            {
+                "icon": "fas fa-hand-holding-heart",
+                "description": "Enriching programs, experiences and activities"
+            }
+        ]
     }
 }
