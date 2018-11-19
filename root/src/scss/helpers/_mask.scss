@@ -10,6 +10,12 @@
 
 .mask-dark {
     background: rgba(0, 0, 0, 0.6);
+    &.mask-gradient-l-t {
+        background: linear-gradient(to left top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.9) 90%);
+    }
+    &.mask-gradient-t-b {
+        background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, transparent 60%);
+    }
 }
 
 .mask-pattern {

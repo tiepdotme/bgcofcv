@@ -22,17 +22,28 @@ permalink: our-clubs.html
         <div class="row">
             {% for club in site.our-clubs %}
             <div class="col-sm-12 col-md-12 col-lg-6 py-3">
-                <div class="card shadow bg-dark text-white">
-                    <span class="mask mask-dark"></span>
-                    {%-capture image-%}{{ club.image | split: "/" | last }}{%-endcapture-%} {% include img_srcset.html
-                    class="card-img" style="height: 200px" alt=club.site filename=image %}
+                <div class="card border-0 shadow bg-dark text-white">
+                    <span class="rounded mask mask-dark mask-gradient-l-t"></span> {%-capture image-%}{{
+                        club.image | split: "/" | last
+                    }}{%-endcapture-%} {% include img_srcset.html class="card-img rounded" style="height: 200px"
+                    alt=club.site filename=image %}
                     <div class="card-img-overlay">
                         <p class="card-text mb-1">{{ club.title }}</p>
-                        <h5 class="card-title">{{ club.city }}</h5>
+                        <h5 class="card-title h1">{{ club.city | split: ", " | first }}</h5>
                         <div>
-                            <a href="" class="text-white border rounded-circle border-white btn btn-round"><i class="fas fa-phone"></i></a>
-                            <a href="" class="text-white border rounded-circle border-white btn btn-round"><i class="fas fa-envelope"></i></a>
-                            <a href="" class="text-white border rounded-circle border-white btn btn-round"><i class="fas fa-arrow-right"></i></a>
+                            <a
+                                href="tel:+{{club.phone | replace: '(' | replace: ')' | replace: '-'}}"
+                                class="text-white border rounded-circle border-white btn btn-round"
+                                ><i class="fas fa-phone"></i
+                            ></a>
+                            <a
+                                href="mailto:{{club.email}}"
+                                class="text-white border rounded-circle border-white btn btn-round"
+                                ><i class="fas fa-envelope"></i
+                            ></a>
+                            <a href="{{club.url}}" class="text-white border rounded-circle border-white btn btn-round"
+                                ><i class="fas fa-arrow-right"></i
+                            ></a>
                         </div>
                     </div>
                 </div>
