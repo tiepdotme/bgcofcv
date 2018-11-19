@@ -15,4 +15,13 @@
         margin-top: -5rem;
         z-index: 3;
     }
+
+    &-home {
+        .hero-view {
+            height: 400px;
+            .hero-logo {
+                z-index: 1;
+            }
+        }
+    }
 }

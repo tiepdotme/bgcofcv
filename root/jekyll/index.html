@@ -3,14 +3,14 @@ layout: home-layout
 title: Home
 permalink: index.html
 ---
-<section class="hero-cascade">
-    <div style="background: url({{site.data.content.hero}});" class="hero-view bg-image-fill position-relative p-5">
+<section class="hero-cascade hero-cascade-home">
+    <div style="background: url({{site.data.content.hero}});" class="hero-view bg-image-fill position-relative p-5 d-flex flex-column align-items-center">
+        <img class="hero-logo position-absolute" src={{site.data.content.hero-logo}} width="300">
+        <span class="mask mask-dark"></span>
     </div>
     <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
-        <h1 class="text-center section-header">Boys &amp; Girls Club</h1>
-        <h2 class="text-center text-muted section-header pb-3">Coachella Valley</h2>
         <button type="button" class="btn btn-primary btn-lg mx-auto">DONATE</button>
-        <p class="lead text-justify pt-3 px-3">{{site.data.content.mission | smartify | markdownify | replace: "<p>" |
+        <p class="lead pt-3 px-3">{{site.data.content.mission | smartify | markdownify | replace: "<p>" |
                 replace: "</p>"}}</p>
     </div>
 </section>
