@@ -48,22 +48,8 @@
             }
         ]
     },
-    "membership": {
+    "waysToGive": {
         "hero": "assets/images/our-clubs-hero.jpg",
-        "description": "Our Clubs help kids and teens develop essential skills, make lasting connections and have fun. Club membership fees range based on ability to pay. \n\n Contact any of our [clubs](our-clubs) for more information",
-        "features": [
-            {
-                "icon": "fas fa-user-graduate",
-                "description": "A safe place to learn, play and grow"
-            },
-            {
-                "icon": "fas fa-hands-helping",
-                "description": "Develop supportive relationships with caring mentors"
-            },
-            {
-                "icon": "fas fa-hand-holding-heart",
-                "description": "Enriching programs, experiences and activities"
-            }
-        ]
+        "description": "Last year **6,500** youth participated in life-changing programs and fun activities at one of our four clubhouses throughout the Coachella Valley. It costs **$500 per child** to provide program and activities for an entire year. Join our life-changing movement by giving a gift that lasts a lifetime in support of our Clubs!"
     }
 }
