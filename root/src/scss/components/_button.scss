@@ -1,4 +1,12 @@
-.btn.btn-round {
+.btn-round {
     height: 40px;
     width: 40px;
+    border-width: 2px !important;
+    &.btn-lg {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        height: 48px;
+        width: 48px;
+        padding: 0.375rem 0.75rem;
+    }
 }

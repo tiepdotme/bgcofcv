@@ -20,25 +20,23 @@ permalink: programs.html
 
             <div class="col-sm-12 py-3">
                 <div class="card border-0 bg-dark text-white shadow h-100">
-                    <span class="mask rounded mask-dark"></span>
+                    <span class="mask rounded mask-dark mask-gradient-t-b"></span>
                     {%-capture image-%}{{scholarshipsProgram.hero | split: "/" | last}}{%-endcapture-%}
                     {% include img_srcset.html class="card-img" style="height:300px" alt=scholarshipsProgram.title
                     filename=image
                     %}
-                    <div class="card-img-overlay p-3 d-flex flex-column justify-content-between">
-                        <div>
-                            <h3 class="card-title">{{scholarshipsProgram.title | markdownify | replace: "<p>" |
-                                    replace: "</p>"}}</h3>
+                    <div class="card-img-overlay p-3">
+                            <div class="d-flex justify-content-between">
+                                <h3 class="card-title">{{scholarshipsProgram.title | markdownify | replace: "<p>" |
+                                        replace: "</p>"}}</h3>
+                                <a href="{{scholarshipsProgram.url}}" class="text-white btn-lg border rounded-circle border-white btn btn-round">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                             <p class="card-text pt-3">
                                 {{scholarshipsProgram.description | markdownify | replace: "<p>" |
                                     replace: "</p>"}}
                             </p>
-                        </div>
-
-                        <div>
-                            <a href="{{scholarshipsProgram.url}}" class="btn btn-link font-weight-bold text-warning btn-lg">Read
-                                More <i class="fa fa-angle-double-right"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -46,23 +44,22 @@ permalink: programs.html
             {% for category in categories %}
             <div class="col-sm-12 col-md-12 col-lg-6 py-3">
                 <div class="card bg-dark text-white shadow h-100 border-0">
-                    <span class="mask rounded mask-dark"></span>
+                    <span class="mask rounded mask-dark mask-gradient-t-b"></span>
                     {%-capture image-%}{{category.thumb | split: "/" | last}}{%-endcapture-%}
                     {% include img_srcset.html class="card-img" style="height:250px" alt=category.title
                     filename=image
                     %}
-                    <div class="card-img-overlay p-3 d-flex flex-column justify-content-between">
-                        <div>
+                    <div class="card-img-overlay p-3">
+                        <div class="d-flex justify-content-between">
                             <h3 class="card-title">{{category.title | markdownify | replace: "<p>" | replace: "</p>"}}</h3>
-                            <p class="card-text py-0">
-                                {{category.description | markdownify | replace: "<p>" | replace: "</p>"}}
-                            </p>
+                            
+                            <a href="{{category.url}}" class="text-white btn-lg border rounded-circle border-white btn btn-round">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
-                        <div>
-                            <a href="{{category.url}}" class="btn btn-link font-weight-bold text-warning btn-lg">View
-                                Programs
-                                <i class="fa fa-angle-double-right"></i></a>
-                        </div>
+                        <p class="card-text py-0">
+                            {{category.description | markdownify | replace: "<p>" | replace: "</p>"}}
+                        </p>
                     </div>
                 </div>
             </div>
