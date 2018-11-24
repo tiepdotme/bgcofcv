@@ -14,3 +14,67 @@ permalink: ways-to-give.html
         <div class="lead text-justify pt-3 px-3">{{ site.data.content.waysToGive.description | markdownify }}</div>
     </div>
 </section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="card border-0 shadow bg-dark text-white">
+                    <span class="rounded mask mask-dark"></span> {% include img_srcset.html class="card-img rounded"
+                    alt="One Time Donation" style="height: 200px" filename="one-time-donation.jpg"%}
+                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                        <h5 class="card-title h3">One-Time Donation</h5>
+                        <div>
+                            <a class="btn btn-outline-light"> GIVE <i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="card border-0 shadow bg-dark text-white">
+                    <span class="rounded mask mask-dark"></span> {% include img_srcset.html class="card-img rounded"
+                    alt="Monthly Donation" style="height: 200px" filename="monthly-donation.jpg" %}
+                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                        <h5 class="card-title h3">Monthly Donation</h5>
+                        <div>
+                            <a class="btn btn-outline-light"> GIVE <i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="card border-0 shadow bg-dark text-white">
+                    <span class="rounded mask mask-dark"></span> {% include img_srcset.html class="card-img rounded"
+                    alt="Become a Fundraiser" style="height: 200px" filename="fundraiser.jpg" %}
+                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                        <h5 class="card-title h3">Become a Fundraiser</h5>
+                        <div>
+                            <a class="btn btn-outline-light"> GIVE <i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"><h2 class="section-header text-center py-4">Partners</h2></div>
+            {% for partner in site.data.partners %}
+            <div
+                class="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex flex-column py-2 align-items-center justify-content-center"
+            >
+                <a href="{{partner.url}}" target="_blank">
+                    <img
+                        width="125"
+                        class="img-fluid"
+                        src="{{ partner.logo | absolute_url }}"
+                        alt="{{ partner.name }}"
+                        title="{{ partner.name }}"
+                    />
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
