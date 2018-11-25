@@ -18,40 +18,88 @@ permalink: ways-to-give.html
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-4">
-                <div class="card border-0 shadow bg-dark text-white">
+                <div class="card border-0 shadow bg-dark text-white my-1">
                     <span class="rounded mask mask-dark"></span> {% include img_srcset.html class="card-img rounded"
                     alt="One Time Donation" style="height: 200px" filename="one-time-donation.jpg"%}
                     <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
                         <h5 class="card-title h3">One-Time Donation</h5>
                         <div>
-                            <a class="btn btn-outline-light"> GIVE <i class="fas fa-heart"></i></a>
+                            <a
+                                href="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=16"
+                                target="_blank"
+                                class="btn btn-outline-light btn-give"
+                            >
+                                GIVE <i class="fas fa-heart"></i
+                            ></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4">
-                <div class="card border-0 shadow bg-dark text-white">
+                <div class="card border-0 shadow bg-dark text-white my-1">
                     <span class="rounded mask mask-dark"></span> {% include img_srcset.html class="card-img rounded"
                     alt="Monthly Donation" style="height: 200px" filename="monthly-donation.jpg" %}
                     <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
                         <h5 class="card-title h3">Monthly Donation</h5>
                         <div>
-                            <a class="btn btn-outline-light"> GIVE <i class="fas fa-heart"></i></a>
+                            <a
+                                href="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=16"
+                                target="_blank"
+                                class="btn btn-outline-light btn-give"
+                            >
+                                GIVE <i class="fas fa-heart"></i
+                            ></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4">
-                <div class="card border-0 shadow bg-dark text-white">
+                <div class="card border-0 shadow bg-dark text-white my-1">
                     <span class="rounded mask mask-dark"></span> {% include img_srcset.html class="card-img rounded"
                     alt="Become a Fundraiser" style="height: 200px" filename="fundraiser.jpg" %}
                     <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
                         <h5 class="card-title h3">Become a Fundraiser</h5>
                         <div>
-                            <a class="btn btn-outline-light"> GIVE <i class="fas fa-heart"></i></a>
+                            <a
+                                href="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=16"
+                                target="_blank"
+                                class="btn btn-outline-light btn-give"
+                            >
+                                GIVE <i class="fas fa-heart"></i
+                            ></a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row bg-light">
+            <div class="col-sm-12 d-flex flex-column align-items-center justify-content-center">
+                <p class="lead">Make a donation through PayPal</p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="9SP9PWBGH6B22" />
+                    <input
+                        type="image"
+                        src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                        border="0"
+                        name="submit"
+                        alt="PayPal - The safer, easier way to pay online!"
+                    />
+                    <img
+                        alt=""
+                        border="0"
+                        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+                        width="1"
+                        height="1"
+                    />
+                </form>
+                <!--
+                    <a href="" target="_blank"><img src="./assets/images/paypal.png" alt="Donate" title="Donate" /> </a>
+                -->
             </div>
         </div>
     </div>
@@ -62,11 +110,11 @@ permalink: ways-to-give.html
             <div class="col-sm-12"><h2 class="section-header text-center py-4">Partners</h2></div>
             {% for partner in site.data.partners %}
             <div
-                class="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex flex-column py-2 align-items-center justify-content-center"
+                class="col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex flex-column py-2 align-items-center justify-content-center"
             >
                 <a href="{{partner.url}}" target="_blank">
                     <img
-                        width="125"
+                        width="140"
                         class="img-fluid"
                         src="{{ partner.logo | absolute_url }}"
                         alt="{{ partner.name }}"

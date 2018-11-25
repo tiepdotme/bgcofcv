@@ -1,0 +1,8 @@
+.btn-give {
+    &:hover {
+        color: $dark !important;
+    }
+    &.btn-outline-light {
+        border-width: 2px !important;
+    }
+}
