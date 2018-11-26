@@ -37,13 +37,38 @@ permalink: events.html
                     </div>
                     <div class="d-flex justify-content-between">
                         <span class="text-danger">Upcoming</span>
-                        <span class="text-muted">{{nextEvent.date | date: "%a %d"}}</span>
+                        <span class="text-muted">{{nextEvent.date | date: "%a, %b %d %Y"}}</span>
                     </div>
                     <h4 class="text-secondary">{{nextEvent.title}}</h4>
                     <p>{{nextEvent.description}}</p>
                 </div>
             </div>
-            <aside class="col-sm-12 col-md-5"></aside>
+            <aside class="col-sm-12 col-md-5">
+            <div class="d-sm-none divider my-3 my-md-5"></div>
+            {% assign events = upcomingEventsArr | shift | concat: pastEventsArr %}
+                <ul class="list-unstyled">
+                    {% for  event in events %}
+                        <li class="media">
+                            <img class="mr-3 align-self-top img-thumbnail" width="96" src="{{event.image}}" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h5 class="m-0">{{event.title}}</h5>
+                                <p class="text-muted">{{event.date | date: "%a, %b %d %Y"}}</p>
+                                <div class="d-flex justify-content-around">
+                                    <p class="m-0 line-clamp line-clamp-1">{{event.description}}</p>
+                                    <div>
+                                        <a href="#" class="text-dark border rounded-circle border-dark btn btn-round"><i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% if forloop.last == false %}
+                        <li>
+                            <div class="divider my-3 my-md-5"></div>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </aside>
         </div>
     </div>
 </section>
