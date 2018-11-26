@@ -51,5 +51,9 @@
     "waysToGive": {
         "hero": "assets/images/our-clubs-hero.jpg",
         "description": "Last year **6,500** youth participated in life-changing programs and fun activities at one of our four clubhouses throughout the Coachella Valley. It costs **$500 per child** to provide program and activities for an entire year. Join our life-changing movement by giving a gift that lasts a lifetime in support of our Clubs!"
+    },
+    "events": {
+        "hero": "assets/images/our-clubs-hero.jpg",
+        "description": "Our club hosts yearly fundraising events and acknowledgment ceremonies that are open to the community. For more information on how to be apart of these events, please visit the event's details below."
     }
 }

@@ -4,9 +4,46 @@ title: Events
 permalink: events.html
 ---
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">{{ page.title }}</h1>
-        <!-- {% include img_srcset.html class="img-blurr" alt="sample" filename="sample.jpg" %} -->
+<section class="hero-cascade">
+    <div
+        style="background: url({{site.data.content.ourClubs.hero}});"
+        class="hero-view bg-image-fill position-relative p-5"
+    ></div>
+    <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
+        <h1 class="text-center section-header">{{ page.title }}</h1>
+        <p class="lead text-justify pt-3 px-3">{{ site.data.content.events.description }}</p>
     </div>
-</div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            {% capture nowUnix %} {{site.time | date: '%s' }}{% endcapture %} 
+            {% assign upcomingEventsArr = "" | split: ',' %} 
+            {% assign pastEventsArr = "" | split: ',' %} 
+            {% for event in site.events %} 
+                {% comment %} {% assign eventDate = event.date | date:'%s' %}  {% endcomment %}
+                {% capture eventDate %} {{event.date | date: '%s' }}{% endcapture %} 
+                {% if nowUnix < eventDate %} 
+                    {% assign upcomingEventsArr = upcomingEventsArr | push: event %} 
+                {% else %} 
+                    {% assign pastEventsArr = pastEventsArr | push: event %} 
+                {% endif %} 
+            {% endfor %} 
+            {% assign nextEvent = upcomingEventsArr | first %}
+            <div class="col-sm-12 col-md-7">
+                <div>
+                    <div class="shadow d-flex justify-content-center mb-3">
+                        <img class="img-fluid rounded" src="{{nextEvent.image}}" />
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="text-danger">Upcoming</span>
+                        <span class="text-muted">{{nextEvent.date | date: "%a %d"}}</span>
+                    </div>
+                    <h4 class="text-secondary">{{nextEvent.title}}</h4>
+                    <p>{{nextEvent.description}}</p>
+                </div>
+            </div>
+            <aside class="col-sm-12 col-md-5"></aside>
+        </div>
+    </div>
+</section>

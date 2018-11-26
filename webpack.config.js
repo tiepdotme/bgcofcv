@@ -56,7 +56,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(["root/jekyll/*.js", "root/jekyll/*.css", "root/jekyll/*.map",  "root/jekyll/assets/images/*"], {}),
+        new CleanWebpackPlugin(
+            ["root/jekyll/*.js", "root/jekyll/*.css", "root/jekyll/*.map", "root/jekyll/assets/images/*"],
+            {}
+        ),
         new MiniCssExtractPlugin({
             filename: "site.[contentHash].min.css"
         }),
@@ -82,6 +85,11 @@ module.exports = {
             inject: true,
             template: "./templates/programs-layout.tmpl.html",
             filename: path.resolve(__dirname, "root/jekyll/_layouts/programs-layout.html")
+        }),
+        new HtmlWebpackPlugin({
+            inject: true,
+            template: "./templates/events-layout.tmpl.html",
+            filename: path.resolve(__dirname, "root/jekyll/_layouts/events-layout.html")
         }),
         new HtmlWebpackPlugin({
             inject: false,
