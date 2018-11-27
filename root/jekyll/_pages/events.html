@@ -32,7 +32,7 @@ permalink: events.html
             {% assign nextEvent = upcomingEventsArr | first %}
             <div class="col-sm-12 col-md-7">
                 <div>
-                    <div class="shadow d-flex justify-content-center mb-3">
+                    <div class="shadow rounded d-flex justify-content-center mb-3">
                         <img class="img-fluid rounded" src="{{nextEvent.image}}" />
                     </div>
                     <div class="d-flex justify-content-between">
@@ -40,7 +40,12 @@ permalink: events.html
                         <span class="text-muted">{{nextEvent.date | date: "%a, %b %d %Y"}}</span>
                     </div>
                     <h4 class="text-secondary">{{nextEvent.title}}</h4>
-                    <p>{{nextEvent.description}}</p>
+                    <div class="d-flex align-content-between">
+                        <p>{{nextEvent.description}}</p>
+                        <div class="px-1">
+                            <a href="{{nextEvent.url}}" class="text-dark border rounded-circle border-dark btn btn-round"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <aside class="col-sm-12 col-md-5">
@@ -56,7 +61,7 @@ permalink: events.html
                                 <div class="d-flex justify-content-around">
                                     <p class="m-0 line-clamp line-clamp-1">{{event.description}}</p>
                                     <div>
-                                        <a href="#" class="text-dark border rounded-circle border-dark btn btn-round"><i class="fas fa-arrow-right"></i></a>
+                                        <a href="{{event.url}}" class="text-dark border rounded-circle border-dark btn btn-round"><i class="fas fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>

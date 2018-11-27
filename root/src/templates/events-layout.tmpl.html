@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-US">
+    <head>
+        {% include collection-head.html %}
+    </head>
 
-<head>
-    {% include collection-head.html %}
-</head>
-
-<body>
-    {% include navbar.html %}
-    <main>
-        <section class="hero-cascade pb-5">
-            <div style="background: url({{page.image | absolute_url}});" class="hero-view bg-image-fill position-relative p-5">
-            </div>
-            <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
-                <h1 class="text-center section-header">{{page.title}}</h1>
-                <p class="lead text-justify pt-3 px-3">{{content | smartify | markdownify | replace: "<p>" |
-                        replace: "</p>"}}</p>
-            </div>
-        </section>
-        <section class="py-5">
-            <div class="container">
-                <div class="row">
-                    <h1>Content</h1>
+    <body>
+        {% include navbar.html %}
+        <main>
+            <section class="hero-cascade pb-5">
+                <div
+                    style="background: url({{page.image | absolute_url}});"
+                    class="hero-view bg-image-fill position-relative p-5"
+                ></div>
+                <div
+                    class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3"
+                >
+                    <h1 class="text-center section-header">{{ page.title }}</h1>
+                    <p class="lead text-justify pt-3 px-3">{{page.description | smartify | markdownify | replace: "<p>" |
+                            replace: "</p>"}}</p>
                 </div>
-            </div>
-        </section>
-    </main>
-    {% include footer.html %}
-    {% include scripts.html %}
-</body>
-
+            </section>
+            <section class="py-5">
+                <div class="container">
+                    <div class="row">{{ content }}</div>
+                </div>
+            </section>
+        </main>
+        {% include footer.html %} {% include scripts.html %}
+    </body>
 </html>
