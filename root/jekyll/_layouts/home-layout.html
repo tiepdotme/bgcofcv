@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
+    <head>
+        {% include home-head.html %}
+    <link href="../site.e3a60448016f3bdae6f9.min.css" rel="stylesheet"></head>
 
-<head>
-    {% include head.html %}
-<link href="../site.e3a60448016f3bdae6f9.min.css" rel="stylesheet"></head>
-
-<body>
-    {% include navbar.html %}
-    <main>
-        {{content}}
-    </main>
-    {% include footer.html %}
-    {% include scripts.html %}
-<script type="text/javascript" src="../site.eef2a813ef87b073c59d.js"></script></body>
-
+    <body>
+        {% include navbar.html %}
+        <main>{{ content }}</main>
+        {% include footer.html %} {% include scripts.html %}
+    <script type="text/javascript" src="../site.eef2a813ef87b073c59d.js"></script></body>
 </html>
