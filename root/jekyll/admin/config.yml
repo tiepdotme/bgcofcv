@@ -1,12 +1,17 @@
 backend:
+    name: git-gateway
     branch: master
-    name: github
     repo: Brightside-Technologies/bgcofcv
+accepted_roles:
+    - Administrator
+    - Editor
 display_url: "https://bgcofcv.netlify.com/"
 media_folder: root/src/assets/images
 public_folder: assets/images
 collections:
-    - delete: false
+    - name: metadata
+      label: "Site Metadata"
+      delete: false
       description: "Site metadata and global settings"
       extension: json
       files:
@@ -62,5 +67,3 @@ collections:
                   label: "Site Keywords (for SEO)"
                   name: keywords
                   widget: list
-      label: "Site Metadata"
-      name: metadata
