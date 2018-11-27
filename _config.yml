@@ -9,6 +9,7 @@ include:
 plugins:
     - jemoji
     - jekyll-sitemap
+future: true
 collections:
     our-clubs:
         output: true

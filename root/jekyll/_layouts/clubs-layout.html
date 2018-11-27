@@ -19,11 +19,14 @@
                         replace: "</p>"}}</p>
                 <div class="list-group">
                     <div class="list-group-item border-0 bg-light d-flex">
-                            {% assign nameArray = page.unitDirector | split: " " %} {% assign firstLetter = nameArray | first |
-                                slice: 0 %} {% assign secondLetter = nameArray | last | slice: 0 %} {% assign initials =
-                                firstLetter | append: secondLetter %}
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                            {{ initials }}
+                        {% assign nameArray = page.unitDirector | split: " " %} 
+                        {% assign firstLetter = nameArray | first | slice: 0 %} 
+                        {% assign secondLetter = nameArray | last | slice: 0 %} 
+                        {% assign initials = firstLetter | append: secondLetter %}
+                        <div>
+                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                {{ initials }}
+                            </div>
                         </div>
                         <div class="pl-3 flex-fill">
                             <h5 class="m-0">{{ page.unitDirector }}</h5>
@@ -31,36 +34,44 @@
                         </div>
                     </div>
                     <div class="list-group-item border-0 bg-light d-flex">
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
+                        </div>
                         <div class="pl-3 flex-fill">
                             <h5 class="m-0">{{page.address}} {{page.city}}, {{page.zip}}</h5>
                             <small class="text-muted">Address</small>
                         </div>
                     </div>
                     <div class="list-group-item border-0 bg-light d-flex">
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
                                 <i class="fas fa-phone"></i>
                             </div>
+                        </div>
                         <div class="pl-3 flex-fill">
                             <h5 class="m-0"><a href="tel:{{page.phone | replace: '(' | replace: ')' | prepend: '1-' }}">{{page.phone}}</a></h5>
                             <small class="text-muted">Phone</small>
                         </div>
                     </div>
                     <div class="list-group-item border-0 bg-light d-flex">
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
                                 <i class="fas fa-fax"></i>
                             </div>
+                        </div>
                         <div class="pl-3 flex-fill">
                             <h5 class="m-0">{{page.fax}}</h5>
                             <small class="text-muted">Fax</small>
                         </div>
                     </div>
                     <div class="list-group-item border-0 bg-light d-flex">
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
                                 <i class="fas fa-envelope"></i>
                             </div>
+                        </div>
                         <div class="pl-3 flex-fill">
                             <h5 class="m-0"><a href="mailto:{{page.email}}">{{page.email}}</a></h5>
                             <small class="text-muted">Email</small>
