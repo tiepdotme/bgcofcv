@@ -15,11 +15,11 @@ collections:
       description: "Site metadata and global settings"
       extension: json
       files:
-          - editor: ~
+          - editor:
+                preview: false
             file: root/jekyll/_data/metadata.json
             label: "Site Metadata"
             name: metadata
-            preview: false
             fields:
                 - label: "Site Title"
                   name: title
@@ -67,3 +67,35 @@ collections:
                   label: "Site Keywords (for SEO)"
                   name: keywords
                   widget: list
+
+    - name: events
+      label: Events
+      folder: root/jekyll/_events
+      create: true
+      delete: true
+      slug: "{{slug}}"
+      fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "events-layout" }
+          - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Image", name: "image", widget: "image", required: false, tagname: "" }
+          - { label: "Publish Date", name: "date", widget: "datetime", required: true }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+                - { label: "Name", name: "name", widget: "text" }
+                - { label: "Title", name: "title", widget: "text" }
+                - { label: "Email", name: "email", widget: "text" }
+                - label: Phone
+                  name: phone
+                  widget: object
+                  fields:
+                      - { label: Number, name: number, widget: "text" }
+                      - { label: Extension, name: extension, widget: "text" }
+                - label: Event Time
+                  name: time
+                  widget: object
+                  fields:
+                      - { label: Start Time, name: startTime, widget: datetime, timeFormat: "hh:mm a" }
+                      - { label: End Time, name: endTime, widget: datetime, timeFormat: "hh:mm a", default: null }
