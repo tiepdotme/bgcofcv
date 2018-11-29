@@ -1,0 +1,332 @@
+{
+    "staff": [
+        {
+            "name": "Quinton Egson",
+            "title": "Chief Executive Officer",
+            "email": "qegson@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Tony Williams",
+            "title": "Director of Operations",
+            "email": "twilliams@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Carolina Vasquez",
+            "title": "Director of Development",
+            "email": "cvasquez@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Bridget Kerr",
+            "title": "Director of Special Events",
+            "email": "bkerr@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Jody Brazil",
+            "title": "Director of Finance",
+            "email": "jbrazil@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Cynthia Grier",
+            "title": "Administrative Assistant",
+            "email": "cgrier@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        }
+    ],
+    "board": [
+        {
+            "name": "John Powell, Jr.",
+            "title": "President"
+        },
+        {
+            "name": "Sandra M. Davis",
+            "title": "Vice President"
+        },
+        {
+            "name": "Judy Vossler",
+            "title": "Secretary"
+        },
+        {
+            "name": "David A. Peat",
+            "title": "Treasurer"
+        },
+        {
+            "name": "Douglas P. Miller",
+            "title": "Immediate Past President"
+        },
+        {
+            "name": "Carolyn Anderson",
+            "title": ""
+        },
+        {
+            "name": "Joe Benitez",
+            "title": ""
+        },
+        {
+            "name": "Robert Bianco",
+            "title": ""
+        },
+        {
+            "name": "Peter Bochnewich",
+            "title": ""
+        },
+        {
+            "name": "Bill Bryan",
+            "title": ""
+        },
+        {
+            "name": "David Cantwell",
+            "title": ""
+        },
+        {
+            "name": "Anthony Caridi",
+            "title": ""
+        },
+        {
+            "name": "Mike Carl",
+            "title": ""
+        },
+        {
+            "name": "Dana Crosby",
+            "title": ""
+        },
+        {
+            "name": "Rondi Edwards",
+            "title": ""
+        },
+        {
+            "name": "Jose Fernandez",
+            "title": ""
+        },
+        {
+            "name": "Jon FitzHenry",
+            "title": ""
+        },
+        {
+            "name": "Randy Florence",
+            "title": ""
+        },
+        {
+            "name": "Cynthia Flores",
+            "title": ""
+        },
+        {
+            "name": "John Foster",
+            "title": ""
+        },
+        {
+            "name": "Ward Fredericks",
+            "title": ""
+        },
+        {
+            "name": "Esther Gelineau",
+            "title": ""
+        },
+        {
+            "name": "Rosa Maria Gonzales",
+            "title": ""
+        },
+        {
+            "name": "Wally Grimm",
+            "title": ""
+        },
+        {
+            "name": "Brian Harnik",
+            "title": ""
+        },
+        {
+            "name": "James Jackson",
+            "title": ""
+        },
+        {
+            "name": "Reid Jenkins",
+            "title": ""
+        },
+        {
+            "name": "George Kirkjan",
+            "title": ""
+        },
+        {
+            "name": "Clara Levrault",
+            "title": ""
+        },
+        {
+            "name": "Oscar Lua",
+            "title": ""
+        },
+        {
+            "name": "Darrell Mike",
+            "title": ""
+        },
+        {
+            "name": "Glenn Miller",
+            "title": ""
+        },
+        {
+            "name": "Mark Nickerson",
+            "title": ""
+        },
+        {
+            "name": "Lee Osborne",
+            "title": ""
+        },
+        {
+            "name": "Donald Pelegrino",
+            "title": ""
+        },
+        {
+            "name": "Greg Raumin",
+            "title": ""
+        },
+        {
+            "name": "Tony Reagins",
+            "title": ""
+        },
+        {
+            "name": "Dominique Shwe",
+            "title": ""
+        },
+        {
+            "name": "Mark Simon",
+            "title": ""
+        },
+        {
+            "name": "Sue Steding",
+            "title": ""
+        },
+        {
+            "name": "Michael Stutz",
+            "title": ""
+        },
+        {
+            "name": "Sandy Taylor",
+            "title": ""
+        },
+        {
+            "name": "Brian Tobey",
+            "title": ""
+        },
+        {
+            "name": "Mike Way",
+            "title": ""
+        },
+        {
+            "name": "Robert Wisely",
+            "title": ""
+        }
+    ],
+    "emeritus": [
+        {
+            "name": "Joan Foster",
+            "title": ""
+        },
+        {
+            "name": "Karen Renberg",
+            "title": ""
+        },
+        {
+            "name": "Donna Walter",
+            "title": ""
+        },
+        {
+            "name": "Ellen Way",
+            "title": ""
+        }
+    ],
+    "friends": [
+        {
+            "name": "Esther Gelineau",
+            "title": "President"
+        },
+        {
+            "name": "Gee Gee Hanson",
+            "title": "Immediate Past President"
+        },
+        {
+            "name": "Margo Ritter",
+            "title": "First Vice President, Spring Event"
+        },
+        {
+            "name": "Kelly Flanagan",
+            "title": "Second Vice President, Fall Event"
+        },
+        {
+            "name": "Joan Lizza",
+            "title": "Secretary"
+        },
+        {
+            "name": "Gail Gallaudet",
+            "title": "Treasurer"
+        },
+        {
+            "name": "Sandy Taylor",
+            "title": "Grand Auction Chair"
+        },
+        {
+            "name": "Maureen Liebman",
+            "title": ""
+        },
+        {
+            "name": "Denise Maddux",
+            "title": ""
+        },
+        {
+            "name": "Donna Logan",
+            "title": ""
+        },
+        {
+            "name": "Harriet Hanson",
+            "title": ""
+        },
+        {
+            "name": "Janet Obradovich",
+            "title": ""
+        },
+        {
+            "name": "Joan Mandala",
+            "title": ""
+        },
+        {
+            "name": "Kate Graham",
+            "title": ""
+        },
+        {
+            "name": "Linda Aliberti",
+            "title": ""
+        },
+        {
+            "name": "Rondi Edwards",
+            "title": ""
+        },
+        {
+            "name": "Shirley Chuchian",
+            "title": ""
+        },
+        {
+            "name": "Tammy Kirkjan  ",
+            "title": ""
+        }
+    ]
+}

@@ -20,7 +20,7 @@ permalink: contact-us.html
             <div class="col-sm-12 col-md-5 bg-light">
                 <h2 class="section-header text-center py-4">Get In Touch</h2>
                 <div class="list-group">
-                    {% for person in site.data.content.contactUs.peopleToContact %}
+                    {% for person in site.data.team.staff %}
                     <div class="list-group-item border-0 bg-light d-flex">
                         {% assign nameArray = person.name | split: " " %} {% assign firstLetter = nameArray | first |
                         slice: 0 %} {% assign secondLetter = nameArray | last | slice: 0 %} {% assign initials =
