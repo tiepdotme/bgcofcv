@@ -51,6 +51,10 @@ collections:
                   name: twitterUrl
                   required: false
                   widget: string
+                - label: "Twitter Username"
+                  name: twitterUsername
+                  required: false
+                  widget: string
                 - label: "Contact Email"
                   name: email
                   required: false

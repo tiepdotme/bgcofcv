@@ -2,7 +2,7 @@
 <html lang="en-US">
     <head>
         {% include collection-head.html %}
-    <link href="../site.e3a60448016f3bdae6f9.min.css" rel="stylesheet"></head>
+    <link href="../site.feb5cee0f2c7fdb18240.min.css" rel="stylesheet"></head>
 
     <body>
         {% include navbar.html %}
@@ -28,6 +28,33 @@
                         >
                     </div>
                     {% endif %}
+                    <div class="pt-5">
+                        <h6 class="text-muted">Share this</h6>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a
+                                href="https://facebook.com/sharer/sharer.php?u={{page.url | absolute_url}}&title={{page.title | url_escape}}"
+                                target="_blank"
+                                rel="nofollow"
+                                title="Share on Facebook"
+                                class="mx-1 rounded-circle btn btn-lg btn-round btn-facebook"
+                                ><i class="fab fa-facebook-f"></i
+                            ></a>
+                            <a
+                                href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{page.url | absolute_url}}&via={{ site.twitterUsername }}&related={{ site.data.metadata.twitterUsername }}"
+                                target="_blank"
+                                rel="nofollow"
+                                title="Share on Twitter"
+                                class="mx-1 rounded-circle btn btn-lg btn-round btn-twitter"
+                                ><i class="fab fa-twitter"></i
+                            ></a>
+                            <a
+                                href="mailto:?subject={{ page.title }}&amp;body=Check out this event {{page.url | absolute_url}}"
+                                title="Share via Email"
+                                class="mx-1 text-white rounded-circle bg-dark btn btn-lg btn-round"
+                                ><i class="fas fa-envelope"></i
+                            ></a>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="py-5">

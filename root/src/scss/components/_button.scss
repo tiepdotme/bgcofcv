@@ -15,3 +15,25 @@
         width: 48px;
     }
 }
+
+.btn-twitter {
+    color: white;
+    background-color: $twitterBlue;
+    &:active,
+    &:focus,
+    &:hover {
+        color: white;
+        background-color: darken($twitterBlue, 10%);
+    }
+}
+
+.btn-facebook {
+    color: white;
+    background-color: $facebookBlue;
+    &:active,
+    &:focus,
+    &:hover {
+        color: white;
+        background-color: darken($facebookBlue, 10%);
+    }
+}
