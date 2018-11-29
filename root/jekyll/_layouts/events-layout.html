@@ -7,23 +7,32 @@
     <body>
         {% include navbar.html %}
         <main>
-        <section class="hero-cascade pb-5">
-            <div style="background: url({{page.image | absolute_url}});" class="hero-view bg-image-fill position-relative p-5"></div>
-            <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3 text-center">
-                <h1 class="text-center section-header mb-3">{{ page.title }}</h1>
-                <h4 class="text-muted">{{ page.date | date: "%a, %b %d %Y" }}</h4>
-                {% if page.callToAction %}
+            <section class="hero-cascade pb-5">
+                <div
+                    style="background: url({{page.image | absolute_url}});"
+                    class="hero-view bg-image-fill position-relative p-5"
+                ></div>
+                <div
+                    class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3 text-center"
+                >
+                    <h1 class="text-center section-header mb-3">{{ page.title }}</h1>
+                    <h4 class="text-muted">{{ page.date | date: "%a, %b %d %Y" }}</h4>
+                    {% if page.callToAction %}
                     <div class="pt-3">
-                        <a class="btn btn-primary btn-lg" href="{{page.callToAction.url}}" target="_blank">{{page.callToAction.text}}</a>
+                        <a
+                            class="btn btn-primary btn-lg"
+                            href="{{page.callToAction.url}}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >{{ page.callToAction.text }}</a
+                        >
                     </div>
-                {% endif %}
-            </div>
-        </section>
-        <section class="py-5">
-            <div class="container">
-                {{ content }}
-            </div>
-        </section>
+                    {% endif %}
+                </div>
+            </section>
+            <section class="py-5">
+                <div class="container">{{ content }}</div>
+            </section>
         </main>
         {% include footer.html %} {% include scripts.html %}
     <script type="text/javascript" src="../site.eef2a813ef87b073c59d.js"></script></body>
