@@ -57,7 +57,7 @@ location: Indian Wells Golf Resort
                         </div>
                     </div>
                     <div class="pl-3 flex-fill">
-                        <h5 class="m-0">{{page.time}}</h5>
+                        <h5 class="m-0">{{page.time.startTime}} {% if page.time.endTime %} &ndash; {{page.time.endTime}} {% endif %}</h5>
                         <small class="text-muted">Time</small>
                     </div>
                 </div>
