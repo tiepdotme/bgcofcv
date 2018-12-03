@@ -6,6 +6,7 @@ accepted_roles:
     - Administrator
     - Editor
 display_url: "https://bgcofcv.netlify.com/"
+logo_url: https://bgcofcv.netlify.com/assets/images/hero-logo.png
 media_folder: root/src/assets/images
 public_folder: assets/images
 collections:
@@ -75,31 +76,68 @@ collections:
     - name: events
       label: Events
       folder: root/jekyll/_events
+      extension: html
       create: true
       delete: true
+      description: Add, edit, and delete Events
       slug: "{{slug}}"
       fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "events-layout" }
           - { label: "Title", name: "title", widget: "string", tagname: "h1" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Image", name: "image", widget: "image", required: false, tagname: "" }
-          - { label: "Publish Date", name: "date", widget: "datetime", required: true }
+          - { label: "Date", name: "date", widget: "datetime", required: true, timeFormat: false }
           - label: Contact
             name: contact
             widget: object
             fields:
-                - { label: "Name", name: "name", widget: "text" }
-                - { label: "Title", name: "title", widget: "text" }
-                - { label: "Email", name: "email", widget: "text" }
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Email", name: "email", widget: "string" }
                 - label: Phone
                   name: phone
                   widget: object
                   fields:
-                      - { label: Number, name: number, widget: "text" }
-                      - { label: Extension, name: extension, widget: "text" }
+                      - { label: Number, name: number, widget: "string" }
+                      - { label: Extension, name: extension, widget: "string" }
                 - label: Event Time
                   name: time
                   widget: object
                   fields:
-                      - { label: Start Time, name: startTime, widget: datetime, timeFormat: "hh:mm a" }
-                      - { label: End Time, name: endTime, widget: datetime, timeFormat: "hh:mm a", default: null }
+                      - {
+                            label: Start Time,
+                            name: startTime,
+                            widget: datetime,
+                            dateFormat: false,
+                            timeFormat: "hh:mm a",
+                            format: "hh:mm a",
+                        }
+                      - {
+                            label: End Time,
+                            name: endTime,
+                            widget: datetime,
+                            dateFormat: false,
+                            timeFormat: "hh:mm a",
+                            default: null,
+                            format: "hh:mm a",
+                        }
+
+    - name: partners
+      label: Partners
+      delete: false
+      description: Manage organization partners/donors
+      extension: json
+      files:
+          - editor:
+                preview: false
+            file: root/jekyll/_data/partners.json
+            label: Partners
+            name: partners
+            fields:
+                - name: partners
+                  label: Partners
+                  widget: list
+                  fields:
+                      - { label: Partner Name, name: name, widget: string }
+                      - { label: Logo, name: logo, widget: image }
+                      - { label: Back-link url, name: url, widget: string }
