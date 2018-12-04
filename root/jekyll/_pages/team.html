@@ -18,7 +18,7 @@ permalink: team.html
     <div class="container">
         <h2 class="text-center section-header">Administrative Staff</h2>
         <div class="row">
-            {% for staff in site.data.team.staff %}
+            {% for staff in site.data.staff.staff %}
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="card bg-light my-1">
                     <div class="card-body">
@@ -49,7 +49,7 @@ permalink: team.html
     <div class="container">
         <h2 class="text-center section-header">Board of Directors</h2>
         <div class="row">
-            {% for board in site.data.team.board %}
+            {% for board in site.data.board-members.board-members %}
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="d-flex flex-column my-3">
                     <p class="lead m-0">{{ board.name }}</p>
@@ -64,7 +64,7 @@ permalink: team.html
     <div class="container">
         <h2 class="text-center section-header">Friends Board</h2>
         <div class="row">
-            {% for friend in site.data.team.friends %}
+            {% for friend in site.data.friends-of-board.friends %}
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="d-flex flex-column my-3">
                     <p class="lead m-0">{{ friend.name }}</p>
@@ -79,7 +79,7 @@ permalink: team.html
     <div class="container">
         <h2 class="text-center section-header">Emeritus</h2>
         <div class="row">
-            {% for emeritus in site.data.team.emeritus %}
+            {% for emeritus in site.data.emeritus-members.emeritus %}
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="d-flex flex-column my-3">
                     <p class="lead m-0">{{ emeritus.name }}</p>
