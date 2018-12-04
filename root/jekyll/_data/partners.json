@@ -1,9 +1,374 @@
 {
-  "partners": [
-    {
-      "name": "Diego",
-      "logo": "/assets/images/brain-gain.jpg",
-      "url": "https://godiego.me"
-    }
-  ]
+    "partners": [
+        {
+            "name": "Anderson Children's Foundation",
+            "logo": "assets/images/partners/anderson-childrens-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "The Aguirre Wilson Group",
+            "logo": "assets/images/partners/aguirre-wilson-group.png",
+            "url": ""
+        },
+        {
+            "name": "American Agcredit",
+            "logo": "assets/images/partners/american-agcredit.png",
+            "url": ""
+        },
+        {
+            "name": "Anthony Vineyards",
+            "logo": "assets/images/partners/anthony-vineyards.png",
+            "url": ""
+        },
+        {
+            "name": "Audrey Demirjian Insurance Services, Inc",
+            "logo": "assets/images/partners/audrey-demirjian-insurance-services.png",
+            "url": ""
+        },
+        {
+            "name": "Bank of America",
+            "logo": "assets/images/partners/bank-of-america.png",
+            "url": ""
+        },
+        {
+            "name": "Ashlock Company",
+            "logo": "assets/images/partners/ashlock-company.png",
+            "url": ""
+        },
+        {
+            "name": "Bank of the West",
+            "logo": "assets/images/partners/bank-of-the-west.png",
+            "url": ""
+        },
+        {
+            "name": "Berger Foundation",
+            "logo": "assets/images/partners/berger-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "Bochnewich Law Offices",
+            "logo": "assets/images/partners/bochnewich-law-offices.png",
+            "url": ""
+        },
+        {
+            "name": "Bolthouse Farms",
+            "logo": "assets/images/partners/bolthouse-farms.png",
+            "url": ""
+        },
+        {
+            "name": "The Champions Volunteer Foundation",
+            "logo": "assets/images/partners/champions-volunteer-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "Bighorn Golf Club Charities",
+            "logo": "assets/images/partners/bighorn-golf-club-charities.png",
+            "url": ""
+        },
+        {
+            "name": "Honda of the Desert, Toyota of the Desert, La Quinta Chevrolet",
+            "logo": "assets/images/partners/honda-toyota-chevrolet.png",
+            "url": ""
+        },
+        {
+            "name": "City of Indian Wells",
+            "logo": "assets/images/partners/city-of-indian-wells.png",
+            "url": ""
+        },
+        {
+            "name": "Coachella Valley Spotlight",
+            "logo": "assets/images/partners/coachella-valley-spotlight.png",
+            "url": ""
+        },
+        {
+            "name": "Bridgestone",
+            "logo": "assets/images/partners/bridgestone.png",
+            "url": ""
+        },
+        {
+            "name": "The Coeta and Donald Barker Foundation",
+            "logo": "assets/images/partners/coeta-barker-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "City of La Quinta",
+            "logo": "assets/images/partners/city-of-la-quinta.png",
+            "url": ""
+        },
+        {
+            "name": "Costco",
+            "logo": "assets/images/partners/costco.png",
+            "url": ""
+        },
+        {
+            "name": "Desert Classic Charities",
+            "logo": "assets/images/partners/desert-classic-charities.png",
+            "url": ""
+        },
+        {
+            "name": "Desert Pacific Properties",
+            "logo": "assets/images/partners/desert-pacific-properties.png",
+            "url": ""
+        },
+        {
+            "name": "City of Indio",
+            "logo": "assets/images/partners/city-of-indio.png",
+            "url": ""
+        },
+        {
+            "name": "Desert Valley Date",
+            "logo": "assets/images/partners/desert-valley-date.png",
+            "url": ""
+        },
+        {
+            "name": "County of Riverside",
+            "logo": "assets/images/partners/county-of-riverside.png",
+            "url": ""
+        },
+        {
+            "name": "Doling Shaw & Hanover",
+            "logo": "assets/images/partners/doling-shaw-hanover.png",
+            "url": ""
+        },
+        {
+            "name": "DiMare",
+            "logo": "assets/images/partners/dimare.png",
+            "url": ""
+        },
+        {
+            "name": "Dick's Sporting Goods",
+            "logo": "assets/images/partners/dicks-sporting-goods.png",
+            "url": ""
+        },
+        {
+            "name": "Flanagan Wealth Management Group",
+            "logo": "assets/images/partners/flanagan-wealth-management-group.png",
+            "url": ""
+        },
+        {
+            "name": "First Foundation",
+            "logo": "assets/images/partners/first-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "Federated Insurance",
+            "logo": "assets/images/partners/federated-insurance.png",
+            "url": ""
+        },
+        {
+            "name": "Ford",
+            "logo": "assets/images/partners/ford.png",
+            "url": ""
+        },
+        {
+            "name": "Foster Gardner, Inc",
+            "logo": "assets/images/partners/foster-gardner.png",
+            "url": ""
+        },
+        {
+            "name": "International Paper",
+            "logo": "assets/images/partners/international-paper.png",
+            "url": ""
+        },
+        {
+            "name": "Fulton Distibution",
+            "logo": "assets/images/partners/fulton-distribution.png",
+            "url": ""
+        },
+        {
+            "name": "J&J Ranch Produce Incorporated",
+            "logo": "assets/images/partners/jj-ranch-produce.png",
+            "url": ""
+        },
+        {
+            "name": "Kaiser Permanente",
+            "logo": "assets/images/partners/kaiser-permanente.png",
+            "url": ""
+        },
+        {
+            "name": "Lewis Brisbois Bisgaard & Smith",
+            "logo": "assets/images/partners/lewis-brisbois-bisgaard.png",
+            "url": ""
+        },
+        {
+            "name": "JFK Memorial Hospital",
+            "logo": "assets/images/partners/jfk-hospital.png",
+            "url": ""
+        },
+        {
+            "name": "Mathis Brothers",
+            "logo": "assets/images/partners/mathis-brothers.png",
+            "url": ""
+        },
+        {
+            "name": "Mastro's Steakhouse",
+            "logo": "assets/images/partners/mastros-steakhouse.png",
+            "url": ""
+        },
+        {
+            "name": "Mojave Gold",
+            "logo": "assets/images/partners/mojave-gold.png",
+            "url": ""
+        },
+        {
+            "name": "Maxco",
+            "logo": "assets/images/partners/maxco.png",
+            "url": ""
+        },
+        {
+            "name": "Pacific Western Bank",
+            "logo": "assets/images/partners/pacific-western-bank.png",
+            "url": ""
+        },
+        {
+            "name": "US Bank",
+            "logo": "assets/images/partners/us-bank.png",
+            "url": ""
+        },
+        {
+            "name": "Osborne Rincon Certified Public Accountants",
+            "logo": "assets/images/partners/osborne-rincon.png",
+            "url": ""
+        },
+        {
+            "name": "Rabobank",
+            "logo": "assets/images/partners/rabobank.png",
+            "url": ""
+        },
+        {
+            "name": "Peter Rabbit Farms",
+            "logo": "assets/images/partners/peter-rabbit-farms.png",
+            "url": ""
+        },
+        {
+            "name": "RDO Equipment Co.",
+            "logo": "assets/images/partners/rdo.png",
+            "url": ""
+        },
+        {
+            "name": "Richard Brooke Foundation",
+            "logo": "assets/images/partners/richard-brooke-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "Prime Time",
+            "logo": "assets/images/partners/prime-time.png",
+            "url": ""
+        },
+        {
+            "name": "Perricone Farms",
+            "logo": "assets/images/partners/perricone-farms.png",
+            "url": ""
+        },
+        {
+            "name": "Taco Bell",
+            "logo": "assets/images/partners/taco-bell.png",
+            "url": ""
+        },
+        {
+            "name": "Shields Date Garden",
+            "logo": "assets/images/partners/shields-date-garden.png",
+            "url": ""
+        },
+        {
+            "name": "Stater Bros",
+            "logo": "assets/images/partners/stater-bros.png",
+            "url": ""
+        },
+        {
+            "name": "Richard Bagdasarian Inc",
+            "logo": "assets/images/partners/richard-bagdasarian.png",
+            "url": ""
+        },
+        {
+            "name": "The Community Foundation",
+            "logo": "assets/images/partners/community-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "Trilogy at La Quinta",
+            "logo": "assets/images/partners/trilogy-at-la-quinta.png",
+            "url": ""
+        },
+        {
+            "name": "Shalhoub Family McDonald's",
+            "logo": "assets/images/partners/shalhoub-family-mcdonalds.png",
+            "url": ""
+        },
+        {
+            "name": "Tolhurst Dentist",
+            "logo": "assets/images/partners/tolhurst-dentists.png",
+            "url": ""
+        },
+        {
+            "name": "Northrop Grumman Foundation",
+            "logo": "assets/images/partners/northrop-grumman-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "Toyota",
+            "logo": "assets/images/partners/toyota.png",
+            "url": ""
+        },
+        {
+            "name": "Triple X Fraternity",
+            "logo": "assets/images/partners/triple-x-fraternity.png",
+            "url": ""
+        },
+        {
+            "name": "Twenty Nine Palms Band of Mission Indians",
+            "logo": "assets/images/partners/twenty-nine-palms-band-of-mission-indians.png",
+            "url": ""
+        },
+        {
+            "name": "United Way",
+            "logo": "assets/images/partners/united-way.png",
+            "url": ""
+        },
+        {
+            "name": "Valley Plumbing",
+            "logo": "assets/images/partners/valley-plumbing.png",
+            "url": ""
+        },
+        {
+            "name": "Walmart Foundation",
+            "logo": "assets/images/partners/walmart-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "Walmart Community Playmakers",
+            "logo": "assets/images/partners/walmart-community-playmakers.png",
+            "url": ""
+        },
+        {
+            "name": "Weingart Foundation",
+            "logo": "assets/images/partners/weingart-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "Webb Family Foundation",
+            "logo": "assets/images/partners/webb-family-foundation.png",
+            "url": ""
+        },
+        {
+            "name": "Weingarten and Hough",
+            "logo": "assets/images/partners/weingarten-hough.png",
+            "url": ""
+        },
+        {
+            "name": "Wells Fargo",
+            "logo": "assets/images/partners/wells-fargo.png",
+            "url": ""
+        },
+        {
+            "name": "West Coast Turf",
+            "logo": "assets/images/partners/west-coast-turf.png",
+            "url": ""
+        },
+        {
+            "name": "Western Growers",
+            "logo": "assets/images/partners/western-growers.png",
+            "url": ""
+        }
+    ]
 }

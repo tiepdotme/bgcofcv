@@ -1,0 +1,58 @@
+{
+    "staff": [
+        {
+            "name": "Quinton Egson",
+            "title": "Chief Executive Officer",
+            "email": "qegson@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Tony Williams",
+            "title": "Director of Operations",
+            "email": "twilliams@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Carolina Vasquez",
+            "title": "Director of Development",
+            "email": "cvasquez@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Bridget Kerr",
+            "title": "Director of Special Events",
+            "email": "bkerr@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Jody Brazil",
+            "title": "Director of Finance",
+            "email": "jbrazil@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Cynthia Grier",
+            "title": "Administrative Assistant",
+            "email": "cgrier@bgcofcv.org",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        }
+    ]
+}

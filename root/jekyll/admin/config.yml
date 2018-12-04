@@ -124,15 +124,13 @@ collections:
 
     - name: partners
       label: Partners
-      delete: false
+      delete: true
       description: Manage organization partners/donors
       extension: json
       files:
-          - editor:
-                preview: false
-            file: root/jekyll/_data/partners.json
-            label: Partners
+          - label: Partners
             name: partners
+            file: root/jekyll/_data/partners.json
             fields:
                 - name: partners
                   label: Partners
@@ -141,3 +139,37 @@ collections:
                       - { label: Partner Name, name: name, widget: string }
                       - { label: Logo, name: logo, widget: image }
                       - { label: Back-link url, name: url, widget: string }
+
+    - name: team
+      label: Team
+      delete: true
+      description: Manage staff and board members
+      extension: json
+      files:
+          - label: Adminastrative Staff
+            name: staff
+            file: root/jekyll/_data/staff.json
+            fields:
+                - name: staff
+                  label: Staff
+                  widget: list
+                  fields:
+                      - { label: Name, name: name, widget: string }
+                      - { label: Title, name: title, widget: string }
+                      - { label: Email, name: email, widget: string }
+                      - label: Phone
+                        name: phone
+                        widget: object
+                        fields:
+                            - { label: Number, name: number, widget: string }
+                            - { label: Extension, name: extension, widget: string }
+          - label: Board Members
+            name: board
+            file: root/jekyll/_data/board-members.json
+            fields:
+                - name: board
+                  label: Board Members
+                  widget: list
+                  fields:
+                      - { label: Name, name: name, widget: string }
+                      - { label: Title, name: title, widget: string }
