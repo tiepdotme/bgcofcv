@@ -1,9 +1,5 @@
 {
-  "partners": [
-    {
-      "name": "Diego",
-      "logo": "/assets/images/brain-gain.jpg",
-      "url": "https://godiego.me"
-    }
-  ]
+  "name": "Test",
+  "logo": "/assets/images/career-launch.png",
+  "url": "Test"
 }
