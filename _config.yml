@@ -17,3 +17,5 @@ collections:
         output: true
     events:
         output: true
+    campaigns:
+        output: false

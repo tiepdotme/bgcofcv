@@ -73,6 +73,20 @@ collections:
                   name: keywords
                   widget: list
 
+    - name: campaigns
+      label: Campaigns
+      folder: root/jekyll/_campaigns
+      create: true
+      delete: true
+      description: Add, edit, and delete Campaigns
+      slug: "{{slug}}"
+      fields:
+          - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: Link, name: url, widget: string }
+          - { label: Active, name: isActive, widget: "boolean", default: true }
+
     - name: events
       label: Events
       folder: root/jekyll/_events
