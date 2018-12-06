@@ -82,7 +82,7 @@ collections:
       slug: "{{slug}}"
       fields:
           - { label: "Title", name: "title", widget: "string", tagname: "h1" }
-          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Description", name: "description", widget: "text", required: false }
           - { label: "Image", name: "image", widget: "image", required: false }
           - { label: Link, name: url, widget: string }
           - { label: Active, name: isActive, widget: "boolean", default: true }
