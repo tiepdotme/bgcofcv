@@ -1,17 +1,19 @@
 ---
 layout: site-layout
 title: Team
+hero: assets/images/our-clubs-hero.jpg
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 permalink: team.html
 ---
 
 <section class="hero-cascade">
     <div
-        style="background: url({{site.data.content.team.hero}});"
+        style="background: url({{page.hero | absolute_url}});"
         class="hero-view bg-image-fill position-relative p-5"
     ></div>
     <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
         <h1 class="text-center section-header">{{ page.title }}</h1>
-        <p class="lead text-justify pt-3 px-3">{{ site.data.content.team.description }}</p>
+        <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
     </div>
 </section>
 <section class="section py-5">

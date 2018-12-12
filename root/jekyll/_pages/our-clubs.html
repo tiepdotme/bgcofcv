@@ -1,17 +1,18 @@
 ---
 layout: site-layout
 title: Our Clubs
+hero: assets/images/our-clubs-hero.jpg
+description: Provide safe havens and a welcoming atmosphere for thousands of youth across the Coachella Valley. After school activities build leadership skills, encourage good citizenship, keep students engaged academically, promote physical activity, and champion community involvement. For more information on programs and services please contact your local clubhouse.
 permalink: our-clubs.html
 ---
 
 <section class="hero-cascade">
     <div
-        style="background: url({{site.data.content.ourClubs.hero}});"
-        class="hero-view bg-image-fill position-relative p-5"
-    ></div>
+        style="background: url({{page.hero | absolute_url}});"
+        class="hero-view bg-image-fill position-relative p-5"></div>
     <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
         <h1 class="text-center section-header">{{ page.title }}</h1>
-        <p class="lead text-justify pt-3 px-3">{{ site.data.content.ourClubs.description }}</p>
+        <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
         <div class="d-flex justify-content-center">
             <button type="button" class="btn btn-primary btn-lg mx-auto">BECOME A MEMBER</button>
         </div>

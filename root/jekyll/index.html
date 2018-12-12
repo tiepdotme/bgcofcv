@@ -1,16 +1,22 @@
 ---
 layout: home-layout
 title: Home
+hero: assets/images/hero.jpg
+heroLogo: assets/images/hero-logo.png
+description:
+history: The John Carroll and Jim O’Brien Clubhouse in Indio opened its doors to the community in 1966. Today, that one small clubhouse has grown into an organization comprised of a network of four full-service clubhouses, two boxing/athletic centers, and the Smilow Family Teen Center in Indio.
+mission: Saving and enhancing the lives of young people, especially those with economic and/or social needs, by offering a safe haven and meaningful youth development programs provided by a caring and qualified staff.
+impact: We strive to give our club members and our communities a better and brighter future. We meet kids and teens where they are and help them to take steps forward to reach their potential. By focusing on safety, academic support and character development.
 permalink: index.html
 ---
 <section class="hero-cascade hero-cascade-home">
-    <div style="background: url({{site.data.content.hero}});" class="hero-view bg-image-fill position-relative p-5 d-flex flex-column align-items-center">
-        <img class="hero-logo position-absolute" src={{site.data.content.hero-logo}} width="300">
+    <div style="background: url({{page.hero | absolute_url}});" class="hero-view bg-image-fill position-relative p-5 d-flex flex-column align-items-center">
+        <img class="hero-logo position-absolute" src={{page.heroLogo | absolute_url}} width="300">
         <span class="mask mask-dark mask-gradient-t-b"></span>
     </div>
     <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
         <button type="button" class="btn btn-primary btn-lg mx-auto">DONATE</button>
-        <p class="lead pt-3 px-3">{{site.data.content.mission | smartify | markdownify | replace: "<p>" |
+        <p class="lead pt-3 px-3">{{page.mission | smartify | markdownify | replace: "<p>" |
                 replace: "</p>"}}</p>
     </div>
 </section>
@@ -19,8 +25,8 @@ permalink: index.html
         <div class="row">
             <div class="col-sm-12">
                 <h1 class="text-center section-header">Community Impact</h1>
-                <p class="lead">{{site.data.content.history | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
-                <p class="lead">{{site.data.content.impact | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                <p class="lead">{{page.history | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                <p class="lead">{{page.impact | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
             </div>
             <div class="col-sm-12">
                 <img class="img-fluid w-100 py-2" src="https://via.placeholder.com/1000x300/222222/222222%20C/O%20https://placeholder.com/">

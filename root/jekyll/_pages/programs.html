@@ -1,14 +1,16 @@
 ---
 layout: site-layout
 title: Programs
+hero: assets/images/programs-hero.jpg
+description: When given a safe place to learn and play, kids and teens are able to reach their academic potential and begin taking steps toward a positive and successful future.
 permalink: programs.html
 ---
 <section class="hero-cascade">
-    <div style="background: url({{site.data.content.programs.hero}});" class="hero-view bg-image-fill position-relative p-5">
+    <div style="background: url({{page.hero | absolute_url}});" class="hero-view bg-image-fill position-relative p-5">
     </div>
     <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
         <h1 class="text-center section-header">{{page.title}}</h1>
-        <p class="lead text-justify pt-3 px-3">{{site.data.content.programs.description}}</p>
+        <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
     </div>
 </section>
 <section class="section py-5">

@@ -17,7 +17,7 @@ collections:
       extension: json
       files:
           - file: root/jekyll/_data/metadata.json
-            label: "Site Metadata"
+            label: "Metadata"
             name: metadata
             editor:
                 preview: false
@@ -50,7 +50,7 @@ collections:
                   widget: list
 
           - file: root/jekyll/_data/global.json
-            label: "Site-wide settings"
+            label: "Global"
             name: global
             editor:
                 preview: false
@@ -88,6 +88,101 @@ collections:
                   name: donateUrl
                   required: true
                   widget: string
+                - label: "Registration Form"
+                  name: "refistrationForm"
+                  widget: "file"
+                  media_library:
+                      config:
+                          multiple: false
+
+    - name: pages
+      label: Pages
+      extension: html
+      create: false
+      delete: false
+      description: Edit page metadata
+      files:
+          - file: root/jekyll/index.html
+            label: "Home"
+            name: home
+            editor:
+                preview: false
+            fields:
+                - { label: "Layout", name: "layout", widget: "hidden" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Hero Image", name: "hero", widget: "image", required: false }
+                - { label: "Hero Logo", name: "heroLogo", widget: "image", required: false }
+                - { label: "SEO Description", name: "description", required: false, widget: "markdown" }
+                - { label: "History", name: "history", required: false, widget: "markdown" }
+                - { label: "Mission", name: "mission", required: false, widget: "markdown" }
+                - { label: "Impact", name: "impact", required: false, widget: "markdown" }
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - file: root/jekyll/_pages/our-clubs.html
+            label: "Our Clubs"
+            name: our-clubs
+            editor:
+                preview: false
+            fields:
+                - { label: "Layout", name: "layout", widget: "hidden" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Hero Image", name: "hero", widget: "image", required: false }
+                - { label: "Description", name: "description", required: false, widget: "markdown" }
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - file: root/jekyll/_pages/programs.html
+            label: "Programs"
+            name: programs
+            editor:
+                preview: false
+            fields:
+                - { label: "Layout", name: "layout", widget: "hidden" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Hero Image", name: "hero", widget: "image", required: false }
+                - { label: "Description", name: "description", required: false, widget: "markdown" }
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - file: root/jekyll/_pages/ways-to-give.html
+            label: "Ways to Give"
+            name: ways-to-give
+            editor:
+                preview: false
+            fields:
+                - { label: "Layout", name: "layout", widget: "hidden" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Hero Image", name: "hero", widget: "image", required: false }
+                - { label: "Description", name: "description", required: false, widget: "markdown" }
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - file: root/jekyll/_pages/events.html
+            label: "Events"
+            name: events
+            editor:
+                preview: false
+            fields:
+                - { label: "Layout", name: "layout", widget: "hidden" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Hero Image", name: "hero", widget: "image", required: false }
+                - { label: "Description", name: "description", required: false, widget: "markdown" }
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - file: root/jekyll/_pages/team.html
+            label: "Team"
+            name: team
+            editor:
+                preview: false
+            fields:
+                - { label: "Layout", name: "layout", widget: "hidden" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Hero Image", name: "hero", widget: "image", required: false }
+                - { label: "Description", name: "description", required: false, widget: "markdown" }
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - file: root/jekyll/_pages/contact-us.html
+            label: "Contact Us"
+            name: contact-us
+            editor:
+                preview: false
+            fields:
+                - { label: "Layout", name: "layout", widget: "hidden" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Hero Image", name: "hero", widget: "image", required: false }
+                - { label: "Description", name: "description", required: false, widget: "markdown" }
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
 
     - name: campaigns
       label: Campaigns

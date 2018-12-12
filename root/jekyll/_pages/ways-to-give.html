@@ -1,17 +1,19 @@
 ---
 layout: site-layout
 title: Ways to Give
+hero: assets/images/our-clubs-hero.jpg
+description: Last year **6,500** youth participated in life-changing programs and fun activities at one of our four clubhouses throughout the Coachella Valley. It costs **$500 per child** to provide program and activities for an entire year. Join our life-changing movement by giving a gift that lasts a lifetime in support of our Clubs!
 permalink: ways-to-give.html
 ---
 
 <section class="hero-cascade">
     <div
-        style="background: url({{site.data.content.waysToGive.hero}});"
+        style="background: url({{page.hero | absolute_url}});"
         class="hero-view bg-image-fill position-relative p-5"
     ></div>
     <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
         <h1 class="text-center section-header">{{ page.title }}</h1>
-        <div class="lead text-justify pt-3 px-3">{{ site.data.content.waysToGive.description | markdownify }}</div>
+        <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
     </div>
 </section>
 <section class="py-5">
@@ -19,8 +21,8 @@ permalink: ways-to-give.html
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="card border-0 shadow bg-dark text-white my-1">
-                    <span class="rounded mask mask-dark"></span> {% include img_srcset.html class="card-img rounded"
-                    alt="One Time Donation" style="height: 200px" filename="one-time-donation.jpg"%}
+                    <span class="rounded mask mask-dark"></span> 
+                    {% include img_srcset.html class="card-img rounded" alt="One Time Donation" style="height: 200px" filename="one-time-donation.jpg"%}
                     <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
                         <h5 class="card-title h3">One-Time Donation</h5>
                         <div>
