@@ -10,17 +10,17 @@ logo_url: https://bgcofcv.netlify.com/assets/images/hero-logo.png
 media_folder: root/src/assets/images
 public_folder: assets/images
 collections:
-    - name: metadata
-      label: "Site Metadata"
+    - name: global
+      label: "Global Settings"
       delete: false
-      description: "Site metadata and global settings"
+      description: "Settings that are applied site-wide"
       extension: json
       files:
-          - editor:
-                preview: false
-            file: root/jekyll/_data/metadata.json
+          - file: root/jekyll/_data/metadata.json
             label: "Site Metadata"
             name: metadata
+            editor:
+                preview: false
             fields:
                 - label: "Site Title"
                   name: title
@@ -40,10 +40,38 @@ collections:
                   name: image
                   required: false
                   widget: image
-                - label: "Site Url"
-                  name: url
+                - label: "Google Analytics ID"
+                  name: googleAnalyticsId
                   required: false
                   widget: string
+                - allow_add: true
+                  label: "Site Keywords (for SEO)"
+                  name: keywords
+                  widget: list
+
+          - file: root/jekyll/_data/global.json
+            label: "Site-wide settings"
+            name: global
+            editor:
+                preview: false
+            fields:
+                - label: "Contact Email"
+                  name: email
+                  required: false
+                  widget: string
+                - label: "Contact Phone Number"
+                  name: phone
+                  required: false
+                  widget: string
+                - label: Location
+                  name: location
+                  required: false
+                  widget: object
+                  fields:
+                      - { label: "Addres Line", name: "address", widget: "string" }
+                      - { label: "City", name: "city", widget: "string" }
+                      - { label: "State", name: "state", widget: "string" }
+                      - { label: "Zip Code", name: "zip", widget: "string" }
                 - label: "Facebook Url"
                   name: facebookUrl
                   required: false
@@ -56,22 +84,10 @@ collections:
                   name: twitterUsername
                   required: false
                   widget: string
-                - label: "Contact Email"
-                  name: email
-                  required: false
+                - label: Donate Url
+                  name: donateUrl
+                  required: true
                   widget: string
-                - label: "Contact Phone Number"
-                  name: phone
-                  required: false
-                  widget: string
-                - label: "Google Analytics ID"
-                  name: googleAnalyticsId
-                  required: false
-                  widget: string
-                - allow_add: true
-                  label: "Site Keywords (for SEO)"
-                  name: keywords
-                  widget: list
 
     - name: campaigns
       label: Campaigns
@@ -136,30 +152,10 @@ collections:
                             format: "hh:mm a",
                         }
 
-    - name: partners
-      label: Partners
-      delete: true
-      description: Manage organization partners/donors
-      extension: json
-      files:
-          - label: Partners
-            name: partners
-            file: root/jekyll/_data/partners.json
-            editor:
-                preview: false
-            fields:
-                - name: partners
-                  label: Partners
-                  widget: list
-                  fields:
-                      - { label: Partner Name, name: name, widget: string }
-                      - { label: Logo, name: logo, widget: image }
-                      - { label: Back-link url, name: url, widget: string }
-
     - name: team
       label: Team
       delete: true
-      description: Manage staff and board members
+      description: Manage staff, board members, and partners/donors
       extension: json
       files:
           - label: Adminastrative Staff
@@ -217,3 +213,17 @@ collections:
                   fields:
                       - { label: Name, name: name, widget: string }
                       - { label: Title, name: title, widget: string }
+          - label: Partners
+            name: partners
+            description: Manage organization partners/donors
+            file: root/jekyll/_data/partners.json
+            editor:
+                preview: false
+            fields:
+                - name: partners
+                  label: Partners
+                  widget: list
+                  fields:
+                      - { label: Partner Name, name: name, widget: string }
+                      - { label: Logo, name: logo, widget: image }
+                      - { label: Back-link url, name: url, widget: string }
