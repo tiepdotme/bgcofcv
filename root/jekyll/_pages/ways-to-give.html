@@ -3,11 +3,114 @@ layout: site-layout
 title: Ways to Give
 hero: /assets/images/ways-to-give-hero.jpg
 description: >-
-  Last year **6,500** youth participated in life-changing programs and fun
-  activities at one of our four clubhouses throughout the Coachella Valley. It
-  costs **$500 per child** to provide program and activities for an entire year.
-  Join our life-changing movement by giving a gift that lasts a lifetime in
-  support of our Clubs!
+    Last year **6,500** youth participated in life-changing programs and fun
+    activities at one of our four clubhouses throughout the Coachella Valley. It
+    costs **$500 per child** to provide program and activities for an entire year.
+    Join our life-changing movement by giving a gift that lasts a lifetime in
+    support of our Clubs!
 permalink: ways-to-give.html
 ---
 
+<section class="hero-cascade">
+    <div
+        style="background: url({{page.hero | absolute_url}});"
+        class="hero-view bg-image-fill position-relative p-5"
+    ></div>
+    <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
+        <h1 class="text-center section-header">{{ page.title }}</h1>
+        <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="card border-0 shadow bg-dark text-white my-1">
+                    <span class="rounded mask mask-dark"></span> {% include img_srcset.html class="card-img rounded"
+                    alt="One Time Donation" style="height: 200px" filename="one-time-donation.jpg"%}
+                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                        <!-- <h5 class="card-title h3">Donate Now</h5> -->
+                        <div>
+                            <a
+                                href="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=16"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline-light btn-lg btn-give"
+                            >
+                                Donate Now <i class="fas fa-heart"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="card border-0 shadow bg-dark text-white my-1">
+                    <span class="rounded mask mask-dark"></span> {% include img_srcset.html class="card-img rounded"
+                    alt="Become a Fundraiser" style="height: 200px" filename="fundraiser.jpg" %}
+                    <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+                        <!-- <h5 class="card-title h3">Become a Fundraiser</h5> -->
+                        <div>
+                            <a
+                                href="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=16"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline-light btn-lg btn-give"
+                            >
+                                Become a Fundraiser <i class="fas fa-heart"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row bg-light">
+            <div class="col-sm-12 d-flex flex-column align-items-center justify-content-center">
+                <p class="lead">Make a donation through PayPal</p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="9SP9PWBGH6B22" />
+                    <input
+                        type="image"
+                        src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                        border="0"
+                        name="submit"
+                        alt="PayPal - The safer, easier way to pay online!"
+                    />
+                    <img
+                        alt=""
+                        border="0"
+                        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+                        width="1"
+                        height="1"
+                    />
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"><h2 class="section-header text-center py-4">Partners</h2></div>
+            {% for partner in site.data.partners.partners %}
+            <div
+                class="col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex flex-column py-2 align-items-center justify-content-center"
+            >
+                <a href="{{partner.url}}" target="_blank" rel="noopener noreferrer">
+                    <img
+                        width="140"
+                        class="img-fluid"
+                        src="{{ partner.logo | absolute_url }}"
+                        alt="{{ partner.name }}"
+                        title="{{ partner.name }}"
+                    />
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
