@@ -41,11 +41,11 @@ permalink: events.html
                         <span class="text-danger">Upcoming</span>
                         <span class="text-muted">{{nextEvent.date | date: "%a, %b %d %Y"}}</span>
                     </div>
-                    <h4 class="text-secondary">{{nextEvent.title}}</h4>
+                    <h4 class="">{{nextEvent.title}}</h4>
                     <div class="d-flex align-content-between">
                         <p>{{nextEvent.description}}</p>
                         <div class="px-1">
-                            <a href="{{nextEvent.url}}" class="text-dark border rounded-circle border-dark btn btn-round"><i class="fas fa-arrow-right"></i></a>
+                            <a href="{{nextEvent.url}}" class="text-dark border rounded-circle border-secondary btn btn-round"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ permalink: events.html
                                 <div class="d-flex justify-content-around">
                                     <p class="m-0 line-clamp line-clamp-1">{{event.description}}</p>
                                     <div>
-                                        <a href="{{event.url}}" class="text-dark border rounded-circle border-dark btn btn-round"><i class="fas fa-arrow-right"></i></a>
+                                        <a href="{{event.url}}" class="text-dark border rounded-circle border-secondary btn btn-round"><i class="fas fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
