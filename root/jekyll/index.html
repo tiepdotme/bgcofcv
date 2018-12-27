@@ -17,10 +17,13 @@ permalink: index.html
     <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
         <p class="lead pt-3 px-3">{{page.mission | smartify | markdownify | replace: "<p>" |
                 replace: "</p>"}}</p>
-        <button type="button" class="btn btn-secondary text-white btn-lg mx-auto">DONATE</button>
+        <a href="{{ site.data.global.donateUrl }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button" class="btn btn-secondary text-white btn-lg mx-auto">DONATE</a>
     </div>
 </section>
-<section class="py-5">
+<section class="py-sm-1 py-md-5">
     <div class="container">
         <div id="campaign-carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -30,7 +33,7 @@ permalink: index.html
             </ol>
             <div class="carousel-inner">
                 {% for campaign in site.campaigns %}
-                <div data-interval="10000" class="carousel-item {% if forloop.first %}active{% endif %}" style="height: 350px">
+                <div data-interval="20000" class="carousel-item {% if forloop.first %}active{% endif %}">
                     <div class="h-100 d-flex flex-column justify-content-center">
                         {% if campaign.isActive %}
                         {% if campaign.campaignUrl %}
@@ -75,39 +78,39 @@ permalink: index.html
         </div>
         <div class="row py-3">
             <div class="col-sm-12 col-md-4">
-                <div class="my-2 p-2 shadow">
+                <div class="h-100 my-2 p-2 shadow">
                     <h3 class="display-1 font-weight-bold text-primary">57%</h3>
                     <p class="text-muted text-uppercase">of alumni say the club <span class="text-warning font-weight-bold">saved their life</span></p>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
-                <div class="my-2 p-2 shadow">
+                <div class="h-100 my-2 p-2 shadow">
                     <h3 class="display-1 font-weight-bold text-primary">85%</h3>
                     <p class="text-muted text-uppercase">of alumni say the club tought them <span class="text-success font-weight-bold">right</span> from <span class="text-danger font-weight-bold">wrong</span></p>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
-                <div class="my-2 p-2 shadow">
+                <div class="h-100 my-2 p-2 shadow">
                     <h3 class="display-1 font-weight-bold text-primary">67%</h3>
                     <p class="text-muted text-uppercase">of alumni say the club kept them <span class="text-warning font-weight-bold">out of trouble with the law</span></p>
                 </div>
             </div>
         </div>
         <div class="row py-4">
-            <div class="col-sm-12 col-md-6">
-                <canvas class="charts shadow" id="growth" width="400" height="400"></canvas>
+            <div class="col-sm-12 col-md-7">
+                <canvas class="charts shadow" id="growth" width="400"></canvas>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-5">
                 <div class="d-flex flex-column justify-content-between h-100">
                     <div>
-                        <div class="p-2 shadow my-2">
-                            <h3 class="display-1 font-weight-bold text-primary">1,430</h3>
+                        <div class="p-2 shadow">
+                            <h3 class="h1 font-weight-bold text-primary">1,430</h3>
                             <p class="text-muted text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every day</span></p>
                         </div>
                     </div>
                     <div>
-                        <div class="p-2 shadow my-2">
-                            <h3 class="display-1 font-weight-bold text-primary">81%</h3>
+                        <div class="p-2 shadow">
+                            <h3 class="h1 font-weight-bold text-primary">81%</h3>
                             <p class="text-muted text-uppercase">of members are eligible for <span class="text-warning font-weight-bold">free or reduced</span> lunch at their schools</p>
                         </div>
                     </div>
@@ -116,7 +119,6 @@ permalink: index.html
         </div>
         <div class="row py-4">
             <div class="col-sm-12">
-                <!-- <h3 class="py-3">Diversity</h3> -->
                 <div class="row">
                     <div class="col-sm-12 col-md-4">
                         <canvas class="charts shadow" id="diversity" width="400" height="400"></canvas>

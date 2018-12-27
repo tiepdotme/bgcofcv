@@ -5,6 +5,7 @@ window.$ = $;
 require("popper.js");
 import "bootstrap";
 import Chart from "chart.js";
+import "chartjs-plugin-labels";
 
 $(document).ready(() => {
     if ($(".charts").length > 0) {
@@ -75,6 +76,12 @@ $(document).ready(() => {
                 },
                 layout: {
                     padding: 5
+                },
+                plugins: {
+                    labels: {
+                        render: "percentage",
+                        overlap: false
+                    }
                 }
             },
             type: "pie",
@@ -115,6 +122,12 @@ $(document).ready(() => {
                 },
                 layout: {
                     padding: 5
+                },
+                plugins: {
+                    labels: {
+                        render: "percentage",
+                        overlap: false
+                    }
                 }
             },
             type: "pie",
@@ -144,6 +157,12 @@ $(document).ready(() => {
                 },
                 layout: {
                     padding: 5
+                },
+                plugins: {
+                    labels: {
+                        render: "percentage",
+                        overlap: false
+                    }
                 }
             },
             type: "pie",

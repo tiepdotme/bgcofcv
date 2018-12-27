@@ -1,5 +1,5 @@
 <nav class="py-0 navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
-    <a href="/" class="navbar-brand"> <img src="{{'assets/images/hero-logo.png' | absolute_url}}" width="75" /> </a>
+    <a href="/" class="navbar-brand"> <img src="{{ 'assets/images/hero-logo.png' | absolute_url }}" width="75" /> </a>
     <button
         class="py-2 navbar-toggler border-0"
         type="button"
@@ -15,11 +15,18 @@
             {% for link in site.data.navigation-links %}
             <a
                 class="py-3 nav-item nav-link {% if page.url contains link.url %} active {% endif %}"
-                href="{{link.url | absolute_url}}"
+                href="{{ link.url | absolute_url }}"
                 >{{ link.label }}</a
             >
             {%endfor%}
         </div>
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Donate</button>
+        <a
+            href="{{ site.data.global.donateUrl }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="button"
+            class="btn btn-outline-light my-2 my-sm-0"
+            >Donate</a
+        >
     </div>
 </nav>
