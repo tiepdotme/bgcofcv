@@ -1,0 +1,28 @@
+#campaign-carousel {
+    .carousel-indicators {
+        li {
+            background-color: theme-color("primary");
+            &.active {
+                background-color: theme-color("secondary");
+            }
+        }
+    }
+    .carousel-control-prev {
+        .avatar {
+            border-width: 5px !important;
+            // border-right-width: 5px !important;
+            // border-left-width: 5px !important;
+            // border-top-width: 5px !important;
+            // border-bottom-width: 5px !important;
+        }
+    }
+    .carousel-control-next {
+        .avatar {
+            border-width: 5px !important;
+            // border-right-width: 5px !important;
+            // border-left-width: 5px !important;
+            // border-top-width: 5px !important;
+            // border-bottom-width: 5px !important;
+        }
+    }
+}
