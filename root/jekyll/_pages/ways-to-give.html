@@ -8,6 +8,10 @@ description: >-
     costs **$500 per child** to provide program and activities for an entire year.
     Join our life-changing movement by giving a gift that lasts a lifetime in
     support of our Clubs!
+video:
+    header: Lorem Ipsum
+    description: Long ago, the mice had a general council to consider what measures they could take to outwit their common enemy, the Cat
+    youtubeId: iHsLgK3zbiA
 permalink: ways-to-give.html
 ---
 
@@ -19,6 +23,17 @@ permalink: ways-to-give.html
     <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
         <h1 class="text-center section-header">{{ page.title }}</h1>
         <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
+    </div>
+</section>
+<section class="my-5 py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section-header text-center">{{ page.video.header }}</h2>
+            </div>
+            <div class="lead pt-3 px-3">{{ page.video.description | markdownify }}</div>
+            <div class="col-sm-12">{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
+        </div>
     </div>
 </section>
 <section class="py-5">

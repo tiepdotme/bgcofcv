@@ -154,6 +154,13 @@ collections:
                 - { label: "Hero Image", name: "hero", widget: "image", required: false }
                 - { label: "Description", name: "description", required: false, widget: "markdown" }
                 - { label: "Permalink", name: "permalink", widget: "hidden" }
+                - label: Video Spotlight
+                  name: video
+                  widget: object
+                  fields:
+                      - { label: "Header", name: "header", required: false, widget: "string" }
+                      - { label: "Description", name: "description", required: false, widget: "markdown" }
+                      - { label: "YouTube Video Id", name: "youtubeId", required: true, widget: "string" }
                 - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/events.html
             label: "Events"
