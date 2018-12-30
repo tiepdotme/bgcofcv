@@ -8,14 +8,20 @@ permalink: our-clubs.html
 
 <section class="hero-cascade">
     <div
-        style="background: url({{page.hero | absolute_url}});"
+        style="background: url({{ page.hero | absolute_url }});"
         class="hero-view bg-image-fill position-relative p-5"
     ></div>
     <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
         <h1 class="text-center section-header">{{ page.title }}</h1>
         <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
         <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-secondary text-white btn-lg mx-auto">BECOME A MEMBER</button>
+            <a
+                href="{{ site.data.global.registrationForm }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary text-white btn-lg mx-auto"
+                >BECOME A MEMBER</a
+            >
         </div>
     </div>
 </section>
@@ -34,17 +40,17 @@ permalink: our-clubs.html
                         <h5 class="card-title h1">{{ club.city | split: ", " | first }}</h5>
                         <div>
                             <a
-                                href="tel:+{{club.phone | replace: '(' | replace: ')' | replace: '-'}}"
+                                href="tel:+{{ club.phone | replace: '(' | replace: ')' | replace: '-' }}"
                                 class="text-white border rounded-circle border-secondary btn btn-round"
                                 ><i class="fas fa-phone"></i
                             ></a>
                             <a
-                                href="mailto:{{club.email}}"
+                                href="mailto:{{ club.email }}"
                                 class="text-white border rounded-circle border-secondary btn btn-round"
                                 ><i class="fas fa-envelope"></i
                             ></a>
                             <a
-                                href="{{club.url}}"
+                                href="{{ club.url }}"
                                 class="text-white border rounded-circle border-secondary btn btn-round"
                                 ><i class="fas fa-arrow-right"></i
                             ></a>

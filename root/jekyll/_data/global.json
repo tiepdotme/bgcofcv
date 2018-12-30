@@ -12,5 +12,9 @@
     "facebookUrl": "https://www.facebook.com/bgcvclubs",
     "instagramUrl": "https://instagram.com/bgcvclubs",
     "donateUrl": "https://interland3.donorperfect.net/weblink/weblink.aspx?name=E331203&id=33",
-    "registrationForm": ""
+    "registrationForm": "assets/bgc-membership-application.pdf",
+    "impactReport": {
+        "file": "assets/bgcofcv-impact-report-2017-2018.pdf",
+        "reportName": "Impact Report 2017-2018"
+    }
 }

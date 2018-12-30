@@ -74,6 +74,17 @@ permalink: index.html
                 <h1 class="text-center section-header">Community Impact</h1>
                 <p class="lead">{{page.history | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
                 <p class="lead">{{page.impact | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
+                {% if site.data.global.impactReport %}
+                <div class="d-flex justify-content-center py-3">
+                    <a
+                        href="{{ site.data.global.impactReport.file }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-secondary btn-lg mx-auto text-uppercase"
+                        >Download {{site.data.global.impactReport.reportName}}</a
+                    >
+                </div>
+                {% endif %}
             </div>
         </div>
         <div class="row py-3">
