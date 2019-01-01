@@ -58,7 +58,7 @@ permalink: index.html
             </a>
             <a class="carousel-control-next" href="#campaign-carousel" role="button" data-slide="next">
                     <div
-                    class="avatar text-white border rounded-circle border-secondary d-flex justify-content-center align-items-center"
+                    class="avatar text-white border rounded-circle b6order-secondary d-flex justify-content-center align-items-center"
                 >
                     <i class="fas fa-arrow-right"></i>
                 </div>                
@@ -81,7 +81,14 @@ permalink: index.html
                         target="_blank"
                         rel="noopener noreferrer"
                         class="btn btn-outline-secondary btn-lg mx-auto text-uppercase"
-                        >Download {{site.data.global.impactReport.reportName}}</a
+                        > <i class="far fa-arrow-alt-circle-down"></i> {{site.data.global.impactReport.reportName}}</a
+                    >
+                    <a
+                        href="{{ site.data.global.annualReport.file }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-secondary btn-lg mx-auto text-uppercase"
+                        > <i class="far fa-arrow-alt-circle-down"></i> {{site.data.global.annualReport.reportName}}</a
                     >
                 </div>
                 {% endif %}
