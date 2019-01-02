@@ -58,7 +58,7 @@ permalink: index.html
             </a>
             <a class="carousel-control-next" href="#campaign-carousel" role="button" data-slide="next">
                     <div
-                    class="avatar text-white border rounded-circle b6order-secondary d-flex justify-content-center align-items-center"
+                    class="avatar text-white border rounded-circle border-secondary d-flex justify-content-center align-items-center"
                 >
                     <i class="fas fa-arrow-right"></i>
                 </div>                
@@ -75,77 +75,97 @@ permalink: index.html
                 <p class="lead">{{page.history | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
                 <p class="lead">{{page.impact | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
                 {% if site.data.global.impactReport %}
-                <div class="d-flex justify-content-center py-3">
+                <div class="d-flex flex-sm-row flex-column justify-content-center py-3">
                     <a
                         href="{{ site.data.global.impactReport.file }}"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn btn-outline-secondary btn-lg mx-auto text-uppercase"
+                        class="my-1 mx-0 mx-sm-2 btn btn-outline-secondary text-uppercase"
                         > <i class="far fa-arrow-alt-circle-down"></i> {{site.data.global.impactReport.reportName}}</a
                     >
                     <a
                         href="{{ site.data.global.annualReport.file }}"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn btn-outline-secondary btn-lg mx-auto text-uppercase"
+                        class="my-1 mx-0 mx-sm-2 btn btn-outline-secondary text-uppercase"
                         > <i class="far fa-arrow-alt-circle-down"></i> {{site.data.global.annualReport.reportName}}</a
                     >
                 </div>
                 {% endif %}
             </div>
         </div>
+    </div>
+</section>
+<section class="py-5 bg-light">
+    <div class="container">
         <div class="row py-3">
-            <div class="col-sm-12 col-md-4">
-                <div class="h-100 my-2 p-2 shadow">
-                    <h3 class="display-1 font-weight-bold text-primary">57%</h3>
-                    <p class="text-muted text-uppercase">of alumni say the club <span class="text-warning font-weight-bold">saved their life</span></p>
+            <div class="col-sm-12 col-md-4 my-1">
+                <div class="h-100 my-1 p-2 shadow rounded bg-white">
+                    <h3 class="display-1 font-weight-bold text-primary">6,165</h3>
+                    <p class="text-muted text-uppercase">hours of community service <span class="text-danger font-weight-bold">completed</span> by Club youth</p>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="h-100 my-2 p-2 shadow">
-                    <h3 class="display-1 font-weight-bold text-primary">85%</h3>
-                    <p class="text-muted text-uppercase">of alumni say the club tought them <span class="text-success font-weight-bold">right</span> from <span class="text-danger font-weight-bold">wrong</span></p>
+            <div class="col-sm-12 col-md-4 my-1">
+                <div class="h-100 my-1 p-2 shadow rounded bg-white">
+                    <h3 class="display-1 font-weight-bold text-primary">81,945</h3>
+                    <p class="text-muted text-uppercase"><span class="text-warning font-weight-bold">free</span> meals and snacks were provided for Club youth during the year</p>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="h-100 my-2 p-2 shadow">
-                    <h3 class="display-1 font-weight-bold text-primary">67%</h3>
-                    <p class="text-muted text-uppercase">of alumni say the club kept them <span class="text-warning font-weight-bold">out of trouble with the law</span></p>
+            <div class="col-sm-12 col-md-4 flex-column justify-content-end">
+                <div class="p-2 my-1 shadow d-flex rounded bg-white">
+                    <h3 class="pr-2 h1 font-weight-bold text-primary">98%</h3>
+                    <p class="text-muted text-uppercase">of members are on track to pass the next grade level</p>
                 </div>
-            </div>
-        </div>
-        <div class="row py-4">
-            <div class="col-sm-12 col-md-7">
-                <canvas class="charts shadow" id="growth" width="400"></canvas>
-            </div>
-            <div class="col-sm-12 col-md-5">
-                <div class="d-flex flex-column justify-content-between h-100">
-                    <div>
-                        <div class="p-2 shadow">
-                            <h3 class="h1 font-weight-bold text-primary">1,430</h3>
-                            <p class="text-muted text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every day</span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="p-2 shadow">
-                            <h3 class="h1 font-weight-bold text-primary">81%</h3>
-                            <p class="text-muted text-uppercase">of members are eligible for <span class="text-warning font-weight-bold">free or reduced</span> lunch at their schools</p>
-                        </div>
-                    </div>
+                <div class="p-2 my-1 shadow d-flex rounded bg-white">
+                    <h3 class="pr-2 h1 font-weight-bold text-primary">802</h3>
+                    <p class="text-muted text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every
+                            day</span></p>
+                </div>
+                <div class="p-2 my-1 shadow d-flex rounded bg-white">
+                    <h3 class="pr-2 h1 font-weight-bold text-primary">77%</h3>
+                    <p class="text-muted text-uppercase">of members are eligible for <span class="text-warning font-weight-bold">free
+                            or reduced</span> lunch at their schools</p>
                 </div>
             </div>
         </div>
         <div class="row py-4">
             <div class="col-sm-12">
+                <canvas class="charts shadow bg-white rounded" id="growth" width="400"></canvas>
+            </div>
+            <!-- <div class="col-sm-12 col-md-5">
+                <div class="d-flex flex-column justify-content-between h-100">
+                    <div>
+                        <div class="p-2 shadow d-flex">
+                            <h3 class="pr-2 h1 font-weight-bold text-primary">98%</h3>
+                            <p class="text-muted text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every day</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="p-2 shadow d-flex">
+                            <h3 class="pr-2 h1 font-weight-bold text-primary">802</h3>
+                            <p class="text-muted text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every day</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="p-2 shadow d-flex">
+                            <h3 class="pr-2 h1 font-weight-bold text-primary">77%</h3>
+                            <p class="text-muted text-uppercase">of members are eligible for <span class="text-warning font-weight-bold">free or reduced</span> lunch at their schools</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="row py-4">
+            <div class="col-sm-12">
                 <div class="row">
-                    <div class="col-sm-12 col-md-4">
-                        <canvas class="charts shadow" id="diversity" width="400" height="400"></canvas>
+                    <div class="col-sm-12 my-1 col-md-4">
+                        <canvas class="charts shadow bg-white rounded" id="diversity" width="400" height="400"></canvas>
                     </div>
-                    <div class="col-sm-12 col-md-4">
-                        <canvas class="charts shadow" id="ages" width="400" height="400"></canvas>
+                    <div class="col-sm-12 my-1 col-md-4">
+                        <canvas class="charts shadow bg-white rounded" id="ages" width="400" height="400"></canvas>
                     </div>
-                    <div class="col-sm-12 col-md-4">
-                        <canvas class="charts shadow" id="gender" width="400" height="400"></canvas>
+                    <div class="col-sm-12 my-1 col-md-4">
+                        <canvas class="charts shadow bg-white rounded" id="gender" width="400" height="400"></canvas>
                     </div>
                 </div>
             </div>
