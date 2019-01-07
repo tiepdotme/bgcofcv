@@ -120,7 +120,7 @@ collections:
       files:
           - file: root/jekyll/index.html
             label: "Home"
-            name: home
+            name: index
             editor:
                 preview: false
             fields:
@@ -132,6 +132,21 @@ collections:
                 - { label: "History", name: "history", required: false, widget: "markdown" }
                 - { label: "Mission", name: "mission", required: false, widget: "markdown" }
                 - { label: "Impact", name: "impact", required: false, widget: "markdown" }
+                - label: Video Spotlight
+                  name: video
+                  widget: object
+                  required: false
+                  default: null
+                  fields:
+                      - { label: "Header", name: "header", required: false, default: null, widget: "string" }
+                      - {
+                            label: "Description",
+                            name: "description",
+                            required: false,
+                            default: null,
+                            widget: "markdown",
+                        }
+                      - { label: "YouTube Video Id", name: "youtubeId", required: true, widget: "string" }
                 - { label: "Permalink", name: "permalink", widget: "hidden" }
                 - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/our-clubs.html
@@ -168,7 +183,6 @@ collections:
                 - { label: "Title", name: "title", widget: "string" }
                 - { label: "Hero Image", name: "hero", widget: "image", required: false }
                 - { label: "Description", name: "description", required: false, widget: "markdown" }
-                - { label: "Permalink", name: "permalink", widget: "hidden" }
                 - label: Video Spotlight
                   name: video
                   widget: object
@@ -184,6 +198,7 @@ collections:
                             widget: "markdown",
                         }
                       - { label: "YouTube Video Id", name: "youtubeId", required: true, widget: "string" }
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
                 - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/events.html
             label: "Events"

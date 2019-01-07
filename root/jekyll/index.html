@@ -7,6 +7,10 @@ description:
 history: The John Carroll and Jim O’Brien Clubhouse in Indio opened its doors to the community in 1966. Today, that one small clubhouse has grown into an organization comprised of a network of four full-service clubhouses, two boxing/athletic centers, and the Smilow Family Teen Center in Indio.
 mission: Saving and enhancing the lives of young people, especially those with economic and/or social needs, by offering a safe haven and meaningful youth development programs provided by a caring and qualified staff.
 impact: We strive to give our club members and our communities a better and brighter future. We meet kids and teens where they are and help them to take steps forward to reach their potential. By focusing on safety, academic support and character development.
+video:
+    header: Lorem Ipsum
+    description: Long ago, the mice had a general council to consider what measures they could take to outwit their common enemy, the Cat
+    youtubeId: iHsLgK3zbiA
 permalink: index.html
 ---
 <section class="hero-cascade hero-cascade-home">
@@ -67,6 +71,19 @@ permalink: index.html
         </div>
     </div>
 </section>
+{% if page.video %}
+<section class="my-5 py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section-header text-center">{{ page.video.header }}</h2>
+            </div>
+            <div class="lead pt-3 px-3">{{ page.video.description | markdownify }}</div>
+            <div class="col-sm-12">{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
+        </div>
+    </div>
+</section>
+{% endif %}
 <section class="py-5">
     <div class="container">
         <div class="row">
