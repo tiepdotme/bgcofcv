@@ -1,14 +1,15 @@
+@import "./variables";
+
 $theme-colors: (
-    "primary": #00ace8,
-    "light": #eee,
-    "secondary": #f45b69,
-    "dark": #262626
+    "primary": $primary,
+    "light": $light,
+    "secondary": $secondary,
+    "dark": $dark
 );
 
 @import "./vendors";
 @import "./base";
 @import "./overrides";
 @import "./helpers";
-@import "./variables";
 @import "./components";
 @import "./pages";

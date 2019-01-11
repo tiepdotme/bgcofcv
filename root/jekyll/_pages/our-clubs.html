@@ -11,8 +11,10 @@ permalink: our-clubs.html
         style="background: url({{ page.hero | absolute_url }});"
         class="hero-view bg-image-fill position-relative p-5"
     ></div>
-    <div class="col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
-        <h1 class="text-center section-header">{{ page.title }}</h1>
+    <div
+        class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3"
+    >
+        <h1 class="text-center section-header underline">{{ page.title }}</h1>
         <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
         <div class="d-flex justify-content-center">
             <a

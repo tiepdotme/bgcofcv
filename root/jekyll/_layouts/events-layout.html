@@ -2,26 +2,26 @@
 <html lang="en-US">
     <head>
         {% include collection-head.html %}
-    <link href="../site.648585346a1cb6629b4a.min.css" rel="stylesheet"></head>
+    <link href="../site.789c8fe89107960a787a.min.css" rel="stylesheet"></head>
 
     <body>
         {% include navbar.html %}
         <main>
             <section class="hero-cascade pb-5">
                 <div
-                    style="background: url({{page.image | absolute_url}});"
+                    style="background: url({{ page.image | absolute_url }});"
                     class="hero-view bg-image-fill position-relative p-5"
                 ></div>
                 <div
-                    class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3 text-center"
+                    class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3 text-center"
                 >
-                    <h1 class="text-center section-header mb-3">{{ page.title }}</h1>
-                    <h4 class="text-muted">{{ page.date | date: "%a, %b %d %Y" }}</h4>
+                    <h1 class="text-center section-header underline mb-3">{{ page.title }}</h1>
+                    <h4 class="text-muted mt-3">{{ page.date | date: "%a, %b %d %Y" }}</h4>
                     {% if page.callToAction %}
                     <div class="pt-3">
                         <a
                             class="btn btn-primary btn-lg"
-                            href="{{page.callToAction.url}}"
+                            href="{{ page.callToAction.url }}"
                             target="_blank"
                             rel="noopener noreferrer"
                             >{{ page.callToAction.text }}</a
@@ -32,7 +32,9 @@
                         <h6 class="text-muted">Share this</h6>
                         <div class="d-flex align-items-center justify-content-center">
                             <a
-                                href="https://facebook.com/sharer/sharer.php?u={{page.url | absolute_url}}&title={{page.title | url_escape}}"
+                                href="https://facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}&title={{
+                                    page.title | url_escape
+                                }}"
                                 target="_blank"
                                 rel="nofollow"
                                 title="Share on Facebook"
@@ -40,7 +42,11 @@
                                 ><i class="fab fa-facebook-f"></i
                             ></a>
                             <a
-                                href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{page.url | absolute_url}}&via={{ site.data.global.twitterUsername }}&related={{ site.data.global.twitterUsername }}"
+                                href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{
+                                    page.url | absolute_url
+                                }}&via={{ site.data.global.twitterUsername }}&related={{
+                                    site.data.global.twitterUsername
+                                }}"
                                 target="_blank"
                                 rel="nofollow"
                                 title="Share on Twitter"
@@ -48,7 +54,9 @@
                                 ><i class="fab fa-twitter"></i
                             ></a>
                             <a
-                                href="mailto:?subject={{ page.title }}&amp;body=Check out this event {{page.url | absolute_url}}"
+                                href="mailto:?subject={{ page.title }}&amp;body=Check out this event {{
+                                    page.url | absolute_url
+                                }}"
                                 title="Share via Email"
                                 class="mx-1 text-white rounded-circle bg-dark btn btn-lg btn-round"
                                 ><i class="fas fa-envelope"></i

@@ -14,4 +14,24 @@ main {
 .section-header {
     font-weight: 300;
     line-height: 1.2;
+    &.underline {
+        display: inline-block;
+        position: relative;
+        max-width: 500px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background: $secondary;
+            //background: linear-gradient(left, transparent 0%, #444 50%, transparent 100%);
+        }
+    }
+}
+
+.header-underline {
+    width: 75px;
+    height: 5px;
 }

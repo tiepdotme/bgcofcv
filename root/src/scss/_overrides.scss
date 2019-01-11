@@ -1,0 +1,7 @@
+// .breadcrumb-dark .breadcrumb-item + .breadcrumb-item::before {
+//     color: white;
+// }
+
+.breadcrumb-light .breadcrumb-item + .breadcrumb-item::before {
+    color: white;
+}
