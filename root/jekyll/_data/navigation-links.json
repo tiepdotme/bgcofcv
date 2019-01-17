@@ -24,6 +24,10 @@
         "label": "Team"
     },
     {
+        "url": "alumni.html",
+        "label": "Alumni"
+    },
+    {
         "url": "contact-us.html",
         "label": "Contact Us"
     }
