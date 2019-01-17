@@ -224,6 +224,19 @@ collections:
                 - { label: "Description", name: "description", required: false, widget: "markdown" }
                 - { label: "Permalink", name: "permalink", widget: "hidden" }
                 - { label: "Body", name: body, widget: hidden }
+          - file: root/jekyll/_pages/alumni.html
+            label: "Team"
+            name: team
+            editor:
+                preview: false
+            fields:
+                - { label: "Layout", name: "layout", widget: "hidden" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Hero Image", name: "hero", widget: "image", required: false }
+                - { label: "Link", name: "link", widget: "string" }
+                - { label: "Description", name: "description", required: false, widget: "markdown" }
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
+                - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/contact-us.html
             label: "Contact Us"
             name: contact-us
