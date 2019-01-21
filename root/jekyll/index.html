@@ -13,7 +13,7 @@ video:
     youtubeId: iHsLgK3zbiA
 permalink: index.html
 ---
-<section class="hero-cascade hero-cascade-home">
+<!-- <section class="hero-cascade hero-cascade-home">
     <div style="background: url({{page.hero | absolute_url}});" class="hero-view bg-image-fill position-relative p-5 d-flex flex-column align-items-center">
         <img class="hero-logo position-absolute" src={{page.heroLogo | absolute_url}} width="300">
         <span class="mask mask-dark mask-gradient-t-b"></span>
@@ -26,8 +26,8 @@ permalink: index.html
         rel="noopener noreferrer"
         role="button" class="btn btn-secondary text-white btn-lg mx-auto">DONATE</a>
     </div>
-</section>
-<section class="py-sm-1 py-md-5">
+</section> -->
+<!-- <section class="py-sm-1 py-md-5">
     <div class="container">
         <div id="campaign-carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -69,6 +69,60 @@ permalink: index.html
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    </div>
+</section> -->
+<section>
+    <div class="container">
+        <div id="campaign-carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {% for campaign in site.campaigns %}
+                    <li data-target="#campaign-carousel" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+                    {% endfor %}
+                </ol>
+                <div class="carousel-inner">
+                    {% for campaign in site.campaigns %}
+                    <div data-interval="20000" class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <div class="h-100 d-flex flex-column justify-content-center">
+                            {% if campaign.isActive %}
+                            {% if campaign.campaignUrl %}
+                            <a href="{{campaign.campaignUrl}}" target="_blank" rel="noopener noreferrer">
+                                <img src="{{campaign.image | absolute_url}}" class="d-block w-100" alt="{{campaign.title}}">
+                            </a>
+                            {% else %}
+                            <img src="{{campaign.image | absolute_url}}" class="d-block w-100"  alt="{{campaign.title}}">
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#campaign-carousel" role="button" data-slide="prev">
+                    <div
+                        class="avatar text-white border rounded-circle border-secondary d-flex justify-content-center align-items-center"
+                    >
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#campaign-carousel" role="button" data-slide="next">
+                        <div
+                        class="avatar text-white border rounded-circle border-secondary d-flex justify-content-center align-items-center"
+                    >
+                        <i class="fas fa-arrow-right"></i>
+                    </div>                
+                    <span class="sr-only">Next</span>
+                </a>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
+        <p class="lead pt-3 px-3">{{page.mission | smartify | markdownify | replace: "<p>" |
+                replace: "</p>"}}</p>
+        <a href="{{ site.data.global.donateUrl }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="button" class="btn btn-secondary text-white btn-lg mx-auto">DONATE</a>
     </div>
 </section>
 {% if page.video %}
@@ -116,19 +170,19 @@ permalink: index.html
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row py-3">
-            <div class="col-sm-12 col-md-6 my-1">
+            <div class="col-sm-12 col-md-6 col-lg-4 my-1">
                 <div class="h-100 my-1 p-2 shadow rounded bg-white">
                     <h3 class="display-1 font-weight-bold text-primary">6,165</h3>
                     <p class="text-muted text-uppercase">hours of community service <span class="text-danger font-weight-bold">completed</span> by Club youth</p>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 my-1">
+            <div class="col-sm-12 col-md-6 col-lg-4 my-1">
                 <div class="h-100 my-1 p-2 shadow rounded bg-white">
                     <h3 class="display-1 font-weight-bold text-primary">81,945</h3>
                     <p class="text-muted text-uppercase"><span class="text-warning font-weight-bold">free</span> meals and snacks were provided for Club youth during the year</p>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 flex-column justify-content-end">
+            <div class="col-sm-12 col-md-12 col-lg-4 flex-column justify-content-end">
                 <div class="p-2 my-1 shadow d-flex rounded bg-white">
                     <h3 class="pr-2 h1 font-weight-bold text-primary">98%</h3>
                     <p class="text-muted text-uppercase">of members are on track to pass the next grade level</p>

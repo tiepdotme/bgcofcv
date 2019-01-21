@@ -24,14 +24,18 @@
 
     .carousel-inner {
         .carousel-item {
-            height: 350px;
+            // height: 350px;
+            height: 50vh;
             @media (max-width: 767.98px) {
-                height: 200px;
+                // height: 200px;
+                height: 25vh;
             }
             img {
-                max-height: 350px;
+                max-height: 50vh;
+                //height: 50vh;
                 @media (max-width: 767.98px) {
-                    max-height: 200px;
+                    max-height: 25vh;
+                    //height: 50vh;
                 }
             }
         }
