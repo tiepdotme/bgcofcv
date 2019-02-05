@@ -257,6 +257,8 @@ collections:
       delete: true
       description: Add, edit, and delete Program Categories
       slug: "{{slug}}"
+      editor:
+          preview: false
       fields:
           - { label: "Layout", name: layout, widget: hidden, default: programs-layout }
           - { label: "Title", name: "title", widget: "string", tagname: "h1" }
@@ -268,7 +270,7 @@ collections:
             widget: list
             fields:
                 - { label: "Title", name: "title", widget: "string" }
-                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Description", name: "description", widget: "markdown" }
                 - { label: "Image", name: "image", widget: "image" }
           - { label: "Body", name: body, widget: hidden }
 
@@ -279,6 +281,8 @@ collections:
       delete: true
       description: Add, edit, and delete Campaigns
       slug: "{{slug}}"
+      editor:
+          preview: false
       fields:
           - { label: "Title", name: "title", widget: "string", tagname: "h1" }
           - { label: "Description", name: "description", widget: "text", required: false }
