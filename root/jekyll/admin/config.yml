@@ -260,7 +260,7 @@ collections:
       fields:
           - { label: "Layout", name: layout, widget: hidden, default: programs-layout }
           - { label: "Title", name: "title", widget: "string", tagname: "h1" }
-          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Description", name: "description", widget: "markdown", required: false }
           - { label: "Image", name: "thumb", widget: "image", required: false }
           - { label: Hero Image, name: hero, widget: image }
           - label: Programs
