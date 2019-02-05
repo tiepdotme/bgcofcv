@@ -250,6 +250,28 @@ collections:
                 - { label: "Permalink", name: "permalink", widget: "hidden" }
                 - { label: "Body", name: body, widget: hidden }
 
+    - name: program-categories
+      label: Program Categories
+      folder: root/jekyll/_program-categories
+      create: true
+      delete: true
+      description: Add, edit, and delete Program Categories
+      slug: "{{slug}}"
+      fields:
+          - { label: "Layout", name: layout, widget: hidden, default: programs-layout }
+          - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Image", name: "thumb", widget: "image", required: false }
+          - { label: Hero Image, name: hero, widget: image }
+          - label: Programs
+            name: programs
+            widget: list
+            fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Image", name: "image", widget: "image" }
+          - { label: "Body", name: body, widget: hidden }
+
     - name: campaigns
       label: Campaigns
       folder: root/jekyll/_campaigns
