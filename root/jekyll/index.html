@@ -1,7 +1,7 @@
 ---
 layout: home-layout
 title: Home
-hero: assets/images/hero.jpg
+hero: assets/images/hero-2.jpg
 heroLogo: assets/images/hero-logo.png
 description:
 history: The John Carroll and Jim O’Brien Clubhouse in Indio opened its doors to the community in 1966. Today, that one small clubhouse has grown into an organization comprised of a network of four full-service clubhouses, two boxing/athletic centers, and the Smilow Family Teen Center in Indio.
@@ -72,13 +72,13 @@ permalink: index.html
     </div>
 </section>
 {% if page.video %}
-<section class="my-5 py-5 bg-light">
+<section class="my-5 py-5 bg-primary">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="section-header text-center">{{ page.video.header }}</h2>
+                <h2 class="section-header text-light text-center">{{ page.video.header }}</h2>
             </div>
-            <div class="lead pt-3 px-3">{{ page.video.description | markdownify }}</div>
+            <div class="lead text-light pt-3 px-3">{{ page.video.description | markdownify }}</div>
             <div class="col-sm-12">{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
         </div>
     </div>
@@ -116,32 +116,56 @@ permalink: index.html
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row py-3">
-            <div class="col-sm-12 col-md-6 col-lg-4 my-1">
-                <div class="h-100 my-1 p-2 shadow rounded bg-white">
-                    <h3 class="display-1 font-weight-bold text-primary">6,165</h3>
-                    <p class="text-muted text-uppercase">hours of community service <span class="text-danger font-weight-bold">completed</span> by Club youth</p>
+            <div class="col-sm-12 col-md-12 col-lg-6 my-1">
+                <div class="card bg-dark text-white">
+                    {% include img_srcset.html class="card-img" alt="" filename="community-service-hours.jpg" %}
+                    <span class="mask rounded mask-dark"></span>
+                    <div class="card-img-overlay">
+                        <h3 class=" display-4 font-weight-bold text-primary">6,165</h3>
+                        <p class="text-uppercase">hours of community service <span class="text-danger font-weight-bold">completed</span> by Club youth</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 my-1">
+                <div class="card bg-dark text-white">
+                    {% include img_srcset.html class="card-img" alt="" filename="meals.jpg" %}
+                    <span class="mask rounded mask-dark"></span>
+                    <div class="card-img-overlay">
+                        <h3 class=" display-4 font-weight-bold text-primary">81,945</h3>
+                        <p class="text-uppercase"><span class="text-warning font-weight-bold">free</span> meals and snacks were provided for Club youth during the year</p>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 my-1">
-                <div class="h-100 my-1 p-2 shadow rounded bg-white">
-                    <h3 class="display-1 font-weight-bold text-primary">81,945</h3>
-                    <p class="text-muted text-uppercase"><span class="text-warning font-weight-bold">free</span> meals and snacks were provided for Club youth during the year</p>
+                <div class="card bg-dark text-white">
+                    {% include img_srcset.html class="card-img" alt="" filename="level-up.jpg" %}
+                    <span class="mask rounded mask-dark"></span>
+                    <div class="card-img-overlay">
+                        <h3 class=" display-4 font-weight-bold text-primary">98%</h3>
+                        <p class="text-uppercase">of members are on track to pass the next grade level</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-4 flex-column justify-content-end">
-                <div class="p-2 my-1 shadow d-flex rounded bg-white">
-                    <h3 class="pr-2 h1 font-weight-bold text-primary">98%</h3>
-                    <p class="text-muted text-uppercase">of members are on track to pass the next grade level</p>
+            <div class="col-sm-12 col-md-6 col-lg-4 my-1">
+                <div class="card bg-dark text-white">
+                    {% include img_srcset.html class="card-img" alt="" filename="visits.jpg" %}
+                    <span class="mask rounded mask-dark"></span>
+                    <div class="card-img-overlay">
+                            <h3 class=" display-4 font-weight-bold text-primary">802</h3>
+                            <p class="text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every
+                                    day</span></p>
+                    </div>
                 </div>
-                <div class="p-2 my-1 shadow d-flex rounded bg-white">
-                    <h3 class="pr-2 h1 font-weight-bold text-primary">802</h3>
-                    <p class="text-muted text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every
-                            day</span></p>
-                </div>
-                <div class="p-2 my-1 shadow d-flex rounded bg-white">
-                    <h3 class="pr-2 h1 font-weight-bold text-primary">77%</h3>
-                    <p class="text-muted text-uppercase">of members are eligible for <span class="text-warning font-weight-bold">free
-                            or reduced</span> lunch at their schools</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 my-1">
+                <div class="card bg-dark text-white">
+                    {% include img_srcset.html class="card-img" alt="" filename="free-lunch.jpg" %}
+                    <span class="mask rounded mask-dark"></span>
+                    <div class="card-img-overlay">
+                        <h3 class=" display-4 font-weight-bold text-primary">77%</h3>
+                        <p class="text-uppercase">of members are eligible for <span class="text-warning font-weight-bold">free
+                                or reduced</span> lunch at their schools</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,28 +173,6 @@ permalink: index.html
             <div class="col-sm-12">
                 <canvas class="charts shadow bg-white rounded" id="growth" width="400"></canvas>
             </div>
-            <!-- <div class="col-sm-12 col-md-5">
-                <div class="d-flex flex-column justify-content-between h-100">
-                    <div>
-                        <div class="p-2 shadow d-flex">
-                            <h3 class="pr-2 h1 font-weight-bold text-primary">98%</h3>
-                            <p class="text-muted text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every day</span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="p-2 shadow d-flex">
-                            <h3 class="pr-2 h1 font-weight-bold text-primary">802</h3>
-                            <p class="text-muted text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every day</span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="p-2 shadow d-flex">
-                            <h3 class="pr-2 h1 font-weight-bold text-primary">77%</h3>
-                            <p class="text-muted text-uppercase">of members are eligible for <span class="text-warning font-weight-bold">free or reduced</span> lunch at their schools</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
         <div class="row py-4">
             <div class="col-sm-12">

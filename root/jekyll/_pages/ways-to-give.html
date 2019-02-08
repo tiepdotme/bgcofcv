@@ -28,13 +28,13 @@ permalink: ways-to-give.html
     </div>
 </section>
 {% if page.video %}
-<section class="my-5 py-5 bg-light">
+<section class="my-5 py-5 bg-primary">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="section-header text-center">{{ page.video.header }}</h2>
+                <h2 class="section-header text-light text-center">{{ page.video.header }}</h2>
             </div>
-            <div class="lead pt-3 px-3">{{ page.video.description | markdownify }}</div>
+            <div class="lead pt-3 px-3 text-light">{{ page.video.description | markdownify }}</div>
             <div class="col-sm-12">{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
         </div>
     </div>
