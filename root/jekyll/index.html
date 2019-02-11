@@ -27,15 +27,19 @@ permalink: index.html
 ---
 <section class="hero-cascade hero-cascade-home">
     <div style="background: url({{page.hero | absolute_url}});" class="hero-view bg-image-fill position-relative d-flex flex-column align-items-center">
-        <div class="position-absolute p-5 d-flex flex-column justify-content-between align-items-center h-100">
+        <div style="height: calc(100vh - 56px)" class="position-absolute p-5 d-flex flex-column justify-content-between align-items-center">
+            <div class="d-flex flex-column justify-content-around align-items-center">
                 <img class="hero-logo" src={{page.heroLogo | absolute_url}} width="300">
-                <!-- <p class="lead text-center font-weight-bold text-white lead pt-3 px-3">{{page.mission | smartify | markdownify | replace: "<p>" |
-                        replace: "</p>"}}
-                </p> -->
-                <a href="{{ site.data.global.donateUrl }}"
-                target="_blank"
-                rel="noopener  "
-                role="button" class="border shadow btn btn-secondary px-4 py-3 text-white btn-lg mx-auto mb-5">DONATE NOW</a>
+                <h2 class="text-center text-uppercase font-weight-bold text-white py-4">Some words here for slogan</h2>
+            </div>    
+            
+            <!-- <p class="lead text-center font-weight-bold text-white lead pt-3 px-3">{{page.mission | smartify | markdownify | replace: "<p>" |
+                    replace: "</p>"}}
+            </p> -->
+            <a href="{{ site.data.global.donateUrl }}"
+            target="_blank"
+            rel="noopener  "
+            role="button" class="border shadow btn btn-secondary px-4 py-3 text-white btn-lg mx-auto my-5">DONATE NOW</a>
         </div>
         <span style="z-index: -1" class="mask mask-dark mask-gradient-t-b"></span>
         
