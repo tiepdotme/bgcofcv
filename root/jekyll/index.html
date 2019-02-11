@@ -28,20 +28,16 @@ permalink: index.html
 <section class="hero-cascade hero-cascade-home">
     <div style="background: url({{page.hero | absolute_url}});" class="hero-view bg-image-fill position-relative d-flex flex-column align-items-center">
         <div class="position-absolute p-5 d-flex flex-column justify-content-between align-items-center h-100">
-            <div style="z-index:1" class="d-flex flex-column justify-content-center align-items-center">
-                    <img class="hero-logo" src={{page.heroLogo | absolute_url}} width="300">
-
-                <p class="lead text-center font-weight-bold text-white lead pt-3 px-3">{{page.mission | smartify | markdownify | replace: "<p>" |
+                <img class="hero-logo" src={{page.heroLogo | absolute_url}} width="300">
+                <!-- <p class="lead text-center font-weight-bold text-white lead pt-3 px-3">{{page.mission | smartify | markdownify | replace: "<p>" |
                         replace: "</p>"}}
-                </p>
-            </div>
-            <a href="{{ site.data.global.donateUrl }}"
-            target="_blank"
-            rel="noopener  "
-            role="button" class="btn btn-secondary px-4 py-3 text-white btn-lg mx-auto mb-5">DONATE NOW</a>
-            
+                </p> -->
+                <a href="{{ site.data.global.donateUrl }}"
+                target="_blank"
+                rel="noopener  "
+                role="button" class="border shadow btn btn-secondary px-4 py-3 text-white btn-lg mx-auto mb-5">DONATE NOW</a>
         </div>
-        <span class="mask mask-dark mask-gradient-t-b"></span>
+        <span style="z-index: -1" class="mask mask-dark mask-gradient-t-b"></span>
         
     </div>
     <!-- <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
