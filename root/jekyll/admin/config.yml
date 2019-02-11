@@ -225,7 +225,7 @@ collections:
                 - { label: "Permalink", name: "permalink", widget: "hidden" }
                 - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/alumni.html
-            label: "Team"
+            label: "Alumni"
             name: team
             editor:
                 preview: false

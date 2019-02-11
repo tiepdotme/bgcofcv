@@ -22,12 +22,12 @@ $(document).ready(() => {
                     {
                         data: [3597, 4330, 5032, 5006, 7794, 8415],
                         backgroundColor: [
-                            "rgba(255, 99, 132, 0.2)",
-                            "rgba(54, 162, 235, 0.2)",
-                            "rgba(255, 206, 86, 0.2)",
-                            "rgba(75, 192, 192, 0.2)",
-                            "rgba(153, 102, 255, 0.2)",
-                            "rgba(255, 159, 64, 0.2)"
+                            "rgba(255, 99, 132)",
+                            "rgba(54, 162, 235)",
+                            "rgba(255, 206, 86)",
+                            "rgba(75, 192, 192)",
+                            "rgba(153, 102, 255)",
+                            "rgba(255, 159, 64)"
                         ],
                         borderColor: [
                             "rgba(255,99,132,1)",
@@ -92,11 +92,11 @@ $(document).ready(() => {
                         label: "Ethnicity",
                         data: [82, 2, 3, 11, 2],
                         backgroundColor: [
-                            "rgba(255, 99, 132, 0.2)",
-                            "rgba(54, 162, 235, 0.2)",
-                            "rgba(255, 206, 86, 0.2)",
-                            "rgba(75, 192, 192, 0.2)",
-                            "rgba(255, 159, 64, 0.2)"
+                            "rgba(255, 99, 132)",
+                            "rgba(54, 162, 235)",
+                            "rgba(255, 206, 86)",
+                            "rgba(75, 192, 192)",
+                            "rgba(255, 159, 64)"
                         ],
                         borderColor: [
                             "rgba(255,99,132,1)",
@@ -134,11 +134,7 @@ $(document).ready(() => {
                 datasets: [
                     {
                         data: [23, 43, 34],
-                        backgroundColor: [
-                            "rgba(255, 99, 132, 0.2)",
-                            "rgba(54, 162, 235, 0.2)",
-                            "rgba(255, 206, 86, 0.2)"
-                        ],
+                        backgroundColor: ["rgba(255, 99, 132)", "rgba(54, 162, 235)", "rgba(255, 206, 86)"],
                         borderColor: ["rgba(255,99,132,1)", "rgba(54, 162, 235, 1)", "rgba(255, 206, 86, 1)"],
                         borderWidth: 1
                     }
@@ -170,7 +166,7 @@ $(document).ready(() => {
                     {
                         label: "Gender",
                         data: [59, 41],
-                        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
+                        backgroundColor: ["rgba(255, 99, 132)", "rgba(54, 162, 235)"],
                         borderColor: ["rgba(255,99,132,1)", "rgba(54, 162, 235, 1)"],
                         borderWidth: 1
                     }
