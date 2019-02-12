@@ -25,25 +25,26 @@ video:
   youtubeId: iHsLgK3zbiA
 permalink: index.html
 ---
-<section class="hero-cascade hero-cascade-home">
+<section class="hero-cascade hero-cascade-home pb-5">
     <div style="background: url({{page.hero | absolute_url}});" class="hero-view bg-image-fill position-relative d-flex flex-column align-items-center">
         <div style="height: calc(100vh - 56px)" class="position-absolute p-5 d-flex flex-column justify-content-between align-items-center">
             <div class="d-flex flex-column justify-content-around align-items-center">
                 <img class="hero-logo" src={{page.heroLogo | absolute_url}} width="300">
-                <h2 class="text-center text-uppercase font-weight-bold text-white py-4">Some words here for slogan</h2>
+                <h2 class="h4 text-center text-uppercase font-weight-bold text-white py-4">Saving and enhancing lives for over 50 years</h2>
             </div>    
             
             <!-- <p class="lead text-center font-weight-bold text-white lead pt-3 px-3">{{page.mission | smartify | markdownify | replace: "<p>" |
                     replace: "</p>"}}
             </p> -->
-            <a href="{{ site.data.global.donateUrl }}"
-            target="_blank"
-            rel="noopener  "
-            role="button" class="border shadow btn btn-secondary px-4 py-3 text-white btn-lg mx-auto my-5">DONATE NOW</a>
+          
         </div>
         <span style="z-index: -1" class="mask mask-dark mask-gradient-t-b"></span>
         
     </div>
+    <a href="{{ site.data.global.donateUrl }}"
+    target="_blank"
+    rel="noopener"
+    role="button" class="call-to-action shadow btn btn-secondary px-5 py-4 text-white btn-lg mx-auto">DONATE NOW</a>
     <!-- <div class="col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
         <p class="lead pt-3 px-3">{{page.mission | smartify | markdownify | replace: "<p>" |
                 replace: "</p>"}}</p>
