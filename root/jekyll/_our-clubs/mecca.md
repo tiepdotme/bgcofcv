@@ -8,9 +8,10 @@ address: 91391 66th Avenue
 city: Mecca, CA
 zip: 92254
 unitDirector: Ray Amador
+isSchoolHours: true
 schoolHours: 2:00pm - 7:00pm
 summerHours: 7:30am - 5:30pm
-image: assets/images/bgc-mecca.jpg
+image: assets/images/mecca-club.jpg
 ---
 
-Is a state-of-the-art facility where members can enjoy games, sports activities, technology, and more! Our Joel E. Smilow Clubhouse currently serves 1,678 youth in the city of Mecca.
+A state-of-the-art facility where members can enjoy games, sports activities, technology, and more! Our Joel E. Smilow Clubhouse currently serves 1,000 youth in Mecca and surrounding cities. In a partnership with the County of Riverside, this Club opened in 2011.

@@ -226,7 +226,7 @@ collections:
                 - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/alumni.html
             label: "Alumni"
-            name: team
+            name: alumni
             editor:
                 preview: false
             fields:
@@ -273,6 +273,36 @@ collections:
                 - { label: "Description", name: "description", widget: "markdown" }
                 - { label: "Image", name: "image", widget: "image" }
           - { label: "Body", name: body, widget: hidden }
+
+    - name: our-clubs
+      label: Our Clubs
+      folder: root/jekyll/_our-clubs
+      create: false
+      delete: false
+      description: Update club information
+      slug: "{{slug}}"
+      editor:
+          preview: false
+      fields:
+          - { label: "Layout", name: layout, widget: hidden, default: clubs-layout }
+          - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Fax", name: "fax", widget: "string", required: false }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "City", name: "city", widget: "string" }
+          - { label: "Zipcode", name: "zip", widget: "string" }
+          - { label: "Unit Director", name: "unitDirector", widget: "string" }
+          - {
+                label: "Is Regular Hours?",
+                name: "isSchoolHours",
+                widget: "boolean",
+                hint: School hours instead of summer hours?,
+            }
+          - { label: "Regular Hours", name: "schoolHours", widget: "string" }
+          - { label: "Summer Hours", name: "summerHours", widget: "string" }
+          - { label: Hero Image, name: image, widget: image }
+          - { label: "Body", name: body, widget: markdown }
 
     - name: campaigns
       label: Campaigns

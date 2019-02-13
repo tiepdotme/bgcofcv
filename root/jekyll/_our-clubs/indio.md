@@ -8,9 +8,10 @@ address: 83100 Date Avenue
 city: Indio, CA
 zip: 92201
 unitDirector: Tracy Reed
+isSchoolHours: true
 schoolHours: 2:00pm - 7:00pm
 summerHours: 7:30am - 5:30pm
-image: assets/images/bgc-indio.jpg
+image: assets/images/indio-club.jpg
 ---
 
-Provide safe havens and a welcoming atmosphere for thousands of youth across the Coachella Valley. After school activities build leadership skills, encourage good citizenship, keep students engaged academically, promote physical activity, and champion community involvement. For more information on programs and services please contact your local clubhouse.
+Our flagship clubhouse, began serving the community in 1966. Directly next to Thomas Jefferson Middle School and just blocks from Van Buren Elementary School, the club boasts a newly renovated gymnasium. This facility includes the separate 9,000 square foot Smilow Family Teen Center and a 4,400 square foot Boxing and Athletic Center.
