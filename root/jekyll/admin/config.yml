@@ -126,7 +126,7 @@ collections:
                         name: reportName
                         widget: string
                 - label: "Newsletter"
-                  name: "annuanewsletterlReport"
+                  name: "newsletter"
                   widget: object
                   required: false
                   default: null
