@@ -27,7 +27,7 @@ permalink: ways-to-give.html
         <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
     </div>
 </section>
-{% if page.video %}
+{% comment %} {% if page.video %}
 <section class="my-5 py-5 bg-primary">
     <div class="container">
         <div class="row">
@@ -39,14 +39,14 @@ permalink: ways-to-give.html
         </div>
     </div>
 </section>
-{% endif %}
+{% endif %} {% endcomment %}
 <section class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6">
                 <div class="card my-1 shadow">
                     {% include img_srcset.html class="card-img-top" alt="One Time Donation" style="height: 300px"
-                    filename="one-time-donation.jpg"%}
+                    filename="ways-to-give-1.jpg"%}
                     <div class="card-body d-flex flex-column align-items-center">
                         <div>
                             <a
@@ -64,7 +64,7 @@ permalink: ways-to-give.html
             <div class="col-sm-12 col-md-12 col-lg-6">
                 <div class="card my-1 shadow">
                     {% include img_srcset.html class="card-img-top" alt="Become a Fundraiser" style="height: 300px"
-                    filename="fundraiser.jpg" %}
+                    filename="ways-to-give-2.jpg" %}
                     <div class="card-body d-flex flex-column align-items-center">
                         <div>
                             <a
