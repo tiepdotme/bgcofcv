@@ -110,6 +110,36 @@ collections:
                       - label: "Report Name"
                         name: reportName
                         widget: string
+                - label: "Annual Report"
+                  name: "annualReport"
+                  widget: object
+                  required: false
+                  default: null
+                  fields:
+                      - label: "File"
+                        name: file
+                        widget: "file"
+                        media_library:
+                            config:
+                                multiple: false
+                      - label: "Report Name"
+                        name: reportName
+                        widget: string
+                - label: "Newsletter"
+                  name: "annuanewsletterlReport"
+                  widget: object
+                  required: false
+                  default: null
+                  fields:
+                      - label: "File"
+                        name: file
+                        widget: "file"
+                        media_library:
+                            config:
+                                multiple: false
+                      - label: "File Name"
+                        name: reportName
+                        widget: string
 
     - name: pages
       label: Pages
