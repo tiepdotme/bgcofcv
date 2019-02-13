@@ -20,5 +20,9 @@
     "annualReport": {
         "file": "assets/bgcofcv-annual-report-2017-2018.pdf",
         "reportName": "Annual Report 2017-2018"
+    },
+    "newsletter": {
+        "file": "assets/bgc-newsletter.pdf",
+        "reportName": "BGC Newsletter"
     }
 }

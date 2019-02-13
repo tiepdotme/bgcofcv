@@ -19,9 +19,8 @@ impact: >-
   character development.
 video:
   description: >-
-    Long ago, the mice had a general council to consider what measures they
-    could take to outwit their common enemy, the Cat
-  header: Lorem Ipsum
+    Watch our mission at work in this 3 minute video
+  header: The Story of Jose
   youtubeId: iHsLgK3zbiA
 permalink: index.html
 ---
@@ -101,6 +100,44 @@ permalink: index.html
 <section class="py-5">
     <div class="container">
         <div class="row">
+            <div class="card-deck">
+                <div class="card">
+                    <div class="d-flex justify-content-center align-content-center py-3">
+                        <i class="display-4 fas fa-user-friends text-secondary"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Join Us</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="d-flex justify-content-center align-content-center py-3">
+                        <i class="display-4 fas fa-hand-holding-heart text-secondary"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Support Us</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="d-flex justify-content-center align-content-center py-3">
+                        <i class="display-4 fas fa-city text-secondary"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Visit Us</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
             <div class="col-sm-12">
                 <h1 class="text-center section-header">Community Impact</h1>
                 <p class="lead">{{page.history | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
@@ -110,14 +147,14 @@ permalink: index.html
                     <a
                         href="{{ site.data.global.impactReport.file }}"
                         target="_blank"
-                        rel="noopener  "
+                        rel="noopener"
                         class="my-1 mx-0 mx-sm-2 btn btn-outline-secondary text-uppercase"
                         > <i class="far fa-arrow-alt-circle-down"></i> {{site.data.global.impactReport.reportName}}</a
                     >
                     <a
                         href="{{ site.data.global.annualReport.file }}"
                         target="_blank"
-                        rel="noopener  "
+                        rel="noopener"
                         class="my-1 mx-0 mx-sm-2 btn btn-outline-secondary text-uppercase"
                         > <i class="far fa-arrow-alt-circle-down"></i> {{site.data.global.annualReport.reportName}}</a
                     >
@@ -212,9 +249,29 @@ permalink: index.html
             <div class="col-sm-12">
                 <h2 class="section-header text-light text-center">{{ page.video.header }}</h2>
             </div>
-            <div class="lead text-light pt-3 px-3">{{ page.video.description | markdownify }}</div>
-            <div class="col-sm-12">{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
+            <div class="col-sm-12 lead text-light pt-3 px-3 text-center">{{ page.video.description | markdownify | replace: "<p>" | replace: "</p>" }}</div>
+            <div class="col-sm-12 pt-3">{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
         </div>
     </div>
 </section>
 {% endif %}
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="h4 text-center">
+                    Learn more about our work
+                </h2>
+                <div class="d-flex flex-sm-row flex-column justify-content-center py-3">
+                    <a
+                        href="{{ site.data.global.newsletter.file }}"
+                        target="_blank"
+                        rel="noopener"
+                        class="my-1 mx-0 mx-sm-2 btn btn-secondary btn-lg text-uppercase"
+                        > <i class="far fa-arrow-alt-circle-down"></i> {{site.data.global.newsletter.reportName}}</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
