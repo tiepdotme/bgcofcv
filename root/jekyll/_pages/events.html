@@ -14,14 +14,18 @@ permalink: events.html
         style="background: url({{page.hero | absolute_url}});"
         class="hero-view bg-image-fill position-relative p-5"
     ></div>
-    <div class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
+    {% comment %} <div class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
         <h1 class="text-center section-header underline">{{ page.title }}</h1>
         <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
-    </div>
+    </div> {% endcomment %}
 </section>
 <section class="py-5">
     <div class="container">
         <div class="row">
+            <div class="col-12 py-5 d-flex flex-column justify-content-center align-items-center">
+                <h1 class="text-center section-header underline">{{ page.title }}</h1>
+                <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
+            </div>
             {% capture nowUnix %} {{site.time | date: '%s' }}{% endcapture %} 
             {% assign upcomingEventsArr = "" | split: ',' %} 
             {% assign pastEventsArr = "" | split: ',' %} 
@@ -35,8 +39,43 @@ permalink: events.html
                 {% endif %} 
             {% endfor %} 
             {% assign nextEvent = upcomingEventsArr | first %}
-            <div class="col-sm-12 col-md-7">
-                <div>
+            <div class="col-sm-12">
+                <div class="card border-0">
+                    <div style="z-index: 2; overflow: hidden" class="rounded shadow position-relative">
+                        {%-capture image-%}{{nextEvent.image | split: "/" | last}}{%-endcapture-%}
+                        {% include img_srcset.html class="card-img-top position-relative" alt=nextEvent.title  filename=image %}
+                    </div>
+                    <div style="z-index: 3; margin-top: -1rem; margin-left: 4%; margin-right: 4%" class="card-body shadow text-center rounded bg-white">
+                        <span class="text-muted text-uppercase font-weight-bold">Upcoming</span>
+                        <h3 class="card-title text-secondary pt-2">{{nextEvent.title | markdownify | replace: "<p>" | replace: "</p>"}}</h3>
+                        <p class="text-muted my-1">{{nextEvent.date | date: "%a, %b %d %Y"}}</p>
+                        <p class="text-muted my-1">{{nextEvent.location}}</p>
+                    </div>
+                </div>
+                {% comment %} <div class="card shadow mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            {%-capture image-%}{{nextEvent.image | split: "/" | last}}{%-endcapture-%}
+                            {% include img_srcset.html class="card-img rounded-0 h-100" alt=nextEvent.title  filename=image %}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <span class="text-muted text-uppercase font-weight-bold">Upcoming</span>
+                                <h3 class="card-title text-secondary pt-2">{{nextEvent.title | markdownify | replace: "<p>" | replace: "</p>"}}</h3>
+                                <div class="d-flex flex-column">
+                                    <span class="text-muted">{{nextEvent.date | date: "%a, %b %d %Y"}}</span>
+                                    <span class="text-muted">{{nextEvent.location}}</span>
+                                </div>
+                                <p class="card-text pt-3">{{nextEvent.description | markdownify | replace: "<p>" |
+                                    replace: "</p>"}}</p>
+                                <div class="pt-2 d-flex justify-content-center">
+                                    <a href="{{nextEvent.url}}" class="btn-lg btn-secondary btn text-uppercase">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> {% endcomment %}
+                {% comment %} <div>
                     <div class="shadow rounded d-flex justify-content-center mb-3">
                         <img class="img-fluid rounded" src="{{nextEvent.image}}" />
                     </div>
@@ -51,9 +90,9 @@ permalink: events.html
                             <a href="{{nextEvent.url}}" class="text-dark border rounded-circle border-secondary btn btn-round"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
-            <aside class="col-sm-12 col-md-5">
+            {% comment %} <aside class="col-sm-12">
             <div class="d-sm-none divider my-3 my-md-5"></div>
             {% assign events = upcomingEventsArr | shift %}
             {% assign eventsSize = events | size %}
@@ -85,7 +124,7 @@ permalink: events.html
                     No more events
                 </div>
             {% endif %}
-            </aside>
+            </aside> {% endcomment %}
         </div>
     </div>
 </section>
