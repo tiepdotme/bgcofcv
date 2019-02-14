@@ -55,7 +55,9 @@ permalink: events.html
             </div>
             <aside class="col-sm-12 col-md-5">
             <div class="d-sm-none divider my-3 my-md-5"></div>
-            {% assign events = upcomingEventsArr | shift | concat: pastEventsArr %}
+            {% assign events = upcomingEventsArr | shift %}
+            {% assign eventsSize = events | size %}
+            {% if eventsSize > 0 %}
                 <ul class="list-unstyled">
                     {% for  event in events %}
                         <li class="media">
@@ -78,6 +80,11 @@ permalink: events.html
                         {% endif %}
                     {% endfor %}
                 </ul>
+            {% else %}
+                <div class="alert alert-secondary text-center" role="alert">
+                    No more events
+                </div>
+            {% endif %}
             </aside>
         </div>
     </div>

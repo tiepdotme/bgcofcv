@@ -24,7 +24,27 @@ permalink: programs.html
             %}
 
             <div class="col-sm-12 py-3">
-                <div class="card border-0 bg-dark text-white shadow h-100">
+                <div class="card shadow mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            {%-capture image-%}{{scholarshipsProgram.hero | split: "/" | last}}{%-endcapture-%}
+                            {% include img_srcset.html class="card-img rounded-0 h-100" alt=scholarshipsProgram.title
+                            filename=image
+                            %}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title text-center text-secondary">{{scholarshipsProgram.title | markdownify | replace: "<p>" | replace: "</p>"}}</h5>
+                                <p class="card-text">{{scholarshipsProgram.description | markdownify | replace: "<p>" |
+                                    replace: "</p>"}}</p>
+                                    <div class="pt-2 d-flex justify-content-center">
+                                        <a href="{{scholarshipsProgram.url}}" class="btn-lg btn-secondary btn text-uppercase">View More</a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card border-0 bg-dark text-white shadow h-100">
                     <span class="mask rounded mask-dark"></span>
                     {%-capture image-%}{{scholarshipsProgram.hero | split: "/" | last}}{%-endcapture-%}
                     {% include img_srcset.html class="card-img" style="height:300px" alt=scholarshipsProgram.title
@@ -43,28 +63,31 @@ permalink: programs.html
                                     replace: "</p>"}}
                             </p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             {% for category in categories %}
             <div class="col-sm-12 col-md-12 col-lg-6 py-3">
                 <div class="card bg-dark text-white shadow h-100 border-0">
-                    <span class="mask rounded mask-dark"></span>
+                    <span class="mask rounded mask-dark mask-gradient-t-b"></span>
                     {%-capture image-%}{{category.thumb | split: "/" | last}}{%-endcapture-%}
                     {% include img_srcset.html class="card-img" style="height:250px" alt=category.title
                     filename=image
                     %}
                     <div class="card-img-overlay p-3">
                         <div class="d-flex justify-content-between">
-                            <h3 class="card-title">{{category.title | markdownify | replace: "<p>" | replace: "</p>"}}</h3>
+                            <h3 class="card-title font-weight-bold">{{category.title | markdownify | replace: "<p>" | replace: "</p>"}}</h3>
                             
+                            <div>
                             <a href="{{category.url}}" class="text-white btn-lg border rounded-circle border-secondary btn btn-round">
                                 <i class="fas fa-arrow-right"></i>
                             </a>
+                            </div>
+                            
                         </div>
-                        <p class="card-text py-0">
+                        {% comment %} <p class="card-text py-0">
                             {{category.description | markdownify | replace: "<p>" | replace: "</p>"}}
-                        </p>
+                        </p> {% endcomment %}
                     </div>
                 </div>
             </div>
