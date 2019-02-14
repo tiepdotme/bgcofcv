@@ -26,6 +26,8 @@ permalink: events.html
                 <h1 class="text-center section-header underline">{{ page.title }}</h1>
                 <div class="lead pt-3">{{ page.description | markdownify }}</div>
             </div>
+        </div>
+        <div class="row py-5">
             {% capture nowUnix %} {{site.time | date: '%s' }}{% endcapture %} 
             {% assign upcomingEventsArr = "" | split: ',' %} 
             {% assign pastEventsArr = "" | split: ',' %} 
@@ -95,38 +97,73 @@ permalink: events.html
                     </div>
                 </div> {% endcomment %}
             </div>
-            {% comment %} <aside class="col-sm-12">
-            <div class="d-sm-none divider my-3 my-md-5"></div>
-            {% assign events = upcomingEventsArr | shift %}
-            {% assign eventsSize = events | size %}
-            {% if eventsSize > 0 %}
-                <ul class="list-unstyled">
-                    {% for  event in events %}
-                        <li class="media">
-                            <img class="mr-3 align-self-top img-thumbnail" width="96" src="{{event.image}}" alt="Generic placeholder image">
-                            <div class="media-body">
-                                <h5 class="m-0">{{event.title}}</h5>
-                                <p class="text-muted">{{event.date | date: "%a, %b %d %Y"}}</p>
-                                <div class="d-flex justify-content-around">
-                                    <p class="m-0 line-clamp line-clamp-1">{{event.description}}</p>
-                                    <div>
-                                        <a href="{{event.url}}" class="text-dark border rounded-circle border-secondary btn btn-round"><i class="fas fa-arrow-right"></i></a>
-                                    </div>
+        </div>
+        {% assign events = upcomingEventsArr | shift %}
+        {% assign eventsSize = events | size %}
+        {% if eventsSize > 0 %}
+            <div class="divider my-5"></div>
+        {% endif %}
+        <div class="row py-5">
+                {% for  event in events %}
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            {%-capture image-%}{{event.image | split: "/" | last}}{%-endcapture-%}
+                            {% include img_srcset.html class="card-img-top" style="max-height:350px" alt=event.title  filename=image %}
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-secondary">{{event.title}}</h5>
+                                <p class="text-muted my-1">{{event.date | date: "%a, %b %d %Y"}}</p>
+                                <p class="text-muted my-1">{{event.location}}</p>
+                                {% if event.location %}
+                                <small>{{event.address}}</small>
+                                {% endif %}
+                                <a href="{{event.url}}" class="btn btn-secondary text-uppercase mt-2">View</a>
+                            </div>
+                        </div>
+                        {% comment %} <img class="mr-3 align-self-top img-thumbnail" width="96" src="{{event.image}}" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="m-0">{{event.title}}</h5>
+                            <p class="text-muted">{{event.date | date: "%a, %b %d %Y"}}</p>
+                            <div class="d-flex justify-content-around">
+                                <p class="m-0 line-clamp line-clamp-1">{{event.description}}</p>
+                                <div>
+                                    <a href="{{event.url}}" class="text-dark border rounded-circle border-secondary btn btn-round"><i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
-                        </li>
-                        {% if forloop.last == false %}
-                        <li>
-                            <div class="divider my-3 my-md-5"></div>
-                        </li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <div class="alert alert-secondary text-center" role="alert">
-                    No more events
-                </div>
-            {% endif %}
+                        </div> {% endcomment %}
+                    </div>
+                {% endfor %}
+            {% comment %} <aside class="col-sm-12">
+                <div class="d-sm-none divider my-3 my-md-5"></div>
+                {% assign events = upcomingEventsArr | shift %}
+                {% assign eventsSize = events | size %}
+                {% if eventsSize > 0 %}
+                    <ul class="list-unstyled">
+                        {% for  event in events %}
+                            <li class="media">
+                                <img class="mr-3 align-self-top img-thumbnail" width="96" src="{{event.image}}" alt="Generic placeholder image">
+                                <div class="media-body">
+                                    <h5 class="m-0">{{event.title}}</h5>
+                                    <p class="text-muted">{{event.date | date: "%a, %b %d %Y"}}</p>
+                                    <div class="d-flex justify-content-around">
+                                        <p class="m-0 line-clamp line-clamp-1">{{event.description}}</p>
+                                        <div>
+                                            <a href="{{event.url}}" class="text-dark border rounded-circle border-secondary btn btn-round"><i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {% if forloop.last == false %}
+                            <li>
+                                <div class="divider my-3 my-md-5"></div>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <div class="alert alert-secondary text-center" role="alert">
+                        No more events
+                    </div>
+                {% endif %}
             </aside> {% endcomment %}
         </div>
     </div>
