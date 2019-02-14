@@ -377,7 +377,7 @@ collections:
                   widget: object
                   fields:
                       - { label: Number, name: number, widget: "string" }
-                      - { label: Extension, name: extension, widget: "string" }
+                      - { label: Extension, name: extension, widget: "string", required: false }
           - label: Event Time
             name: time
             widget: object
@@ -400,6 +400,7 @@ collections:
                       format: "hh:mm a",
                   }
           - { label: "Location", name: "location", widget: "string" }
+          - { label: "Address", name: "address", widget: "string", default: null }
           - { label: "Body", name: body, widget: hidden }
 
     - name: team
