@@ -4,8 +4,8 @@ title: The Arts
 description: >-
   Fostering creativity in young people, and give them outlets for
   self-expression.
-thumb: /assets/images/arts.jpg
-hero: assets/images/arts-hero.jpg
+thumb: /assets/images/contact-us-hero.jpg
+hero: /assets/images/contact-us-hero.jpg
 programs:
   - title: Fine Arts
     description: >-
