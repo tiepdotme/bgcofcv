@@ -1,10 +1,17 @@
 ---
 layout: site-layout
 title: Alumni
-hero: assets/images/our-clubs-hero.jpg
+hero: assets/images/alumni-hero.png
 link: https://docs.google.com/forms/d/e/1FAIpQLSdRI2SEPmMiHRn8rbeepMeCAEy_6FdU_aG2_WS1d8_x_AjZlA/viewform?embedded=true
-description: The Owl always takes her sleep during the day. Then after sundown, when the rosy light fades from the sky and the shadows rise slowly through the wood, out she comes ruffling and blinking from the old hollow tree. Now her weird "hoo-hoo-hoo-oo-oo" echoes through the quiet wood, and she begins her hunt for the bugs and beetles, frogs and mice she likes so well to eat. Now there was a certain old Owl who had become very cross and hard to please as she grew older, especially if anything disturbed her daily slumbers. One warm summer afternoon as she dozed away in her den in the old oak tree, a Grasshopper nearby began a joyous but very raspy song. Out popped the old Owl's head from the opening in the tree that served her both for door and for window.
+description: Are you a Boys & Girls Club kid? Please tell us how the Boys & Girls Clubs played a role in your life
 permalink: alumni.html
+testimonials:
+    - image:
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+      source:
+    - image:
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+      source:
 ---
 
 <section class="hero-cascade">
@@ -17,16 +24,68 @@ permalink: alumni.html
     >
         <h1 class="text-center section-header underline">{{ page.title }}</h1>
         <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
+        <div class="pt-2 d-flex justify-content-center">
+            <a target="_blank" rel="noopener" class="btn-secondary btn text-uppercase" href="{{ page.link }}"
+                >Share Your Story</a
+            >
+        </div>
     </div>
 </section>
-<section class="py-5 mt-5 bg-light">
+<section class="py-5 mt-5 bg-white">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"><h2 class="section-header text-center py-4">Sign Up</h2></div>
-            <div class="col-sm-12">
-                <div class="embed-responsive embed-responsive-4by3">
-                    <iframe class="embed-responsive-item" src="{{ page.link }}">Loading...</iframe>
-                </div>
+            <div class="col-12">
+                <blockquote class="blockquote">
+                    <p class="mb-0 text-center">
+                        Recently I started working for the Dean as a student worker. Organizing and participating in
+                        campus events reminds me of my past participation with Keystone Leadership Program at Indio Boys
+                        and Girls Club. All the life lessons and skills I was taught throughout my participation with
+                        Keystone have carried with me and have been reapplied many times. I will forever be thankful to
+                        the Boys and Girls Club staff who mentored and encouraged me to step out of my comfort zone.
+                    </p>
+                    <footer class="pt-2 d-flex align-items-center justify-content-end blockquote-footer text-right">
+                        <div class="d-flex align-items-center">
+                            <img
+                                width="56"
+                                height="56"
+                                style="object-fit: cover"
+                                src="{{ './assets/images/melissa.jpg' | absolute_url }}"
+                                class="rounded-circle"
+                                alt="Melissa"
+                            />
+                            <cite title="Melissa">Melissa, Cal State San Bernardino Graduate</cite>
+                        </div>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <blockquote class="blockquote">
+                    <p class="mb-0 text-center">
+                        Each year the Tony Reagins Alumni Association grows with Boys and Girls Club alumni. The
+                        association hosts an annual golf tournament which raises thousands of dollars to send Club youth
+                        to college. If you would like to learn more about the association please call us at
+                        760-836-1160.
+                    </p>
+                    <footer class="pt-2 d-flex align-items-center justify-content-end blockquote-footer text-right">
+                        <div class="d-flex align-items-center">
+                            <img
+                                width="56"
+                                height="56"
+                                style="object-fit: cover"
+                                src="{{ './assets/images/tony.jpg' | absolute_url }}"
+                                class="rounded-circle"
+                                alt="Tony Reagins"
+                            />
+                            <cite title="Tony Reagins">Tony Reagins, Alumni Association</cite>
+                        </div>
+                    </footer>
+                </blockquote>
             </div>
         </div>
     </div>
