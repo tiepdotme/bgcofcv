@@ -4,8 +4,8 @@ title: Sports &amp; Fitness
 description: >-
   Develop physical fitness, reduce stress and promote a positive use of leisure
   time, appreciation for the environment and interpersonal skills.
-thumb: assets/images/sports-fitness-thumb.jpg
-hero: /assets/images/sports-fitness.jpg
+thumb: /assets/images/image-5.jpg
+hero: /assets/images/image-5.jpg
 programs:
   - title: PGA Sports Academy
     description: >-
