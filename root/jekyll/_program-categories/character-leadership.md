@@ -5,8 +5,8 @@ description: >-
   Enabling youth to become responsible, caring citizens and develop leadership
   skills and gain opportunities for planning, decision-making, contributing to
   their Club and community.
-thumb: assets/images/character-leadership-thumb.jpg
-hero: assets/images/character-leadership-hero.jpg
+thumb: /assets/images/image-1.jpg
+hero: /assets/images/image-1.jpg
 programs:
   - title: 'Million Members, Million Hours of Service'
     description: >-
