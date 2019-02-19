@@ -16,6 +16,9 @@
     &.mask-gradient-t-b {
         background: linear-gradient(rgba(0, 0, 0, 0.75) 0%, transparent 75%);
     }
+    &.mask-gradient-t-b-2 {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, 1) 100%);
+    }
 }
 
 .mask-pattern {

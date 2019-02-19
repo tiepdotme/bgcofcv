@@ -240,6 +240,20 @@ collections:
                 - { label: "Title", name: "title", widget: "string" }
                 - { label: "Hero Image", name: "hero", widget: "image", required: false }
                 - { label: "Description", name: "description", required: false, widget: "markdown" }
+                - {
+                      label: "Volunteer Form Link",
+                      name: "volunteerLink",
+                      required: false,
+                      widget: "string",
+                      hint: Url to the volunteer form,
+                  }
+                - {
+                      label: "Subscribe Form Link",
+                      name: "subscribeLink",
+                      required: false,
+                      widget: "string",
+                      hint: Url to the form for subscribing for event updates,
+                  }
                 - { label: "Permalink", name: "permalink", widget: "hidden" }
                 - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/team.html

@@ -7,6 +7,9 @@
     background-position: 50% 33% !important;
     overflow: hidden;
     background-size: cover !important;
+    &.position-center {
+        background-position: center !important;
+    }
 }
 
 .bg-image-contain {

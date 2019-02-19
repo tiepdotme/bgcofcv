@@ -2,10 +2,10 @@
 layout: site-layout
 title: Events
 hero: /assets/images/events-hero.jpg
+volunteerLink:  https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=37
+subscribeLink: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=38
 description: >-
-  Our club hosts yearly fundraising events and acknowledgment ceremonies that
-  are open to the community. For more information on how to be apart of these
-  events, please visit the event's details below.
+    If you would like to receive information about our events please join our mailing list.
 permalink: events.html
 ---
 
@@ -14,19 +14,16 @@ permalink: events.html
         style="background: url({{page.hero | absolute_url}});"
         class="hero-view bg-image-fill position-relative p-5"
     ></div>
-    {% comment %} <div class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
+    <div class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3">
         <h1 class="text-center section-header underline">{{ page.title }}</h1>
         <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
-    </div> {% endcomment %}
+        <div class="d-flex py-2 justifu-content-center">
+            <a class="btn btn-lg btn-secondary text-uppercase" target="_blank" rel="noopener" href="{{page.subscribeLink}}">Subscribe</a>
+        </div>
+    </div>
 </section>
 <section class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-12 py-5 d-flex flex-column justify-content-center align-items-center">
-                <h1 class="text-center section-header underline">{{ page.title }}</h1>
-                <div class="lead pt-3">{{ page.description | markdownify }}</div>
-            </div>
-        </div>
         <div class="row py-5">
             {% capture nowUnix %} {{site.time | date: '%s' }}{% endcapture %} 
             {% assign upcomingEventsArr = "" | split: ',' %} 
@@ -57,45 +54,6 @@ permalink: events.html
                         </div>
                     </div>
                 </div>
-                {% comment %} <div class="card shadow mb-3">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            {%-capture image-%}{{nextEvent.image | split: "/" | last}}{%-endcapture-%}
-                            {% include img_srcset.html class="card-img rounded-0 h-100" alt=nextEvent.title  filename=image %}
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <span class="text-muted text-uppercase font-weight-bold">Upcoming</span>
-                                <h3 class="card-title text-secondary pt-2">{{nextEvent.title | markdownify | replace: "<p>" | replace: "</p>"}}</h3>
-                                <div class="d-flex flex-column">
-                                    <span class="text-muted">{{nextEvent.date | date: "%a, %b %d %Y"}}</span>
-                                    <span class="text-muted">{{nextEvent.location}}</span>
-                                </div>
-                                <p class="card-text pt-3">{{nextEvent.description | markdownify | replace: "<p>" |
-                                    replace: "</p>"}}</p>
-                                <div class="pt-2 d-flex justify-content-center">
-                                    <a href="{{nextEvent.url}}" class="btn-lg btn-secondary btn text-uppercase">View More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> {% endcomment %}
-                {% comment %} <div>
-                    <div class="shadow rounded d-flex justify-content-center mb-3">
-                        <img class="img-fluid rounded" src="{{nextEvent.image}}" />
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <span class="text-danger">Upcoming</span>
-                        <span class="text-muted">{{nextEvent.date | date: "%a, %b %d %Y"}}</span>
-                    </div>
-                    <h4 class="">{{nextEvent.title}}</h4>
-                    <div class="d-flex align-content-between">
-                        <p>{{nextEvent.description}}</p>
-                        <div class="px-1">
-                            <a href="{{nextEvent.url}}" class="text-dark border rounded-circle border-secondary btn btn-round"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div> {% endcomment %}
             </div>
         </div>
         {% assign events = upcomingEventsArr | shift %}
@@ -119,52 +77,28 @@ permalink: events.html
                                 <a href="{{event.url}}" class="btn btn-secondary text-uppercase mt-2">View</a>
                             </div>
                         </div>
-                        {% comment %} <img class="mr-3 align-self-top img-thumbnail" width="96" src="{{event.image}}" alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h5 class="m-0">{{event.title}}</h5>
-                            <p class="text-muted">{{event.date | date: "%a, %b %d %Y"}}</p>
-                            <div class="d-flex justify-content-around">
-                                <p class="m-0 line-clamp line-clamp-1">{{event.description}}</p>
-                                <div>
-                                    <a href="{{event.url}}" class="text-dark border rounded-circle border-secondary btn btn-round"><i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div> {% endcomment %}
                     </div>
                 {% endfor %}
-            {% comment %} <aside class="col-sm-12">
-                <div class="d-sm-none divider my-3 my-md-5"></div>
-                {% assign events = upcomingEventsArr | shift %}
-                {% assign eventsSize = events | size %}
-                {% if eventsSize > 0 %}
-                    <ul class="list-unstyled">
-                        {% for  event in events %}
-                            <li class="media">
-                                <img class="mr-3 align-self-top img-thumbnail" width="96" src="{{event.image}}" alt="Generic placeholder image">
-                                <div class="media-body">
-                                    <h5 class="m-0">{{event.title}}</h5>
-                                    <p class="text-muted">{{event.date | date: "%a, %b %d %Y"}}</p>
-                                    <div class="d-flex justify-content-around">
-                                        <p class="m-0 line-clamp line-clamp-1">{{event.description}}</p>
-                                        <div>
-                                            <a href="{{event.url}}" class="text-dark border rounded-circle border-secondary btn btn-round"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            {% if forloop.last == false %}
-                            <li>
-                                <div class="divider my-3 my-md-5"></div>
-                            </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    <div class="alert alert-secondary text-center" role="alert">
-                        No more events
-                    </div>
-                {% endif %}
-            </aside> {% endcomment %}
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="h4 text-center text-light">
+                    Want to volunteer for future events?
+                </h2>
+                <div class="d-flex flex-sm-row flex-column justify-content-center py-3">
+                    <a
+                        href="{{ page.volunteerLink }}"
+                        target="_blank"
+                        rel="noopener"
+                        class="shadow btn btn-secondary btn-lg text-uppercase"
+                        >Sign Up</a
+                    >
+                </div>
+            </div>
         </div>
     </div>
 </section>
