@@ -45,33 +45,50 @@ permalink: index.html
             <div class="col-sm-12">
                 <div class="card-deck">
                     <div class="card">
+                        {% capture nowUnix %} {{site.time | date: '%s' }}{% endcapture %} 
+                        {% assign upcomingEventsArr = "" | split: ',' %} 
+                        {% for event in site.events %} 
+                            {% capture eventDate %} {{event.date | date: '%s' }}{% endcapture %} 
+                            {% if nowUnix < eventDate %} 
+                                {% assign upcomingEventsArr = upcomingEventsArr | push: event %} 
+                            {% endif %} 
+                        {% endfor %} 
+                        {% assign nextEvent = upcomingEventsArr | first %}
                         <div class="d-flex justify-content-center align-content-center py-3">
-                            <i class="display-4 fas fa-user-friends text-primary"></i>
+                            <i class="display-4 text-primary fas fa-calendar-alt"></i>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Join Us</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title text-center">Upcoming Events</h5>
+                            <div class="media">
+                                {%-capture image-%}{{nextEvent.image | split: "/" | last}}{%-endcapture-%}
+                                {% include img_srcset.html style="height: 64px; width:64px;" class="mr-3" alt=nextEvent.title  filename=image %}
+                                <div class="media-body">
+                                    <p class="mt-0">{{nextEvent.title}}</p>
+                                </div>
+                            </div>
+                            <a href="{{nextEvent.url | absolute_url}}" class="p-0 btn btn-link stretched-link">View Details</a>
                         </div>
                     </div>
                     <div class="card">
                         <div class="d-flex justify-content-center align-content-center py-3">
                             <i class="display-4 fas fa-hand-holding-heart text-primary"></i>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Support Us</h5>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title text-center">Join Our Mission</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.</p>
+                            <a href="{{'ways-to-give.html' | absolute_url}}" class="p-0 btn btn-link stretched-link">Find out how</a>
                         </div>
                     </div>
                     <div class="card">
                         <div class="d-flex justify-content-center align-content-center py-3">
                             <i class="display-4 fas fa-city text-primary"></i>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Visit Us</h5>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title text-center">Take a Club Tour</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.</p>
+                            <a href="{{'ways-to-give.html' | absolute_url}}" class="p-0 btn btn-link stretched-link">Find out how</a>
                         </div>
                     </div>
                 </div>
