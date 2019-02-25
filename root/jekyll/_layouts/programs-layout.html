@@ -3,7 +3,7 @@
 
 <head>
     {% include collection-head.html %}
-<link href="../site.d63ba4a7bf7751056833.min.css" rel="stylesheet"></head>
+<link href="../site.e5326b70d6cf060c8fa7.min.css" rel="stylesheet"></head>
 
 <body>
     {% include navbar.html %}
@@ -22,6 +22,15 @@
                 <h1 class="text-center section-header underline">{{page.title}}</h1>
                 <p class="lead text-justify pt-3 px-3">{{page.description | smartify | markdownify | replace: "<p>" |
                         replace: "</p>"}}</p>
+                    {% if page.callToAction != null %}
+                    <a
+                        href="{{ page.callToAction.link }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary text-uppercase text-white mx-auto"
+                        >{{page.callToAction.text}}</a
+                    >
+                    {% endif %}
             </div>
         </section>
         <section class="py-5">

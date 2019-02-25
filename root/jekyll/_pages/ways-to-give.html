@@ -1,6 +1,6 @@
 ---
 layout: site-layout
-title: Ways to Give
+title: Why Giving Matters
 hero: /assets/images/ways-to-give-hero.jpg
 description: >-
     Last year **6,500** youth participated in life-changing programs and fun
@@ -27,6 +27,17 @@ permalink: ways-to-give.html
     >
         <h1 class="text-center section-header underline">{{ page.title }}</h1>
         <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
+        <p>Credit Card, Phone or Check, Electronic Funds Transfer, Appreciated Funds Transfer</p>
+        <a
+            href="{{ site.data.global.donateUrl }}"
+            target="_blank"
+            rel="noopener"
+            role="button"
+            class="shadow btn btn-secondary mb-2"
+            >DONATE NOW</a
+        >
+        <small>All donations are tax deductible</small>
+        <small>Federal Tax ID Number 95-6122699</small>
     </div>
 </section>
 {% comment %} {% if page.video %}
@@ -45,38 +56,74 @@ permalink: ways-to-give.html
 <section class="py-5">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-                <div class="card my-1 shadow">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border-0 my-1 shadow h-100">
                     {% include img_srcset.html class="card-img-top" alt="One Time Donation" style="height: 300px"
                     filename="ways-to-give-1.jpg"%}
-                    <div class="card-body d-flex flex-column align-items-center">
+                    <div class="card-body px-1 d-flex flex-column align-items-center">
                         <div>
                             <a
                                 href="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=16"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="btn btn-light btn-lg btn-give text-uppercase"
+                                class="btn btn-light font-weight-bold text-secondary btn-sm btn-give text-uppercase stretched-link"
                             >
-                                Donate Now <i class="fas fa-heart text-secondary"></i
-                            ></a>
+                                President's Circle
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-                <div class="card my-1 shadow">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border-0 my-1 shadow h-100">
                     {% include img_srcset.html class="card-img-top" alt="Become a Fundraiser" style="height: 300px"
                     filename="ways-to-give-2.jpg" %}
-                    <div class="card-body d-flex flex-column align-items-center">
+                    <div class="card-body px-1 d-flex flex-column align-items-center">
+                        <div>
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-light font-weight-bold text-secondary btn-sm btn-give text-uppercase stretched-link"
+                            >
+                                Friends
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border-0 my-1 shadow h-100">
+                    {% include img_srcset.html class="card-img-top" alt="One Time Donation" style="height: 300px"
+                    filename="ways-to-give-1.jpg"%}
+                    <div class="card-body px-1 d-flex flex-column align-items-center">
+                        <div>
+                            <a
+                                href="{{ 'assets/planned-giving-bequests.pdf' | absolute_url }}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-light font-weight-bold text-secondary btn-sm btn-give text-uppercase stretched-link"
+                            >
+                                Planned Giving
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border-0 my-1 shadow h-100">
+                    {% include img_srcset.html class="card-img-top" alt="Become a Fundraiser" style="height: 300px"
+                    filename="ways-to-give-2.jpg" %}
+                    <div class="card-body px-1 d-flex flex-column align-items-center">
                         <div>
                             <a
                                 href="https://www.facebook.com/fund/bgcvclubs/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="btn btn-light btn-lg btn-give text-uppercase"
+                                class="btn btn-light font-weight-bold text-secondary btn-sm btn-give text-uppercase stretched-link"
                             >
-                                Become a Fundraiser <i class="fas fa-heart text-secondary"></i
-                            ></a>
+                                Become a Fundraiser
+                            </a>
                         </div>
                     </div>
                 </div>

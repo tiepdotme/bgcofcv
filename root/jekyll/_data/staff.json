@@ -53,6 +53,42 @@
                 "number": "",
                 "extension": ""
             }
+        },
+        {
+            "name": "Peter Sturgeon",
+            "title": "Major Gifts Officer",
+            "email": "",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Desiree Porras",
+            "title": "Development Assistant",
+            "email": "",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Sharon O'Donnel",
+            "title": "Development Assistant",
+            "email": "",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
+        },
+        {
+            "name": "Susan Ogrodnick",
+            "title": "Special Events Coordinator",
+            "email": "",
+            "phone": {
+                "number": "",
+                "extension": ""
+            }
         }
     ]
 }

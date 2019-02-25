@@ -22,6 +22,15 @@
                 <h1 class="text-center section-header underline">{{page.title}}</h1>
                 <p class="lead text-justify pt-3 px-3">{{page.description | smartify | markdownify | replace: "<p>" |
                         replace: "</p>"}}</p>
+                    {% if page.callToAction != null %}
+                    <a
+                        href="{{ page.callToAction.link }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary text-uppercase text-white mx-auto"
+                        >{{page.callToAction.text}}</a
+                    >
+                    {% endif %}
             </div>
         </section>
         <section class="py-5">

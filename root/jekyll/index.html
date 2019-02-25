@@ -26,13 +26,13 @@ permalink: index.html
 ---
 <section class="hero-cascade hero-cascade-home pb-5">
     <div style="background: url({{page.hero | absolute_url}});" class="hero-view bg-image-fill position-relative d-flex flex-column align-items-center">
-        <div style="height: calc(100vh - 56px)" class="position-absolute p-5 d-flex flex-column justify-content-between align-items-center">
-            <div class="d-flex flex-column justify-content-around align-items-center">
-                <img class="hero-logo" src={{page.heroLogo | absolute_url}} width="300">
-                <h2 class="h4 text-center text-uppercase font-weight-bold text-white py-4">Saving and enhancing lives for over 50 years</h2>
-            </div>    
+        <div style="height: calc(75vh - 77px)" class="position-absolute p-5 d-flex flex-column align-items-center justify-content-between">
+            <!-- <div class="d-flex flex-column justify-content-around align-items-center"> -->
+                <img class="hero-logo" src={{page.heroLogo | absolute_url}} width="250">
+                <h2 class="h3 text-center text-uppercase font-weight-bold text-white py-4">Saving and enhancing lives for over 50 years</h2>
+            <!-- </div>     -->
         </div>
-        <span style="z-index: -1" class="mask mask-dark mask-gradient-t-b"></span>
+        <span style="z-index: -1" class="mask mask-25"></span>
     </div>
     <a href="{{ site.data.global.donateUrl }}"
     target="_blank"
@@ -96,11 +96,24 @@ permalink: index.html
         </div>
     </div>
 </section>
+{% if page.video %}
+<section class="py-5 bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section-header text-light text-center">{{ page.video.header }}</h2>
+            </div>
+            <div class="col-sm-12 lead text-light pt-3 px-3 text-center">{{ page.video.description | markdownify | replace: "<p>" | replace: "</p>" }}</div>
+            <div class="col-sm-12 pt-3">{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
+        </div>
+    </div>
+</section>
+{% endif %}
 <section class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="text-center section-header">Community Impact</h1>
+                <h2 class="text-center section-header">Community Impact</h2>
                 <p class="lead">{{page.history | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
                 <p class="lead">{{page.impact | smartify | markdownify | replace: "<p>" | replace: "</p>"}}</p>
                 {% if site.data.global.impactReport %}
@@ -203,7 +216,7 @@ permalink: index.html
         </div>
     </div>
 </section>
-{% if page.video %}
+<!-- {% if page.video %}
 <section class="py-5 bg-primary">
     <div class="container">
         <div class="row">
@@ -215,7 +228,7 @@ permalink: index.html
         </div>
     </div>
 </section>
-{% endif %}
+{% endif %} -->
 <section class="py-5">
     <div class="container">
         <div class="row">
