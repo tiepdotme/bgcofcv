@@ -27,7 +27,6 @@ permalink: ways-to-give.html
     >
         <h1 class="text-center section-header underline">{{ page.title }}</h1>
         <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
-        <p>Credit Card, Phone or Check, Electronic Funds Transfer, Appreciated Funds Transfer</p>
         <a
             href="{{ site.data.global.donateUrl }}"
             target="_blank"
@@ -36,8 +35,66 @@ permalink: ways-to-give.html
             class="shadow btn btn-secondary mb-2"
             >DONATE NOW</a
         >
-        <small>All donations are tax deductible</small>
-        <small>Federal Tax ID Number 95-6122699</small>
+    </div>
+</section>
+<section class="my-5 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-center flex-column align-items-center">
+                <h3 class="text-center mb-3">Ways to Give</h3>
+                <small class="pb-5">All donations are tax deductible. Federal Tax ID Number 95-6122699</small>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                    <i class="h1 fa fa-credit-card text-primary" aria-hidden="true"></i>
+                    <small class="text-center">Credit Card</small>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                    <i class="text-primary h1 fas fa-money-check"></i>
+                    <small class="text-center">Check</small>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                    <i class="text-primary h1 fas fa-phone"></i>
+                    <small class="text-center">By phone at (999)-999-9999</small>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                    <i class="text-primary h1 fas fa-exchange-alt"></i>
+                    <small class="text-center">Electronic Funds</small>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                    <i class="text-primary h1 fas fa-hand-holding-usd"></i>
+                    <small class="text-center">Appreciated Funds</small>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <form
+                    action="https://www.paypal.com/cgi-bin/webscr"
+                    id="paypal-form"
+                    method="post"
+                    target="_blank"
+                    class="d-flex flex-column justify-content-center align-items-center p-3 position-relative"
+                >
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="9SP9PWBGH6B22" />
+                    <i class="text-primary h1 fab fa-paypal"></i>
+                    <a
+                        href="#"
+                        class="btn btn-link stretched-link p-0 text-dark"
+                        role="button"
+                        onclick="document.getElementById('paypal-form').submit();"
+                        >Paypal</a
+                    >
+                </form>
+            </div>
+        </div>
     </div>
 </section>
 {% comment %} {% if page.video %}
@@ -131,7 +188,7 @@ permalink: ways-to-give.html
         </div>
     </div>
 </section>
-<section class="py-5 bg-light">
+<!-- <section class="py-5 bg-light">
     <div class="container">
         <div class="row bg-light">
             <div class="col-sm-12 d-flex flex-column align-items-center justify-content-center">
@@ -157,7 +214,7 @@ permalink: ways-to-give.html
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="py-5">
     <div class="container">
         <div class="row">
