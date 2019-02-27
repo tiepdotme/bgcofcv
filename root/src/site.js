@@ -10,7 +10,7 @@ import "chartjs-plugin-labels";
 $(document).ready(() => {
     if ($(".charts").length > 0) {
         Chart.defaults.global.title.fontSize = 22;
-        Chart.defaults.global.title.fontColor = "#00868b ";
+        Chart.defaults.global.title.fontColor = "#00ace8 ";
 
         const growthChartCtx = $("#growth");
         const growthChart = new Chart(growthChartCtx, {
