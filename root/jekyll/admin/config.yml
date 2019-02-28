@@ -425,7 +425,7 @@ collections:
                       widget: datetime,
                       dateFormat: false,
                       timeFormat: "hh:mm a",
-                      required: false
+                      required: false,
                       default: null,
                       format: "hh:mm a",
                   }
