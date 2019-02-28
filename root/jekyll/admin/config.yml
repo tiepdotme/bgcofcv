@@ -59,14 +59,17 @@ collections:
                 - label: "Contact Email"
                   name: email
                   required: false
+                  default: null
                   widget: string
                 - label: "Contact Phone Number"
                   name: phone
                   required: false
+                  default: null
                   widget: string
                 - label: Location
                   name: location
                   required: false
+                  default: null
                   widget: object
                   fields:
                       - { label: "Addres Line", name: "address", widget: "string" }
@@ -76,6 +79,7 @@ collections:
                 - label: "Facebook Url"
                   name: facebookUrl
                   required: false
+                  default: null
                   widget: string
                 - label: "Twitter Url"
                   name: twitterUrl
@@ -92,6 +96,8 @@ collections:
                 - label: "Registration Form"
                   name: "refistrationForm"
                   widget: "file"
+                  required: false
+                  default: null
                   media_library:
                       config:
                           multiple: false
@@ -384,14 +390,23 @@ collections:
             widget: object
             fields:
                 - { label: "Name", name: "name", widget: "string" }
-                - { label: "Title", name: "title", widget: "string" }
-                - { label: "Email", name: "email", widget: "string" }
+                - { label: "Title", name: "title", widget: "string", required: false, default: null }
+                - { label: "Email", name: "email", widget: "string", required: false, default: null }
                 - label: Phone
                   name: phone
                   widget: object
+                  required: false
+                  default: null
                   fields:
                       - { label: Number, name: number, widget: "string" }
                       - { label: Extension, name: extension, widget: "string", required: false }
+          - label: Call to Action
+            name: callToAction
+            widget: object
+            hint: Use this to add a "Buy Tickets" action or any other action
+            fields:
+                - { label: "Link", name: "url", widget: "string" }
+                - { label: "Text", name: "text", widget: "string" }
           - label: Event Time
             name: time
             widget: object
@@ -410,6 +425,7 @@ collections:
                       widget: datetime,
                       dateFormat: false,
                       timeFormat: "hh:mm a",
+                      required: false
                       default: null,
                       format: "hh:mm a",
                   }
