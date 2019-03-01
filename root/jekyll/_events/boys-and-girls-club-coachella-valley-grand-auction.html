@@ -2,125 +2,25 @@
 layout: events-layout
 title: Boys & Girls Clubs of Coachella Valley's Grand Auction 2019
 description: >-
-  Join us this year at our 37th Annual Grand Auction 2019! Enjoy a luscious
-  3-course dinner served during the frenzied and fun live auction. Every year is
-  bigger and better… You won’t want to miss out..
+    Join us this year at our 37th Annual Grand Auction 2019! Enjoy a luscious
+    3-course dinner served during the frenzied and fun live auction. Every year is
+    bigger and better… You won’t want to miss out..
 image: /assets/images/auction.jpg
 date: 2019-03-09T17:20:15.965Z
-callToAction: 
+callToAction:
     url: https://secure.maestroweb.com/default.aspx?OrgID=1648
     text: Buy Tickets
 contact:
-  email: bkerr@bgcofcv.org
-  name: Bridget Kerr
-  phone:
-    extension: 105
-    number: (760)-836-1160
-  fax: null
-  title: Director of Special Events
+    email: bkerr@bgcofcv.org
+    name: Bridget Kerr
+    phone:
+        extension: 105
+        number: (760)-836-1160
+    fax: null
+    title: Director of Special Events
 time:
-  endTime: null
-  startTime: '05:00 pm'
+    endTime: null
+    startTime: "05:00 pm"
 location: Hyatt Regency Indian Wells Resort & Spa
 address: null
 ---
-
-<div class="row pb-3">
-    <div class="col-sm-12">
-            <p class="lead text-justify pt-3 px-3">{{page.description | smartify | markdownify | replace: "<p>" |
-                    replace: "</p>"}}</p>
-    </div>
-</div>
-<div class="row py-3">
-    <div class="col-sm-12">
-        <h2 class="section-header">Details</h2>
-    </div>
-    <div class="col-sm-12">
-        <div class="card bg-light">
-            <div class="card-body">
-                <div class="d-flex py-1">
-                    <div>
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                    </div>
-                    <div class="pl-3 flex-fill">
-                        <h5 class="m-0">{{page.location}}</h5>
-                        <small class="text-muted">Location</small>
-                    </div>
-                </div>
-                <div class="d-flex py-1">
-                    <div>
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                          <i class="far fa-building"></i>
-                        </div>
-                    </div>
-                    <div class="pl-3 flex-fill">
-                        <h5 class="m-0">{{page.address}}</h5>
-                        <small class="text-muted">Address</small>
-                    </div>
-                </div>
-                <div class="d-flex py-1">
-                    <div>
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                            <i class="far fa-clock"></i>
-                        </div>
-                    </div>
-                    <div class="pl-3 flex-fill">
-                        <h5 class="m-0">{{page.time.startTime}} {% if page.time.endTime %} &ndash; {{page.time.endTime}} {% endif %}</h5>
-                        <small class="text-muted">Time</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row py-3">
-    <div class="col-sm-12">
-        <h2 class="section-header">Contact</h2>
-    </div>
-    <div class="col-sm-12">
-        <p>For more information, please contact:</p>
-        <div class="card bg-light">
-            <div class="card-body">
-                {% assign nameArray = page.contact.name | split: " " %} 
-                {% assign firstLetter = nameArray | first | slice: 0 %} 
-                {% assign secondLetter = nameArray | last | slice: 0 %} 
-                {% assign initials = firstLetter | append: secondLetter %}
-                <div class="d-flex py-1">
-                    <div>
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                            {{ initials }}
-                        </div>
-                    </div>
-                    <div class="pl-3 flex-fill">
-                        <h5 class="m-0">{{ page.contact.name }}</h5>
-                        <small class="text-muted">{{page.contact.title}}</small>
-                    </div>
-                </div>
-                <div class="d-flex py-1">
-                    <div>
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                    </div>
-                    <div class="pl-3 flex-fill">
-                        <h5 class="m-0"><a href="tel:{{page.contact.phone.number | replace: '(' | replace: ')' | prepend: '1-' }}">{{page.contact.phone.number}}</a>{% if page.contact.phone.extension %}&nbsp; ext. {{page.contact.phone.extension}}{% endif %}</h5>
-                        <small class="text-muted">Phone</small>
-                    </div>
-                </div>
-                <div class="d-flex py-1">
-                    <div>
-                        <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                    </div>
-                    <div class="pl-3 flex-fill">
-                        <h5 class="m-0"><a href="mailto:{{page.contact.email}}">{{page.contact.email}}</a></h5>
-                        <small class="text-muted">Email</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
