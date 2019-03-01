@@ -2,19 +2,19 @@
 layout: site-layout
 title: Why Giving Matters
 hero: >-
-  https://raw.githubusercontent.com/Brightside-Technologies/bgcofcv/master/root/src/assets/images/ways-to-give-1.jpg
+    https://raw.githubusercontent.com/Brightside-Technologies/bgcofcv/master/root/src/assets/images/ways-to-give-1.jpg
 description: >-
-  Last year **6,500** youth participated in life-changing programs and fun
-  activities at one of our four clubhouses throughout the Coachella Valley. It
-  costs **$500 per child** to provide program and activities for an entire year.
-  Join our life-changing movement by giving a gift that lasts a lifetime in
-  support of our Clubs!
+    Last year **6,500** youth participated in life-changing programs and fun
+    activities at one of our four clubhouses throughout the Coachella Valley. It
+    costs **$500 per child** to provide program and activities for an entire year.
+    Join our life-changing movement by giving a gift that lasts a lifetime in
+    support of our Clubs!
 video:
-  description: >-
-    Long ago, the mice had a general council to consider what measures they
-    could take to outwit their common enemy, the Cat
-  header: Lorem Ipsum
-  youtubeId: iHsLgK3zbiA
+    description: >-
+        Long ago, the mice had a general council to consider what measures they
+        could take to outwit their common enemy, the Cat
+    header: Lorem Ipsum
+    youtubeId: iHsLgK3zbiA
 permalink: ways-to-give.html
 ---
 
@@ -48,7 +48,13 @@ permalink: ways-to-give.html
             <div class="col-sm-6 col-md-4">
                 <div class="d-flex flex-column justify-content-center align-items-center p-3">
                     <i class="display-4 fa fa-credit-card text-white font-weight-bold" aria-hidden="true"></i>
-                    <p class="text-center text-white">Credit Card</p>
+                    <a
+                        href="{{ site.data.global.donateUrl }}"
+                        target="_blank"
+                        rel="noopener"
+                        class="stretched-link text-center text-white m-0 font-weight-bold"
+                        >Credit Card</a
+                    >
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -68,7 +74,13 @@ permalink: ways-to-give.html
             <div class="col-sm-6 col-md-4">
                 <div class="d-flex flex-column justify-content-center align-items-center p-3">
                     <i class="text-white display-4 fas fa-exchange-alt"></i>
-                    <p class="text-center text-white font-weight-bold">Electronic Funds</p>
+                    <a
+                        href="{{ site.data.global.donateUrl }}"
+                        target="_blank"
+                        rel="noopener"
+                        class="stretched-link text-center text-white m-0 font-weight-bold"
+                        >Electronic Funds</a
+                    >
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -98,6 +110,18 @@ permalink: ways-to-give.html
                     >
                 </form>
             </div>
+            <div class="col-sm-12">
+                <p class="lead pt-5 text-white text-center">
+                    For <strong>planned giving</strong> click
+                    <a
+                        href="{{ 'assets/planned-giving-bequests.pdf' | absolute_url }}"
+                        target="_blank"
+                        class="font-weight-bold text-white"
+                        rel="noopener noreferrer"
+                        >here</a
+                    >
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -117,7 +141,7 @@ permalink: ways-to-give.html
 <section class="py-5">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card border-0 my-1 shadow h-100">
                     {% include img_srcset.html class="card-img-top" alt="One Time Donation" style="height: 300px"
                     filename="ways-to-give-1.jpg"%}
@@ -135,7 +159,7 @@ permalink: ways-to-give.html
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card border-0 my-1 shadow h-100">
                     {% include img_srcset.html class="card-img-top" alt="Become a Fundraiser" style="height: 300px"
                     filename="ways-to-give-2.jpg" %}
@@ -153,7 +177,7 @@ permalink: ways-to-give.html
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
+            <!-- <div class="col-sm-12 col-md-6 col-lg-3">
                 <div class="card border-0 my-1 shadow h-100">
                     {% include img_srcset.html class="card-img-top" alt="One Time Donation" style="height: 300px"
                     filename="ways-to-give-1.jpg"%}
@@ -170,11 +194,11 @@ permalink: ways-to-give.html
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
+            </div> -->
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card border-0 my-1 shadow h-100">
                     {% include img_srcset.html class="card-img-top" alt="Become a Fundraiser" style="height: 300px"
-                    filename="ways-to-give-2.jpg" %}
+                    filename="kids.jpg" %}
                     <div class="card-body px-1 d-flex flex-column align-items-center">
                         <div>
                             <a
@@ -183,7 +207,7 @@ permalink: ways-to-give.html
                                 rel="noopener noreferrer"
                                 class="btn btn-light font-weight-bold text-secondary btn-sm btn-give text-uppercase stretched-link"
                             >
-                                Become a Fundraiser
+                                Donate your birthday on Facebook!
                             </a>
                         </div>
                     </div>
@@ -222,7 +246,7 @@ permalink: ways-to-give.html
 <section class="py-5">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12"><h2 class="section-header text-center py-4">Partners</h2></div>
+            <div class="col-sm-12"><h2 class="section-header text-center pb-4">Partners</h2></div>
             {% for partner in site.data.partners.partners %}
             <div
                 class="col-sm-12 col-md-4 col-lg-4 col-xl-4 d-flex flex-column py-2 align-items-center justify-content-center"
