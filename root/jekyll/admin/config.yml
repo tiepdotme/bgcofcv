@@ -286,6 +286,25 @@ collections:
                 - { label: "Link", name: "link", widget: "string" }
                 - { label: "Description", name: "description", required: false, widget: "markdown" }
                 - { label: "Permalink", name: "permalink", widget: "hidden" }
+                - label: Testimonials
+                  name: testimonials
+                  widget: list
+                  fields:
+                      - label: Testimonial
+                        name: testimonial
+                        widget: object
+                        fields:
+                            - label: Text
+                              name: text
+                              widget: markdown
+                            - label: Source
+                              name: source
+                              widget: string
+                            - label: Image
+                              name: image
+                              widget: image
+                              required: false
+                              default: null
                 - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/contact-us.html
             label: "Contact Us"

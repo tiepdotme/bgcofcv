@@ -7,6 +7,17 @@ link: >-
 description: >-
     Are you a Boys & Girls Club kid? Please tell us how the Boys & Girls Clubs
     played a role in your life
+givingBack: Boys & Girls Clubs alumni are shining examples of how Clubs help shape young people and assist them in achieving their dreams.  Many alums from across the country have achieved particular distinction in fields such as entertainment, business, politics and sports; however, the average alumnus is not famous.  Most have achieved success by getting an education, raising a family, serving their country, pursuing a career or supporting the community!  Club alums are living proof that “Great Futures Start Here.” [Join our growing alumni organization](https://interland3.donorperfect.net/weblink/weblink.aspx?name=E331203&id=40) and be a part of a committed group of people who are generously giving back.
+testimonials:
+    - text: Recently I started working for the Dean as a student worker. Organizing and participating in campus events reminds me of my past participation with Keystone Leadership Program at Indio Boys and Girls Club. All the life lessons and skills I was taught throughout my participation with Keystone have carried with me and have been reapplied many times. I will forever be thankful to the Boys and Girls Club staff who mentored and encouraged me to step out of my comfort zone.
+      source: Melissa, Cal State San Bernardino Graduate
+      image: /assets/images/melissa.jpg
+    - text: Each year the Tony Reagins Alumni Association grows with Boys and Girls Club alumni. The association hosts an annual golf tournament which raises thousands of dollars to send Club youth to college. If you would like to learn more about the association please call us at 760-836-1160.
+      source: Tony Reagins Alumni Association
+      image: /assets/images/tony.jpg
+    - text: I was the first Boy of the Year at the Indio Boys club. I remember I went by myself to the dinner/awards banquet, when I got home I showed my mom all of the awards I had won that evening.  I hadn’t invited her because I was embarrassed - I wasn't embarrassed of my mom, I was embarrassed because I had an alcoholic father. I didn't understand this until years later.  But this is exactly how important the Boys Club was to me. I kid you not, I was attending the Club every day from the 7th grade into college! I was a recipient of the Boys Club scholarship. I finished with my B.A and I've been teaching for 20 years and very involved in the teachers union. I still go to the Boys Club every summer and hand out baseball cards to the kids, I've been doing this since the 90s. Thank you!
+      source: Lionel, Club Alumni 1980-1989
+      image: null
 permalink: alumni.html
 ---
 
@@ -33,38 +44,35 @@ permalink: alumni.html
             <div class="col-12">
                 <h2 class="text-center section-header">Giving Back</h2>
                 <p>
-                    Some days later, while stalking his prey in the forest, the Lion was caught in the toils of a
-                    hunter's net. Unable to free himself, he filled the forest with his angry roaring. The Mouse knew
-                    the voice and quickly found the Lion struggling in the net. Running to one of the great ropes that
-                    bound him, she gnawed it until it parted, and soon the Lion was free
+                    {{page.givingBack | markdownify | replace: "<p>" | replace: "</p>" | smartify}}
                 </p>
             </div>
         </div>
     </div>
 </section>
-<section class="py-5 mt-5 bg-white">
+{% for testimonial in page.testimonials %}
+{% assign mod = forloop.index | modulo: 2 %}
+<section class="py-5 {% if mod != 0 %}bg-light{% endif %}">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <blockquote class="blockquote">
                     <p class="mb-0 text-center">
-                        Recently I started working for the Dean as a student worker. Organizing and participating in
-                        campus events reminds me of my past participation with Keystone Leadership Program at Indio Boys
-                        and Girls Club. All the life lessons and skills I was taught throughout my participation with
-                        Keystone have carried with me and have been reapplied many times. I will forever be thankful to
-                        the Boys and Girls Club staff who mentored and encouraged me to step out of my comfort zone.
+                       {{testimonial.text | markdownify | replace: "<p>" | replace: "</p>" | smartify}}
                     </p>
                     <footer class="pt-2 d-flex align-items-center justify-content-end blockquote-footer text-right">
                         <div class="d-flex align-items-center">
+                            {% if testimonial.image != null %}
                             <img
                                 width="56"
                                 height="56"
                                 style="object-fit: cover"
-                                src="{{ './assets/images/melissa.jpg' | absolute_url }}"
+                                src="{{ testimonial.image | absolute_url }}"
                                 class="rounded-circle p-1"
-                                alt="Melissa"
+                                alt="{{testimonial.source}}"
                             />
-                            <cite title="Melissa">Melissa, Cal State San Bernardino Graduate</cite>
+                            {% endif %}
+                            <cite title="{{testimonial.source}}">{{testimonial.source}}</cite>
                         </div>
                     </footer>
                 </blockquote>
@@ -72,32 +80,4 @@ permalink: alumni.html
         </div>
     </div>
 </section>
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <blockquote class="blockquote">
-                    <p class="mb-0 text-center">
-                        Each year the Tony Reagins Alumni Association grows with Boys and Girls Club alumni. The
-                        association hosts an annual golf tournament which raises thousands of dollars to send Club youth
-                        to college. If you would like to learn more about the association please call us at
-                        760-836-1160.
-                    </p>
-                    <footer class="pt-2 d-flex align-items-center justify-content-end blockquote-footer text-right">
-                        <div class="d-flex align-items-center">
-                            <img
-                                width="56"
-                                height="56"
-                                style="object-fit: cover"
-                                src="{{ './assets/images/tony.jpg' | absolute_url }}"
-                                class="rounded-circle p-1"
-                                alt="Tony Reagins Alumni Association"
-                            />
-                            <cite title="Tony Reagins">Tony Reagins Alumni Association</cite>
-                        </div>
-                    </footer>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-</section>
+{% endfor %}
