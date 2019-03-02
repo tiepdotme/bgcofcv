@@ -236,6 +236,29 @@ collections:
                       - { label: "YouTube Video Id", name: "youtubeId", required: true, widget: "string" }
                 - { label: "Permalink", name: "permalink", widget: "hidden" }
                 - { label: "Body", name: body, widget: hidden }
+          - file: root/jekyll/_pages/ways-to-give/presidents-circle.html
+            label: "Presidents Circle"
+            name: presidents-circle
+            editor:
+                preview: false
+            fields:
+                - { label: "Layout", name: "layout", widget: "hidden" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Hero Image", name: "hero", widget: "image", required: false }
+                - { label: "Description", name: "description", required: false, widget: "markdown" }
+                - { label: "Content", name: "body", required: false, widget: "markdown" }
+                - label: Levels
+                  name: levels
+                  widget: list
+                  fields:
+                      - label: Description
+                        name: text
+                        widget: string
+                      - label: Value
+                        name: value
+                        widget: string
+                - { label: "Permalink", name: "permalink", widget: "hidden" }
+                - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/events.html
             label: "Events"
             name: events

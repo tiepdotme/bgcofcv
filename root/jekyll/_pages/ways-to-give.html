@@ -1,8 +1,7 @@
 ---
 layout: site-layout
 title: Why Giving Matters
-hero: >-
-    https://raw.githubusercontent.com/Brightside-Technologies/bgcofcv/master/root/src/assets/images/ways-to-give-1.jpg
+hero: assets/images/ways-to-give-1.jpg
 description: >-
     Last year **6,500** youth participated in life-changing programs and fun
     activities at one of our four clubhouses throughout the Coachella Valley. It
@@ -125,19 +124,6 @@ permalink: ways-to-give.html
         </div>
     </div>
 </section>
-{% comment %} {% if page.video %}
-<section class="my-5 py-5 bg-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="section-header text-light text-center">{{ page.video.header }}</h2>
-            </div>
-            <div class="lead pt-3 px-3 text-light">{{ page.video.description | markdownify }}</div>
-            <div class="col-sm-12">{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
-        </div>
-    </div>
-</section>
-{% endif %} {% endcomment %}
 <section class="py-5">
     <div class="container">
         <div class="row">
@@ -148,9 +134,7 @@ permalink: ways-to-give.html
                     <div class="card-body px-1 d-flex flex-column align-items-center">
                         <div>
                             <a
-                                href="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=16"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="{{ 'ways-to-give/presidents-circle.html' | absolute_url }}"
                                 class="btn btn-light font-weight-bold text-secondary btn-sm btn-give text-uppercase stretched-link"
                             >
                                 Presidents Circle
