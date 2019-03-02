@@ -63,13 +63,7 @@ permalink: index.html
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between">
                             <h5 class="card-title text-center">Upcoming Events</h5>
-                            <div class="media">
-                                {%-capture image-%}{{nextEvent.image | split: "/" | last}}{%-endcapture-%}
-                                {% include img_srcset.html style="height: 64px; width:64px;" class="mr-3" alt=nextEvent.title  filename=image %}
-                                <div class="media-body">
-                                    <p class="mt-0">{{nextEvent.title}}</p>
-                                </div>
-                            </div>
+                            <div class="card-text text-center">{{nextEvent.title}}</div>
                             <a href="{{nextEvent.url | absolute_url}}" class="p-0 btn btn-link stretched-link">View Details</a>
                         </div>
                     </div>
