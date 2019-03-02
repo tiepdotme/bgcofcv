@@ -22,14 +22,26 @@
                 <h1 class="text-center section-header underline">{{page.title}}</h1>
                 <p class="lead pt-3 px-3">{{page.description | smartify | markdownify | replace: "<p>" |
                         replace: "</p>"}}</p>
+                    {% if page.url == "/program-categories/college-scholarship.html" %}
+                    <div class="d-flex justify-content-center w-100">
                     {% if page.callToAction != null %}
                     <a
                         href="{{ page.callToAction.link }}"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn btn-secondary text-uppercase text-white mx-auto"
+                        class="btn btn-secondary text-uppercase text-white mx-1"
                         >{{page.callToAction.text}}</a
                     >
+                    {% endif %}
+                    <a
+                        href="{{ site.data.global.donateUrl }}"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-light text-secondary font-weight-bold text-uppercase mx-1"
+                    >
+                        Donate
+                    </a>
+                    </div>
                     {% endif %}
             </div>
         </section>
