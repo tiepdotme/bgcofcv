@@ -4,27 +4,27 @@
             <div
                 class="py-2 col-sm-12 col-md-4 d-flex justify-content-center align-items-center justify-content-md-start"
             >
-                <img src="{{'assets/images/hero-logo.png' | absolute_url}}" width="100" />
+                <img src="{{ 'assets/images/hero-logo.png' | absolute_url }}" width="100" />
             </div>
             <div class="py-2 col-sm-12 col-md-4">
                 <h6 class="text-center">Contact Us</h6>
                 <div class="d-flex align-items-center justify-content-center">
                     <a
-                        href="{{site.data.global.facebookUrl}}"
+                        href="{{ site.data.global.facebookUrl }}"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="mx-1 text-white border rounded-circle border-secondary btn btn-round"
                         ><i class="fab fa-facebook-f"></i
                     ></a>
                     <a
-                        href="{{site.data.global.twitterUrl}}"
+                        href="{{ site.data.global.twitterUrl }}"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="mx-1 text-white border rounded-circle border-secondary btn btn-round"
                         ><i class="fab fa-twitter"></i
                     ></a>
                     <a
-                        href="{{site.data.global.instagramUrl}}"
+                        href="{{ site.data.global.instagramUrl }}"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="mx-1 text-white border rounded-circle border-secondary btn btn-round"
@@ -36,7 +36,7 @@
                 class="py-2  col-sm-12 col-md-4 d-flex justify-content-center align-items-center justify-content-md-end"
             >
                 <small class="pt-3 pt-sm-0">
-                    <a class="made-with-heart" href="#" rel="noopener noreferrer" target="_blank"
+                    <a class="made-with-heart" href="{{ site.developerUrl }}" rel="noopener" target="_blank"
                         >Made with <i class="fas fa-heart" aria-hidden="true"></i> by Brightside Tech</a
                     >
                 </small>
