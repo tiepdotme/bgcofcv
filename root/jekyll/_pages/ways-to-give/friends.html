@@ -1,7 +1,71 @@
 ---
 layout: site-layout
-title: Presidents Circle
-hero: assets/images/presidents-cricle.jpg
-description: Each year, the Board directs Presidents Circle funding to a handful of key initiatives and ongoing priorities. [Please see our impact report](/assets/bgcofcv-impact-report-2018.pdf) to learn about our initiatives and priorities from last year
+title: The FRIENDS of Boys & Girls Clubs of Coachella Valley
+hero: assets/images/friends-of-bgcofcv.jpg
+description: This non-profit organization is to support the Boys & Girls Clubs of Coachella Valley by cooperating with the Chief Executive Officer and Board of Directors through fund raising and service projects. Join the Friends!
+innerContent: >-
+    The FRIENDS of Boys & Girls Clubs of Coachella Valley was established by a group of community-minded women residing in the Coachella Valley.
+
+    As a member of this wonderful organization, you will have many opportunities to share your talents and skills. Moreover, you will enjoy a unique camaraderie with many of the active members of the FRIENDS.
+
+    One of the fun–raising and fundraising activities hosted by the FRIENDS is Putting with a Purpose. Putting with a Purpose – Under the stars and under the lights of Indian Wells Golf Resort the FRIENDS host an evening of Glow – Golf, food, drinks and fun.
+
+    All monies raised from fundraising activities and dues by the Friends go directly to support the 6,000+ Club Kids.
+donateUrl: https://interland3.donorperfect.net/weblink/weblink.aspx?name=E331203&id=39
+levels:
+    - text: Support Friends Scholarship Fund
+      value: "$50 annual dues"
+    - text: Friends Members support BGCCV while enhancing the participation and fundraising
+      value: null
 permalink: ways-to-give/friends.html
 ---
+
+<section class="hero-cascade">
+    <div
+        style="background: url({{ page.hero | absolute_url }});"
+        class="hero-view bg-image-fill position-relative p-5 bg-image-position-25"
+    ></div>
+    <div
+        class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3"
+    >
+        <h1 class="text-center section-header underline">{{ page.title }}</h1>
+        <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
+        <div class="pt-2 d-flex justify-content-center">
+            <a target="_blank" rel="noopener" class="btn-secondary btn text-uppercase mx-1" href="{{ page.donateUrl }}"
+                >Donate</a
+            >
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {{ page.innerContent | markdownify | smartify }}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-center flex-column align-items-center">
+                <h3 class="text-center mb-3">Friends Membership</h3>
+            </div>
+            <div class="col-sm-12">
+                <div class="card-deck">
+                    {% for level in page.levels %}
+                    <div class="card mx-1 text-center bg-primary text-white">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ level.text }}</h6>
+                            {% if level.value != null %}
+                            <h4 class="card-text">{{ level.value }}</h4>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
