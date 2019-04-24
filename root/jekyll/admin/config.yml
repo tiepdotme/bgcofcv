@@ -554,7 +554,7 @@ collections:
                   widget: list
                   fields:
                       - { label: Name, name: name, widget: string }
-                      - { label: Title, name: title, widget: string }
+                      - { label: Title, name: title, widget: string, required: false, default: null }
           - label: Friends of Board
             name: friends
             file: root/jekyll/_data/friends-of-board.json
@@ -566,7 +566,7 @@ collections:
                   widget: list
                   fields:
                       - { label: Name, name: name, widget: string }
-                      - { label: Title, name: title, widget: string }
+                      - { label: Title, name: title, widget: string, required: false, default: null }
           - label: Emeritus
             name: emeritus
             file: root/jekyll/_data/emeritus-members.json
@@ -578,7 +578,7 @@ collections:
                   widget: list
                   fields:
                       - { label: Name, name: name, widget: string }
-                      - { label: Title, name: title, widget: string }
+                      - { label: Title, name: title, widget: string, required: false, default: null }
           - label: Partners
             name: partners
             description: Manage organization partners/donors
