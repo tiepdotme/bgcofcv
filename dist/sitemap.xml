@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/events/presidents-circle-reception.html</loc>
-<lastmod>2018-12-06T09:20:15-08:00</lastmod>
+<loc>http://localhost:4000/events/boys-and-girls-club-coachella-valley-grand-auction.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/events/boys-and-girls-club-coachella-valley-grand-auction.html</loc>
-<lastmod>2019-03-09T09:20:15-08:00</lastmod>
+<loc>http://localhost:4000/events/presidents-circle-reception.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/events/putting-with-a-purpose.html</loc>
-<lastmod>2019-11-06T11:55:51-08:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/events/southern-growers-golf-tournament.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/events/tony-reagins-golf-tournament.html</loc>
-<lastmod>2019-05-13T22:35:28-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/our-clubs/coachella.html</loc>

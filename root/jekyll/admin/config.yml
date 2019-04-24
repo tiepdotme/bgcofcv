@@ -451,7 +451,7 @@ collections:
       fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "events-layout" }
           - { label: "Title", name: "title", widget: "string", tagname: "h1" }
-          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Description", name: "description", widget: "markdown", required: false, default: null }
           - { label: "Image", name: "image", widget: "image", required: false, tagname: "" }
           - { label: "Start Date", name: "start_date", widget: "datetime", required: true, timeFormat: false }
           - {
@@ -478,6 +478,8 @@ collections:
                       - { label: Number, name: number, widget: "string" }
                       - { label: Extension, name: extension, widget: "string", required: false }
           - label: Call to Action
+            required: false
+            default: null
             name: callToAction
             widget: object
             hint: Use this to add a "Buy Tickets" action or any other action
@@ -512,7 +514,7 @@ collections:
                       default: null,
                       format: "hh:mm a",
                   }
-          - { label: "Location", name: "test_location", widget: "map", required: false, default: null }
+          - { label: "Location", name: "location", widget: "string" }
           - { label: "Address", name: "address", widget: "string", default: null }
           - { label: "Body", name: body, widget: hidden }
 
