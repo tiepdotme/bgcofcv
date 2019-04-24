@@ -1,184 +1,176 @@
 {
-    "board-members": [
-        {
-            "name": "John Powell, Jr.",
-            "title": "President"
-        },
-        {
-            "name": "Sandra M. Davis",
-            "title": "Vice President"
-        },
-        {
-            "name": "Judy Vossler",
-            "title": "Secretary"
-        },
-        {
-            "name": "David A. Peat",
-            "title": "Treasurer"
-        },
-        {
-            "name": "Douglas P. Miller",
-            "title": "Immediate Past President"
-        },
-        {
-            "name": "Carolyn Anderson",
-            "title": ""
-        },
-        {
-            "name": "Joe Benitez",
-            "title": ""
-        },
-        {
-            "name": "Robert Bianco",
-            "title": ""
-        },
-        {
-            "name": "Peter Bochnewich",
-            "title": ""
-        },
-        {
-            "name": "Bill Bryan",
-            "title": ""
-        },
-        {
-            "name": "David Cantwell",
-            "title": ""
-        },
-        {
-            "name": "Anthony Caridi",
-            "title": ""
-        },
-        {
-            "name": "Mike Carl",
-            "title": ""
-        },
-        {
-            "name": "Dana Crosby",
-            "title": ""
-        },
-        {
-            "name": "Rondi Edwards",
-            "title": ""
-        },
-        {
-            "name": "Jose Fernandez",
-            "title": ""
-        },
-        {
-            "name": "Jon FitzHenry",
-            "title": ""
-        },
-        {
-            "name": "Randy Florence",
-            "title": ""
-        },
-        {
-            "name": "Cynthia Flores",
-            "title": ""
-        },
-        {
-            "name": "John Foster",
-            "title": ""
-        },
-        {
-            "name": "Ward Fredericks",
-            "title": ""
-        },
-        {
-            "name": "Esther Gelineau",
-            "title": ""
-        },
-        {
-            "name": "Rosa Maria Gonzales",
-            "title": ""
-        },
-        {
-            "name": "Wally Grimm",
-            "title": ""
-        },
-        {
-            "name": "Brian Harnik",
-            "title": ""
-        },
-        {
-            "name": "James Jackson",
-            "title": ""
-        },
-        {
-            "name": "Reid Jenkins",
-            "title": ""
-        },
-        {
-            "name": "George Kirkjan",
-            "title": ""
-        },
-        {
-            "name": "Clara Levrault",
-            "title": ""
-        },
-        {
-            "name": "Oscar Lua",
-            "title": ""
-        },
-        {
-            "name": "Darrell Mike",
-            "title": ""
-        },
-        {
-            "name": "Glenn Miller",
-            "title": ""
-        },
-        {
-            "name": "Mark Nickerson",
-            "title": ""
-        },
-        {
-            "name": "Lee Osborne",
-            "title": ""
-        },
-        {
-            "name": "Donald Pelegrino",
-            "title": ""
-        },
-        {
-            "name": "Greg Raumin",
-            "title": ""
-        },
-        {
-            "name": "Tony Reagins",
-            "title": ""
-        },
-        {
-            "name": "Dominique Shwe",
-            "title": ""
-        },
-        {
-            "name": "Mark Simon",
-            "title": ""
-        },
-        {
-            "name": "Sue Steding",
-            "title": ""
-        },
-        {
-            "name": "Michael Stutz",
-            "title": ""
-        },
-        {
-            "name": "Sandy Taylor",
-            "title": ""
-        },
-        {
-            "name": "Brian Tobey",
-            "title": ""
-        },
-        {
-            "name": "Mike Way",
-            "title": ""
-        },
-        {
-            "name": "Robert Wisely",
-            "title": ""
-        }
-    ]
+  "board-members": [
+    {
+      "name": "John Powell, Jr.",
+      "title": "Board Chair"
+    },
+    {
+      "name": "Sandra M. Davis",
+      "title": "Vice Chair"
+    },
+    {
+      "name": "Judy Vossler",
+      "title": "Secretary"
+    },
+    {
+      "name": "David A. Peat",
+      "title": "Treasurer"
+    },
+    {
+      "name": "Douglas P. Miller",
+      "title": "Immediate Past President"
+    },
+    {
+      "name": "Carolyn Anderson",
+      "title": ""
+    },
+    {
+      "name": "Joe Benitez",
+      "title": ""
+    },
+    {
+      "name": "Robert Bianco",
+      "title": ""
+    },
+    {
+      "name": "Peter Bochnewich",
+      "title": ""
+    },
+    {
+      "name": "Bill Bryan",
+      "title": ""
+    },
+    {
+      "name": "David Cantwell",
+      "title": ""
+    },
+    {
+      "name": "Anthony Caridi",
+      "title": ""
+    },
+    {
+      "name": "Mike Carl",
+      "title": ""
+    },
+    {
+      "name": "Dana Crosby",
+      "title": ""
+    },
+    {
+      "name": "Rondi Edwards",
+      "title": ""
+    },
+    {
+      "name": "Jose Fernandez",
+      "title": ""
+    },
+    {
+      "name": "Jon FitzHenry",
+      "title": ""
+    },
+    {
+      "name": "Randy Florence",
+      "title": ""
+    },
+    {
+      "name": "Cynthia Flores",
+      "title": ""
+    },
+    {
+      "name": "John Foster",
+      "title": ""
+    },
+    {
+      "name": "Ward Fredericks",
+      "title": ""
+    },
+    {
+      "name": "Esther Gelineau",
+      "title": ""
+    },
+    {
+      "name": "Rosa Maria Gonzales",
+      "title": ""
+    },
+    {
+      "name": "Wally Grimm",
+      "title": ""
+    },
+    {
+      "name": "James Jackson",
+      "title": ""
+    },
+    {
+      "name": "Reid Jenkins",
+      "title": ""
+    },
+    {
+      "name": "George Kirkjan",
+      "title": ""
+    },
+    {
+      "name": "Clara Levrault",
+      "title": ""
+    },
+    {
+      "name": "Oscar Lua",
+      "title": ""
+    },
+    {
+      "name": "Darrell Mike",
+      "title": ""
+    },
+    {
+      "name": "Glenn Miller",
+      "title": ""
+    },
+    {
+      "name": "Mark Nickerson",
+      "title": ""
+    },
+    {
+      "name": "Lee Osborne",
+      "title": ""
+    },
+    {
+      "name": "Donald Pelegrino",
+      "title": ""
+    },
+    {
+      "name": "Greg Raumin",
+      "title": ""
+    },
+    {
+      "name": "Tony Reagins",
+      "title": ""
+    },
+    {
+      "name": "Dominique Shwe",
+      "title": ""
+    },
+    {
+      "name": "Mark Simon",
+      "title": ""
+    },
+    {
+      "name": "Sue Steding",
+      "title": ""
+    },
+    {
+      "name": "Michael Stutz",
+      "title": ""
+    },
+    {
+      "name": "Sandy Taylor",
+      "title": ""
+    },
+    {
+      "name": "Brian Tobey",
+      "title": ""
+    },
+    {
+      "name": "Mike Way",
+      "title": ""
+    }
+  ]
 }
