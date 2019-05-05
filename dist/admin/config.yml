@@ -423,13 +423,13 @@ collections:
           - { label: Hero Image, name: image, widget: image }
           - { label: "Body", name: body, widget: markdown }
           - label: "Calendar of Events"
-                  name: "calendar"
-                  widget: "file"
-                  required: false
-                  default: null
-                  media_library:
-                      config:
-                          multiple: false
+            name: "calendar"
+            widget: "file"
+            required: false
+            default: null
+            media_library:
+                config:
+                    multiple: false
 
     - name: campaigns
       label: Campaigns
