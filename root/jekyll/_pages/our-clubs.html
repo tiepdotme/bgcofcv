@@ -43,24 +43,20 @@ permalink: our-clubs.html
                     }}{%-endcapture-%} {% include img_srcset.html class="card-img rounded" style="height: 200px"
                     alt=club.site filename=image %}
                     <div class="card-img-overlay">
-                        <p class="card-text mb-1">{{ club.title }}</p>
+                        {% comment %} <p class="card-text mb-1">{{ club.title }}</p> {% endcomment %}
+                        <a href="{{ club.url }}" class="text-white stretched-link card-text mb-1">{{ club.title }}</a>
                         <h5 class="card-title h1">{{ club.city | split: ", " | first }}</h5>
                         <div>
                             <a
                                 href="tel:+{{ club.phone | replace: '(' | replace: ')' | replace: '-' }}"
-                                class="text-white border rounded-circle border-secondary btn btn-round"
+                                class="text-white border rounded-circle border-secondary btn btn-round position-relative" style="z-index: 2"
                                 ><i class="fas fa-phone"></i
                             ></a>
                             <a
                                 href="mailto:{{ club.email }}"
-                                class="text-white border rounded-circle border-secondary btn btn-round"
+                                class="text-white border rounded-circle border-secondary btn btn-round position-relative" style="z-index: 2"
                                 ><i class="fas fa-envelope"></i
-                            ></a>
-                            <a
-                                href="{{ club.url }}"
-                                class="text-white border rounded-circle border-secondary btn btn-round"
-                                ><i class="fas fa-arrow-right"></i
-                            ></a>
+                            ></a>                
                         </div>
                     </div>
                 </div>
