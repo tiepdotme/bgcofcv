@@ -494,6 +494,14 @@ collections:
             fields:
                 - { label: "Link", name: "url", widget: "string" }
                 - { label: "Text", name: "text", widget: "string" }
+                - label: "Supplemental Form"
+                  name: "supplemental_form"
+                  hint: "Registration Form or any other form related to an the event. If a file is given, it will override the 'Link' field"
+                  widget: "file"
+                  default: null
+                  media_library:
+                      config:
+                          multiple: false
           - label: More Information Link
             name: moreInformationLink
             widget: string
@@ -503,6 +511,8 @@ collections:
           - label: Event Time
             name: time
             widget: object
+            required: false
+            default: null
             fields:
                 - {
                       label: Start Time,
@@ -510,6 +520,8 @@ collections:
                       widget: datetime,
                       dateFormat: false,
                       timeFormat: "hh:mm a",
+                      required: false,
+                      default: null,
                       format: "hh:mm a",
                   }
                 - {

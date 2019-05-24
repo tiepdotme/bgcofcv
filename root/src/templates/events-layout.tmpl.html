@@ -19,6 +19,15 @@
                     <h4 class="text-muted mt-3">{{ page.date | date: "%a, %b %d %Y" }}</h4>
                     {% if page.callToAction %}
                     <div class="pt-3">
+                        {% if page.callToAction.supplemental_form %}
+                        <a
+                            class="btn btn-secondary text-uppercase"
+                            href="{{ page.callToAction.supplemental_form }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >{{ page.callToAction.text }}</a
+                        >
+                        {% else %}
                         <a
                             class="btn btn-secondary text-uppercase"
                             href="{{ page.callToAction.url }}"
@@ -26,6 +35,7 @@
                             rel="noopener noreferrer"
                             >{{ page.callToAction.text }}</a
                         >
+                        {% endif %}
                     </div>
                     {% endif %}
                     <div class="pt-5">
