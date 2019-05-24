@@ -492,7 +492,7 @@ collections:
             widget: object
             hint: Use this to add a "Buy Tickets" action or any other action
             fields:
-                - { label: "Link", name: "url", widget: "string" }
+                - { label: "Link", name: "url", widget: "string", required: false, default: null }
                 - { label: "Text", name: "text", widget: "string" }
                 - label: "Supplemental Form"
                   name: "supplemental_form"
