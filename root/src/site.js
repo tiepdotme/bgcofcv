@@ -184,8 +184,8 @@ $(document).ready(() => {
             var $form = $(this);
             if ($form[0].checkValidity()) {
                 var $cardContent = $contactForm.parent();
-                $.post($form.attr("action"), $form.serialize()).then(
-                    function success() {
+                $.post($form.attr("action"), $form.serialize())
+                    .then(function() {
                         var successAlert = [
                             '<div class="mt-3 alert alert-success alert-dismissible fade show" role="alert">',
                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">',
@@ -200,8 +200,8 @@ $(document).ready(() => {
                         $cardContent.append(successAlert);
 
                         $contactForm.trigger("reset");
-                    },
-                    function error() {
+                    })
+                    .catch(function() {
                         var errorAlert = [
                             '<div class="mt-3 alert alert-danger alert-dismissible fade show" role="alert">',
                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">',
@@ -218,8 +218,7 @@ $(document).ready(() => {
                         $contactForm.trigger("reset");
 
                         $formSubmitButton.attr("disabled", true);
-                    }
-                );
+                    });
             }
         });
 
@@ -234,10 +233,10 @@ $(document).ready(() => {
                     $formGroup.removeClass("has-danger");
                 } else {
                     $formGroup.addClass("has-danger");
-                    if (input.validity.typeMismatch && $input.attr("name") == "email") {
+                    if (input.validity.typeMismatch && $input.attr("name") == "contact_email") {
                         $feedback.html("Please provide a valid email");
                     }
-                    if (input.validity.valueMissing && $input.attr("name") == "email") {
+                    if (input.validity.valueMissing && $input.attr("name") == "contact_email") {
                         $feedback.html("Email is required");
                     }
                 }
