@@ -180,7 +180,7 @@ $(document).ready(() => {
         var $formSubmitButton = $("button.btn-submit");
         $contactForm.submit(function(e) {
             e.preventDefault();
-
+            console.log("g-recaptcha-response", $("#g-recaptcha-response"));
             var $form = $(this);
             if ($form[0].checkValidity()) {
                 var $cardContent = $contactForm.parent();
