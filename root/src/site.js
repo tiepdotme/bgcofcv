@@ -184,7 +184,7 @@ $(document).ready(() => {
 
             var $recaptcha = $("#g-recaptcha-response");
             if (!$recaptcha.val()) {
-                var errorAlert = ['<p class="text-danger">', "Please show that you're not a robot", "</p>"]
+                var errorAlert = ['<p class="text-danger text-center">', "Please show that you're not a robot", "</p>"]
                     .join("")
                     .replace(/\s\s+/g, "");
 
