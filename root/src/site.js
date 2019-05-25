@@ -180,10 +180,20 @@ $(document).ready(() => {
         var $formSubmitButton = $("button.btn-submit");
         $contactForm.submit(function(e) {
             e.preventDefault();
-            console.log("g-recaptcha-response", $("#g-recaptcha-response"));
+            var $cardContent = $contactForm.parent();
+
+            var $recaptcha = $("#g-recaptcha-response");
+            if ($recaptcha.val()) {
+                var errorAlert = ['<p class="text-danger">', "Please show that you're not a robot", "</p>"]
+                    .join("")
+                    .replace(/\s\s+/g, "");
+
+                $cardContent.append(errorAlert);
+                return;
+            }
+
             var $form = $(this);
             if ($form[0].checkValidity()) {
-                var $cardContent = $contactForm.parent();
                 $.post($form.attr("action"), $form.serialize())
                     .then(function() {
                         var successAlert = [
@@ -220,11 +230,6 @@ $(document).ready(() => {
                         $formSubmitButton.attr("disabled", true);
                     });
             }
-        });
-
-        var $recaptcha = $("#g-recaptcha-response");
-        $recaptcha.change(function() {
-            console.log("$this", $(this).val());
         });
 
         var inputs = document.querySelectorAll("input, textarea");
