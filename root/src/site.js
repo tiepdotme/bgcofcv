@@ -178,13 +178,14 @@ $(document).ready(() => {
     if ($("#contact-form").length > 0) {
         var $contactForm = $("#contact-form");
         var $formSubmitButton = $("button.btn-submit");
+        var $cardContent = $contactForm.parent();
+
         $contactForm.submit(function(e) {
             e.preventDefault();
-            var $cardContent = $contactForm.parent();
 
             var $recaptcha = $("#g-recaptcha-response");
             if (!$recaptcha.val()) {
-                $cardContent.remove(".recaptcha-error");
+                $(".recaptcha-error").remove();
                 var errorAlert = [
                     '<p class="recaptcha-error text-danger text-center">',
                     "Please show that you're not a robot",
@@ -200,6 +201,8 @@ $(document).ready(() => {
             if ($form[0].checkValidity()) {
                 $.post($form.attr("action"), $form.serialize())
                     .then(function() {
+                        $(".recaptcha-error").remove();
+
                         var successAlert = [
                             '<div class="mt-3 alert alert-success alert-dismissible fade show" role="alert">',
                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">',
@@ -216,6 +219,8 @@ $(document).ready(() => {
                         $contactForm.trigger("reset");
                     })
                     .catch(function() {
+                        $(".recaptcha-error").remove();
+
                         var errorAlert = [
                             '<div class="mt-3 alert alert-danger alert-dismissible fade show" role="alert">',
                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">',
