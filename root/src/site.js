@@ -222,15 +222,18 @@ $(document).ready(() => {
             }
         });
 
-        var inputs = document.querySelectorAll("input, textarea, #g-recaptcha-response");
+        var $recaptcha = $("#g-recaptcha-response");
+        $recaptcha.change(function() {
+            console.log("$this", $(this).val());
+        });
+
+        var inputs = document.querySelectorAll("input, textarea");
         inputs.forEach(function(input) {
             var $input = $(input);
             var $formGroup = $input.parents(".form-group");
             var $feedback = $formGroup.find(".form-control-feedback");
 
             input.addEventListener("input", function() {
-                console.log("$input", $input.val());
-
                 if (input.validity.valid) {
                     $formGroup.removeClass("has-danger");
                 } else {
