@@ -228,9 +228,9 @@ $(document).ready(() => {
             var $formGroup = $input.parents(".form-group");
             var $feedback = $formGroup.find(".form-control-feedback");
 
-            console.log("$input", $input);
-
             input.addEventListener("input", function() {
+                console.log("$input", $input.val());
+
                 if (input.validity.valid) {
                     $formGroup.removeClass("has-danger");
                 } else {
