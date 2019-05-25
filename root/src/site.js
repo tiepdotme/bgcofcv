@@ -222,11 +222,13 @@ $(document).ready(() => {
             }
         });
 
-        var inputs = document.querySelectorAll("input, textarea");
+        var inputs = document.querySelectorAll("input, textarea, #g-recaptcha-response");
         inputs.forEach(function(input) {
             var $input = $(input);
             var $formGroup = $input.parents(".form-group");
             var $feedback = $formGroup.find(".form-control-feedback");
+
+            console.log("$input", $input);
 
             input.addEventListener("input", function() {
                 if (input.validity.valid) {
