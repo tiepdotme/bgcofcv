@@ -183,7 +183,7 @@ $(document).ready(() => {
             var $cardContent = $contactForm.parent();
 
             var $recaptcha = $("#g-recaptcha-response");
-            if ($recaptcha.val()) {
+            if (!$recaptcha.val()) {
                 var errorAlert = ['<p class="text-danger">', "Please show that you're not a robot", "</p>"]
                     .join("")
                     .replace(/\s\s+/g, "");
