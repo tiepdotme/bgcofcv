@@ -184,10 +184,14 @@ $(document).ready(() => {
 
             var $recaptcha = $("#g-recaptcha-response");
             if (!$recaptcha.val()) {
-                var errorAlert = ['<p class="text-danger text-center">', "Please show that you're not a robot", "</p>"]
+                $cardContent.remove(".recaptcha-error");
+                var errorAlert = [
+                    '<p class="recaptcha-error text-danger text-center">',
+                    "Please show that you're not a robot",
+                    "</p>"
+                ]
                     .join("")
                     .replace(/\s\s+/g, "");
-
                 $cardContent.append(errorAlert);
                 return;
             }
