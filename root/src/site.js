@@ -223,7 +223,7 @@ $(document).ready(() => {
             }
         });
 
-        var inputs = document.querySelectorAll("input, select, textarea, select");
+        var inputs = document.querySelectorAll("input, textarea");
         inputs.forEach(function(input) {
             var $input = $(input);
             var $formGroup = $input.parents(".form-group");

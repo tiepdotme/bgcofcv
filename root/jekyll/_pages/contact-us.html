@@ -58,11 +58,18 @@ permalink: contact-us.html
                     <input style="display:none" name="bot-field" />
                     <div class="form-group">
                         <label for="contact_name">Name</label>
-                        <input type="text" class="form-control form-control-lg" id="contact_name" name="contact_name" />
+                        <input
+                            required
+                            type="text"
+                            class="form-control form-control-lg"
+                            id="contact_name"
+                            name="contact_name"
+                        />
                     </div>
                     <div class="form-group">
                         <label for="contact_email">Email</label>
                         <input
+                            required
                             type="email"
                             class="form-control form-control-lg"
                             id="contact_email"
@@ -72,6 +79,7 @@ permalink: contact-us.html
                     <div class="form-group">
                         <label for="contact_phone">Phone</label>
                         <input
+                            required
                             type="text"
                             class="form-control form-control-lg"
                             id="contact_phone"
@@ -80,7 +88,13 @@ permalink: contact-us.html
                     </div>
                     <div class="form-group">
                         <label for="contact_message">Message</label>
-                        <textarea class="form-control" id="contact_message" name="contact_message" rows="3"></textarea>
+                        <textarea
+                            required
+                            class="form-control"
+                            id="contact_message"
+                            name="contact_message"
+                            rows="3"
+                        ></textarea>
                     </div>
                     <div class="d-flex justify-content-center">
                         <button disabled type="submit" class="btn btn-secondary text-white btn-lg btn-submit">
