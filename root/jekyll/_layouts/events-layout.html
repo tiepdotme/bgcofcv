@@ -16,9 +16,24 @@
                     class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3 text-center"
                 >
                     <h1 class="text-center section-header underline mb-3">{{ page.title }}</h1>
-                    <h4 class="text-muted mt-3">{{ page.date | date: "%a, %b %d %Y" }}</h4>
+                    <!-- <h4 class="text-muted mt-3">{{ page.date | date: "%a, %b %d, %Y" }}</h4> -->
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p class="text-muted my-1">{{ page.start_date | date: "%a, %b %d, %Y" }}</p>
+                        {% if page.end_date %} &nbsp; &ndash; &nbsp;
+                        <p class="text-muted my-1">{{ page.end_date | date: "%a, %b %d, %Y" }}</p>
+                        {% endif %}
+                    </div>
                     {% if page.callToAction %}
                     <div class="pt-3">
+                        {% if page.callToAction.supplemental_form %}
+                        <a
+                            class="btn btn-secondary text-uppercase"
+                            href="{{ page.callToAction.supplemental_form }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >{{ page.callToAction.text }}</a
+                        >
+                        {% else %}
                         <a
                             class="btn btn-secondary text-uppercase"
                             href="{{ page.callToAction.url }}"
@@ -26,6 +41,7 @@
                             rel="noopener noreferrer"
                             >{{ page.callToAction.text }}</a
                         >
+                        {% endif %}
                     </div>
                     {% endif %}
                     <div class="pt-5">
