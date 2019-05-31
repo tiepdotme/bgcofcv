@@ -7,7 +7,7 @@ accepted_roles:
     - Administrator
     - Editor
 #display_url: "https://www.bgcofcv.org/"
-display_url: "development.bgcofcv.org"
+display_url: "https://development.bgcofcv.org"
 logo_url: https://bgcofcv.netlify.com/assets/images/hero-logo.png
 media_folder: root/src/assets/images
 public_folder: assets/images
