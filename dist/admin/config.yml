@@ -1,7 +1,7 @@
 backend:
     name: git-gateway
-    #branch: cms
-    branch: master
+    branch: development
+    #branch: master
     repo: Brightside-Technologies/bgcofcv
 accepted_roles:
     - Administrator
