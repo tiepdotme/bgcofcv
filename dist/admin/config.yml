@@ -6,7 +6,8 @@ backend:
 accepted_roles:
     - Administrator
     - Editor
-display_url: "https://bgcofcv.netlify.com/"
+#display_url: "https://www.bgcofcv.org/"
+display_url: "development.bgcofcv.org"
 logo_url: https://bgcofcv.netlify.com/assets/images/hero-logo.png
 media_folder: root/src/assets/images
 public_folder: assets/images
@@ -493,11 +494,12 @@ collections:
             hint: Use this to add a "Buy Tickets" action or any other action
             fields:
                 - { label: "Link", name: "url", widget: "string", required: false, default: null }
-                - { label: "Text", name: "text", widget: "string" }
+                - { label: "Text", name: "text", widget: "string", required: false, default: null }
                 - label: "Supplemental Form"
                   name: "supplemental_form"
                   hint: "Registration Form or any other form related to an the event. If a file is given, it will override the 'Link' field"
                   widget: "file"
+                  required: false
                   default: null
                   media_library:
                       config:
