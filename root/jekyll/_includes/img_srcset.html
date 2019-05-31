@@ -8,5 +8,5 @@
         {% assign absolutePaths = absolutePaths | push: absoluteImagePath %}
     {% endfor %}
     {%-capture srcset-%}{{absolutePaths | join: ', '}}{%-endcapture-%}
-    <img class="{{ include.class }}" alt="{{ include.alt }}" style="{{ include.style }}; object-fit: contain" srcset="{{ srcset }}" src="{{ selectedImage.src | absolute_url }}" sizes="(min-width: 300px) 50vw, 100vw" width="300">
+    <img class="{{ include.class }}" alt="{{ include.alt }}" style="{{ include.style }}; object-fit: cover" srcset="{{ srcset }}" src="{{ selectedImage.src | absolute_url }}" sizes="(min-width: 300px) 50vw, 100vw" width="300">
     
