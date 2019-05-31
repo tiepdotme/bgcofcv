@@ -1,5 +1,6 @@
 developer: Brightside Tech
 developerUrl: "https://brightsidetech.io"
+#url: https://www.bgcofcv.org
 url: development.bgcofcv.org
 markdown: kramdown
 destination: dist
