@@ -2,7 +2,7 @@
 <html lang="en-US">
     <head>
         {% include collection-head.html %}
-    <link href="../site.9d0b9d6c2e8248024322.min.css" rel="stylesheet"></head>
+    <link href="../site.30f228162ecf191bd7be.min.css" rel="stylesheet"></head>
 
     <body>
         {% include navbar.html %}
@@ -10,7 +10,7 @@
             <section class="hero-cascade pb-5">
                 <div
                     style="background: url({{ page.image | absolute_url }});"
-                    class="hero-view bg-image-fill position-relative p-5"
+                    class="hero-view bg-image-contain position-relative p-5"
                 ></div>
                 <div
                     class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3 text-center"
@@ -33,8 +33,8 @@
                             rel="noopener noreferrer"
                             >{{ page.callToAction.text }}</a
                         >
-                        {% endif %}
-                        {% if page.callToAction.url != "" and page.callToAction.supplemental_form == null and page.callToAction.text %}
+                        {% endif %} {% if page.callToAction.url != "" and page.callToAction.supplemental_form == null
+                        and page.callToAction.text %}
                         <a
                             class="btn btn-secondary text-uppercase"
                             href="{{ page.callToAction.url }}"
@@ -88,7 +88,7 @@
                     <div class="row pb-3">
                         <div class="col-sm-12">
                             <div class="lead text-justify pt-3 px-3">
-                                {{page.description | smartify | markdownify}}
+                                {{ page.description | smartify | markdownify }}
                             </div>
                         </div>
                     </div>
@@ -102,37 +102,45 @@
                                 <div class="card-body">
                                     <div class="d-flex py-1">
                                         <div>
-                                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <div
+                                                class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center"
+                                            >
                                                 <i class="fas fa-map-marker-alt"></i>
                                             </div>
                                         </div>
                                         <div class="pl-3 flex-fill">
-                                            <h5 class="m-0">{{page.location}}</h5>
+                                            <h5 class="m-0">{{ page.location }}</h5>
                                             <small class="text-muted">Location</small>
                                         </div>
                                     </div>
                                     <div class="d-flex py-1">
                                         <div>
-                                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                                              <i class="far fa-building"></i>
+                                            <div
+                                                class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center"
+                                            >
+                                                <i class="far fa-building"></i>
                                             </div>
                                         </div>
                                         <div class="pl-3 flex-fill">
-                                            <h5 class="m-0">{{page.address}}</h5>
+                                            <h5 class="m-0">{{ page.address }}</h5>
                                             <small class="text-muted">Address</small>
                                         </div>
                                     </div>
                                     {% if page.time != null %}
                                     <div class="d-flex py-1">
                                         <div>
-                                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <div
+                                                class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center"
+                                            >
                                                 <i class="far fa-clock"></i>
                                             </div>
                                         </div>
                                         <div class="pl-3 flex-fill">
-                                            <h5 class="m-0">{{page.time.startTime}} 
-                                            {% if page.time.endTime and page.time.endTime != "" and page.time.endTime != "Invalid date" %} &ndash; {{page.time.endTime}} 
-                                            {% endif %}</h5>
+                                            <h5 class="m-0">
+                                                {{ page.time.startTime }} {% if page.time.endTime and page.time.endTime
+                                                != "" and page.time.endTime != "Invalid date" %} &ndash;
+                                                {{ page.time.endTime }} {% endif %}
+                                            </h5>
                                             <small class="text-muted">Time</small>
                                         </div>
                                     </div>
@@ -150,45 +158,62 @@
                             <p>For more information, please contact:</p>
                             <div class="card bg-light">
                                 <div class="card-body">
-                                    {% assign nameArray = page.contact.name | split: " " %} 
-                                    {% assign firstLetter = nameArray | first | slice: 0 %} 
-                                    {% assign secondLetter = nameArray | last | slice: 0 %} 
-                                    {% assign initials = firstLetter | append: secondLetter %}
+                                    {% assign nameArray = page.contact.name | split: " " %} {% assign firstLetter =
+                                    nameArray | first | slice: 0 %} {% assign secondLetter = nameArray | last | slice: 0
+                                    %} {% assign initials = firstLetter | append: secondLetter %}
                                     <div class="d-flex py-1">
                                         <div>
-                                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <div
+                                                class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center"
+                                            >
                                                 {{ initials }}
                                             </div>
                                         </div>
                                         <div class="pl-3 flex-fill">
                                             <h5 class="m-0">{{ page.contact.name }}</h5>
                                             {% if page.contact.title %}
-                                            <small class="text-muted">{{page.contact.title}}</small>
+                                            <small class="text-muted">{{ page.contact.title }}</small>
                                             {% endif %}
                                         </div>
                                     </div>
                                     {% if page.contact.phone != null%}
                                     <div class="d-flex py-1">
                                         <div>
-                                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <div
+                                                class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center"
+                                            >
                                                 <i class="fas fa-phone"></i>
                                             </div>
                                         </div>
                                         <div class="pl-3 flex-fill">
-                                            <h5 class="m-0"><a href="tel:{{page.contact.phone.number | replace: '(' | replace: ')' | prepend: '1-' }}">{{page.contact.phone.number}}</a>{% if page.contact.phone.extension %}&nbsp; ext. {{page.contact.phone.extension}}{% endif %}</h5>
+                                            <h5 class="m-0">
+                                                <a
+                                                    href="tel:{{
+                                                        page.contact.phone.number
+                                                            | replace: '('
+                                                            | replace: ')'
+                                                            | prepend: '1-'
+                                                    }}"
+                                                    >{{ page.contact.phone.number }}</a
+                                                >{% if page.contact.phone.extension %}&nbsp; ext.
+                                                {{ page.contact.phone.extension }}{% endif %}
+                                            </h5>
                                             <small class="text-muted">Phone</small>
                                         </div>
                                     </div>
-                                    {% endif %}
-                                    {% if page.contact.email != null%}
+                                    {% endif %} {% if page.contact.email != null%}
                                     <div class="d-flex py-1">
                                         <div>
-                                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <div
+                                                class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center"
+                                            >
                                                 <i class="fas fa-envelope"></i>
                                             </div>
                                         </div>
                                         <div class="pl-3 flex-fill">
-                                            <h5 class="m-0"><a href="mailto:{{page.contact.email}}">{{page.contact.email}}</a></h5>
+                                            <h5 class="m-0">
+                                                <a href="mailto:{{ page.contact.email }}">{{ page.contact.email }}</a>
+                                            </h5>
                                             <small class="text-muted">Email</small>
                                         </div>
                                     </div>
@@ -208,7 +233,7 @@
                             <h2 class="section-header text-center">Interested?</h2>
                         </div>
                         <div class="col-sm-12 justify-content-center d-flex">
-                                <a
+                            <a
                                 class="btn btn-secondary text-uppercase"
                                 href="{{ page.moreInformationLink }}"
                                 target="_blank"
