@@ -33,7 +33,8 @@
                             rel="noopener noreferrer"
                             >{{ page.callToAction.text }}</a
                         >
-                        {% else %}
+                        {% endif %}
+                        {% if page.callToAction.url != "" and page.callToAction.supplemental_form == null %}
                         <a
                             class="btn btn-secondary text-uppercase"
                             href="{{ page.callToAction.url }}"
@@ -86,9 +87,9 @@
                     {% if page.description %}
                     <div class="row pb-3">
                         <div class="col-sm-12">
-                            <p class="lead text-justify pt-3 px-3">
-                                {{page.description | smartify | markdownify | replace: "<p>" | replace: "</p>"}}
-                            </p>
+                            <div class="lead text-justify pt-3 px-3">
+                                {{page.description | smartify | markdownify}}
+                            </div>
                         </div>
                     </div>
                     {% endif %}
@@ -129,7 +130,9 @@
                                             </div>
                                         </div>
                                         <div class="pl-3 flex-fill">
-                                            <h5 class="m-0">{{page.time.startTime}} {% if page.time.endTime %} &ndash; {{page.time.endTime}} {% endif %}</h5>
+                                            <h5 class="m-0">{{page.time.startTime}} 
+                                            {% if page.time.endTime and page.time.endTime != "" and page.time.endTime != "Invalid date" %} &ndash; {{page.time.endTime}} 
+                                            {% endif %}</h5>
                                             <small class="text-muted">Time</small>
                                         </div>
                                     </div>
