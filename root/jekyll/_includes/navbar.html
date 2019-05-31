@@ -14,7 +14,7 @@
         <div class="navbar-nav mr-auto">
             {% for link in site.data.navigation-links %}
             <a
-                class="py-3 nav-item nav-link {% if page.url contains link.url %} active {% endif %}"
+                class="text-white py-3 nav-item nav-link {% if page.url contains link.url %} active font-weight-bold{% endif %}"
                 href="{{ link.url | absolute_url }}"
                 >{{ link.label }}</a
             >
