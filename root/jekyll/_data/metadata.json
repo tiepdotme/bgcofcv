@@ -1,16 +1,16 @@
 {
-    "title": "Boys & Girls Clubs of Coachella Valley",
-    "favicon": "assets/images/favicon.ico",
-    "type": "website",
-    "description": "Who we are · Our Mission · Our History · Board and Staff · Our Partners · Clubhouses · Coachella · Desert Hot Springs",
-    "image": "/assets/images/site-preview.png",
-    "googleAnalyticsId": "",
-    "keywords": [
-        "bgcofcv",
-        "home",
-        "boys and girls clubs of coachella valley",
-        "donate",
-        "our clubs",
-        "coachella valley"
-    ]
+  "title": "Boys & Girls Clubs of Coachella Valley",
+  "favicon": "assets/images/favicon.ico",
+  "type": "website",
+  "description": "We strive to give our club members and our communities a better and brighter future. We meet kids and teens where they are and help them to take steps forward to reach their potential. By focusing on safety, academic support and character development.",
+  "image": "/assets/images/open-graph.png",
+  "googleAnalyticsId": "UA-141493371-1",
+  "keywords": [
+    "bgcofcv",
+    "home",
+    "boys and girls clubs of coachella valley",
+    "donate",
+    "our clubs",
+    "coachella valley"
+  ]
 }
