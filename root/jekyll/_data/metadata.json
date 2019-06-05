@@ -1,16 +1,16 @@
 {
-  "title": "Boys & Girls Clubs of Coachella Valley",
-  "favicon": "assets/images/favicon.ico",
-  "type": "website",
-  "description": "We strive to give our club members and our communities a better and brighter future. We meet kids and teens where they are and help them to take steps forward to reach their potential. By focusing on safety, academic support and character development.",
-  "image": "/assets/images/open-graph.png",
-  "googleAnalyticsId": "UA-141493371-1",
-  "keywords": [
-    "bgcofcv",
-    "home",
-    "boys and girls clubs of coachella valley",
-    "donate",
-    "our clubs",
-    "coachella valley"
-  ]
+    "title": "Boys & Girls Clubs of Coachella Valley",
+    "favicon": "assets/images/favicon.ico",
+    "type": "website",
+    "description": "To save and enhance the lives of the young people of our community, especially those with economic and/or social needs by offering a safe haven and meaningful youth development  services provided by a caring and qualified staff.",
+    "image": "/assets/images/open-graph.png",
+    "googleAnalyticsId": "UA-141493371-1",
+    "keywords": [
+        "bgcofcv",
+        "home",
+        "boys and girls clubs of coachella valley",
+        "donate",
+        "our clubs",
+        "coachella valley"
+    ]
 }
