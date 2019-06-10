@@ -1,7 +1,10 @@
 [build]
-publish = "dist"
-command = "npm run build"
+    publish = "dist"
+    command = "npm run build"
+[context.development]
+    publish = "dist"
+    command = "npm run build:dev"
 [[redirects]]
-from = "https://bgcofcv.netlify.com/*"
-to = "https://www.bgcofcv.org/:splat"
-status = 301
+    from = "https://bgcofcv.netlify.com/*"
+    to = "https://www.bgcofcv.org/:splat"
+    status = 301
