@@ -538,6 +538,7 @@ collections:
           - { label: "Address", name: "address", widget: "string", default: null }
           - { label: "Body", name: body, widget: hidden }
           - label: Sponsors
+            name: sponsors
             required: false
             default: null
             widget: list
