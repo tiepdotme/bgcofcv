@@ -1,15 +1,15 @@
-env: PRODUCTION
+env: DEVELOPMENT
 developer: Brightside Tech
 developerUrl: "https://brightsidetech.io"
-url: https://www.bgcofcv.org
+url: https://development.bgcofcv.org
 markdown: kramdown
 destination: dist
 source: root/jekyll
 include:
     - _pages
-    - admin
+    - _dev_admin
 exclude:
-    - dev_admin
+    - admin
 plugins:
     - jemoji
     - jekyll-sitemap

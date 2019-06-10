@@ -3,8 +3,10 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "start": "bundle exec jekyll serve",
-        "build": "webpack && bundle exec jekyll build"
+        "start": "bundle exec jekyll serve --config _config.dev.yml",
+        "dev": "bundle exec jekyll serve --config _config.dev.yml",
+        "build": "webpack && bundle exec jekyll build",
+        "build:dev": "webpack && bundle exec jekyll build --config _config.dev.yml"
     },
     "dependencies": {
         "bootstrap": "^4.3.1",
