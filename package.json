@@ -42,7 +42,7 @@
         "sharp": "^0.20.8",
         "style-loader": "^0.23.0",
         "uglifyjs-webpack-plugin": "^2.0.1",
-        "webpack": "^4.19.1",
-        "webpack-cli": "^3.1.0"
+        "webpack": "^4.34.0",
+        "webpack-cli": "^3.3.4"
     }
 }
