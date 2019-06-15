@@ -460,13 +460,14 @@ collections:
           - { label: "Title", name: "title", widget: "string", tagname: "h1" }
           - { label: "Description", name: "description", widget: "markdown", required: false, default: null }
           - { label: "Image", name: "image", widget: "image", required: false, tagname: "" }
-          - { label: "Start Date", name: "start_date", widget: "datetime", required: true, timeFormat: false }
+          - { label: "Start Date", name: "start_date", widget: "datetime", required: true, dateFormat: true, timeFormat: false }
           - {
                 label: "End Date",
                 name: "end_date",
                 widget: "datetime",
                 required: false,
-                default: null,
+                dateFormat: true,
+                default: "",
                 timeFormat: false,
             }
           - label: Contact
@@ -518,25 +519,34 @@ collections:
                       label: Start Time,
                       name: startTime,
                       widget: datetime,
-                      dateFormat: false,
+                      dateFormat: true,
                       timeFormat: "hh:mm a",
                       required: false,
-                      default: null,
+                      default: "",
                       format: "hh:mm a",
                   }
                 - {
                       label: End Time,
                       name: endTime,
                       widget: datetime,
-                      dateFormat: false,
+                      dateFormat: true,
                       timeFormat: "hh:mm a",
                       required: false,
-                      default: null,
+                      default: "",
                       format: "hh:mm a",
                   }
           - { label: "Location", name: "location", widget: "string" }
           - { label: "Address", name: "address", widget: "string", default: null }
           - { label: "Body", name: body, widget: hidden }
+          - label: Sponsors
+            name: sponsors
+            required: false
+            default: null
+            widget: list
+            fields:
+                - { label: Sponsor, name: name, widget: string }
+                - { label: Logo, name: logo, widget: image }
+                - { label: Link, name: link, widget: string, required: false, default: null }
 
     - name: team
       label: Team

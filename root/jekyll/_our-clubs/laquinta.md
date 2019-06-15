@@ -5,14 +5,13 @@ phone: (760)-564-5555
 fax: (760)-564-5527
 email: twopositive@dc.rr.com
 address: 49995 Moon River Drive
-city: La Quinta, CA
+city: 'La Quinta, CA'
 zip: 92253
 unitDirector: Siah Nix
-isSchoolHours: true
-schoolHours: 2:00pm - 7:00pm
-summerHours: 7:30am - 5:30pm
+isSchoolHours: false
+schoolHours: '2:00pm - 7:00pm'
+summerHours: '7:30am - 5:30pm'
 image: assets/images/la-quinta-club.jpg
-calendar: null
 ---
 
 President Gerald R. Ford Boys & Girls Club (La Quinta) opened in 1994 and dedicated to
