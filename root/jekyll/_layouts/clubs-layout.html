@@ -22,9 +22,16 @@
                 <h1 class="text-center section-header underline">{{page.title}}</h1>
                 <h2 class="mt-3 text-center h4 text-muted">{{page.city | split: "," | first}}</h2>
                 {% if page.isSchoolHours %}
-                <p class="text-center text-muted py-3">Open today {{page.schoolHours}}</p>
+                <div class="py-3 text-center d-flex flex-column">
+                    <small class="text-uppercase">Mon &ndash; Fri</small>
+                    <p class="text-center">{{page.schoolHours}}</p>
+                </div>
                 {% else %}
-                <p class="text-center text-muted py-3">Open today {{page.summerHours}} (Summer Hours)</p>
+                <div class="py-3 text-center d-flex flex-column">
+                    <small class="text-uppercase">Summer Hours</small>
+                    <small class="text-uppercase">Mon &ndash; Fri</small>
+                    <p class="text-center">{{page.summerHours}}</p>
+                </div>
                 {% endif %}
                 <p class="lead text-justify px-3">{{content | smartify | markdownify | replace: "<p>" |
                         replace: "</p>"}}</p>
