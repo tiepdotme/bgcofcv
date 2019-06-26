@@ -545,6 +545,7 @@ collections:
             widget: list
             fields:
                 - { label: Sponsor, name: name, widget: string }
+                - { label: Category, name: category, widget: string, required: false, default: null}
                 - { label: Logo, name: logo, widget: image }
                 - { label: Link, name: link, widget: string, required: false, default: null }
 
