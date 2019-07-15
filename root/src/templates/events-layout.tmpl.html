@@ -23,11 +23,11 @@
                     {% if page.callToAction %}
                         <div class="pt-3">
                             {% if page.callToAction.supplemental_form and page.callToAction.text %}
-                                <a class="btn btn-secondary text-uppercase" href="{{ page.callToAction.supplemental_form }}" target="_blank" rel="noopener noreferrer">{{ page.callToAction.text }}</a>
+                                <a class="btn btn-dark text-uppercase" href="{{ page.callToAction.supplemental_form }}" target="_blank" rel="noopener noreferrer">{{ page.callToAction.text }}</a>
                             {% endif %}
                             {% if page.callToAction.url != "" and page.callToAction.supplemental_form == null
                         and page.callToAction.text %}
-                                <a class="btn btn-secondary text-uppercase" href="{{ page.callToAction.url }}" target="_blank" rel="noopener noreferrer">{{ page.callToAction.text }}</a>
+                                <a class="btn btn-dark text-uppercase" href="{{ page.callToAction.url }}" target="_blank" rel="noopener noreferrer">{{ page.callToAction.text }}</a>
                             {% endif %}
                         </div>
                     {% endif %}
