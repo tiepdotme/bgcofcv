@@ -10,16 +10,22 @@
     <main>
         <section class="hero-cascade pb-5">
             <div class="hero-view bg-image-contain position-relative p-5"
-                style="background: url({{ page.image | absolute_url }});"></div>
+                style="background: url({{ page.image | absolute_url }});">
+            </div>
             <div
                 class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3 text-center">
                 <h1 class="text-center section-header underline mb-3">{{ page.title }}</h1>
+                {% if page.description %}
+                <div class="text-muted py-3 px-3">
+                    {{ page.description | smartify | markdownify | replace: "<p>" |  replace: "</p>" }}
+                </div>
+                {% endif %}
                 <!-- <h4 class="text-muted mt-3">{{ page.date | date: "%a, %b %d, %Y" }}</h4> -->
                 <div class="d-flex justify-content-center align-items-center">
-                    <p class="text-muted my-1">{{ page.start_date | date: "%a, %b %d, %Y" }}</p>
+                    <p class="my-1">{{ page.start_date | date: "%a, %b %d, %Y" }}</p>
                     {% if page.end_date and page.end_date != "" and page.end_date != "Invalid date" %}
                     &nbsp; &ndash; &nbsp;
-                    <p class="text-muted my-1">{{ page.end_date | date: "%a, %b %d, %Y" }}</p>
+                    <p class="my-1">{{ page.end_date | date: "%a, %b %d, %Y" }}</p>
                     {% endif %}
                 </div>
                 {% if page.callToAction %}
@@ -35,7 +41,7 @@
                     {% endif %}
                 </div>
                 {% endif %}
-                <div class="pt-5">
+                <div class="py-3">
                     <h6 class="text-muted">Share this</h6>
                     <div class="d-flex align-items-center justify-content-center">
                         <a class="mx-1 rounded-circle btn btn-lg btn-round btn-facebook"
@@ -67,26 +73,18 @@
         </section>
         <section class="py-5">
             <div class="container">
-                {% if page.description %}
-                <div class="row pb-3">
-                    <div class="col-sm-12">
-                        <div class="lead text-justify pt-3 px-3">
-                            {{ page.description | smartify | markdownify }}
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
                 {% if page.promotion %}
                 <div class="row pb-3">
                     <div class="col-sm-12">
                         {% if page.promotion.image %}
                         <div class="d-flex justify-content-center">
-                        <div class="d-flex flex-column align-items-center">
-                            {% if page.promotion.link %}
-                            <a target="_blank" rel="noopener noreferrer" href="{{page.promotion.link}}" class="stretched-link text-dark">{{page.promotion.description}}</a>
-                            {% endif %}
-                            <img class="img-fluid" src="{{page.promotion.image}}" />
-                        </div>
+                            <div class="d-flex flex-column align-items-center">
+                                {% if page.promotion.link %}
+                                <a target="_blank" rel="noopener noreferrer" href="{{page.promotion.link}}"
+                                    class="stretched-link text-dark">{{page.promotion.description}}</a>
+                                {% endif %}
+                                <img class="img-fluid" src="{{page.promotion.image}}" />
+                            </div>
                         </div>
                         {% endif %}
                     </div>
