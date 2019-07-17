@@ -1,235 +1,269 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-    <head>
-        {% include collection-head.html %}
-    </head>
+<head>
+    {% include collection-head.html %}
+</head>
 
-    <body>
-        {% include navbar.html %}
-        <main>
-            <section class="hero-cascade pb-5">
-                <div class="hero-view bg-image-contain position-relative p-5" style="background: url({{ page.image | absolute_url }});"></div>
-                <div class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3 text-center">
-                    <h1 class="text-center section-header underline mb-3">{{ page.title }}</h1>
-                    <!-- <h4 class="text-muted mt-3">{{ page.date | date: "%a, %b %d, %Y" }}</h4> -->
-                    <div class="d-flex justify-content-center align-items-center">
-                        <p class="text-muted my-1">{{ page.start_date | date: "%a, %b %d, %Y" }}</p>
-                        {% if page.end_date and page.end_date != "" %}
-                            &nbsp; &ndash; &nbsp;
-                            <p class="text-muted my-1">{{ page.end_date | date: "%a, %b %d, %Y" }}</p>
-                        {% endif %}
-                    </div>
-                    {% if page.callToAction %}
-                        <div class="pt-3">
-                            {% if page.callToAction.supplemental_form and page.callToAction.text %}
-                                <a class="btn btn-secondary text-uppercase" href="{{ page.callToAction.supplemental_form }}" target="_blank" rel="noopener noreferrer">{{ page.callToAction.text }}</a>
-                            {% endif %}
-                            {% if page.callToAction.url != "" and page.callToAction.supplemental_form == null
-                        and page.callToAction.text %}
-                                <a class="btn btn-secondary text-uppercase" href="{{ page.callToAction.url }}" target="_blank" rel="noopener noreferrer">{{ page.callToAction.text }}</a>
-                            {% endif %}
-                        </div>
+<body>
+    {% include navbar.html %}
+    <main>
+        <section class="hero-cascade pb-5">
+            <div class="hero-view bg-image-contain position-relative p-5"
+                style="background: url({{ page.image | absolute_url }});">
+            </div>
+            <div
+                class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3 text-center">
+                <h1 class="text-center section-header underline mb-3">{{ page.title }}</h1>
+                {% if page.description %}
+                <div class="text-muted py-3 px-3">
+                    {{ page.description | smartify | markdownify | replace: "<p>" |  replace: "</p>" }}
+                </div>
+                {% endif %}
+                <!-- <h4 class="text-muted mt-3">{{ page.date | date: "%a, %b %d, %Y" }}</h4> -->
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="my-1">{{ page.start_date | date: "%a, %b %d, %Y" }}</p>
+                    {% if page.end_date and page.end_date != "" and page.end_date != "Invalid date" %}
+                    &nbsp; &ndash; &nbsp;
+                    <p class="my-1">{{ page.end_date | date: "%a, %b %d, %Y" }}</p>
                     {% endif %}
-                    <div class="pt-5">
-                        <h6 class="text-muted">Share this</h6>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <a class="mx-1 rounded-circle btn btn-lg btn-round btn-facebook" href="https://facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}&title={{
+                </div>
+                {% if page.callToAction %}
+                <div class="pt-3">
+                    {% if page.callToAction.supplemental_form and page.callToAction.text %}
+                    <a class="btn btn-dark text-uppercase" href="{{ page.callToAction.supplemental_form }}"
+                        target="_blank" rel="noopener noreferrer">{{ page.callToAction.text }}</a>
+                    {% endif %}
+                    {% if page.callToAction.url != "" and page.callToAction.supplemental_form == null
+                        and page.callToAction.text %}
+                    <a class="btn btn-dark text-uppercase" href="{{ page.callToAction.url }}" target="_blank"
+                        rel="noopener noreferrer">{{ page.callToAction.text }}</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+                <div class="py-3">
+                    <h6 class="text-muted">Share this</h6>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a class="mx-1 rounded-circle btn btn-lg btn-round btn-facebook"
+                            href="https://facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}&title={{
                                                                                                                                                                                                                                                                     page.title | url_escape
-                                                                                                                                                                                                                                                                }}" rel="nofollow" target="_blank" title="Share on Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="mx-1 rounded-circle btn btn-lg btn-round btn-twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{
+                                                                                                                                                                                                                                                                }}"
+                            rel="nofollow" target="_blank" title="Share on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="mx-1 rounded-circle btn btn-lg btn-round btn-twitter"
+                            href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{
                                                                                                                                                                                                                                                                     page.url | absolute_url
                                                                                                                                                                                                                                                                 }}&via={{ site.data.global.twitterUsername }}&related={{
                                                                                                                                                                                                                                                                     site.data.global.twitterUsername
-                                                                                                                                                                                                                                                                }}" rel="nofollow" target="_blank" title="Share on Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="mx-1 text-white rounded-circle bg-dark btn btn-lg btn-round" href="mailto:?subject={{ page.title }}&amp;body=Check out this event {{
+                                                                                                                                                                                                                                                                }}"
+                            rel="nofollow" target="_blank" title="Share on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="mx-1 text-white rounded-circle bg-dark btn btn-lg btn-round"
+                            href="mailto:?subject={{ page.title }}&amp;body=Check out this event {{
                                                                                                                                                                                                                                                                     page.url | absolute_url
-                                                                                                                                                                                                                                                                }}" title="Share via Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
+                                                                                                                                                                                                                                                                }}"
+                            title="Share via Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-            </section>
-            <section class="py-5">
-                <div class="container">
-                    {% if page.description %}
-                        <div class="row pb-3">
-                            <div class="col-sm-12">
-                                <div class="lead text-justify pt-3 px-3">
-                                    {{ page.description | smartify | markdownify }}
-                                </div>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container">
+                {% if page.promotion %}
+                <div class="row pb-3">
+                    <div class="col-sm-12">
+                        {% if page.promotion.image %}
+                        <div class="d-flex justify-content-center">
+                            <div class="d-flex flex-column align-items-center">
+                                {% if page.promotion.link %}
+                                <a target="_blank" rel="noopener noreferrer" href="{{page.promotion.link}}"
+                                    class="stretched-link text-dark">{{page.promotion.description}}</a>
+                                {% endif %}
+                                <img class="img-fluid" src="{{page.promotion.image}}" />
                             </div>
                         </div>
-                    {% endif %}
-                    <div class="row py-3">
-                        <div class="col-sm-12">
-                            <h2 class="section-header">Details</h2>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="card bg-light">
-                                <div class="card-body">
-                                    <div class="d-flex py-1">
-                                        <div>
-                                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                            </div>
-                                        </div>
-                                        <div class="pl-3 flex-fill">
-                                            <h5 class="m-0">{{ page.location }}</h5>
-                                            <small class="text-muted">Location</small>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex py-1">
-                                        <div>
-                                            <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                                                <i class="far fa-building"></i>
-                                            </div>
-                                        </div>
-                                        <div class="pl-3 flex-fill">
-                                            <h5 class="m-0">{{ page.address }}</h5>
-                                            <small class="text-muted">Address</small>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+                <div class="row py-3">
+                    <div class="col-sm-12">
+                        <h2 class="section-header">Details</h2>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <div class="d-flex py-1">
+                                    <div>
+                                        <div
+                                            class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    {% if page.time != null and page.time.startTime != null%}
-                                        <div class="d-flex py-1">
-                                            <div>
-                                                <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                                                    <i class="far fa-clock"></i>
-                                                </div>
-                                            </div>
-                                            <div class="pl-3 flex-fill">
-                                                <h5 class="m-0">
-                                                    {{ page.time.startTime }}
-                                                    {% if page.time.endTime and page.time.endTime
+                                    <div class="pl-3 flex-fill">
+                                        <h5 class="m-0">{{ page.location }}</h5>
+                                        <small class="text-muted">Location</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex py-1">
+                                    <div>
+                                        <div
+                                            class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <i class="far fa-building"></i>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 flex-fill">
+                                        <h5 class="m-0">{{ page.address }}</h5>
+                                        <small class="text-muted">Address</small>
+                                    </div>
+                                </div>
+                                {% if page.time != null and page.time.startTime != null and page.time.startTime != "Invalid date"%}
+                                <div class="d-flex py-1">
+                                    <div>
+                                        <div
+                                            class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <i class="far fa-clock"></i>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 flex-fill">
+                                        <h5 class="m-0">
+                                            {{ page.time.startTime }}
+                                            {% if page.time.endTime and page.time.endTime
                                                 != "" and page.time.endTime != "Invalid date" %}
-                                                        &ndash;
-                                                        {{ page.time.endTime }}
-                                                    {% endif %}
-                                                </h5>
-                                                <small class="text-muted">Time</small>
-                                            </div>
-                                        </div>
-                                    {% endif %}
+                                            &ndash;
+                                            {{ page.time.endTime }}
+                                            {% endif %}
+                                        </h5>
+                                        <small class="text-muted">Time</small>
+                                    </div>
                                 </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
-                    {% if page.contact != null %}
-                        <div class="row py-3">
-                            <div class="col-sm-12">
-                                <h2 class="section-header">Contact</h2>
-                            </div>
-                            <div class="col-sm-12">
-                                <p>For more information, please contact:</p>
-                                <div class="card bg-light">
-                                    <div class="card-body">
-                                        {% assign nameArray = page.contact.name | split: " " %}
-                                        {% assign firstLetter =
+                </div>
+                {% if page.contact != null %}
+                <div class="row py-3">
+                    <div class="col-sm-12">
+                        <h2 class="section-header">Contact</h2>
+                    </div>
+                    <div class="col-sm-12">
+                        <p>For more information, please contact:</p>
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                {% assign nameArray = page.contact.name | split: " " %}
+                                {% assign firstLetter =
                                     nameArray | first | slice: 0 %}
-                                        {% assign secondLetter = nameArray | last | slice: 0
+                                {% assign secondLetter = nameArray | last | slice: 0
                                     %}
-                                        {% assign initials = firstLetter | append: secondLetter %}
-                                        <div class="d-flex py-1">
-                                            <div>
-                                                <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                                                    {{ initials }}
-                                                </div>
-                                            </div>
-                                            <div class="pl-3 flex-fill">
-                                                <h5 class="m-0">{{ page.contact.name }}</h5>
-                                                {% if page.contact.title %}
-                                                    <small class="text-muted">{{ page.contact.title }}</small>
-                                                {% endif %}
-                                            </div>
+                                {% assign initials = firstLetter | append: secondLetter %}
+                                <div class="d-flex py-1">
+                                    <div>
+                                        <div
+                                            class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            {{ initials }}
                                         </div>
-                                        {% if page.contact.phone != null%}
-                                            <div class="d-flex py-1">
-                                                <div>
-                                                    <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                                                        <i class="fas fa-phone"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="pl-3 flex-fill">
-                                                    <h5 class="m-0">
-                                                        <a href="tel:{{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            page.contact.phone.number
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | replace: '('
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | replace: ')'
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | prepend: '1-'
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }}">{{ page.contact.phone.number }}</a>
-                                                        {% if page.contact.phone.extension %}&nbsp;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ext.
-                                                            {{ page.contact.phone.extension }}
-                                                        {% endif %}
-                                                    </h5>
-                                                    <small class="text-muted">Phone</small>
-                                                </div>
-                                            </div>
-                                        {% endif %}
-                                        {% if page.contact.email != null%}
-                                            <div class="d-flex py-1">
-                                                <div>
-                                                    <div class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
-                                                        <i class="fas fa-envelope"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="pl-3 flex-fill">
-                                                    <h5 class="m-0">
-                                                        <a href="mailto:{{ page.contact.email }}">{{ page.contact.email }}</a>
-                                                    </h5>
-                                                    <small class="text-muted">Email</small>
-                                                </div>
-                                            </div>
+                                    </div>
+                                    <div class="pl-3 flex-fill">
+                                        <h5 class="m-0">{{ page.contact.name }}</h5>
+                                        {% if page.contact.title %}
+                                        <small class="text-muted">{{ page.contact.title }}</small>
                                         {% endif %}
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                    {% if page.sponsors %}
-                        <div class="row py-3">
-                            <div class="col-sm-12">
-                                <h2 class="section-header">Sponsors</h2>
-                            </div>
-                            {% for sponsor in page.sponsors %}
-                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 d-flex py-2">
-                                    {% if sponsor.link %}
-                                        <figure title="{{sponsor.name}}" class="p-1 figure w-100 sponsor has-link">
-                                            <a href={{sponsor.link}} target="_blank" class="stretched-link">
-                                                <img style="height:100px; object-fit:contain" src="{{ sponsor.logo | absolute_url }}" class="figure-img w-100 img-fluid rounded" alt="{{sponsor.name}}">
+                                {% if page.contact.phone != null%}
+                                <div class="d-flex py-1">
+                                    <div>
+                                        <div
+                                            class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 flex-fill">
+                                        <h5 class="m-0">
+                                            <a
+                                                href="tel:{{page.contact.phone.number | replace: '(' | replace: ')' | prepend: '1-'}}">
+                                                {{ page.contact.phone.number }}
                                             </a>
-                                        </figure>
-                                    {% else %}
-                                        <figure class="figure w-100 sponsor">
-                                            <img title="{{sponsor.name}}" style="height:100px; object-fit:contain" src="{{ sponsor.logo | absolute_url }}" class="figure-img w-100 img-fluid rounded" alt="{{sponsor.name}}">
-                                        </figure>
-                                    {% endif %}
+                                            {% if page.contact.phone.extension %}
+                                            &nbsp; ext. {{ page.contact.phone.extension }}
+                                            {% endif %}
+                                        </h5>
+                                        <small class="text-muted">Phone</small>
+                                    </div>
                                 </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-            </section>
-            {% if page.moreInformationLink != null %}
-                <section class="py-5 bg-light">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2 class="section-header text-center">Interested?</h2>
-                            </div>
-                            <div class="col-sm-12 justify-content-center d-flex">
-                                <a class="btn btn-secondary text-uppercase" href="{{ page.moreInformationLink }}" target="_blank" rel="noopener">Learn More</a>
+                                {% endif %}
+                                {% if page.contact.email != null%}
+                                <div class="d-flex py-1">
+                                    <div>
+                                        <div
+                                            class="avatar avatar-sm text-white bg-primary rounded-circle d-flex justify-content-center align-items-center">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 flex-fill">
+                                        <h5 class="m-0">
+                                            <a href="mailto:{{ page.contact.email }}">{{ page.contact.email }}</a>
+                                        </h5>
+                                        <small class="text-muted">Email</small>
+                                    </div>
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
-                </section>
-            {% endif %}
-        </main>
-        {% include footer.html %}
-        {% include scripts.html %}</body>
-</html></html>
+                </div>
+                {% endif %}
+                {% if page.sponsors %}
+                <div class="row py-3">
+                    <div class="col-sm-12">
+                        <h2 class="section-header">Sponsors</h2>
+                    </div>
+                    {% for sponsor in page.sponsors %}
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 d-flex py-2">
+                        {% if sponsor.link %}
+                        <figure title="{{sponsor.name}}" class="p-1 figure w-100 sponsor has-link">
+                            <a href={{sponsor.link}} target="_blank" class="stretched-link">
+                                <img style="height:100px; object-fit:contain" src="{{ sponsor.logo | absolute_url }}"
+                                    class="figure-img w-100 img-fluid rounded" alt="{{sponsor.name}}">
+                            </a>
+                        </figure>
+                        {% else %}
+                        <figure class="figure w-100 sponsor">
+                            <img title="{{sponsor.name}}" style="height:100px; object-fit:contain"
+                                src="{{ sponsor.logo | absolute_url }}" class="figure-img w-100 img-fluid rounded"
+                                alt="{{sponsor.name}}">
+                        </figure>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </section>
+        {% if page.moreInformationLink != null %}
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="section-header text-center">Interested?</h2>
+                    </div>
+                    <div class="col-sm-12 justify-content-center d-flex">
+                        <a class="btn btn-secondary text-uppercase" href="{{ page.moreInformationLink }}"
+                            target="_blank" rel="noopener">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+    </main>
+    {% include footer.html %}
+    {% include scripts.html %}</body>
+
+</html>
+
+</html>
