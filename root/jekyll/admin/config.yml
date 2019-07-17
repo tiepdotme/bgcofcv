@@ -546,6 +546,27 @@ collections:
                 - { label: Sponsor, name: name, widget: string }
                 - { label: Logo, name: logo, widget: image }
                 - { label: Link, name: link, widget: string, required: false, default: null }
+          - label: Promotion
+            name: promotion
+            required: false
+            default: null
+            widget: object
+            fields:
+              - label: Description
+                name: description
+                widget: markdown
+                required: false
+                default: null
+              - label: Image
+                name: image
+                widget: image
+                required: false
+                default: null
+              - label: Link
+                name: link
+                widget: string
+                required: false
+                default: null
 
     - name: team
       label: Team
