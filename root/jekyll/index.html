@@ -112,17 +112,27 @@ permalink: index.html
         </div>
     </div>
 </section>
-<section class="py-5">
+<section class="py-5 bg-light">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="section-header text-center">Boys &amp; Girls Clubs of Coachella Valley NBC Interview 2019</h2>
+                <h2 class="section-header text-center mb-5">Boys &amp; Girls Clubs of Coachella Valley Presents</h2>
             </div>
-            <div class="col-sm-12 pt-3">{% include youtube-embed.html videoId="CpjrSK6hVyI" ratio="16by9" %}</div>
+            <div class="col-sm-12 col-md-6">
+                <h4>NBC Interview 2019</h4>
+                <div>{% include youtube-embed.html videoId="CpjrSK6hVyI" ratio="16by9" %}</div>
+            </div>
+            {% if page.video %}
+                <div class="col-sm-12 col-md-6">
+                    <h4>{{ page.video.header }}</h4>
+                    {%- comment -%} <div class="lead text-light pt-3 px-3 text-center">{{ page.video.description | markdownify | replace: "<p>" | replace: "</p>" }}</div> {%- endcomment -%}
+                    <div>{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
+                </div>
+            {% endif %}
         </div>
     </div>
 </section>
-{% if page.video %}
+<!-- {% if page.video %}
 <section class="py-5 bg-primary">
     <div class="container">
         <div class="row">
@@ -134,7 +144,7 @@ permalink: index.html
         </div>
     </div>
 </section>
-{% endif %}
+{% endif %} -->
 <section class="py-5">
     <div class="container">
         <div class="row">
