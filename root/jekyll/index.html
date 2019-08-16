@@ -22,13 +22,6 @@ video:
     Watch our mission at work in this 3 minute video
   header: The Story of Jose
   youtubeId: iHsLgK3zbiA
-spotlight:
-    - image: https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-      description: Background beverage breakfast brown.
-      title: Morning Coffee
-    - image: https://images.pexels.com/photos/372748/pexels-photo-372748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-      description: Classic close up draw expensive 
-      title: The Pen
 permalink: index.html
 ---
 <section class="hero-cascade hero-cascade-home pb-5">
@@ -119,19 +112,19 @@ permalink: index.html
         </div>
     </div>
 </section>
-<section class="py-5 bg-light">
+<section class="py-5 bg-primary">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="section-header text-center mb-5">Boys &amp; Girls Clubs of Coachella Valley Presents</h2>
+                <h2 class="section-header text-center mb-5 text-light">Boys &amp; Girls Clubs of Coachella Valley Presents</h2>
             </div>
             <div class="col-sm-12 col-md-6">
-                <h4>NBC Interview 2019</h4>
+                <h4 class="text-light">NBC Interview 2019</h4>
                 <div>{% include youtube-embed.html videoId="CpjrSK6hVyI" ratio="16by9" %}</div>
             </div>
             {% if page.video %}
                 <div class="col-sm-12 col-md-6">
-                    <h4>{{ page.video.header }}</h4>
+                    <h4 class="text-light">{{ page.video.header }}</h4>
                     {%- comment -%} <div class="lead text-light pt-3 px-3 text-center">{{ page.video.description | markdownify | replace: "<p>" | replace: "</p>" }}</div> {%- endcomment -%}
                     <div>{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
                 </div>
@@ -181,6 +174,7 @@ permalink: index.html
         </div>
     </div>
 </section>
+{% if spotlight %}
 <section class="py-5 bg-primary">
     <div class="container">
         <div class="row">
@@ -223,6 +217,7 @@ permalink: index.html
         </div>
     </div>
 </section>
+{% endif %}
 <section class="py-5">
     <div class="container">
         <div class="row">
@@ -320,7 +315,7 @@ permalink: index.html
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-md-6">
                 <h2 class="h4 text-center">
                     Learn more about our work
                 </h2>
@@ -330,7 +325,21 @@ permalink: index.html
                         target="_blank"
                         rel="noopener"
                         class="my-1 mx-0 mx-sm-2 btn btn-secondary btn-lg text-uppercase"
-                        > <i class="far fa-arrow-alt-circle-down"></i> {{site.data.global.newsletter.reportName}}</a
+                        > {{site.data.global.newsletter.reportName}}</a
+                    >
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <h2 class="h4 text-center">
+                    Would you like to learn more about us?
+                </h2>
+                <div class="d-flex flex-sm-row flex-column justify-content-center py-3">
+                    <a
+                        href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E331203&id=38"
+                        target="_blank"
+                        rel="noopener"
+                        class="my-1 mx-0 mx-sm-2 btn btn-secondary btn-lg text-uppercase"
+                        > Sign Up!</a
                     >
                 </div>
             </div>
