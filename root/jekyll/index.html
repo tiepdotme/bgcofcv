@@ -112,17 +112,27 @@ permalink: index.html
         </div>
     </div>
 </section>
-<section class="py-5">
+<section class="py-5 bg-primary">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="section-header text-center">Boys &amp; Girls Clubs of Coachella Valley NBC Interview 2019</h2>
+                <h2 class="section-header text-center mb-5 text-light">Boys &amp; Girls Clubs of Coachella Valley Presents</h2>
             </div>
-            <div class="col-sm-12 pt-3">{% include youtube-embed.html videoId="CpjrSK6hVyI" ratio="16by9" %}</div>
+            <div class="col-sm-12 col-md-6">
+                <h4 class="text-light">NBC Interview 2019</h4>
+                <div>{% include youtube-embed.html videoId="CpjrSK6hVyI" ratio="16by9" %}</div>
+            </div>
+            {% if page.video %}
+                <div class="col-sm-12 col-md-6">
+                    <h4 class="text-light">{{ page.video.header }}</h4>
+                    {%- comment -%} <div class="lead text-light pt-3 px-3 text-center">{{ page.video.description | markdownify | replace: "<p>" | replace: "</p>" }}</div> {%- endcomment -%}
+                    <div>{% include youtube-embed.html videoId=page.video.youtubeId ratio="16by9" %}</div>
+                </div>
+            {% endif %}
         </div>
     </div>
 </section>
-{% if page.video %}
+<!-- {% if page.video %}
 <section class="py-5 bg-primary">
     <div class="container">
         <div class="row">
@@ -134,7 +144,7 @@ permalink: index.html
         </div>
     </div>
 </section>
-{% endif %}
+{% endif %} -->
 <section class="py-5">
     <div class="container">
         <div class="row">
@@ -164,6 +174,50 @@ permalink: index.html
         </div>
     </div>
 </section>
+{% if spotlight %}
+<section class="py-5 bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center section-header text-light">Spotlight</h2>
+                <p class="lead text-center text-light">Some text describing what the Spotlight section is all about</p>
+                <div id="spotlight-caraousel" class="carousel slide py-3" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        {% for item in page.spotlight %}
+                            <li data-target="#spotlight-caraousel" data-slide-to="{{index0}}" class="{%if forloop.index0 == 0%}active{% endif %}"></li>
+                        {% endfor %}
+                    </ol>
+                    <div class="carousel-inner">
+                        {% for item in page.spotlight %}
+                        <div class="carousel-item {%if forloop.index0 == 0%}active{% endif %}">
+                            <figure style="width: 100%;
+                                    height: 300px;
+                                    overflow: hidden;
+                                    -moz-border-radius: 8px;
+                                    border-radius: 8px;">
+                                <img src="{{item.image}}" style="height: 100%; object-fit: cover" class="d-block w-100" alt="{{item.title}}">
+                            </figure>
+                            <div class="carousel-caption">
+                                <h5>{{item.title}}</h5>
+                                <p>{{item.description}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#spotlight-caraousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#spotlight-caraousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                </div>
+        </div>
+    </div>
+</section>
+{% endif %}
 <section class="py-5">
     <div class="container">
         <div class="row">
@@ -261,7 +315,7 @@ permalink: index.html
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-md-6">
                 <h2 class="h4 text-center">
                     Learn more about our work
                 </h2>
@@ -271,7 +325,21 @@ permalink: index.html
                         target="_blank"
                         rel="noopener"
                         class="my-1 mx-0 mx-sm-2 btn btn-secondary btn-lg text-uppercase"
-                        > <i class="far fa-arrow-alt-circle-down"></i> {{site.data.global.newsletter.reportName}}</a
+                        > {{site.data.global.newsletter.reportName}}</a
+                    >
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <h2 class="h4 text-center">
+                    Would you like to learn more about us?
+                </h2>
+                <div class="d-flex flex-sm-row flex-column justify-content-center py-3">
+                    <a
+                        href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E331203&id=38"
+                        target="_blank"
+                        rel="noopener"
+                        class="my-1 mx-0 mx-sm-2 btn btn-secondary btn-lg text-uppercase"
+                        > Sign Up!</a
                     >
                 </div>
             </div>
