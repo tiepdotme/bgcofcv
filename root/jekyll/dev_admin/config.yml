@@ -182,6 +182,15 @@ collections:
                             widget: "markdown",
                         }
                       - { label: "YouTube Video Id", name: "youtubeId", required: true, widget: "string" }
+                - label: Spotlight
+                  name: spotlight
+                  widget: list
+                  required: false
+                  default: null
+                  fields:
+                      - { label: "Title", name: "title", required: false, default: null, widget: "string" }
+                      - { label: "Description", name: "description", required: false, default: null, widget: "string" }
+                      - { label: "Image", name: "image", widget: "image", required: true }
                 - { label: "Permalink", name: "permalink", widget: "hidden" }
                 - { label: "Body", name: body, widget: hidden }
           - file: root/jekyll/_pages/our-clubs.html
