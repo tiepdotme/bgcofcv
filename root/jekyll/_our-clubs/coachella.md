@@ -8,7 +8,7 @@ address: 85350 Bagdad Ave
 city: 'Coachella, CA'
 zip: 92236
 unitDirector: Juanita Godwin
-isSchoolHours: false
+isSchoolHours: true
 schoolHours: '2:00pm - 7:00pm'
 summerHours: '7:30am - 5:30pm'
 image: assets/images/coachella-club.jpg
