@@ -8,7 +8,7 @@ address: 91391 66th Avenue
 city: 'Mecca, CA'
 zip: 92254
 unitDirector: Ray Amador
-isSchoolHours: false
+isSchoolHours: true
 schoolHours: '2:00pm - 7:00pm'
 summerHours: '7:30am - 5:30pm'
 image: assets/images/mecca-club.jpg

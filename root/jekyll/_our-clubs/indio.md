@@ -8,7 +8,7 @@ address: 83100 Date Avenue
 city: 'Indio, CA'
 zip: 92201
 unitDirector: Tracy Reed
-isSchoolHours: false
+isSchoolHours: true
 schoolHours: '2:00pm - 7:00pm'
 summerHours: '7:30am - 5:30pm'
 image: assets/images/indio-club.jpg
