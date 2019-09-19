@@ -86,11 +86,17 @@ $(document).ready(() => {
             },
             type: "pie",
             data: {
-                labels: ["Hispanic", "Other", "African-American", "Caucasian", "Multi-Racial"],
+                labels: [
+                    "Hispanic",
+                    "Other",
+                    "African-American",
+                    "Caucasian",
+                    "Multi-Racial"
+                ],
                 datasets: [
                     {
                         label: "Ethnicity",
-                        data: [82, 2, 3, 11, 2],
+                        data: [86, 1, 2, 9, 2],
                         backgroundColor: [
                             "rgba(255, 99, 132, 1)",
                             "rgba(54, 162, 235, 1)",
@@ -133,9 +139,17 @@ $(document).ready(() => {
                 labels: ["7-10 yrs", "11-13 yrs", "14-18 yrs"],
                 datasets: [
                     {
-                        data: [23, 43, 34],
-                        backgroundColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)", "rgba(255, 206, 86, 1)"],
-                        borderColor: ["rgba(255,99,132,1)", "rgba(54, 162, 235, 1)", "rgba(255, 206, 86, 1)"],
+                        data: [22, 47, 31],
+                        backgroundColor: [
+                            "rgba(255, 99, 132, 1)",
+                            "rgba(54, 162, 235, 1)",
+                            "rgba(255, 206, 86, 1)"
+                        ],
+                        borderColor: [
+                            "rgba(255,99,132,1)",
+                            "rgba(54, 162, 235, 1)",
+                            "rgba(255, 206, 86, 1)"
+                        ],
                         borderWidth: 1
                     }
                 ]
@@ -165,9 +179,15 @@ $(document).ready(() => {
                 datasets: [
                     {
                         label: "Gender",
-                        data: [59, 41],
-                        backgroundColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
-                        borderColor: ["rgba(255,99,132,1)", "rgba(54, 162, 235, 1)"],
+                        data: [56, 44],
+                        backgroundColor: [
+                            "rgba(255, 99, 132, 1)",
+                            "rgba(54, 162, 235, 1)"
+                        ],
+                        borderColor: [
+                            "rgba(255,99,132,1)",
+                            "rgba(54, 162, 235, 1)"
+                        ],
                         borderWidth: 1
                     }
                 ]
@@ -252,10 +272,16 @@ $(document).ready(() => {
                     $formGroup.removeClass("has-danger");
                 } else {
                     $formGroup.addClass("has-danger");
-                    if (input.validity.typeMismatch && $input.attr("name") == "contact_email") {
+                    if (
+                        input.validity.typeMismatch &&
+                        $input.attr("name") == "contact_email"
+                    ) {
                         $feedback.html("Please provide a valid email");
                     }
-                    if (input.validity.valueMissing && $input.attr("name") == "contact_email") {
+                    if (
+                        input.validity.valueMissing &&
+                        $input.attr("name") == "contact_email"
+                    ) {
                         $feedback.html("Email is required");
                     }
                 }
