@@ -18,10 +18,19 @@ impact: >-
   forward to reach their potential. By focusing on safety, academic support and
   character development.
 video:
-  description: >-
-    Watch our mission at work in this 3 minute video
+  description: Watch our mission at work in this 3 minute video
   header: The Story of Jose
   youtubeId: iHsLgK3zbiA
+spotlight:
+  - title: Lorem Ipsum
+    description: This is a test
+    image: /assets/images/publication1.jpg
+  - title: Lorem Ipsum
+    description: Testing
+    image: /assets/images/picture1.png
+  - title: Lorem Ipsum 2
+    description: Test
+    image: /assets/images/publication2.jpg
 permalink: index.html
 ---
 <section class="hero-cascade hero-cascade-home pb-5">
@@ -174,7 +183,7 @@ permalink: index.html
         </div>
     </div>
 </section>
-{% if spotlight %}
+{% if page.spotlight %}
 <section class="py-5 bg-primary">
     <div class="container">
         <div class="row">
