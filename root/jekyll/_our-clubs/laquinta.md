@@ -12,6 +12,7 @@ isSchoolHours: true
 schoolHours: '2:00pm - 7:00pm'
 summerHours: '7:30am - 5:30pm'
 image: assets/images/la-quinta-club.jpg
+calendar: /assets/images/october-calendar-2019-la-quinta.pdf
 ---
 
 President Gerald R. Ford Boys & Girls Club (La Quinta) opened in 1994 and dedicated to
