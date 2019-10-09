@@ -1,32 +1,40 @@
 {
     "friends": [
         {
-            "name": "Esther Gelineau",
+            "name": "Janet Obradovich",
             "title": "President"
         },
         {
-            "name": "Gee Gee Hanson",
+            "name": "Esther Gelineau",
             "title": "Immediate Past President"
         },
         {
             "name": "Margo Ritter",
-            "title": "First Vice President, Spring Event"
+            "title": "Spring Event Chair, Corresponding Secretary"
         },
         {
             "name": "Kelly Flanagan",
-            "title": "Second Vice President, Fall Event"
+            "title": "Fall Event Chair"
         },
         {
             "name": "Joan Lizza",
             "title": "Secretary"
         },
         {
-            "name": "Gail Gallaudet",
+            "name": "Kate Graham",
             "title": "Treasurer"
         },
         {
             "name": "Sandy Taylor",
             "title": "Grand Auction Chair"
+        },
+        {
+            "name": "Gail Gallaudet",
+            "title": ""
+        },
+        {
+            "name": "Gee Gee Hanson",
+            "title": ""
         },
         {
             "name": "Maureen Liebman",
@@ -50,10 +58,6 @@
         },
         {
             "name": "Joan Mandala",
-            "title": ""
-        },
-        {
-            "name": "Kate Graham",
             "title": ""
         },
         {
