@@ -18,10 +18,11 @@ impact: >-
   forward to reach their potential. By focusing on safety, academic support and
   character development.
 video:
-  description: >-
-    Watch our mission at work in this 3 minute video
+  description: Watch our mission at work in this 3 minute video
   header: The Story of Jose
   youtubeId: iHsLgK3zbiA
+spotlight:
+  - image: /assets/images/spotlight-vans-banner.png
 permalink: index.html
 ---
 <section class="hero-cascade hero-cascade-home pb-5">
@@ -174,13 +175,13 @@ permalink: index.html
         </div>
     </div>
 </section>
-{% if spotlight %}
+{% if page.spotlight %}
 <section class="py-5 bg-primary">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <h2 class="text-center section-header text-light">Spotlight</h2>
-                <p class="lead text-center text-light">Some text describing what the Spotlight section is all about</p>
+                <p class="lead text-center text-light">Below are only a few of our shining stars. We cannot thank you enough!</p>
                 <div id="spotlight-caraousel" class="carousel slide py-3" data-ride="carousel">
                     <ol class="carousel-indicators">
                         {% for item in page.spotlight %}
@@ -195,12 +196,14 @@ permalink: index.html
                                     overflow: hidden;
                                     -moz-border-radius: 8px;
                                     border-radius: 8px;">
-                                <img src="{{item.image}}" style="height: 100%; object-fit: cover" class="d-block w-100" alt="{{item.title}}">
+                                <img src="{{item.image}}" style="height: 100%; object-fit: contain" class="d-block w-100" alt="{{item.title}}">
                             </figure>
+                            {% if item.title or item.description %}
                             <div class="carousel-caption">
                                 <h5>{{item.title}}</h5>
                                 <p>{{item.description}}</p>
                             </div>
+                            {%endif%}
                         </div>
                         {% endfor %}
                     </div>
@@ -229,7 +232,7 @@ permalink: index.html
                     {% include img_srcset.html class="card-img" alt="" filename="community-service-hours.jpg" %}
                     <span class="mask rounded mask-dark mask-gradient-t-b-2"></span>
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
-                        <h3 class=" display-3 font-weight-bold text-primary">6,165</h3>
+                        <h3 class=" display-3 font-weight-bold text-primary">6,935</h3>
                         <p class="text-uppercase">hours of community service <span class="text-danger font-weight-bold">completed</span> by Club youth</p>
                     </div>
                 </div>
@@ -239,7 +242,7 @@ permalink: index.html
                     {% include img_srcset.html class="card-img" alt="" filename="meals.jpg" %}
                     <span class="mask rounded mask-dark mask-gradient-t-b-2"></span>
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
-                        <h3 class=" display-3 font-weight-bold text-primary">81,945</h3>
+                        <h3 class=" display-3 font-weight-bold text-primary">111,100</h3>
                         <p class="text-uppercase"><span class="text-warning font-weight-bold">free</span> meals and snacks were provided for Club youth during the year</p>
                     </div>
                 </div>
@@ -259,7 +262,7 @@ permalink: index.html
                     {% include img_srcset.html class="card-img" alt="" filename="purple.jpg" %}
                     <span class="mask rounded mask-dark mask-gradient-t-b-2"></span>
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
-                            <h3 class=" display-3 font-weight-bold text-primary">802</h3>
+                            <h3 class=" display-3 font-weight-bold text-primary">1,151</h3>
                             <p class="text-uppercase">children visit a clubhouse or an after-school site <span class="text-warning font-weight-bold">every
                                     day</span></p>
                     </div>
@@ -270,7 +273,7 @@ permalink: index.html
                     {% include img_srcset.html class="card-img" alt="" filename="computers.jpg" %}
                     <span class="mask rounded mask-dark mask-gradient-t-b-2"></span>
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
-                        <h3 class=" display-3 font-weight-bold text-primary">77%</h3>
+                        <h3 class=" display-3 font-weight-bold text-primary">76%</h3>
                         <p class="text-uppercase">of members are eligible for <span class="text-warning font-weight-bold">free
                                 or reduced</span> lunch at their schools</p>
                     </div>

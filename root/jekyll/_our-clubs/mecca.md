@@ -8,10 +8,11 @@ address: 91391 66th Avenue
 city: 'Mecca, CA'
 zip: 92254
 unitDirector: Ray Amador
-isSchoolHours: false
+isSchoolHours: true
 schoolHours: '2:00pm - 7:00pm'
 summerHours: '7:30am - 5:30pm'
 image: assets/images/mecca-club.jpg
+calendar: /assets/images/october-calendar-2019-mecca.pdf
 ---
 
 A state-of-the-art facility where members can enjoy games, sports activities, technology, and more! Our Joel E. Smilow Clubhouse currently serves 1,000 youth in Mecca and surrounding cities. In a partnership with the County of Riverside, this Club opened in 2011.
