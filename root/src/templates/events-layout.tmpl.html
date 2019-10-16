@@ -97,6 +97,7 @@
                     <div class="col-sm-12">
                         <div class="card bg-light">
                             <div class="card-body">
+                                {% if page.location %}
                                 <div class="d-flex py-1">
                                     <div>
                                         <div
@@ -109,6 +110,8 @@
                                         <small class="text-muted">Location</small>
                                     </div>
                                 </div>
+                                {%endif%}
+                                {% if page.address %}
                                 <div class="d-flex py-1">
                                     <div>
                                         <div
@@ -121,6 +124,7 @@
                                         <small class="text-muted">Address</small>
                                     </div>
                                 </div>
+                                {%endif%}
                                 {% if page.time != null and page.time.startTime != null and page.time.startTime != "Invalid date"%}
                                 <div class="d-flex py-1">
                                     <div>
