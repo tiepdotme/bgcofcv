@@ -58,7 +58,9 @@ permalink: events.html
                             <p class="text-muted my-1">{{ nextEvent.end_date | date: "%a, %b %d, %Y" }}</p>
                             {% endif %}
                         </div>
+                        {% if nextEvent.location != null %}
                         <p class="text-muted my-1">{{ nextEvent.location }}</p>
+                        {%endif%}
                         {%if nextEvent.address != null%}
                         <p class="text-muted my-1">{{ nextEvent.address }}</p>
                         {%endif%}
@@ -87,8 +89,10 @@ permalink: events.html
                                 <p class="text-muted my-1">{{ event.end_date | date: "%a, %b %d, %Y" }}</p>
                                 {% endif %}
                             </div>
-                            <p class="text-muted my-1">{{ event.location }}</p>
                             {% if event.location %}
+                            <p class="text-muted my-1">{{ event.location }}</p>
+                            {%endif%}
+                            {% if event.address %}
                             <small class="d-block">{{ event.address }}</small>
                             {% endif %}
                         </div>
