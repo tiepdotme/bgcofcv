@@ -29,12 +29,19 @@ permalink: events.html
 <section class="py-5">
     <div class="container">
         <div class="row py-5">
-            {% capture nowUnix %} {{ site.time | date: "%s" }}{% endcapture %} {% assign upcomingEventsArr = "" | split:
-            ',' %} {% assign pastEventsArr = "" | split: ',' %} {% assign sorted = site.events | sort: 'start_date' %}
-            {% for event in sorted %} {% capture eventDate %} {{ event.start_date | date: "%s" }}{% endcapture %} {% if
-            nowUnix < eventDate %} {% assign upcomingEventsArr = upcomingEventsArr | push: event %} {% else %} {% assign
-            pastEventsArr = pastEventsArr | push: event %} {% endif %} {% endfor %} {% assign nextEvent =
-            upcomingEventsArr | first %}
+            {% capture nowUnix %} {{ site.time | date: "%s" }}{% endcapture %} 
+            {% assign upcomingEventsArr = "" | split:',' %}
+            {% assign pastEventsArr = "" | split: ',' %} 
+            {% assign sorted = site.events | sort: 'start_date' %}
+            {% for event in sorted %} 
+                {% capture eventDate %} {{ event.start_date | date: "%s" }}{% endcapture %} 
+                {% if nowUnix < eventDate %} 
+                {% assign upcomingEventsArr = upcomingEventsArr | push: event %} 
+                {% else %} 
+                {% assign pastEventsArr = pastEventsArr | push: event %} 
+                {% endif %} 
+            {% endfor %} 
+            {% assign nextEvent = upcomingEventsArr | first %}
             <div class="col-sm-12">
                 <div class="card border-0">
                     <div style="z-index: 2; overflow: hidden" class="rounded shadow position-relative">
@@ -72,7 +79,9 @@ permalink: events.html
                 </div>
             </div>
         </div>
-        {% assign events = upcomingEventsArr | shift %} {% assign eventsSize = events | size %} {% if eventsSize > 0 %}
+        {% assign events = upcomingEventsArr | shift %} 
+        {% assign eventsSize = events | size %} 
+        {% if eventsSize > 0 %}
         <div class="divider my-3"></div>
         {% endif %}
         <div class="row py-5">
@@ -90,6 +99,36 @@ permalink: events.html
                                 <p class="text-muted my-1">{{ event.end_date | date: "%a, %b %d, %Y" }}</p>
                                 {% endif %}
                             </div>
+                            {% if event.location %}
+                            <p class="text-muted my-1">{{ event.location }}</p>
+                            {%endif%}
+                            {% if event.address %}
+                            <small class="d-block">{{ event.address }}</small>
+                            {% endif %}
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ event.url }}" class="btn btn-secondary text-uppercase mt-2 stretched-link"
+                                >View</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% for event in pastEventsArr %}
+            <div class="col-sm-12 col-md-6 col-lg-4 my-2">
+                <div class="card h-100">
+                    {%-capture image-%}{{ event.image | split: "/" | last }}{%-endcapture-%} {% include img_srcset.html
+                    class="card-img-top" style="height:250px" alt=event.title filename=image %}
+                    <div class="card-body text-center d-flex flex-column justify-content-between">
+                        <h5 class="card-title text-secondary">{{ event.title }}</h5>
+                        <div>
+                            {%- comment -%} <div class="d-flex justify-content-center align-items-center">
+                                <p class="text-muted my-1">{{ event.start_date | date: "%a, %b %d, %Y" }}</p>
+                                {% if event.end_date and event.end_date != "" %} &nbsp; &ndash; &nbsp;
+                                <p class="text-muted my-1">{{ event.end_date | date: "%a, %b %d, %Y" }}</p>
+                                {% endif %}
+                            </div> {%- endcomment -%}
                             {% if event.location %}
                             <p class="text-muted my-1">{{ event.location }}</p>
                             {%endif%}
