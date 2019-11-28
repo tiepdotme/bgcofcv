@@ -115,7 +115,12 @@ permalink: events.html
                 </div>
             </div>
             {% endfor %}
-            {% for event in pastEventsArr %}
+        </div>
+        {% assign pastEventsSize = pastEventsArr | size %}
+        {% if pastEventsSize > 0 %}
+        <p class="lead m-0">Past Events</p>
+        <div class="row">
+        {% for event in pastEventsArr %}
             <div class="col-sm-12 col-md-6 col-lg-4 my-2">
                 <div class="card h-100">
                     {%-capture image-%}{{ event.image | split: "/" | last }}{%-endcapture-%} {% include img_srcset.html
@@ -146,6 +151,7 @@ permalink: events.html
             </div>
             {% endfor %}
         </div>
+        {% endif %}
     </div>
 </section>
 {%- comment -%} <section class="py-5 bg-primary">
