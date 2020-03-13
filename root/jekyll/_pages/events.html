@@ -46,7 +46,7 @@ permalink: events.html
                 <div class="card border-0">
                     <div style="z-index: 2; overflow: hidden" class="rounded shadow position-relative">
                         {%-capture image-%}{{ nextEvent.image | split: "/" | last }}{%-endcapture-%} {% include
-                        img_srcset.html class="card-img-top position-relative" style="max-height:50vh"
+                        img_srcset.html class="card-img-top position-relative" style="max-height:50vh; object-fit: contain !important;"
                         alt=nextEvent.title filename=image %}
                     </div>
                     <div
