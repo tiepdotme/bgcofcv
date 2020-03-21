@@ -294,4 +294,16 @@ $(document).ready(() => {
             });
         });
     }
+
+    if ($("#read-more-03-20-2020").length > 0) {
+        const readMoreLink = $("#read-more-03-20-2020");
+        readMoreLink.click(function() {
+            $(this).text(
+                // inverted logic
+                $(this).attr("aria-expanded") === "true"
+                    ? "Read More"
+                    : "View Less"
+            );
+        });
+    }
 });
