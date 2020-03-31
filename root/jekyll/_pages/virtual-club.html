@@ -1,0 +1,69 @@
+---
+layout: site-layout
+title: Virtual Club
+description: >-
+  Provide safe havens and a welcoming atmosphere for thousands of youth across
+  the Coachella Valley. After school activities build leadership skills,
+  encourage good citizenship, keep students engaged academically, promote
+  physical activity, and champion community involvement. For more information on
+  programs and services please contact your local clubhouse.
+permalink: virtual-club.html
+---
+
+{%- comment -%} <section class="hero-cascade">
+    <div
+        style="background: url({{ page.hero | absolute_url }});"
+        class="hero-view bg-image-fill position-center position-relative p-5"
+    ></div>
+    <div
+        class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 mx-auto hero-content shadow bg-white rounded p-3"
+    >
+        <h1 class="text-center section-header underline">{{ page.title }}</h1>
+        <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
+        <div class="d-flex justify-content-center">
+            <a
+                href="{{ site.data.global.registrationForm }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary mx-auto text-uppercase"
+                >BECOME A CLUB MEMBER</a
+            >
+        </div>
+    </div>
+</section> {%- endcomment -%}
+<section class="section py-5">
+    <div class="container">
+        <div class="row">
+            {% for club in site.our-clubs %}
+            <div class="col-sm-12 col-md-12 col-lg-12 py-3">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                        <span class="mask mask-dark mask-gradient-l-t"></span> {%-capture image-%}{{
+                        club.image | split: "/" | last
+                    }}{%-endcapture-%} {% include img_srcset.html class="card-img" style="height: 200px"
+                    alt=club.site filename=image %}
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-text mb-1">{{ club.title }}</a>
+                            <h5 class="card-title h1">{{ club.city | split: ", " | first }}</h5>
+                            <p>Live every weekday from 2pm&ndash;7pm</p>
+                            <a
+                                href="{{ club.zoom_url | absolute_url}}" target="_blank" rel="noopener"
+                                role="button"
+                                class="btn btn-light text-secondary font-weight-bold my-2 my-sm-0 mr-1"
+                                >Join Us Live
+                                <span style="font-size:10px; margin-left: 5px"
+                                    ><i class="fa fa-circle text-danger Blink"></i
+                                ></span>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

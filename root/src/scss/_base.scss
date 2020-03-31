@@ -35,3 +35,15 @@ main {
     width: 75px;
     height: 5px;
 }
+
+.Blink {
+    animation: blinker 1.5s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+}
+@keyframes blinker {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

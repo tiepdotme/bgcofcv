@@ -1,5 +1,12 @@
-<nav class="py-0 navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
-    <a href="/" class="navbar-brand"> <img src="{{ 'assets/images/hero-logo.png' | absolute_url }}" width="125" /> </a>
+<nav
+    class="py-0 navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top"
+>
+    <a href="/" class="navbar-brand">
+        <img
+            src="{{ 'assets/images/hero-logo.png' | absolute_url }}"
+            width="125"
+        />
+    </a>
     <button
         class="py-2 navbar-toggler border-0"
         type="button"
@@ -20,13 +27,28 @@
             >
             {%endfor%}
         </div>
-        <a
-            href="{{ site.data.global.donateUrl }}"
-            target="_blank"
-            rel="noopener"
-            role="button"
-            class="btn btn-light text-secondary font-weight-bold shadow my-2 my-sm-0"
-            >Donate<i class="ml-1 fas fa-heart"></i
-        ></a>
+        <div class="d-flex flex-column flex-lg-row">
+            <div class="my-1 my-lg-0">
+                <a
+                    href="/virtual-club"
+                    role="button"
+                    class="btn btn-sm btn-light text-secondary font-weight-bold shadow my-2 my-sm-0 mr-1"
+                    >Virtual Club
+                    <span style="font-size:10px; margin-left: 5px"
+                        ><i class="fa fa-circle text-danger Blink"></i
+                    ></span>
+                </a>
+            </div>
+            <div class="my-1 my-lg-0">
+                <a
+                    href="{{ site.data.global.donateUrl }}"
+                    target="_blank"
+                    rel="noopener"
+                    role="button"
+                    class="btn btn-sm btn-light text-secondary font-weight-bold shadow my-2 my-sm-0"
+                    >Donate<i class="ml-1 fas fa-heart"></i
+                ></a>
+            </div>
+        </div>
     </div>
 </nav>
