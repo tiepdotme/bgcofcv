@@ -34,6 +34,8 @@ permalink: virtual-club.html
 
 <section class="section py-5">
     <div class="container">
+        <h1>Welcome to the Virtual Club</h1>
+        <p class="lead">Join us every weekday from 2pm to 7pm</p>
         <div class="row">
             {% for club in site.our-clubs %}
             <div class="col-sm-12 col-md-12 col-lg-12 py-3">
@@ -42,23 +44,42 @@ permalink: virtual-club.html
                         <div class="col-md-4">
                         <span class="mask mask-dark mask-gradient-l-t"></span> {%-capture image-%}{{
                         club.image | split: "/" | last
-                    }}{%-endcapture-%} {% include img_srcset.html class="card-img" style="height: 200px"
+                    }}{%-endcapture-%} {% include img_srcset.html class="card-img" style="height: 300px"
                     alt=club.site filename=image %}
                         </div>
                         <div class="col-md-8">
                         <div class="card-body">
                             <p class="card-text mb-1">{{ club.title }}</a>
                             <h5 class="card-title h1">{{ club.city | split: ", " | first }}</h5>
-                            <p>Live every weekday from 2pm&ndash;7pm</p>
-                            <a
-                                href="{{ club.zoom_url | absolute_url}}" target="_blank" rel="noopener"
-                                role="button"
-                                class="btn btn-light text-secondary font-weight-bold my-2 my-sm-0 mr-1"
-                                >Join Us Live
-                                <span style="font-size:10px; margin-left: 5px"
-                                    ><i class="fa fa-circle text-danger Blink"></i
-                                ></span>
-                            </a>
+                             <div class="live-indicator">
+                                <a
+                                    href="{{ club.zoom_url | absolute_url}}" target="_blank" rel="noopener"
+                                    role="button"
+                                    class="d-none live-button btn btn-light text-secondary font-weight-bold my-2 my-sm-0 mr-1"
+                                    >Join Us Live
+                                    <span style="font-size:10px; margin-left: 5px"
+                                        ><i class="fa fa-circle text-danger Blink"></i
+                                    ></span>
+                                </a>
+                                <p class="d-none text-muted">We are currently not live.  Join us tomorrow at 2pm</p>
+                                <div class="d-flex flex-column">
+                                    <div class="d-flex">
+                                        <span>2pm &ndash; 4pm</span>
+                                        &nbsp;
+                                        <span>Class 1</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span>4pm &ndash; 5pm</span>
+                                        &nbsp;
+                                        <span>Class 2</span>
+                                    </div>
+                                     <div class="d-flex">
+                                        <span>5pm &ndash; 7pm</span>
+                                        &nbsp;
+                                        <span>Class 3</span>
+                                    </div>
+                                </div>
+                             </div>                    
                         </div>
                         </div>
                     </div>

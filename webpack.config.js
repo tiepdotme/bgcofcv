@@ -26,20 +26,29 @@ module.exports = {
                     loader: "babel-loader",
                     options: {
                         presets: ["@babel/preset-env"],
-                        plugins: ["@babel/plugin-proposal-class-properties"]
+                        plugins: [
+                            "@babel/plugin-proposal-class-properties",
+                            "@babel/plugin-syntax-dynamic-import"
+                        ]
                     }
                 }
             },
             {
                 test: /\.scss$/,
-                use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
+                use: [
+                    "style-loader",
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader"
+                ]
             },
             {
                 test: /\.(jpe?g|png)$/i,
                 loader: "responsive-loader",
                 options: {
                     sizes: [500, 750, 1000],
-                    adapter: require("responsive-loader/sharp"),
+                    adapter: require("responsive-loader/jimp"),
                     name: "assets/images/[name]-[hash]-[width].[ext]",
                     placeholder: true
                 }
@@ -57,7 +66,12 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(
-            ["root/jekyll/*.js", "root/jekyll/*.css", "root/jekyll/*.map", "root/jekyll/assets/images/*"],
+            [
+                "root/jekyll/*.js",
+                "root/jekyll/*.css",
+                "root/jekyll/*.map",
+                "root/jekyll/assets/images/*"
+            ],
             {}
         ),
         new MiniCssExtractPlugin({
@@ -69,40 +83,66 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: true,
             template: "./templates/home-layout.tmpl.html",
-            filename: path.resolve(__dirname, "root/jekyll/_layouts/home-layout.html")
+            filename: path.resolve(
+                __dirname,
+                "root/jekyll/_layouts/home-layout.html"
+            )
         }),
         new HtmlWebpackPlugin({
             inject: true,
             template: "./templates/site-layout.tmpl.html",
-            filename: path.resolve(__dirname, "root/jekyll/_layouts/site-layout.html")
+            filename: path.resolve(
+                __dirname,
+                "root/jekyll/_layouts/site-layout.html"
+            )
         }),
         new HtmlWebpackPlugin({
             inject: true,
             template: "./templates/clubs-layout.tmpl.html",
-            filename: path.resolve(__dirname, "root/jekyll/_layouts/clubs-layout.html")
+            filename: path.resolve(
+                __dirname,
+                "root/jekyll/_layouts/clubs-layout.html"
+            )
         }),
         new HtmlWebpackPlugin({
             inject: true,
             template: "./templates/programs-layout.tmpl.html",
-            filename: path.resolve(__dirname, "root/jekyll/_layouts/programs-layout.html")
+            filename: path.resolve(
+                __dirname,
+                "root/jekyll/_layouts/programs-layout.html"
+            )
         }),
         new HtmlWebpackPlugin({
             inject: true,
             template: "./templates/events-layout.tmpl.html",
-            filename: path.resolve(__dirname, "root/jekyll/_layouts/events-layout.html")
+            filename: path.resolve(
+                __dirname,
+                "root/jekyll/_layouts/events-layout.html"
+            )
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: "./templates/images-metadata.tmpl.js",
-            filename: path.resolve(__dirname, "root/jekyll/_data/images-metadata.json")
+            filename: path.resolve(
+                __dirname,
+                "root/jekyll/_data/images-metadata.json"
+            )
         }),
         new HtmlWebpackPlugin({
             inject: false,
             //hash: true,
             template: "./templates/srcset.tmpl.js",
-            filename: path.resolve(__dirname, "root/jekyll/_includes/img_srcset.html")
+            filename: path.resolve(
+                __dirname,
+                "root/jekyll/_includes/img_srcset.html"
+            )
         }),
-        new CopyWebpackPlugin([{ from: "./assets/**/*", to: path.resolve(__dirname, "root/jekyll") }])
+        new CopyWebpackPlugin([
+            {
+                from: "./assets/**/*",
+                to: path.resolve(__dirname, "root/jekyll")
+            }
+        ])
     ],
     optimization: {
         minimizer: [

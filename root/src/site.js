@@ -306,4 +306,41 @@ $(document).ready(() => {
             );
         });
     }
+
+    if ($(".live-indicator").length > 0) {
+        import(/* webpackChunkName: "date-fns" */ "date-fns").then(function(
+            module
+        ) {
+            const { isWithinInterval, startOfToday, addHours } = module;
+            const now = new Date();
+            const liveStart = addHours(startOfToday(), 14);
+            const liveEnd = addHours(liveStart, 5);
+            const isCurrentlyLive = isWithinInterval(now, {
+                start: liveStart,
+                end: liveEnd
+            });
+
+            if (isCurrentlyLive) {
+                $(".live-indicator").each(function() {
+                    $(this)
+                        .find("a")
+                        .removeClass("d-none");
+
+                    $(this)
+                        .find("p")
+                        .remove();
+                });
+            } else {
+                $(".live-indicator").each(function() {
+                    $(this)
+                        .find("p")
+                        .removeClass("d-none");
+
+                    $(this)
+                        .find("a")
+                        .remove();
+                });
+            }
+        });
+    }
 });
