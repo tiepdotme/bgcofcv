@@ -1,0 +1,82 @@
+[
+    {
+        "organization": "Amazing Education Resources",
+        "website": "http://www.amazingeducationalresources.com/",
+        "summary": "This website has put together an AMAZING list of free online resources for the family."
+    },
+    {
+        "organization": "ChoseMyPlate",
+        "website": "https://www.choosemyplate.gov/eathealthy/start-simple-myplate",
+        "summary": "This website offers help related to healthy food choices."
+    },
+    {
+        "organization": "Education.com",
+        "website": "https://www.education.com/",
+        "summary": "Get access to grade-specific lessons and activities using their “basic” package."
+    },
+    {
+        "organization": "Family Time Machine",
+        "website": "https://familytimemachine.com/",
+        "summary": "Find activities to do with your family throughout the day no matter what you’re doing."
+    },
+    {
+        "organization": "Free Reading Program",
+        "website": "https://www.freereadingprogram.com/",
+        "summary": "The Free Reading Program offers reading activities and lessons for grades K-6."
+    },
+    {
+        "organization": "ReadWorks.org",
+        "website": "https://about.readworks.org/parents.html",
+        "summary": "ReadWorks.org allows caregivers to create an online reading classroom using free, leveled texts to give K-12 students reading practice."
+    },
+    {
+        "organization": "Scholastic",
+        "website": "https://classroommagazines.scholastic.com/support/learnathome/resources-for-families.html",
+        "summary": "Scholastic provides resources for families."
+    },
+    {
+        "organization": "Starfall",
+        "website": "https://www.starfall.com/h/",
+        "summary": "Find free online activities for children ages Kinder - 3rd grade."
+    },
+    {
+        "organization": "TED",
+        "website": "https://www.ted.com/",
+        "summary": "TED provides videos on many different topics by experts and professionals around the world."
+    },
+    {
+        "organization": "This Reading Mama",
+        "website": "https://thisreadingmama.com/",
+        "summary": "This Reading Mama provides many helpful posts and activities on all things reading."
+    },
+    {
+        "organization": "Time for Kids",
+        "website": "https://time.com/tfk-free/",
+        "summary": "A free digital library for children reading materials."
+    },
+    {
+        "organization": "Wonderopolis",
+        "website": "https://www.wonderopolis.org/",
+        "summary": "Read about a new topic every day of the week with your child by visiting Wonderopolis."
+    },
+    {
+        "organization": "Riverside Country Library System e-Resources",
+        "website": "http://www.rivlib.net/website/eresources-688",
+        "summary": "Electronic resources provided by the Riverside Country Library System"
+    },
+    {
+        "organization": "Riverside Country Library System Audiobooks",
+        "website": "http://www.rivlib.net/website/eresources-688",
+        "summary": "Audiobooks provided by the Riverside Country Library System"
+    },
+    {
+        "organization": "State of California Online Services",
+        "website": "http://www.rivlib.net/website/eresources-688",
+        "summary": "List of online services provided by the state of California"
+    },
+    {
+        "organization": "Ustrive",
+        "website": "https://www.ustrive.com/",
+        "summary": "Find a mentor to help you apply to college and succeed once you’re there"
+    }
+]

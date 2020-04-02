@@ -89,3 +89,17 @@ permalink: virtual-club.html
         </div>
     </div>
 </section>
+<section class="section py-5">
+    <div class="container">
+        <h2>Other Resources</h2>
+        <ul>
+            {% assign sorted = site.data.resources | sort: 'organization' %}
+            {% for resource in sorted %}
+            <li>
+                <a href="{{resource.website}}" target="_blank" rel="noopener noreferrer">{{resource.organization}}</a>
+                <p>{{resource.summary}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
