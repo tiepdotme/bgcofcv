@@ -13,7 +13,8 @@ schoolHours: "2:00pm - 7:00pm"
 summerHours: "7:30am - 5:30pm"
 image: assets/images/coachella-club.jpg
 calendar: /assets/images/coachella-january-2020-calendar.pdf
-zoom_url: https://us04web.zoom.us/j/7189026076
+zoomUrl: https://us04web.zoom.us/j/7189026076
+isVirtualLive: false
 ---
 
 With the vision and support of the Foster and Powell families, this clubhouse opened in 2002 and was funded in large part from a California Youth Authority grant. Located next to Bobby Duke Middle School and Palm View Elementary School in Coachella, this club hosts a variety of after-school and summer activities. Today this club still benefits from the involvement and support of the Foster and Powell children and grandchildren..

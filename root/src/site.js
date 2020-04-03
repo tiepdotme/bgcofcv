@@ -307,14 +307,36 @@ $(document).ready(() => {
         });
     }
 
-    if ($(".live-indicator").length > 0) {
+    if ($("#virtual-club-page").length > 0) {
         import(/* webpackChunkName: "date-fns" */ "date-fns").then(function(
             module
         ) {
-            const { isWithinInterval, startOfToday, addHours } = module;
+            const {
+                isWithinInterval,
+                startOfToday,
+                addHours,
+                getDay,
+                format
+            } = module;
+
+            const currentDayNumber = getDay(new Date());
+            const currentActiveTab = $(
+                "#schedule-tabs .nav-item .nav-link"
+            ).filter(`[data-day=${currentDayNumber}]`);
+            const currentActiveTabPane = $(".tab-pane").filter(
+                `[data-day=${currentDayNumber}]`
+            );
+
+            currentActiveTab.addClass("active").attr("aria-selected", true);
+
+            currentActiveTabPane.addClass("active show");
+
+            const liveStartToday = currentActiveTabPane.data("start");
+            const liveEndToday = currentActiveTabPane.data("end");
+
             const now = new Date();
-            const liveStart = addHours(startOfToday(), 14);
-            const liveEnd = addHours(liveStart, 5);
+            const liveStart = addHours(startOfToday(), liveStartToday);
+            const liveEnd = addHours(startOfToday(), liveEndToday);
             const isCurrentlyLive = isWithinInterval(now, {
                 start: liveStart,
                 end: liveEnd
@@ -323,21 +345,31 @@ $(document).ready(() => {
             if (isCurrentlyLive) {
                 $(".live-indicator").each(function() {
                     $(this)
-                        .find("a")
-                        .removeClass("d-none");
+                        .find(".is-live")
+                        .removeClass("d-none")
+                        .find(".live-description")
+                        .html(
+                            `Live today, ${format(
+                                liveStart,
+                                "EEE, LLL, do"
+                            )} from ${format(
+                                liveStart,
+                                "hh:mmaaaa"
+                            )} to ${format(liveEnd, "hh:mmaaaa")}`
+                        );
 
                     $(this)
-                        .find("p")
+                        .find(".is-not-live")
                         .remove();
                 });
             } else {
                 $(".live-indicator").each(function() {
                     $(this)
-                        .find("p")
+                        .find(".is-not-live")
                         .removeClass("d-none");
 
                     $(this)
-                        .find("a")
+                        .find(".is-live")
                         .remove();
                 });
             }

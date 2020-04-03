@@ -32,59 +32,69 @@ permalink: virtual-club.html
     </div>
 </section> {%- endcomment -%}
 
-<section class="section py-5">
+<section class="section py-5" id="virtual-club-page">
     <div class="container">
-        <h1>Welcome to the Virtual Club</h1>
-        <p class="lead">Join us every weekday from 2pm to 7pm</p>
+        <h1 class="pb-3">Welcome to the Virtual Club</h1>
         <div class="row">
             {% for club in site.our-clubs %}
+            {% if club.isVirtualLive %}
             <div class="col-sm-12 col-md-12 col-lg-12 py-3">
-                <div class="card mb-3">
+                <div class="card shadow-sm">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                        <span class="mask mask-dark mask-gradient-l-t"></span> {%-capture image-%}{{
-                        club.image | split: "/" | last
-                    }}{%-endcapture-%} {% include img_srcset.html class="card-img" style="height: 300px"
-                    alt=club.site filename=image %}
+                        <img src="{{club.image}}" class="img-fluid" alt="{{club.name}}">
                         </div>
                         <div class="col-md-8">
                         <div class="card-body">
-                            <p class="card-text mb-1">{{ club.title }}</a>
+                            <p class="card-text">{{ club.title }}</p>
                             <h5 class="card-title h1">{{ club.city | split: ", " | first }}</h5>
                              <div class="live-indicator">
-                                <a
-                                    href="{{ club.zoom_url | absolute_url}}" target="_blank" rel="noopener"
+                                <div class="is-live d-none">
+                                <p class="live-description"></p>
+                                 <a
+                                    href="{{ club.zoomUrl | absolute_url}}" target="_blank" rel="noopener"
                                     role="button"
-                                    class="d-none live-button btn btn-light text-secondary font-weight-bold my-2 my-sm-0 mr-1"
+                                    class="live-button btn btn-light text-secondary font-weight-bold my-2 my-sm-0 mr-1"
                                     >Join Us Live
                                     <span style="font-size:10px; margin-left: 5px"
                                         ><i class="fa fa-circle text-danger Blink"></i
                                     ></span>
                                 </a>
-                                <p class="d-none text-muted">We are currently not live.  Join us tomorrow at 2pm</p>
-                                <div class="d-flex flex-column">
-                                    <div class="d-flex">
-                                        <span>2pm &ndash; 4pm</span>
-                                        &nbsp;
-                                        <span>Class 1</span>
-                                    </div>
-                                    <div class="d-flex">
-                                        <span>4pm &ndash; 5pm</span>
-                                        &nbsp;
-                                        <span>Class 2</span>
-                                    </div>
-                                     <div class="d-flex">
-                                        <span>5pm &ndash; 7pm</span>
-                                        &nbsp;
-                                        <span>Class 3</span>
-                                    </div>
-                                </div>
-                             </div>                    
+                                </div> 
+                                <p class="d-none text-muted is-not-live">Check our schedule live-streaming hours.</p>
+                            </div>  
                         </div>
                         </div>
                     </div>
+                    <ul class="nav nav-tabs" id="schedule-tabs" role="tablist">
+                        {% for item in club.virtualSchedule %}
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" data-day="{{item.dayNumber}}" href="#{{item.day}}" data-toggle="tab" href="#{{item.day}}" role="tab" aria-controls="{{item.day}}">{{item.day}}</a>
+                        </li>
+                        {%endfor%}
+                    </ul>
+                    <div class="card-body tab-content" id="schedule-content">
+                        {% for item in club.virtualSchedule %}
+                        <div class="tab-pane fade" data-start="{{item.start}}" data-end="{{item.end}}" data-day="{{item.dayNumber}}" id="{{item.day}}" role="tabpanel" aria-labelledby="{{item.day}}-tab">
+                        <div class="d-flex flex-column">
+                            {% if item.isOff %}
+                            <span>No Classes Today</span>
+                            {%else%}
+                            {% for slot in item.slots %}
+                                <div>
+                                <span>{{slot.time}}</span>
+                                &nbsp;
+                                <span>{{slot.subject}}</span>
+                                </div>
+                            {% endfor %}
+                            {%endif%}
+                        </div>
+                        </div>
+                        {%endfor%}
+                    </div>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
