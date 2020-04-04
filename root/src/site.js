@@ -320,13 +320,38 @@ $(document).ready(() => {
             } = module;
 
             const currentDayNumber = getDay(new Date());
+
+            // if weekend
+            if ([0, 6].includes(currentDayNumber)) {
+                $("#schedule-tabs .nav-item .nav-link")
+                    .first()
+                    .addClass("active")
+                    .attr("aria-selected", true);
+
+                $(".tab-pane")
+                    .first()
+                    .addClass("active show");
+
+                $(".live-indicator").each(function() {
+                    $(this)
+                        .find(".is-not-live")
+                        .html("Join us weekdays. Find our schedule below")
+                        .removeClass("d-none");
+
+                    $(this)
+                        .find(".is-live")
+                        .remove();
+                });
+
+                return;
+            }
+
             const currentActiveTab = $(
                 "#schedule-tabs .nav-item .nav-link"
             ).filter(`[data-day=${currentDayNumber}]`);
             const currentActiveTabPane = $(".tab-pane").filter(
                 `[data-day=${currentDayNumber}]`
             );
-
             currentActiveTab.addClass("active").attr("aria-selected", true);
 
             currentActiveTabPane.addClass("active show");
