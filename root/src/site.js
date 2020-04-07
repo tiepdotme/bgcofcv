@@ -368,37 +368,37 @@ $(document).ready(() => {
                 end: liveEnd
             });
 
-            if (isCurrentlyLive) {
-                $(".live-indicator").each(function() {
-                    $(this)
-                        .find(".is-live")
-                        .removeClass("d-none")
-                        .find(".live-description")
-                        .html(
-                            `Live today, ${format(
-                                liveStart,
-                                "EEE, LLL, do"
-                            )} from ${format(
-                                liveStart,
-                                "hh:mmaaaa"
-                            )} to ${format(liveEnd, "hh:mmaaaa")}`
-                        );
+            // if (isCurrentlyLive) {
+            //     $(".live-indicator").each(function() {
+            //         $(this)
+            //             .find(".is-live")
+            //             .removeClass("d-none")
+            //             .find(".live-description")
+            //             .html(
+            //                 `Live today, ${format(
+            //                     liveStart,
+            //                     "EEE, LLL, do"
+            //                 )} from ${format(
+            //                     liveStart,
+            //                     "hh:mmaaaa"
+            //                 )} to ${format(liveEnd, "hh:mmaaaa")}`
+            //             );
 
-                    $(this)
-                        .find(".is-not-live")
-                        .remove();
-                });
-            } else {
-                $(".live-indicator").each(function() {
-                    $(this)
-                        .find(".is-not-live")
-                        .removeClass("d-none");
+            //         $(this)
+            //             .find(".is-not-live")
+            //             .remove();
+            //     });
+            // } else {
+            //     $(".live-indicator").each(function() {
+            //         $(this)
+            //             .find(".is-not-live")
+            //             .removeClass("d-none");
 
-                    $(this)
-                        .find(".is-live")
-                        .remove();
-                });
-            }
+            //         $(this)
+            //             .find(".is-live")
+            //             .remove();
+            //     });
+            // }
         });
     }
 });

@@ -49,7 +49,7 @@ permalink: virtual-club.html
                             <p class="card-text">{{ club.title }}</p>
                             <h5 class="card-title h1">{{ club.city | split: ", " | first }}</h5>
                              <div class="live-indicator">
-                                <div class="is-live d-none">
+                                <div class="is-live">
                                 <p class="live-description"></p>
                                  <a
                                     href="{{ club.zoomUrl | absolute_url}}" target="_blank" rel="noopener"
