@@ -321,8 +321,8 @@ $(document).ready(() => {
             } = module;
 
             const currentDayNumber = getDay(new Date());
-            $(".club-card").each(el => {
-                const element = $(el);
+            $(".club-card").each(function() {
+                const element = $(this);
                 // if weekend
                 if ([0, 6].includes(currentDayNumber)) {
                     element
@@ -356,23 +356,25 @@ $(document).ready(() => {
                 const currentActiveTabPane = element
                     .find(".tab-pane")
                     .filter(`[data-day=${currentDayNumber}]`);
-                currentActiveTab.addClass("active").attr("aria-selected", true);
 
+                currentActiveTab.addClass("active").attr("aria-selected", true);
                 currentActiveTabPane.addClass("active show");
 
                 const liveStartToday = currentActiveTabPane.data("start");
                 const liveEndToday = currentActiveTabPane.data("end");
 
-                console.log("liveStartToday", liveStartToday);
-                console.log("liveStartToday", liveStartToday);
-
-                const now = new Date();
-                const liveStart = addHours(startOfToday(), liveStartToday);
-                const liveEnd = addHours(startOfToday(), liveEndToday);
-                const isCurrentlyLive = isWithinInterval(now, {
-                    start: addMinutes(liveStart, -15),
-                    end: liveEnd
-                });
+                let isCurrentlyLive = false;
+                let liveStart = null;
+                let liveEnd = null;
+                if (liveStartToday && liveEndToday) {
+                    const now = new Date();
+                    liveStart = addHours(startOfToday(), liveStartToday);
+                    liveEnd = addHours(startOfToday(), liveEndToday);
+                    isCurrentlyLive = isWithinInterval(now, {
+                        start: addMinutes(liveStart, -15),
+                        end: liveEnd
+                    });
+                }
 
                 if (isCurrentlyLive) {
                     element
