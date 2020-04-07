@@ -69,13 +69,13 @@ permalink: virtual-club.html
                     <ul class="nav nav-tabs" id="schedule-tabs" role="tablist">
                         {% for item in club.virtualSchedule %}
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" data-day="{{item.dayNumber}}" href="#{{item.day}}" data-toggle="tab" href="#{{item.day}}" role="tab" aria-controls="{{item.day}}">{{item.day}}</a>
+                            <a class="nav-link text-uppercase" data-day="{{item.dayNumber}}" data-toggle="tab" href="#{{ club.city | split: ', ' | first }}-{{item.day}}" role="tab" aria-controls="{{item.day}}">{{item.day}}</a>
                         </li>
                         {%endfor%}
                     </ul>
                     <div class="card-body tab-content" id="schedule-content">
                         {% for item in club.virtualSchedule %}
-                        <div class="tab-pane fade" data-start="{{item.start}}" data-end="{{item.end}}" data-day="{{item.dayNumber}}" id="{{item.day}}" role="tabpanel" aria-labelledby="{{item.day}}-tab">
+                        <div class="tab-pane fade" data-start="{{item.start}}" data-end="{{item.end}}" data-day="{{item.dayNumber}}" id="{{ club.city | split: ', ' | first }}-{{item.day}}" role="tabpanel" aria-labelledby="{{item.day}}-tab">
                         <div class="d-flex flex-column">
                             {% if item.isOff %}
                             <span>No Classes Today</span>
