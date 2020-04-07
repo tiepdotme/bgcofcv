@@ -45,13 +45,13 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png)$/i,
-                loader: "responsive-loader",
-                options: {
-                    sizes: [500, 750, 1000],
-                    adapter: require("responsive-loader/jimp"),
-                    name: "assets/images/[name]-[hash]-[width].[ext]",
-                    placeholder: true
-                }
+                loader: "file-loader"
+                // options: {
+                //     sizes: [500, 750, 1000],
+                //     adapter: require("responsive-loader/jimp"),
+                //     name: "assets/images/[name]-[hash]-[width].[ext]",
+                //     placeholder: true
+                // }
             }
             // {
             //     test: /\.html$/,

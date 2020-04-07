@@ -321,84 +321,80 @@ $(document).ready(() => {
             } = module;
 
             const currentDayNumber = getDay(new Date());
+            $(".club-card").each(el => {
+                const element = $(el);
+                // if weekend
+                if ([0, 6].includes(currentDayNumber)) {
+                    element
+                        .find("#schedule-tabs .nav-item .nav-link")
+                        .first()
+                        .addClass("active")
+                        .attr("aria-selected", true);
 
-            // if weekend
-            if ([0, 6].includes(currentDayNumber)) {
-                $("#schedule-tabs .nav-item .nav-link")
-                    .first()
-                    .addClass("active")
-                    .attr("aria-selected", true);
+                    element
+                        .find(".tab-pane")
+                        .first()
+                        .addClass("active show");
 
-                $(".tab-pane")
-                    .first()
-                    .addClass("active show");
-
-                $(".live-indicator").each(function() {
-                    $(this)
+                    element
+                        .find(".live-indicator")
                         .find(".is-not-live")
                         .html("Join us weekdays. Find our schedule below")
                         .removeClass("d-none");
 
-                    $(this)
+                    element
+                        .find(".live-indicator")
                         .find(".is-live")
                         .remove();
+
+                    return;
+                }
+
+                const currentActiveTab = element
+                    .find("#schedule-tabs .nav-item .nav-link")
+                    .filter(`[data-day=${currentDayNumber}]`);
+                const currentActiveTabPane = element
+                    .find(".tab-pane")
+                    .filter(`[data-day=${currentDayNumber}]`);
+                currentActiveTab.addClass("active").attr("aria-selected", true);
+
+                currentActiveTabPane.addClass("active show");
+
+                const liveStartToday = currentActiveTabPane.data("start");
+                const liveEndToday = currentActiveTabPane.data("end");
+
+                console.log("liveStartToday", liveStartToday);
+                console.log("liveStartToday", liveStartToday);
+
+                const now = new Date();
+                const liveStart = addHours(startOfToday(), liveStartToday);
+                const liveEnd = addHours(startOfToday(), liveEndToday);
+                const isCurrentlyLive = isWithinInterval(now, {
+                    start: addMinutes(liveStart, -15),
+                    end: liveEnd
                 });
 
-                return;
-            }
+                if (isCurrentlyLive) {
+                    element
+                        .find(".is-live")
+                        .removeClass("d-none")
+                        .find(".live-description")
+                        .html(
+                            `Live today, ${format(
+                                liveStart,
+                                "EEE, LLL, do"
+                            )} from ${format(
+                                liveStart,
+                                "hh:mmaaaa"
+                            )} to ${format(liveEnd, "hh:mmaaaa")}`
+                        );
 
-            const currentActiveTab = $(
-                "#schedule-tabs .nav-item .nav-link"
-            ).filter(`[data-day=${currentDayNumber}]`);
-            const currentActiveTabPane = $(".tab-pane").filter(
-                `[data-day=${currentDayNumber}]`
-            );
-            currentActiveTab.addClass("active").attr("aria-selected", true);
-
-            currentActiveTabPane.addClass("active show");
-
-            const liveStartToday = currentActiveTabPane.data("start");
-            const liveEndToday = currentActiveTabPane.data("end");
-
-            const now = new Date();
-            const liveStart = addHours(startOfToday(), liveStartToday);
-            const liveEnd = addHours(startOfToday(), liveEndToday);
-            const isCurrentlyLive = isWithinInterval(now, {
-                start: liveStart,
-                end: liveEnd
+                    element.find(".is-not-live").remove();
+                } else {
+                    element.find(".is-not-live").removeClass("d-none");
+                    element.find(".is-live").remove();
+                }
             });
-
-            // if (isCurrentlyLive) {
-            //     $(".live-indicator").each(function() {
-            //         $(this)
-            //             .find(".is-live")
-            //             .removeClass("d-none")
-            //             .find(".live-description")
-            //             .html(
-            //                 `Live today, ${format(
-            //                     liveStart,
-            //                     "EEE, LLL, do"
-            //                 )} from ${format(
-            //                     liveStart,
-            //                     "hh:mmaaaa"
-            //                 )} to ${format(liveEnd, "hh:mmaaaa")}`
-            //             );
-
-            //         $(this)
-            //             .find(".is-not-live")
-            //             .remove();
-            //     });
-            // } else {
-            //     $(".live-indicator").each(function() {
-            //         $(this)
-            //             .find(".is-not-live")
-            //             .removeClass("d-none");
-
-            //         $(this)
-            //             .find(".is-live")
-            //             .remove();
-            //     });
-            // }
         });
     }
 });
