@@ -23,10 +23,8 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
+          - time: "11:00am - 12:00am"
             subject: "Triple Play w/Jose"
-          - time: "11:00am - 12:00pm"
-            subject: "Keystone"
           - time: "12:00pm - 1:00pm"
             subject: "Fitness w/Alexis"
           - time: "1:00pm - 2:00pm"
@@ -41,10 +39,8 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
+          - time: "11:00am - 12:00am"
             subject: "Triple Play w/Jose"
-          - time: "11:00am - 12:00pm"
-            subject: "Keystone"
           - time: "12:00pm - 1:00pm"
             subject: "Fitness w/Alexis"
           - time: "1:00pm - 2:00pm"
@@ -59,8 +55,6 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
-            subject: "Triple Play w/Jose"
           - time: "11:00am - 12:00pm"
             subject: "Keystone"
           - time: "12:00pm - 1:00pm"
@@ -77,10 +71,8 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
+          - time: "11:00am - 12:00am"
             subject: "Triple Play w/Jose"
-          - time: "11:00am - 12:00pm"
-            subject: "Keystone"
           - time: "12:00pm - 1:00pm"
             subject: "Fitness w/Alexis"
           - time: "1:00pm - 2:00pm"
@@ -95,10 +87,8 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
+          - time: "11:00am - 12:00am"
             subject: "Triple Play w/Jose"
-          - time: "11:00am - 12:00pm"
-            subject: "Keystone"
           - time: "12:00pm - 1:00pm"
             subject: "Fitness w/Alexis"
           - time: "1:00pm - 2:00pm"
