@@ -37,7 +37,7 @@ permalink: virtual-club.html
         <h1 class="pb-3">Welcome to the Virtual Club</h1>
         <div class="row">
             {% for club in site.our-clubs %}
-            {% if club.isVirtualLive %}
+            {% if club.showVirtualCalendar %}
             <div class="col-sm-12 col-md-12 col-lg-12 py-3">
                 <div class="card shadow-sm club-card">
                     <div class="row no-gutters">
@@ -48,6 +48,7 @@ permalink: virtual-club.html
                         <div class="card-body">
                             <p class="card-text">{{ club.title }}</p>
                             <h5 class="card-title h1">{{ club.city | split: ", " | first }}</h5>
+                             {% if club.isVirtualLive %}
                              <div class="live-indicator">
                                 <div class="is-live d-none">
                                 <p class="live-description"></p>
@@ -62,20 +63,23 @@ permalink: virtual-club.html
                                 </a>
                                 </div> 
                                 <p class="d-none text-muted is-not-live">Check our schedule below for live-streaming hours.</p>
-                            </div>  
+                            </div>
+                            {% else %}
+                            <p>Live streaming starts {{club.virtualStartDate | date: "%A, %B %-d, %Y"}}</p>
+                            {% endif %}
                         </div>
                         </div>
                     </div>
                     <ul class="nav nav-tabs" id="schedule-tabs" role="tablist">
                         {% for item in club.virtualSchedule %}
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" data-day="{{item.dayNumber}}" data-toggle="tab" href="#{{ club.city | split: ', ' | first }}-{{item.day}}" role="tab" aria-controls="{{item.day}}">{{item.day}}</a>
+                            <a class="nav-link text-uppercase" data-day="{{item.dayNumber}}" data-toggle="tab" href="#{{ club.city | split: ', ' | first | downcase | replace: " ", "-" }}-{{item.day}}" role="tab" aria-controls="{{item.day}}">{{item.day}}</a>
                         </li>
                         {%endfor%}
                     </ul>
                     <div class="card-body tab-content" id="schedule-content">
                         {% for item in club.virtualSchedule %}
-                        <div class="tab-pane fade" data-start="{{item.start}}" data-end="{{item.end}}" data-day="{{item.dayNumber}}" id="{{ club.city | split: ', ' | first }}-{{item.day}}" role="tabpanel" aria-labelledby="{{item.day}}-tab">
+                        <div class="tab-pane fade" data-start="{{item.start}}" data-end="{{item.end}}" data-day="{{item.dayNumber}}" id="{{ club.city | split: ', ' | first | downcase | replace: " ", "-" }}-{{item.day}}" role="tabpanel" aria-labelledby="{{item.day}}-tab">
                         <div class="d-flex flex-column">
                             {% if item.isOff %}
                             <span>No Classes Today</span>

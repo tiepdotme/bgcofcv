@@ -14,6 +14,7 @@ summerHours: "7:30am - 5:30pm"
 image: assets/images/mecca-club.jpg
 calendar: /assets/images/october-calendar-2019-mecca.pdf
 zoomUrl: https://us04web.zoom.us/j/5520528777
+showVirtualCalendar: true
 isVirtualLive: true
 virtualSchedule:
     - day: "Mon"
