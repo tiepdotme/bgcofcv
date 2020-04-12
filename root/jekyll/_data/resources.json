@@ -83,5 +83,10 @@
         "organization": "Palm Springs Art Museum",
         "website": "https://www.psmuseum.org/at-home",
         "summary": "Visit The Palm Springs Art Museum right from home and check out their At Home Art Activities"
+    },
+    {
+        "organization": "One Future Coachella Valley",
+        "website": "/assets/one-future-coachella-valley.pdf",
+        "summary": "List of resources for high school seniors and college students impacted by COVID-19"
     }
 ]
