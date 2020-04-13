@@ -69,10 +69,12 @@ virtualSchedule:
             subject: "Music & Flight Lessons w/ Rob"
     - day: "Thu"
       dayNumber: 4
-      start: null
-      end: null
-      isOff: true
-      slots: null
+      start: 13
+      end: 14
+      isOff: false
+      slots:
+          - time: "3:30pm - 4:00pm"
+            subject: "ASL Class (use ZoomID 512 538 4139)"
     - day: "Fri"
       dayNumber: 5
       start: 10

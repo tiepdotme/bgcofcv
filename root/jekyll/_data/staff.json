@@ -2,7 +2,7 @@
     "staff": [
         {
             "name": "Quinton Egson",
-            "title": "Chief Executive Officer",
+            "title": "President & CEO",
             "email": "qegson@bgcofcv.org",
             "phone": {
                 "number": "",
@@ -31,15 +31,6 @@
             "name": "Jody Brazil",
             "title": "Director of Finance",
             "email": "jbrazil@bgcofcv.org",
-            "phone": {
-                "number": "",
-                "extension": ""
-            }
-        },
-        {
-            "name": "Cynthia Grier",
-            "title": "Administrative Assistant",
-            "email": "cgrier@bgcofcv.org",
             "phone": {
                 "number": "",
                 "extension": ""

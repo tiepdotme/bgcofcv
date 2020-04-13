@@ -16,7 +16,7 @@ calendar: /assets/images/october-calendar-2019-la-quinta.pdf
 zoomUrl: https://us04web.zoom.us/j/8270290918
 showVirtualCalendar: true
 isVirtualLive: true
-virtualStartDate: "2020-04-13"
+isVirtualPrivate: true
 virtualSchedule:
     - day: "Mon"
       dayNumber: 1

@@ -67,10 +67,14 @@ virtualSchedule:
             subject: "Palabra with Victor Ronnie Ray  "
     - day: "Fri"
       dayNumber: 5
-      start: null
-      end: null
-      isOff: true
-      slots: null
+      start: 14
+      end: 16
+      isOff: false
+      slots:
+          - time: "02:00am - 02:55am"
+            subject: "Teen Time with Ronnie"
+          - time: "03:00am - 03:55am"
+            subject: "Passport to Manhood with Ronnie"
 ---
 
 A state-of-the-art facility where members can enjoy games, sports activities, technology, and more! Our Joel E. Smilow Clubhouse currently serves 1,000 youth in Mecca and surrounding cities. In a partnership with the County of Riverside, this Club opened in 2011.

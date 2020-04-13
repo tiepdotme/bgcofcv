@@ -19,7 +19,7 @@ isVirtualLive: true
 virtualSchedule:
     - day: "Mon"
       dayNumber: 1
-      start: 10
+      start: 11
       end: 16
       isOff: false
       slots:
@@ -28,7 +28,7 @@ virtualSchedule:
           - time: "12:00pm - 1:00pm"
             subject: "Fitness w/Alexis"
           - time: "1:00pm - 2:00pm"
-            subject: " Did You Know? w/Juanita"
+            subject: "Reading w/ Ms. Silvia"
           - time: "2:00pm - 3:00pm"
             subject: "Power Hour/Reading w/Ms. Silvia"
           - time: "3:00pm - 4:00pm"
@@ -39,19 +39,21 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
+          - time: "10:00am - 11:00am"
+            subject: "Let's share w/ Juanita"
           - time: "11:00am - 12:00am"
             subject: "Triple Play w/Jose"
           - time: "12:00pm - 1:00pm"
             subject: "Fitness w/Alexis"
           - time: "1:00pm - 2:00pm"
-            subject: " Did You Know? w/Juanita"
+            subject: "Reading w/ Ms. Silvia"
           - time: "2:00pm - 3:00pm"
             subject: "Power Hour/Reading w/Ms. Silvia"
           - time: "3:00pm - 4:00pm"
             subject: "Arts & Crafts w/Mrs. Martinez"
     - day: "Wed"
       dayNumber: 3
-      start: 10
+      start: 11
       end: 16
       isOff: false
       slots:
@@ -60,7 +62,7 @@ virtualSchedule:
           - time: "12:00pm - 1:00pm"
             subject: "Fitness w/Alexis"
           - time: "1:00pm - 2:00pm"
-            subject: " Did You Know? w/Juanita"
+            subject: "Reading w/ Ms. Silvia"
           - time: "2:00pm - 3:00pm"
             subject: "Power Hour/Reading w/Ms. Silvia"
           - time: "3:00pm - 4:00pm"
@@ -71,19 +73,21 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
+          - time: "10:00am - 11:00am"
+            subject: "Let's share w/ Juanita"
           - time: "11:00am - 12:00am"
             subject: "Triple Play w/Jose"
           - time: "12:00pm - 1:00pm"
             subject: "Fitness w/Alexis"
           - time: "1:00pm - 2:00pm"
-            subject: " Did You Know? w/Juanita"
+            subject: " Reading w/ Ms. Silvia"
           - time: "2:00pm - 3:00pm"
             subject: "Power Hour/Reading w/Ms. Silvia"
           - time: "3:00pm - 4:00pm"
             subject: "Arts & Crafts w/Mrs. Martinez"
     - day: "Fri"
       dayNumber: 5
-      start: 10
+      start: 11
       end: 16
       isOff: false
       slots:
@@ -92,7 +96,7 @@ virtualSchedule:
           - time: "12:00pm - 1:00pm"
             subject: "Fitness w/Alexis"
           - time: "1:00pm - 2:00pm"
-            subject: " Did You Know? w/Juanita"
+            subject: " Reading w/ Ms. Silvia"
           - time: "2:00pm - 3:00pm"
             subject: "Power Hour/Reading w/Ms. Silvia"
           - time: "3:00pm - 4:00pm"

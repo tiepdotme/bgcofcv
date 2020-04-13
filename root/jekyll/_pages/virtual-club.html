@@ -49,21 +49,24 @@ permalink: virtual-club.html
                             <p class="card-text">{{ club.title }}</p>
                             <h5 class="card-title h1">{{ club.city | split: ", " | first }}</h5>
                              {% if club.isVirtualLive %}
-                             <div class="live-indicator">
-                                <div class="is-live d-none">
-                                <p class="live-description"></p>
-                                 <a
-                                    href="{{ club.zoomUrl | absolute_url}}" target="_blank" rel="noopener"
-                                    role="button"
-                                    class="live-button btn btn-light text-secondary font-weight-bold my-2 my-sm-0 mr-1"
-                                    >Join Us Live
-                                    <span style="font-size:10px; margin-left: 5px"
-                                        ><i class="fa fa-circle text-danger Blink"></i
-                                    ></span>
-                                </a>
-                                </div> 
-                                <p class="d-none text-muted is-not-live">Check our schedule below for live-streaming hours.</p>
-                            </div>
+                                {% if club.isVirtualPrivate %}
+                                <p class="lead">Live sessions for this club are by invitation only.</p>
+                                {% endif %}
+                                <div class="live-indicator">
+                                    <div class="is-live d-none">
+                                    <p class="live-description"></p>
+                                    <a
+                                        href="{{ club.zoomUrl | absolute_url}}" target="_blank" rel="noopener"
+                                        role="button"
+                                        class="live-button btn btn-light text-secondary font-weight-bold my-2 my-sm-0 mr-1"
+                                        >Join Us Live
+                                        <span style="font-size:10px; margin-left: 5px"
+                                            ><i class="fa fa-circle text-danger Blink"></i
+                                        ></span>
+                                    </a>
+                                    </div> 
+                                    <p class="d-none text-muted is-not-live">Check our schedule below for live-streaming hours.</p>
+                                </div>
                             {% else %}
                             <p>Live streaming starts {{club.virtualStartDate | date: "%A, %B %-d, %Y"}}</p>
                             {% endif %}
