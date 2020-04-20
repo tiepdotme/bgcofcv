@@ -20,94 +20,94 @@ isVirtualPrivate: true
 virtualSchedule:
     - day: "Mon"
       dayNumber: 1
-      start: 10
+      start: 11
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
+          - time: "11:00am - 11:30am"
             subject: "TorchClub Meeting-Que"
-          - time: "11:00am - 12:00pm"
+          - time: "12:00pm - 12:30pm"
             subject: "Healthy Habits-Zack"
-          - time: "12:00pm - 1:00pm"
-            subject: "Work Out with Mike"
-          - time: "1:00pm - 2:00pm"
-            subject: "Power Hour- Jacob"
-          - time: "2:00pm - 3:00pm"
+          - time: "1:00pm - 1:30pm"
+            subject: "Sports Talk with Mike"
+          - time: "2:00pm - 2:30pm"
+            subject: "Trivia with Jacob"
+          - time: "3:00pm - 3:30pm"
             subject: "Smart Moves- James"
-          - time: "3:00pm - 4:00pm"
+          - time: "3:30pm - 4:00pm"
             subject: "Martial Arts Training"
     - day: "Tue"
       dayNumber: 2
-      start: 10
+      start: 11
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
-            subject: "STEM programs"
-          - time: "11:00am - 12:00pm"
-            subject: "Work out Out"
-          - time: "12:00pm - 1:00pm"
-            subject: "Art at Home-Maria G"
-          - time: "1:00pm - 2:00pm"
-            subject: "Basketball Training-Siah"
-          - time: "2:00pm - 3:00pm"
-            subject: "Power Hour"
-          - time: "3:00pm - 4:00pm"
-            subject: "Games for Fun w/ Gus"
+          - time: "11:00am - 11:30am"
+            subject: "Pixel Art Club"
+          - time: "12:00pm - 12:30pm"
+            subject: "Heads Up with James"
+          - time: "1:00pm - 1:30pm"
+            subject: "2k with Mike"
+          - time: "2:00pm - 2:30pm"
+            subject: "Basketball Training for girls with Siah"
+          - time: "3:00pm - 3:30pm"
+            subject: "Games for Fun with Gus"
+          - time: "3:30pm - 4:00pm"
+            subject: "Social Time with Yasmine"
     - day: "Wed"
       dayNumber: 3
-      start: 10
+      start: 11
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
-            subject: "Morning Work Out"
-          - time: "11:00am - 12:00pm"
-            subject: "Healthy Habits"
-          - time: "12:00pm - 1:00pm"
+          - time: "11:00am - 11:30am"
+            subject: "Nature Walk with Zack"
+          - time: "12:00pm - 12:30pm"
+            subject: "5 Second Game with James"
+          - time: "1:00pm - 1:30pm"
             subject: "Power Hour"
-          - time: "1:00pm - 2:00pm"
-            subject: "Keystone Meeting- w/ Mayra & James"
-          - time: "2:00pm - 3:00pm"
-            subject: "STEM Programs"
-          - time: "3:00pm - 4:00pm"
-            subject: "Martial Arts"
+          - time: "2:00pm - 2:30pm"
+            subject: "Keystone Meeting with Mayra & James"
+          - time: "3:00pm - 3:30pm"
+            subject: "Club Tech Challenge"
+          - time: "3:30pm - 4:00pm"
+            subject: "Martial Arts Training"
     - day: "Thu"
       dayNumber: 4
-      start: 10
+      start: 11
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
-            subject: "STEM Programs"
-          - time: "11:00am - 12:00pm"
-            subject: "Games for Fun"
-          - time: "12:00pm - 1:00pm"
-            subject: "Softball Basics w/ Yasmine"
-          - time: "1:00pm - 2:00pm"
-            subject: "Education Trivia w/ Jacob"
-          - time: "2:00pm - 3:00pm"
+          - time: "11:00am - 11:30am"
+            subject: "Zoom roll call first 20 members win entry for Starbucks card with Mayra & Yasmine"
+          - time: "12:00pm - 12:30pm"
+            subject: "Games for Fun with Gus"
+          - time: "1:00pm - 1:30pm"
+            subject: "Softball Basics with Yasmine"
+          - time: "2:00pm - 2:30pm"
             subject: "Basketball Training"
-          - time: "3:00pm - 4:00pm"
-            subject: "Social Time w/ Jacob"
+          - time: "3:00pm - 3:30pm"
+            subject: "Education Trivia with Jacob"
+          - time: "3:30pm - 4:00pm"
+            subject: "Social Time with Mike"
     - day: "Fri"
       dayNumber: 5
-      start: 10
+      start: 11
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 11:00am"
+          - time: "11:00am - 11:30am"
             subject: "Education Trivia"
-          - time: "11:00am - 12:00pm"
+          - time: "12:00pm - 12:30pm"
             subject: "Healthy Habits"
-          - time: "12:00pm - 1:00pm"
-            subject: "Art at Home"
-          - time: "1:00pm - 2:00pm"
-            subject: "Ping Pong Basics"
-          - time: "2:00pm - 3:00pm"
-            subject: "Work Out w/ Zack"
-          - time: "3:00pm - 4:00pm"
-            subject: "Social Time w/ James"
+          - time: "1:00pm - 1:30pm"
+            subject: "Staff Meeting"
+          - time: "2:00pm - 2:30pm"
+            subject: "Scavenger Hunt with Gus"
+          - time: "3:00pm - 3:30pm"
+            subject: "Person/place/animals/thing Game with Yasmine"
+          - time: "3:30pm - 4:00pm"
+            subject: "First Take with James and Jacob"
 ---
 
 President Gerald R. Ford Boys & Girls Club (La Quinta) opened in 1994 and dedicated to
