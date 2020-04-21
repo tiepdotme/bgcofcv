@@ -24,27 +24,29 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "10:00am - 10:30am"
-            subject: "Athletes Profile with Chris B"
+            subject: "Athletes Profile w/ Chris B"
           - time: "11:00am - 11:15pm"
-            subject: "Arts & Crafts with Yaya"
+            subject: "Arts & Crafts w/ Yaya"
           - time: "11:15am - 11:30am"
-            subject: "Arts & Crafts with Myriam"
+            subject: "Arts & Crafts w/Myriam"
           - time: "12:00pm - 12:30pm"
-            subject: "Boxing with Antonio & Joel Diaz"
+            subject: "Boxing w/ Antonio & Joel Diaz"
           - time: "1:00pm - 1:25pm"
-            subject: "Healthy Habits with Ms. Chris"
+            subject: "Healthy Habits w/ Ms. Chris"
           - time: "1:30pm - 2:00pm"
-            subject: "STEM with Briza"
+            subject: "STEM w/ Briza"
           - time: "2:30pm - 3:00pm"
-            subject: "Reading Circle with Ms. Jaime"
+            subject: "Reading Circle w/ Ms. Jaime"
           - time: "3:30pm - 4:00pm"
-            subject: "Music & Flight Lessons with Rob"
+            subject: "Music & Flight Lessons w/ Rob"
     - day: "Tue"
       dayNumber: 2
-      start: null
-      end: null
-      isOff: true
-      slots: null
+      start: 11
+      end: 12
+      isOff: false
+      slots:
+          - time: "11:00am - 11:30am"
+            subject: "Math Tutoring with Ms. Nunez"
     - day: "Wed"
       dayNumber: 3
       start: 10
@@ -52,28 +54,30 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "10:00am - 10:15am"
-            subject: "Arts & Crafts with Myriam"
+            subject: "Arts & Crafts w/ Myriam"
           - time: "10:15am - 10:30pm"
-            subject: "Arts & Crafts with Yaya"
+            subject: "Arts & Crafts w/ Yaya"
           - time: "11:00am - 11:30am"
-            subject: "STEM with Briza"
+            subject: "STEM w/ Briza"
           - time: "12:00pm - 12:30pm"
-            subject: "Boxing with Antonio & Joel Diaz"
+            subject: "Boxing w/ Antonio & Joel Diaz"
           - time: "1:00pm - 1:25pm"
-            subject: "Healthy Habits with Ms. Chris"
+            subject: "Healthy Habits w/ Ms. Chris"
           - time: "1:30pm - 2:00pm"
-            subject: "Sports Trivia with Chris B"
+            subject: "Sports Trivia w/ Chris B"
           - time: "2:30pm - 3:00pm"
-            subject: "Reading Circle with Ms. Jamie"
+            subject: "Reading Circle w/ Ms. Jamie"
           - time: "3:30pm - 4:00pm"
-            subject: "Music & Flight Lessons with Rob"
+            subject: "Music & Flight Lessons w/ Rob"
     - day: "Thu"
       dayNumber: 4
-      start: 13
+      start: 11
       end: 14
       isOff: false
       isPrivate: true
       slots:
+          - time: "11:00am - 11:30am"
+            subject: "Math Tutoring with Ms. Nunez"
           - time: "1:00pm - 1:30pm"
             subject: "ASL Class (use ZoomID 512 538 4139)"
     - day: "Fri"
@@ -83,21 +87,21 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "10:00am - 10:30am"
-            subject: "Game Show with Chris B"
+            subject: "Game Show w/ Chris B"
           - time: "11:00am - 11:15pm"
-            subject: "Arts & Crafts with Yaya"
+            subject: "Arts & Crafts w/ Yaya"
           - time: "11:15am - 11:30am"
-            subject: "Arts & Crafts with Myriam"
+            subject: "Arts & Crafts w/Myriam"
           - time: "12:00pm - 12:30pm"
-            subject: "Boxing with Antonio & Joel Diaz"
+            subject: "Boxing w/ Antonio & Joel Diaz"
           - time: "1:00pm - 1:25pm"
-            subject: "Healthy Habits with Ms. Chris"
+            subject: "Healthy Habits w/ Ms. Chris"
           - time: "1:30pm - 2:00pm"
-            subject: "STEM with Briza"
+            subject: "STEM w/ Briza"
           - time: "2:30pm - 3:00pm"
-            subject: "Reading Circle with Ms. Jaime"
+            subject: "Reading Circle w/ Ms. Jaime"
           - time: "3:30pm - 4:00pm"
-            subject: "Music & Flight Lessons with Rob"
+            subject: "Music & Flight Lessons w/ Rob"
 ---
 
 Our flagship clubhouse, began serving the community in 1966. Directly next to Thomas Jefferson Middle School and just blocks from Van Buren Elementary School, the club boasts a newly renovated gymnasium. This facility includes the separate 9,000 square foot Smilow Family Teen Center and a 4,400 square foot Boxing and Athletic Center.

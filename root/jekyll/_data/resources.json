@@ -88,5 +88,20 @@
         "organization": "One Future Coachella Valley",
         "website": "/assets/one-future-coachella-valley.pdf",
         "summary": "List of resources for high school seniors and college students impacted by COVID-19"
+    },
+    {
+        "organization": "Bonafide Solutions",
+        "website": "/assets/origami-face-covering.pdf",
+        "summary": "Learn how to make a face mask with a paper towel"
+    },
+    {
+        "organization": "Sesame Street: Monster Meditations with Headspace",
+        "website": "https://www.youtube.com/watch?v=J9nE4RE8uiQ&list=PL8TioFHubWFuQ84KAuK0AblTXsZtbMJF0",
+        "summary": "Cookie Monster can't wait for his cookies to be done baking! His friend Mr. Andy from Headspace is here to help with a Monster Meditation. Join Cookie Monster and Mr. Andy in a game of I-Sense, and discover how you can make waiting more fun! "
+    },
+    {
+        "organization": "Readiness and Emergency Management for Schools",
+        "website": "https://rems.ed.gov/coronavirus.aspx",
+        "summary": "Find guidance, resources, training, and tools in one centralized location on COVID-19 and infectious disease planning activities. This page is updated on a regular basis in order to provide you with the most up-to-date information. We encourage you to bookmark this page and check in daily."
     }
 ]
