@@ -90,6 +90,7 @@
                     </div>
                 </div>
                 {% endif %}
+                {% if page.address and page.location %}
                 <div class="row py-3">
                     <div class="col-sm-12">
                         <h2 class="section-header">Details</h2>
@@ -150,6 +151,7 @@
                         </div>
                     </div>
                 </div>
+                {%endif%}
                 {% if page.contact != null %}
                 <div class="row py-3">
                     <div class="col-sm-12">

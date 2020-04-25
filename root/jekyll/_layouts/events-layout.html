@@ -3,7 +3,7 @@
 
 <head>
     {% include collection-head.html %}
-<link href="../site.6f6f5e8ad91c1acc040b.min.css" rel="stylesheet"></head>
+<link href="../site.50a81da7ee9e095a781e.min.css" rel="stylesheet"></head>
 
 <body>
     {% include navbar.html %}
@@ -90,6 +90,7 @@
                     </div>
                 </div>
                 {% endif %}
+                {% if page.address and page.location %}
                 <div class="row py-3">
                     <div class="col-sm-12">
                         <h2 class="section-header">Details</h2>
@@ -150,6 +151,7 @@
                         </div>
                     </div>
                 </div>
+                {%endif%}
                 {% if page.contact != null %}
                 <div class="row py-3">
                     <div class="col-sm-12">
