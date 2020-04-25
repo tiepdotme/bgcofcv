@@ -82,7 +82,7 @@ GEM
       tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
     wdm (0.1.1)
-    zeitwerk (2.3.0)
+    zeitwerk (2.2.2)
 
 PLATFORMS
   x64-mingw32
