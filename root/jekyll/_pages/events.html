@@ -35,10 +35,19 @@ permalink: events.html
             {% assign sorted = site.events | sort: 'start_date' %}
             {% for event in sorted %} 
                 {% capture eventDate %} {{ event.start_date | date: "%s" }}{% endcapture %} 
-                {% if nowUnix < eventDate %} 
+                {% if nowUnix < eventDate %}
                 {% assign upcomingEventsArr = upcomingEventsArr | push: event %} 
-                {% else %} 
-                {% assign pastEventsArr = pastEventsArr | push: event %} 
+                {% else %}
+                    {% if event.end_date %}
+                        {% capture eventEndDate %} {{ event.end_date | date: "%s" }}{% endcapture %}
+                        {% if nowUnix < eventEndDate %}
+                            {% assign upcomingEventsArr = upcomingEventsArr | push: event %}
+                        {%else%}
+                            {% assign pastEventsArr = pastEventsArr | push: event %}
+                        {% endif %}
+                    {% else %}
+                        {% assign pastEventsArr = pastEventsArr | push: event %} 
+                    {% endif %}
                 {% endif %} 
             {% endfor %} 
             {% assign nextEvent = upcomingEventsArr | first %}
