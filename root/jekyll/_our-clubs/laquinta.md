@@ -29,13 +29,13 @@ virtualSchedule:
           - time: "12:00pm - 12:30pm"
             subject: "Healthy Habits-Zack"
           - time: "1:00pm - 1:30pm"
-            subject: "Sports Talk with Mike"
-          - time: "2:00pm - 2:30pm"
             subject: "Trivia with Jacob"
+          - time: "2:00pm - 2:30pm"
+            subject: "Social Time with Mayra"
           - time: "3:00pm - 3:30pm"
-            subject: "Smart Moves- James"
+            subject: "Smart Moves with James"
           - time: "3:30pm - 4:00pm"
-            subject: "Martial Arts Training"
+            subject: "Martial Arts Training with Siah"
     - day: "Tue"
       dayNumber: 2
       start: 11
@@ -45,7 +45,7 @@ virtualSchedule:
           - time: "11:00am - 11:30am"
             subject: "Pixel Art Club"
           - time: "12:00pm - 12:30pm"
-            subject: "Heads Up with James"
+            subject: "Music Trivia with James"
           - time: "1:00pm - 1:30pm"
             subject: "2k with Mike"
           - time: "2:00pm - 2:30pm"
@@ -53,7 +53,7 @@ virtualSchedule:
           - time: "3:00pm - 3:30pm"
             subject: "Games for Fun with Gus"
           - time: "3:30pm - 4:00pm"
-            subject: "Social Time with Yasmine"
+            subject: "Girl Talk with Yasmine"
     - day: "Wed"
       dayNumber: 3
       start: 11
@@ -61,7 +61,7 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00am - 11:30am"
-            subject: "Nature Walk with Zack"
+            subject: "Get Fit with Zack"
           - time: "12:00pm - 12:30pm"
             subject: "5 Second Game with James"
           - time: "1:00pm - 1:30pm"
@@ -79,17 +79,17 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00am - 11:30am"
-            subject: "Zoom roll call first 20 members win entry for Starbucks card with Mayra & Yasmine"
+            subject: "Zoom roll call first 20 members win entry for Starbucks card with Mayra"
           - time: "12:00pm - 12:30pm"
             subject: "Games for Fun with Gus"
           - time: "1:00pm - 1:30pm"
-            subject: "Softball Basics with Yasmine"
+            subject: "2k with Mike"
           - time: "2:00pm - 2:30pm"
             subject: "Basketball Training"
           - time: "3:00pm - 3:30pm"
-            subject: "Education Trivia with Jacob"
+            subject: "Power Hour with Jacob"
           - time: "3:30pm - 4:00pm"
-            subject: "Social Time with Mike"
+            subject: "Social Time with James"
     - day: "Fri"
       dayNumber: 5
       start: 11
@@ -97,15 +97,15 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00am - 11:30am"
-            subject: "Education Trivia"
+            subject: "STEM"
           - time: "12:00pm - 12:30pm"
-            subject: "Healthy Habits"
+            subject: "Walk with Mayra"
           - time: "1:00pm - 1:30pm"
-            subject: "Staff Meeting"
+            subject: "Greet the Staff"
           - time: "2:00pm - 2:30pm"
-            subject: "Scavenger Hunt with Gus"
+            subject: "Scavenger Hunt"
           - time: "3:00pm - 3:30pm"
-            subject: "Person/place/animals/thing Game with Yasmine"
+            subject: "Hanging with Mike"
           - time: "3:30pm - 4:00pm"
             subject: "First Take with James and Jacob"
 ---

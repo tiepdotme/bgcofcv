@@ -24,7 +24,7 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "10:00am - 10:30am"
-            subject: "Athletes Profile with Chris B"
+            subject: "Athletes Profile (Deion Sanders) with Chris B"
           - time: "11:00am - 11:15pm"
             subject: "Arts & Crafts with Yaya"
           - time: "11:15am - 11:30am"
@@ -32,7 +32,7 @@ virtualSchedule:
           - time: "12:00pm - 12:30pm"
             subject: "Boxing with Antonio & Joel Diaz"
           - time: "1:00pm - 1:25pm"
-            subject: "Healthy Habits with Ms. Chris"
+            subject: "Cooking with Ms. Chris"
           - time: "1:30pm - 2:00pm"
             subject: "STEM with Briza"
           - time: "2:30pm - 3:00pm"
@@ -91,7 +91,7 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "10:00am - 10:30am"
-            subject: "Game Show with Chris B"
+            subject: "Guess that Athlete with Chris B"
           - time: "11:00am - 11:15pm"
             subject: "Arts & Crafts with Yaya"
           - time: "11:15am - 11:30am"
