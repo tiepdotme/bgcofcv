@@ -31,17 +31,17 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 10:55am"
-            subject: "Torch Club with Sofia"
           - time: "11:00am - 11:55am"
-            subject: "Tech and STEAM with Veronica"
+            subject: "Torch Club with Sofia"
           - time: "12:00pm - 12:55pm"
-            subject: "Arts & Crafts with Jervoa and Leslie"
+            subject: "Tech and STEAM with Veronica"
           - time: "1:00pm - 1:55pm"
-            subject: "Healthy Habits with Erika"
+            subject: "Arts & Crafts with Jervoa and Leslie"
           - time: "2:00pm - 2:55pm"
-            subject: "Education with Albert"
+            subject: "Healthy Habits with Erika"
           - time: "3:00pm - 3:55pm"
+            subject: "Education with Albert"
+          - time: "4:00pm - 4:55pm"
             subject: "Boxing with Shaggy and Ray"
     - day: "Wed"
       dayNumber: 3
@@ -57,17 +57,17 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 10:55am"
-            subject: "Torch Club with Sofia"
           - time: "11:00am - 11:55am"
+            subject: "New Beginnings with Sofia"
+          - time: "12:00pm - 12:55am"
             subject: "Tech and STEAM with Veronica"
-          - time: "12:00pm - 12:55pm"
-            subject: "Arts & Crafts with Jervoa and Leslie"
           - time: "1:00pm - 1:55pm"
-            subject: "Healthy Habits with Erika"
+            subject: "Arts & Crafts with Jervoa and Leslie"
           - time: "2:00pm - 2:55pm"
-            subject: "Education with Albert"
+            subject: "Healthy Habits with Erika"
           - time: "3:00pm - 3:55pm"
+            subject: "Education with Albert"
+          - time: "4:00pm - 4:55pm"
             subject: "Boxing with Shaggy and Ray"
     - day: "Fri"
       dayNumber: 5
