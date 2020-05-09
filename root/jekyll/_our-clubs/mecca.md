@@ -28,7 +28,7 @@ virtualSchedule:
     - day: "Tue"
       dayNumber: 2
       start: 10
-      end: 16
+      end: 17
       isOff: false
       slots:
           - time: "11:00am - 11:55am"
@@ -54,7 +54,7 @@ virtualSchedule:
     - day: "Thu"
       dayNumber: 4
       start: 10
-      end: 16
+      end: 17
       isOff: false
       slots:
           - time: "11:00am - 11:55am"
