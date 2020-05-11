@@ -24,7 +24,7 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "10:00am - 10:30am"
-            subject: "Athletes Profile (Deion Sanders) with Chris B"
+            subject: "Athlete's Profile with Chris B"
           - time: "11:00am - 11:15pm"
             subject: "Arts & Crafts with Yaya"
           - time: "11:15am - 11:30am"
