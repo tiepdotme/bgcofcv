@@ -58,7 +58,7 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00am - 11:55am"
-            subject: "New Beginnings with Sofia"
+            subject: "New Beginnings (Girls Only) with Sofia"
           - time: "12:00pm - 12:55am"
             subject: "Tech and STEAM with Veronica"
           - time: "1:00pm - 1:55pm"

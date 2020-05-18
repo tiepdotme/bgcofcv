@@ -24,7 +24,7 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "10:00am - 10:30am"
-            subject: "Athlete's Profile with Chris B"
+            subject: "Reading Circle with Ms. Jamie"
           - time: "11:00am - 11:15pm"
             subject: "Arts & Crafts with Yaya"
           - time: "11:15am - 11:30am"
@@ -36,7 +36,7 @@ virtualSchedule:
           - time: "1:30pm - 2:00pm"
             subject: "STEM with Briza"
           - time: "2:30pm - 3:00pm"
-            subject: "Reading Circle with Ms. Jaime"
+            subject: "Athlete's Profile with Chris B"
           - time: "3:00pm - 3:30pm"
             subject: "Where am I? with Ms. Delia"
           - time: "3:30pm - 4:00pm"
@@ -60,7 +60,7 @@ virtualSchedule:
           - time: "10:15am - 10:30pm"
             subject: "Arts & Crafts with Yaya"
           - time: "11:00am - 11:30am"
-            subject: "STEM with Briza"
+            subject: "Reading Circle with Ms. Jamie"
           - time: "12:00pm - 12:30pm"
             subject: "Boxing with Antonio & Joel Diaz"
           - time: "1:00pm - 1:25pm"
@@ -68,7 +68,7 @@ virtualSchedule:
           - time: "1:30pm - 2:00pm"
             subject: "Sports Trivia with Chris B"
           - time: "2:30pm - 3:00pm"
-            subject: "Reading Circle with Ms. Jamie"
+            subject: "STEM with Briza"
           - time: "3:00pm - 3:30pm"
             subject: "Where am I? with Ms. Delia"
           - time: "3:30pm - 4:00pm"
@@ -91,7 +91,7 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "10:00am - 10:30am"
-            subject: "Guess that Athlete with Chris B"
+            subject: "Reading Circle with Ms. Jamie"
           - time: "11:00am - 11:15pm"
             subject: "Arts & Crafts with Yaya"
           - time: "11:15am - 11:30am"
@@ -103,7 +103,7 @@ virtualSchedule:
           - time: "1:30pm - 2:00pm"
             subject: "STEM with Briza"
           - time: "2:30pm - 3:00pm"
-            subject: "Reading Circle with Ms. Jaime"
+            subject: "Guess that Athlete with Chris B"
           - time: "3:00pm - 3:30pm"
             subject: "Where am I? with Ms. Delia"
           - time: "3:30pm - 4:00pm"
