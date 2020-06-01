@@ -51,18 +51,18 @@ virtualSchedule:
             subject: "Math Tutoring with Ms. Nunez"
     - day: "Wed"
       dayNumber: 3
-      start: 10
+      start: 13
       end: 16
       isOff: false
       slots:
-          - time: "10:00am - 10:15am"
-            subject: "Arts & Crafts with Myriam"
-          - time: "10:15am - 10:30pm"
-            subject: "Arts & Crafts with Yaya"
-          - time: "11:00am - 11:30am"
-            subject: "Reading Circle with Ms. Jamie"
-          - time: "12:00pm - 12:30pm"
-            subject: "Boxing with Antonio & Joel Diaz"
+          #- time: "10:00am - 10:15am"
+          #  subject: "Arts & Crafts with Myriam"
+          #- time: "10:15am - 10:30pm"
+          #  subject: "Arts & Crafts with Yaya"
+          #- time: "11:00am - 11:30am"
+          #  subject: "Reading Circle with Ms. Jamie"
+          #- time: "12:00pm - 12:30pm"
+          #  subject: "Boxing with Antonio & Joel Diaz"
           - time: "1:00pm - 1:25pm"
             subject: "Cooking with Ms. Chris"
           - time: "1:30pm - 2:00pm"
