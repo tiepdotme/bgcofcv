@@ -23,12 +23,13 @@ permalink: team.html
         <h2 class="text-center section-header">Administrative Staff</h2>
         <div class="row">
             {% for staff in site.data.staff.staff %}
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card bg-light my-1">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 my-1">
+                <div class="card bg-light h-100">
                     <div class="card-body">
-                        {% assign nameArray = staff.name | split: " " %} {% assign firstLetter = nameArray | first |
-                        slice: 0 %} {% assign secondLetter = nameArray | last | slice: 0 %} {% assign initials =
-                        firstLetter | append: secondLetter %}
+                        {% assign nameArray = staff.name | split: " " %} {%
+                        assign firstLetter = nameArray | first | slice: 0 %} {%
+                        assign secondLetter = nameArray | last | slice: 0 %} {%
+                        assign initials = firstLetter | append: secondLetter %}
                         <div class="d-flex py-1">
                             <div>
                                 <div
@@ -39,7 +40,9 @@ permalink: team.html
                             </div>
                             <div class="pl-3 flex-fill">
                                 <h5 class="m-0">{{ staff.name }}</h5>
-                                <small class="text-muted">{{ staff.title }}</small>
+                                <small class="text-muted"
+                                    >{{ staff.title }}</small
+                                >
                             </div>
                         </div>
                     </div>
@@ -57,7 +60,9 @@ permalink: team.html
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="d-flex flex-column my-3">
                     <p class="lead m-0">{{ board.name }}</p>
-                    {% if board.title %} <small class="text-muted">{{ board.title }}</small> {% endif %}
+                    {% if board.title %}
+                    <small class="text-muted">{{ board.title }}</small> {% endif
+                    %}
                 </div>
             </div>
             {% endfor %}
@@ -72,7 +77,9 @@ permalink: team.html
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="d-flex flex-column my-3">
                     <p class="lead m-0">{{ friend.name }}</p>
-                    {% if friend.title %} <small class="text-muted">{{ friend.title }}</small> {% endif %}
+                    {% if friend.title %}
+                    <small class="text-muted">{{ friend.title }}</small> {%
+                    endif %}
                 </div>
             </div>
             {% endfor %}
@@ -87,7 +94,9 @@ permalink: team.html
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div class="d-flex flex-column my-3">
                     <p class="lead m-0">{{ emeritus.name }}</p>
-                    {% if emeritus.title %} <small class="text-muted">{{ emeritus.title }}</small> {% endif %}
+                    {% if emeritus.title %}
+                    <small class="text-muted">{{ emeritus.title }}</small> {%
+                    endif %}
                 </div>
             </div>
             {% endfor %}
