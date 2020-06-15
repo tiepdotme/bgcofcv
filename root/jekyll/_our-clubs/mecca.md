@@ -27,22 +27,18 @@ virtualSchedule:
             subject: "Math Tutoring with Ms. Nunez"
     - day: "Tue"
       dayNumber: 2
-      start: 10
-      end: 17
+      start: 14
+      end: 18
       isOff: false
       slots:
-          - time: "11:00am - 11:55am"
-            subject: "Torch Club with Sofia"
-          - time: "12:00pm - 12:55pm"
-            subject: "Tech and STEAM with Veronica"
-          - time: "1:00pm - 1:55pm"
-            subject: "Arts & Crafts with Jervoa and Leslie"
-          - time: "2:00pm - 2:55pm"
+          - time: "2:00pm - 2:45pm"
             subject: "Healthy Habits with Erika"
-          - time: "3:00pm - 3:55pm"
-            subject: "Education with Albert"
-          - time: "4:00pm - 4:55pm"
-            subject: "Boxing with Shaggy and Ray"
+          - time: "3:00pm - 3:45pm"
+            subject: "Arts and Crafts with Jervoa and Leslie"
+          - time: "4:00pm - 4:45pm"
+            subject: "STEM with Alber"
+          - time: "5:00pm - 5:45pm"
+            subject: "Boxing with Shaggy and Ray Ray"
     - day: "Wed"
       dayNumber: 3
       start: 11
@@ -53,34 +49,28 @@ virtualSchedule:
             subject: "Math Tutoring with Ms. Nunez"
     - day: "Thu"
       dayNumber: 4
-      start: 10
-      end: 17
+      start: 14
+      end: 18
       isOff: false
       slots:
-          - time: "11:00am - 11:55am"
+          - time: "2:00pm - 2:45pm"
             subject: "New Beginnings (Girls Only) with Sofia"
-          - time: "12:00pm - 12:55am"
-            subject: "Tech and STEAM with Veronica"
-          - time: "1:00pm - 1:55pm"
-            subject: "Arts & Crafts with Jervoa and Leslie"
-          - time: "2:00pm - 2:55pm"
-            subject: "Healthy Habits with Erika"
-          - time: "3:00pm - 3:55pm"
-            subject: "Education with Albert"
-          - time: "4:00pm - 4:55pm"
-            subject: "Boxing with Shaggy and Ray"
+          - time: "3:00pm - 3:45pm"
+            subject: "Arts and Crafts with Jervoa and Leslie"
+          - time: "4:00pm - 4:45pm"
+            subject: "STEM with Alber"
+          - time: "5:00pm - 5:45pm"
+            subject: "Boxing with Shaggy and Ray Ray"
     - day: "Fri"
       dayNumber: 5
       start: 11
-      end: 16
+      end: 15
       isOff: false
       slots:
           - time: "11:00am - 11:30am"
             subject: "Math Tutoring with Ms. Nunez"
-          - time: "02:00pm - 02:55pm"
+          - time: "02:00pm - 02:45pm"
             subject: "Teen Time with Ronnie"
-          - time: "03:00pm - 03:55pm"
-            subject: "Passport to Manhood with Victor"
 ---
 
 A state-of-the-art facility where members can enjoy games, sports activities, technology, and more! Our Joel E. Smilow Clubhouse currently serves 1,000 youth in Mecca and surrounding cities. In a partnership with the County of Riverside, this Club opened in 2011.

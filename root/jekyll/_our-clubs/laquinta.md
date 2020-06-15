@@ -20,27 +20,21 @@ isVirtualPrivate: true
 virtualSchedule:
     - day: "Mon"
       dayNumber: 1
-      start: 11
-      end: 16
+      start: 12
+      end: 15
       isOff: false
       slots:
-          - time: "11:00am - 11:30am"
-            subject: "TorchClub Meeting with Que"
-          - time: "12:00pm - 12:30pm"
-            subject: "Healthy Habits with Zack"
-          - time: "1:00pm - 1:30pm"
-            subject: "Trivia with Jacob"
-          - time: "2:00pm - 2:30pm"
-            subject: "Social Time with Mike"
-          - time: "3:00pm - 3:30pm"
-            subject: "Smart Moves with James"
-          - time: "3:30pm - 4:00pm"
-            subject: "Martial Arts Training with Siah"
+          - time: "12:30pm - 1:00pm"
+            subject: "2K with Mike"
+          - time: "1:00pm - 2:00pm"
+            subject: "Fun Trivia with Jacob"
+          - time: "2:00pm - 3:00pm"
+            subject: "Music Trivia with James"
     - day: "Tue"
       dayNumber: 2
       start: 11
       end: 16
-      isOff: false
+      isOff: true
       slots:
           - time: "11:00am - 11:30am"
             subject: "Pixel Art Club"
@@ -56,27 +50,23 @@ virtualSchedule:
             subject: "Girl Talk with Yasmine"
     - day: "Wed"
       dayNumber: 3
-      start: 11
+      start: 12
       end: 16
       isOff: false
       slots:
-          - time: "11:00am - 11:30am"
-            subject: "Get Fit with Zack"
           - time: "12:00pm - 12:30pm"
-            subject: "5 Second Game with Yasmine"
-          - time: "1:00pm - 1:30pm"
-            subject: "Power Hour"
+            subject: "Torch Club Meeting with Que"
+          - time: "12:30pm - 1:00pm"
+            subject: "Social Time with Mike"
           - time: "2:00pm - 2:30pm"
-            subject: "Keystone Meeting with Mayra & James"
+            subject: "Keystone Meeting with James"
           - time: "3:00pm - 3:30pm"
-            subject: "Club Tech Challenge"
-          - time: "3:30pm - 4:00pm"
-            subject: "Martial Arts Training"
+            subject: "Scavenger Hunt with Jacob"
     - day: "Thu"
       dayNumber: 4
       start: 11
       end: 16
-      isOff: false
+      isOff: true
       slots:
           - time: "11:00am - 11:30am"
             subject: "Zoom roll call first 20 members win entry for Starbucks card with Mayra"
@@ -92,22 +82,16 @@ virtualSchedule:
             subject: "Social Time with James"
     - day: "Fri"
       dayNumber: 5
-      start: 11
+      start: 12
       end: 16
       isOff: false
       slots:
-          - time: "11:00am - 11:30am"
-            subject: "STEM"
-          - time: "12:00pm - 12:30pm"
-            subject: "Walk with Mayra"
-          - time: "1:00pm - 1:30pm"
-            subject: "Greet the Staff"
+          - time: "12:30pm - 1:00pm"
+            subject: "2K with Mike"
           - time: "2:00pm - 2:30pm"
-            subject: "Scavenger Hunt"
+            subject: "First Talk with James and Jacob"
           - time: "3:00pm - 3:30pm"
-            subject: "Hanging with Mike"
-          - time: "3:30pm - 4:00pm"
-            subject: "First Take with James and Jacob"
+            subject: "ASES Social Time with Reyna"
 ---
 
 President Gerald R. Ford Boys & Girls Club (La Quinta) opened in 1994 and dedicated to
