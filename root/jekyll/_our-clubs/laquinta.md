@@ -27,9 +27,11 @@ virtualSchedule:
           - time: "12:30pm - 1:00pm"
             subject: "2K with Mike"
           - time: "1:00pm - 2:00pm"
-            subject: "Fun Trivia with Jacob"
+            subject: "Karate with Siah"
           - time: "2:00pm - 3:00pm"
             subject: "Music Trivia with James"
+          - time: "3:00pm - 3:30pm"
+            subject: "Scavenger Hunt with Jacob"
     - day: "Tue"
       dayNumber: 2
       start: 11
@@ -58,10 +60,12 @@ virtualSchedule:
             subject: "Torch Club Meeting with Que"
           - time: "12:30pm - 1:00pm"
             subject: "Social Time with Mike"
+          - time: "1:00pm - 2:00pm"
+            subject: "Karate with Siah"
           - time: "2:00pm - 2:30pm"
             subject: "Keystone Meeting with James"
           - time: "3:00pm - 3:30pm"
-            subject: "Scavenger Hunt with Jacob"
+            subject: "Trivia with Jacob"
     - day: "Thu"
       dayNumber: 4
       start: 11
