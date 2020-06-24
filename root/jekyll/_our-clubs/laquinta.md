@@ -58,14 +58,14 @@ virtualSchedule:
       slots:
           - time: "12:00pm - 12:30pm"
             subject: "Torch Club Meeting with Que"
-          - time: "12:30pm - 1:00pm"
-            subject: "Social Time with Mike"
-          - time: "1:00pm - 2:00pm"
-            subject: "Karate with Siah"
+          - time: "1:30pm - 2:00pm"
+            subject: "Hanging with Mike"
           - time: "2:00pm - 2:30pm"
-            subject: "Keystone Meeting with James"
-          - time: "3:00pm - 3:30pm"
-            subject: "Trivia with Jacob"
+            subject: "Keystone Meeting with Myra and James"
+          - time: "2:30pm - 3:00pm"
+            subject: "Scavenger Hunt with Jacob"
+          - time: "3:00pm - 4:00pm"
+            subject: "Martial Arts with Siah"
     - day: "Thu"
       dayNumber: 4
       start: 11
@@ -94,8 +94,8 @@ virtualSchedule:
             subject: "2K with Mike"
           - time: "2:00pm - 2:30pm"
             subject: "First Talk with James and Jacob"
-          - time: "3:00pm - 3:30pm"
-            subject: "ASES Social Time with Reyna"
+          # - time: "3:00pm - 3:30pm"
+          #   subject: "ASES Social Time with Reyna"
 ---
 
 President Gerald R. Ford Boys & Girls Club (La Quinta) opened in 1994 and dedicated to
