@@ -61,7 +61,7 @@ virtualSchedule:
           - time: "1:30pm - 2:00pm"
             subject: "Hanging with Mike"
           - time: "2:00pm - 2:30pm"
-            subject: "Keystone Meeting with Myra and James"
+            subject: "Keystone Meeting with Mayra and James"
           - time: "2:30pm - 3:00pm"
             subject: "Scavenger Hunt with Jacob"
           - time: "3:00pm - 4:00pm"

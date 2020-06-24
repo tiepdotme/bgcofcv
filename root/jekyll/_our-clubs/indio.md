@@ -20,7 +20,7 @@ virtualSchedule:
     - day: "Mon"
       dayNumber: 1
       start: 12
-      end: 16
+      end: 17
       isOff: false
       slots:
           # - time: "10:00am - 10:30am"
@@ -41,6 +41,8 @@ virtualSchedule:
           #   subject: "Where am I? with Ms. Delia"
           - time: "3:30pm - 4:00pm"
             subject: "Music & Flight Lessons with Rob"
+          - time: "4:00pm - 4:30pm"
+            subject: "Story Time with Ms. Delia"
     - day: "Tue"
       dayNumber: 2
       start: 11
@@ -52,7 +54,7 @@ virtualSchedule:
     - day: "Wed"
       dayNumber: 3
       start: 12
-      end: 16
+      end: 17
       isOff: false
       slots:
           #- time: "10:00am - 10:15am"
@@ -73,6 +75,8 @@ virtualSchedule:
             subject: "Keystone Meeting with Tracy"
           - time: "3:30pm - 4:00pm"
             subject: "Music & Flight Lessons with Rob"
+          - time: "4:00pm - 4:30pm"
+            subject: "Story Time with Ms. Delia"
     - day: "Thu"
       dayNumber: 4
       start: 11
@@ -87,7 +91,7 @@ virtualSchedule:
     - day: "Fri"
       dayNumber: 5
       start: 15
-      end: 16
+      end: 17
       isOff: false
       slots:
           # - time: "10:00am - 10:30am"
@@ -108,6 +112,8 @@ virtualSchedule:
           #   subject: "Where am I? with Ms. Delia"
           - time: "3:30pm - 4:00pm"
             subject: "Music & Flight Lessons with Rob"
+          - time: "4:00pm - 4:30pm"
+            subject: "Story Time with Ms. Delia"
 ---
 
 Our flagship clubhouse, began serving the community in 1966. Directly next to Thomas Jefferson Middle School and just blocks from Van Buren Elementary School, the club boasts a newly renovated gymnasium. This facility includes the separate 9,000 square foot Smilow Family Teen Center and a 4,400 square foot Boxing and Athletic Center.

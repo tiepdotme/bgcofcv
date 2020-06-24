@@ -43,6 +43,9 @@ permalink: team.html
                                 <small class="text-muted"
                                     >{{ staff.title }}</small
                                 >
+                                <small>
+                                    <a class="text-muted" style="text-decoration: underline" href="tel:{{staff.phone.number | replace: "-", ""}};{{staff.phone.extension}}">{{staff.phone.number}} ext. {{staff.phone.extension}}</a>
+                                </small>
                             </div>
                         </div>
                     </div>

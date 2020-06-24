@@ -41,6 +41,7 @@ permalink: contact-us.html
                             <h5 class="m-0">{{ person.name }}</h5>
                             <p class="m-0 text-muted">{{ person.title }}</p>
                             <p class="m-0 text-muted">{{ person.email }}</p>
+                            <a class="text-muted" style="text-decoration: underline" href="tel:{{person.phone.number | replace: "-", ""}};{{person.phone.extension}}">{{person.phone.number}} ext. {{person.phone.extension}}</a>
                         </div>
                     </div>
                     {% endfor %}
