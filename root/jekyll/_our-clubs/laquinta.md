@@ -90,10 +90,20 @@ virtualSchedule:
       end: 16
       isOff: false
       slots:
-          - time: "12:30pm - 1:00pm"
-            subject: "2K with Mike"
+          - time: "11:00pm - 11:30pm"
+            subject: "S.T.E.M"
+          - time: "12:00pm - 12:30pm"
+            subject: "Fun games with Yasmine"
+          - time: "1:00pm - 1:30pm"
+            subject: "Walk with Siah"
+          - time: "1:30pm - 2:00pm"
+            subject: "Greet the staff"
           - time: "2:00pm - 2:30pm"
-            subject: "First Talk with James and Jacob"
+            subject: "2000 Questions with Mayra"
+          - time: "3:00pm - 3:30pm"
+            subject: "2K Tournament with Mike"
+          - time: "3:30pm - 4:00pm"
+            subject: "First Take with James"
           # - time: "3:00pm - 3:30pm"
           #   subject: "ASES Social Time with Reyna"
 ---
