@@ -23,26 +23,14 @@ virtualSchedule:
       end: 17
       isOff: false
       slots:
-          # - time: "10:00am - 10:30am"
-          #   subject: "Reading Circle with Ms. Jamie"
           - time: "12:30pm - 1:00pm"
             subject: "Arts & Crafts with Yaya"
-          # - time: "11:15am - 11:30am"
-          #   subject: "Arts & Crafts with Myriam"
-          # - time: "12:00pm - 12:30pm"
-          #   subject: "Boxing with Antonio & Joel Diaz"
-          # - time: "1:00pm - 1:25pm"
-          #   subject: "Cooking with Ms. Chris"
-          # - time: "1:30pm - 2:00pm"
-          #   subject: "STEM with Briza"
-          # - time: "2:30pm - 3:00pm"
-          #   subject: "Athlete's Profile with Chris B"
-          # - time: "3:00pm - 3:30pm"
-          #   subject: "Where am I? with Ms. Delia"
           - time: "3:30pm - 4:00pm"
             subject: "Music & Flight Lessons with Rob"
           - time: "4:00pm - 4:30pm"
             subject: "Story Time with Ms. Delia"
+          - time: "4:30pm - 5:00pm"
+            subject: "Where Am I/Who Am I with Ron"
     - day: "Tue"
       dayNumber: 2
       start: 11
@@ -57,14 +45,6 @@ virtualSchedule:
       end: 17
       isOff: false
       slots:
-          #- time: "10:00am - 10:15am"
-          #  subject: "Arts & Crafts with Myriam"
-          #- time: "10:15am - 10:30pm"
-          #  subject: "Arts & Crafts with Yaya"
-          #- time: "11:00am - 11:30am"
-          #  subject: "Reading Circle with Ms. Jamie"
-          #- time: "12:00pm - 12:30pm"
-          #  subject: "Boxing with Antonio & Joel Diaz"
           - time: "12:00pm - 12:30pm"
             subject: "Arts and Crafts with Yaya"
           # - time: "1:30pm - 2:00pm"
@@ -77,6 +57,8 @@ virtualSchedule:
             subject: "Music & Flight Lessons with Rob"
           - time: "4:00pm - 4:30pm"
             subject: "Story Time with Ms. Delia"
+          - time: "4:30pm - 5:00pm"
+            subject: "Where Am I/Who Am I with Ron"
     - day: "Thu"
       dayNumber: 4
       start: 11
@@ -114,6 +96,8 @@ virtualSchedule:
             subject: "Music & Flight Lessons with Rob"
           - time: "4:00pm - 4:30pm"
             subject: "Story Time with Ms. Delia"
+          - time: "4:30pm - 5:00pm"
+            subject: "Where Am I/Who Am I with Ron"
 ---
 
 Our flagship clubhouse, began serving the community in 1966. Directly next to Thomas Jefferson Middle School and just blocks from Van Buren Elementary School, the club boasts a newly renovated gymnasium. This facility includes the separate 9,000 square foot Smilow Family Teen Center and a 4,400 square foot Boxing and Athletic Center.
