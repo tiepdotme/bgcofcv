@@ -66,7 +66,7 @@ virtualSchedule:
             subject: "ASL Class (use ZoomID 512 538 4139)"
     - day: "Fri"
       dayNumber: 5
-      start: 15
+      start: 12
       end: 17
       isOff: false
       slots:
