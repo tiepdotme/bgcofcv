@@ -37,7 +37,7 @@ virtualSchedule:
             subject: "Arts and Crafts with Jervoa and Leslie"
           - time: "4:00pm - 4:45pm"
             subject: "STEM with Albert"
-          - time: "5:00pm - 5:45pm"
+          - time: "6:00pm - 6:45pm"
             subject: "Boxing with Shaggy and Ray Ray"
     - day: "Wed"
       dayNumber: 3
@@ -59,7 +59,7 @@ virtualSchedule:
             subject: "Arts and Crafts with Jervoa and Leslie"
           - time: "4:00pm - 4:45pm"
             subject: "Keystone with Albert"
-          - time: "5:00pm - 5:45pm"
+          - time: "6:00pm - 6:45pm"
             subject: "Boxing with Shaggy and Ray Ray"
     - day: "Fri"
       dayNumber: 5

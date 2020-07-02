@@ -45,14 +45,8 @@ virtualSchedule:
       end: 17
       isOff: false
       slots:
-          - time: "12:00pm - 12:30pm"
-            subject: "Arts and Crafts with Yaya"
-          # - time: "1:30pm - 2:00pm"
-          #   subject: "Sports Trivia with Chris B"
-          # - time: "2:30pm - 3:00pm"
-          #   subject: "STEM with Briza"
-          - time: "3:00pm - 3:30pm"
-            subject: "Keystone Meeting with Tracy"
+          - time: "12:30pm - 1:00pm"
+            subject: "Arts & Crafts with Yaya"
           - time: "3:30pm - 4:00pm"
             subject: "Music & Flight Lessons with Rob"
           - time: "4:00pm - 4:30pm"
@@ -76,22 +70,8 @@ virtualSchedule:
       end: 17
       isOff: false
       slots:
-          # - time: "10:00am - 10:30am"
-          #   subject: "Reading Circle with Ms. Jamie"
-          # - time: "11:00am - 11:15pm"
-          #   subject: "Arts & Crafts with Yaya"
-          # - time: "11:15am - 11:30am"
-          #   subject: "Arts & Crafts with Myriam"
-          # - time: "12:00pm - 12:30pm"
-          #   subject: "Boxing with Antonio & Joel Diaz"
-          # - time: "1:00pm - 1:25pm"
-          #   subject: "Cooking with Ms. Chris"
-          # - time: "1:30pm - 2:00pm"
-          #   subject: "STEM with Briza"
-          # - time: "2:30pm - 3:00pm"
-          #   subject: "Guess that Athlete with Chris B"
-          # - time: "3:00pm - 3:30pm"
-          #   subject: "Where am I? with Ms. Delia"
+          - time: "12:30pm - 1:00pm"
+            subject: "Arts & Crafts with Yaya"
           - time: "3:30pm - 4:00pm"
             subject: "Music & Flight Lessons with Rob"
           - time: "4:00pm - 4:30pm"
