@@ -29,14 +29,14 @@ permalink: index.html
 <section class="hero-cascade hero-cascade-home pb-5">
     <div style="background: url({{page.hero | absolute_url}});" class="hero-view bg-image-fill position-relative d-flex flex-column align-items-center">
         <div style="height: calc(75vh - 77px)" class="position-absolute p-0 p-xl-3 d-flex flex-column align-items-center justify-content-between">
-            <!-- <div class="d-flex flex-column justify-content-around align-items-center"> -->
+            {%- comment -%} <!-- <div class="d-flex flex-column justify-content-around align-items-center"> --> {%- endcomment -%}
                 <div>
                     <h2 class="m-0 display-4 text-center text-white text-uppercase font-weight-bold">6,043</h2>
                     <p class="h2 text-center text-white">Coachella Valley youth served annually</p>
                 </div>
-                <!-- <h2 class="h1 text-center text-uppercase font-weight-bold text-white py-4"> 6,004 Coachella Valley youth served last year</h2> -->
+                {%- comment -%} <!-- <h2 class="h1 text-center text-uppercase font-weight-bold text-white py-4"> 6,004 Coachella Valley youth served last year</h2> --> {%- endcomment -%}
                 <img class="hero-logo" src={{page.heroLogo | absolute_url}} width="250">
-            <!-- </div>     -->
+            {%- comment -%} <!-- </div>     --> {%- endcomment -%}
         </div>
         <span style="z-index: -1" class="mask mask-25"></span>
     </div>

@@ -10,13 +10,13 @@
     <main>
         <section class="hero-cascade pb-5">
             <div style="background: url({{page.hero | absolute_url}});" class="hero-view bg-image-fill position-relative p-5">
-                <!-- <span class="mask mask-dark mask-gradient-t-b"></span>
+                {%- comment -%} <!-- <span class="mask mask-dark mask-gradient-t-b"></span>
                 <nav aria-label="breadcrumb" class="breadcrumb-light position-absolute">
                     <ol class="breadcrumb bg-transparent">
                       <li class="breadcrumb-item"><a class="text-white" href="/programs.html">Our Clubs</a></li>
                       <li class="breadcrumb-item active text-light font-weight-bold" aria-current="page">{{page.title}}</li>
                     </ol>
-                  </nav> -->
+                  </nav> --> {%- endcomment -%}
             </div>
             <div class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 d-flex flex-column justify-content-center mx-auto hero-content shadow bg-white rounded p-3">
                 <h1 class="text-center section-header underline">{{page.title}}</h1>

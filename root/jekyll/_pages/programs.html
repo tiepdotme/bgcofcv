@@ -44,7 +44,7 @@ permalink: programs.html
                         </div>
                     </div>
                 </div>
-                <!-- <div class="card border-0 bg-dark text-white shadow h-100">
+                {%- comment -%} <!-- <div class="card border-0 bg-dark text-white shadow h-100">
                     <span class="mask rounded mask-dark"></span>
                     {%-capture image-%}{{scholarshipsProgram.hero | split: "/" | last}}{%-endcapture-%}
                     {% include img_srcset.html class="card-img" style="height:300px" alt=scholarshipsProgram.title
@@ -63,7 +63,7 @@ permalink: programs.html
                                     replace: "</p>"}}
                             </p>
                     </div>
-                </div> -->
+                </div> --> {%- endcomment -%}
             </div>
 
             {% for category in categories %}

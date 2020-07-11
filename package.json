@@ -6,7 +6,8 @@
         "start": "bundle exec jekyll serve --config _config.dev.yml",
         "dev": "bundle exec jekyll serve --config _config.dev.yml",
         "build": "webpack && bundle exec jekyll build",
-        "build:dev": "webpack && bundle exec jekyll build --config _config.dev.yml"
+        "build:dev": "webpack && bundle exec jekyll build --config _config.dev.yml",
+        "build:local": "webpack && bundle exec jekyll build --config _config.local.yml"
     },
     "dependencies": {
         "bootstrap": "^4.3.1",
