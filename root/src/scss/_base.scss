@@ -9,6 +9,7 @@ body {
 main {
     flex: 1 0 auto;
     min-height: 100%;
+    overflow-x: hidden !important;
 }
 
 .section-header {
