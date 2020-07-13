@@ -25,13 +25,13 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00am- 11:30am"
-            subject: "Torch Club"
+            subject: "Club Tech with Que"
           - time: "12:00pm - 12:30pm"
-            subject: "Workout with Mike"
+            subject: "Passport to Manhood"
           - time: "1:00pm - 1:30pm"
             subject: "Trivia with Yasmine"
           - time: "2:00pm - 2:30pm"
-            subject: "Social Time with Mayra"
+            subject: "Jeopardy with Mayra"
           - time: "3:00pm - 3:30pm"
             subject: "Smart Moves with James"
           - time: "3:30pm - 4:30pm"
@@ -43,11 +43,11 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00am - 11:30am"
-            subject: "Pixel Art Club"
+            subject: "Games Tech"
           - time: "12:00pm - 12:30pm"
             subject: "Music Trivia with James"
           - time: "1:00pm - 1:30pm"
-            subject: "2k Tournament with Mike"
+            subject: "2K Tournament with Mike"
           - time: "2:00pm - 2:30pm"
             subject: "Basketball Training with Siah"
           - time: "3:00pm - 3:30pm"
@@ -61,15 +61,15 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00am - 11:30am"
-            subject: "Get Fit with Mike"
+            subject: "Sports Trivia with Mike"
           - time: "12:00pm - 12:30pm"
-            subject: "5 Second Game with Yasmine"
+            subject: "Torch Club Meeting"
           - time: "1:00pm - 1:30pm"
             subject: "Scavenger Hunt with James"
           - time: "2:00pm - 2:30pm"
             subject: "Keystone Meeting with Mayra"
           - time: "3:00pm - 3:30pm"
-            subject: "Club Tech Challenge"
+            subject: "5 Second Game with Yasmine"
           - time: "3:30pm - 4:30pm"
             subject: "Martial Arts with Siah"
     - day: "Thu"
@@ -95,9 +95,9 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00pm - 11:30pm"
-            subject: "S.T.E.M"
+            subject: "Roblox Club"
           - time: "12:00pm - 12:30pm"
-            subject: "5 Second Game with Yasmine"
+            subject: "Pictionary with Yasmine"
           - time: "1:00pm - 1:30pm"
             subject: "Walk with Siah"
           - time: "1:30pm - 2:00pm"
