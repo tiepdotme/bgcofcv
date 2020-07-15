@@ -47,6 +47,8 @@ virtualSchedule:
       slots:
           - time: "12:30pm - 1:00pm"
             subject: "Arts & Crafts with Yaya"
+          - time: "3:00pm - 3:30pm"
+            subject: "Keystone Meeting with Tracy"
           - time: "3:30pm - 4:00pm"
             subject: "Music & Flight Lessons with Rob"
           - time: "4:00pm - 4:30pm"
