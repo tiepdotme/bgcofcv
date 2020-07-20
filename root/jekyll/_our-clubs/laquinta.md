@@ -26,6 +26,8 @@ virtualSchedule:
       slots:
           - time: "11:00am- 11:30am"
             subject: "Club Tech with Que"
+          - time: "11:30am - 12:00pm"
+            subject: "Healthy Habits with Zack"
           - time: "12:00pm - 12:30pm"
             subject: "Passport to Manhood"
           - time: "1:00pm - 1:30pm"
@@ -44,6 +46,8 @@ virtualSchedule:
       slots:
           - time: "11:00am - 11:30am"
             subject: "Games Tech"
+          - time: "11:30am - 12:00pm"
+            subject: "Working Out with Zack"
           - time: "12:00pm - 12:30pm"
             subject: "Music Trivia with James"
           - time: "1:00pm - 1:30pm"
@@ -62,6 +66,8 @@ virtualSchedule:
       slots:
           - time: "11:00am - 11:30am"
             subject: "Sports Trivia with Mike"
+          - time: "11:30am - 12:00pm"
+            subject: "Healthy Habits with Zack"
           - time: "12:00pm - 12:30pm"
             subject: "Torch Club Meeting"
           - time: "1:00pm - 1:30pm"
@@ -80,6 +86,8 @@ virtualSchedule:
       slots:
           - time: "11:00am - 11:30am"
             subject: "Zoom roll call first 20 members win entry for Starbucks card with Mayra"
+          - time: "11:30am - 12:00pm"
+            subject: "Working Out with Zack"
           - time: "12:00pm - 12:30pm"
             subject: "Games for Fun with Gus"
           - time: "1:00pm - 1:30pm"
