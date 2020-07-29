@@ -58,7 +58,7 @@ virtualSchedule:
           - time: "3:00pm - 3:45pm"
             subject: "Arts and Crafts with Jervoa and Leslie"
           - time: "4:00pm - 4:45pm"
-            subject: "Keystone with Albert"
+            subject: "Keystone with Albert (private)"
           - time: "6:00pm - 6:45pm"
             subject: "Boxing with Shaggy and Ray Ray"
     - day: "Fri"
