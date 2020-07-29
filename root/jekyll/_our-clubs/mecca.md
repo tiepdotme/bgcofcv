@@ -64,7 +64,7 @@ virtualSchedule:
     - day: "Fri"
       dayNumber: 5
       start: 11
-      end: 15
+      end: 16
       isOff: false
       slots:
           - time: "11:00am - 11:30am"
