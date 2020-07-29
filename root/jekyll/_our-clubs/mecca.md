@@ -71,6 +71,8 @@ virtualSchedule:
             subject: "Math Tutoring with Ms. Nunez"
           - time: "02:00pm - 02:45pm"
             subject: "Teen Time with Ronnie"
+          - time: "03:00pm - 03:30pm"
+            subject: "Palabra with Ronnie"
 ---
 
 A state-of-the-art facility where members can enjoy games, sports activities, technology, and more! Our Joel E. Smilow Clubhouse currently serves 1,000 youth in Mecca and surrounding cities. In a partnership with the County of Riverside, this Club opened in 2011.

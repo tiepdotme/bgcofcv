@@ -65,13 +65,13 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00am - 11:30am"
-            subject: "Sports Trivia with Mike"
+            subject: "Torch Club Meeting with Que"
           - time: "11:30am - 12:00pm"
             subject: "Healthy Habits with Zack"
           - time: "12:00pm - 12:30pm"
-            subject: "Torch Club Meeting"
+            subject: "Music Trivia with James"
           - time: "1:00pm - 1:30pm"
-            subject: "Scavenger Hunt with James"
+            subject: "Sports Trivia with Mike"
           - time: "2:00pm - 2:30pm"
             subject: "Keystone Meeting with Mayra"
           - time: "3:00pm - 3:30pm"
@@ -85,17 +85,17 @@ virtualSchedule:
       isOff: false
       slots:
           - time: "11:00am - 11:30am"
-            subject: "Zoom roll call first 20 members win entry for Starbucks card with Mayra"
+            subject: "Family Funds with Mayra"
           - time: "11:30am - 12:00pm"
             subject: "Working Out with Zack"
           - time: "12:00pm - 12:30pm"
             subject: "Games for Fun with Gus"
-          - time: "1:00pm - 1:30pm"
+          - time: "1:30pm - 2:00pm"
             subject: "2k with Mike"
           - time: "2:00pm - 2:30pm"
             subject: "Basketball Training"
           - time: "3:00pm - 3:30pm"
-            subject: "Hanging with James"
+            subject: "Scavenger Hunt with James"
     - day: "Fri"
       dayNumber: 5
       start: 12
