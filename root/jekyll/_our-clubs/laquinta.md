@@ -100,7 +100,7 @@ virtualSchedule:
       dayNumber: 5
       start: 12
       end: 16
-      isOff: false
+      isOff: true
       slots:
           - time: "11:00pm - 11:30pm"
             subject: "Roblox Club"
