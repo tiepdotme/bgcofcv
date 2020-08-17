@@ -25,6 +25,8 @@ virtualSchedule:
       slots:
           - time: "11:00am - 11:30am"
             subject: "Math Tutoring with Ms. Nunez"
+          - time: "2:00pm - 2:45pm"
+            subject: "New Beginnings (Girls Only) with Sofia"
     - day: "Tue"
       dayNumber: 2
       start: 14
