@@ -2,7 +2,11 @@
     "board-members": [
         {
             "name": "Clara R. Levrault",
-            "title": "Interim Chairwoman"
+            "title": "Chairwoman"
+        },
+        {
+            "name": "Lee Osborne",
+            "title": "Vice Chair"
         },
         {
             "name": "Judy Vossler",
@@ -82,10 +86,6 @@
         },
         {
             "name": "Jose Fernandez, M.D",
-            "title": ""
-        },
-        {
-            "name": "Lee Osborne",
             "title": ""
         },
         {
