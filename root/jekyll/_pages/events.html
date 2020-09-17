@@ -5,226 +5,215 @@ hero: /assets/images/events-hero.jpg
 volunteerLink: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E331203&id=37
 subscribeLink: https://interland3.donorperfect.net/weblink/weblink.aspx?name=E331203&id=38
 description: >-
-    If you’d like to learn more about Boys & Girls Clubs and events, please join our mailing list.
+  If you’d like to learn more about Boys & Girls Clubs and events, please join our mailing list.
 permalink: events.html
 ---
 
 <section class="hero-cascade">
-    <div
-        style="background: url({{ page.hero | absolute_url }});"
-        class="hero-view bg-image-fill position-relative p-5"
-    ></div>
-    <div
-        class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 mx-auto shadow bg-white rounded p-3"
-    >
-        <h1 class="text-center section-header underline">{{ page.title }}</h1>
-        <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
-        <div class="d-flex py-2 justifu-content-center">
-            <a
-                class="btn btn-secondary text-uppercase"
-                target="_blank"
-                rel="noopener"
-                href="{{ page.subscribeLink }}"
-                >Sign Up</a
-            >
-        </div>
+  <div
+    style="background: url({{ page.hero | absolute_url }});"
+    class="hero-view bg-image-fill position-relative p-5"
+  ></div>
+  <div
+    class="d-flex flex-column align-items-center col-sm-11 col-md-8 col-lg-7 mx-auto shadow bg-white rounded p-3"
+  >
+    <h1 class="text-center section-header underline">{{ page.title }}</h1>
+    <div class="lead pt-3 px-3">{{ page.description | markdownify }}</div>
+    <div class="d-flex py-2 justifu-content-center">
+      <a
+        class="btn btn-secondary text-uppercase"
+        target="_blank"
+        rel="noopener"
+        href="{{ page.subscribeLink }}"
+        >Sign Up</a
+      >
     </div>
+  </div>
 </section>
 <section class="py-5">
-    <div class="container">
-        <div class="row py-5">
-            {% capture nowUnix %} {{ site.time | date: "%s" }}{% endcapture %}
-            {% assign upcomingEventsArr = "" | split:',' %} 
-            {% assign pastEventsArr = "" | split: ',' %} 
-            {% assign sorted = site.events | sort: 'start_date', "last" %} 
-            {% for event in sorted %} 
-                {% if event.isActive %}
-                    {% assign upcomingEventsArr = upcomingEventsArr | push: event %}
-                {%else%}
-                {% capture eventDate %} {{ event.start_date | date: "%s" }}{% endcapture %}
-                {% if nowUnix < eventDate %} 
-                    {% assign upcomingEventsArr = upcomingEventsArr | push: event %} 
-                {% else %} 
-                    {% if event.end_date %} 
-                        {% capture eventEndDate %} {{ event.end_date | date: "%s" }}{% endcapture %} 
-                        {% if nowUnix < eventEndDate %} 
-                            {% assign upcomingEventsArr = upcomingEventsArr | push: event %} 
-                        {%else%} 
-                            {% assign pastEventsArr = pastEventsArr | push: event %} 
-                        {% endif %} 
-                    {% else %} 
-                        {% assign pastEventsArr = pastEventsArr | push: event %} 
-                    {% endif %} 
-                {% endif %}
-                {%endif%} 
-            {% endfor %}
-            {% assign nextEvent = upcomingEventsArr | first %}
-            <div class="col-sm-12">
-                <div class="card border-0">
-                    <div
-                        style="z-index: 2; overflow: hidden"
-                        class="rounded shadow position-relative"
-                    >
-                        {%-capture image-%}{{ nextEvent.image | split: "/" |
-                        last }}{%-endcapture-%} {% include img_srcset.html
-                        class="card-img-top position-relative"
-                        style="max-height:50vh; object-fit: contain !important;"
-                        alt=nextEvent.title filename=image %}
-                    </div>
-                    <div
-                        style="z-index: 3; margin-top: -1rem; margin-left: 4%; margin-right: 4%"
-                        class="card-body shadow text-center rounded bg-white"
-                    >
-                        <span class="text-muted text-uppercase font-weight-bold"
-                            >Upcoming</span
-                        >
-                        <h5 class="card-title text-secondary pt-2">
-                            {{nextEvent.title | markdownify | replace: "
-                            <p>" | replace: "</p>
-                            "}}
-                        </h5>
-                        <div
-                            class="d-flex justify-content-center align-items-center"
-                        >
-                            <p class="text-muted my-1">
-                                {{ nextEvent.start_date | date: "%a, %b %d, %Y"
-                                }}
-                            </p>
-                            {% if nextEvent.end_date and nextEvent.end_date !=
-                            "" and nextEvent.end_date != "Invalid date" %}
-                            &nbsp; &ndash; &nbsp;
-                            <p class="text-muted my-1">
-                                {{ nextEvent.end_date | date: "%a, %b %d, %Y" }}
-                            </p>
-                            {% endif %}
-                        </div>
-                        {% if nextEvent.location != null %}
-                        <p class="text-muted my-1">{{ nextEvent.location }}</p>
-                        {%endif%} {%if nextEvent.address != null%}
-                        <p class="text-muted my-1">{{ nextEvent.address }}</p>
-                        {%endif%}
-                        <div class="pt-2 d-flex justify-content-center">
-                            <a
-                                href="{{ nextEvent.url }}"
-                                class="btn-lg btn-secondary btn text-uppercase"
-                                >View More</a
-                            >
-                        </div>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="row py-5">
+      {% capture nowUnix %} {{ site.time | date: "%s" }}{% endcapture %} {%
+      assign upcomingEventsArr = "" | split:',' %} {% assign pastEventsArr = ""
+      | split: ',' %} {% assign sorted = site.events | sort: 'start_date',
+      "last" %} {% for event in sorted %} {% if event.isActive %} {% assign
+      upcomingEventsArr = upcomingEventsArr | push: event %} {%else%} {% capture
+      eventDate %} {{ event.start_date | date: "%s" }}{% endcapture %} {% if
+      nowUnix < eventDate %} {% assign upcomingEventsArr = upcomingEventsArr |
+      push: event %} {% else %} {% if event.end_date %} {% capture eventEndDate
+      %} {{ event.end_date | date: "%s" }}{% endcapture %} {% if nowUnix <
+      eventEndDate %} {% assign upcomingEventsArr = upcomingEventsArr | push:
+      event %} {%else%} {% assign pastEventsArr = pastEventsArr | push: event %}
+      {% endif %} {% else %} {% assign pastEventsArr = pastEventsArr | push:
+      event %} {% endif %} {% endif %} {%endif%} {% endfor %} {% assign
+      nextEvent = upcomingEventsArr | first %}
+      <div class="col-sm-12">
+        <div class="card border-0">
+          <div
+            style="z-index: 2; overflow: hidden"
+            class="rounded shadow position-relative"
+          >
+            {%-capture image-%}{{ nextEvent.image | split: "/" | last
+            }}{%-endcapture-%} {% include img_srcset.html class="card-img-top
+            position-relative" style="max-height:50vh; object-fit: contain
+            !important;" alt=nextEvent.title filename=image %}
+          </div>
+          <div
+            style="z-index: 3; margin-top: -1rem; margin-left: 4%; margin-right: 4%"
+            class="card-body shadow text-center rounded bg-white"
+          >
+            <span class="text-muted text-uppercase font-weight-bold"
+              >Upcoming</span
+            >
+            <h5 class="card-title text-secondary pt-2">
+              {{nextEvent.title | markdownify | replace: "
+              <p>" | replace: "</p>
+              "}}
+            </h5>
+            <div class="d-flex justify-content-center align-items-center">
+              <p class="text-muted my-1">
+                {{ nextEvent.start_date | date: "%a, %b %d, %Y" }}
+              </p>
+              {% if nextEvent.end_date and nextEvent.end_date != "" and
+              nextEvent.end_date != "Invalid date" %} &nbsp; &ndash; &nbsp;
+              <p class="text-muted my-1">
+                {{ nextEvent.end_date | date: "%a, %b %d, %Y" }}
+              </p>
+              {% endif %}
             </div>
-        </div>
-        {% assign events = upcomingEventsArr | shift %} {% assign eventsSize =
-        events | size %} {% if eventsSize > 0 %}
-        <div class="divider my-3"></div>
-        {% endif %}
-        <div class="row py-5">
-            {% for event in events %}
-            <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-                <div class="card h-100">
-                    {%-capture image-%}{{ event.image | split: "/" | last
-                    }}{%-endcapture-%} {% include img_srcset.html
-                    class="card-img-top" style="height:250px" alt=event.title
-                    filename=image %}
-                    <div
-                        class="card-body text-center d-flex flex-column justify-content-between"
-                    >
-                        <h5 class="card-title text-secondary">
-                            {{ event.title }}
-                        </h5>
-                        <div>
-                            <div
-                                class="d-flex justify-content-center align-items-center"
-                            >
-                                <p class="text-muted my-1">
-                                    {{ event.start_date | date: "%a, %b %d, %Y"
-                                    }}
-                                </p>
-                                {% if event.end_date and event.end_date != "" %}
-                                &nbsp; &ndash; &nbsp;
-                                <p class="text-muted my-1">
-                                    {{ event.end_date | date: "%a, %b %d, %Y" }}
-                                </p>
-                                {% endif %}
-                            </div>
-                            {% if event.location %}
-                            <p class="text-muted my-1">{{ event.location }}</p>
-                            {%endif%} {% if event.address %}
-                            <small class="d-block">{{ event.address }}</small>
-                            {% endif %}
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <a
-                                href="{{ event.url }}"
-                                class="btn btn-secondary text-uppercase mt-2 stretched-link"
-                                >View</a
-                            >
-                        </div>
-                    </div>
-                </div>
+            {% if nextEvent.location != null %}
+            <p class="text-muted my-1">{{ nextEvent.location }}</p>
+            {%endif%} {%if nextEvent.address != null%}
+            <p class="text-muted my-1">{{ nextEvent.address }}</p>
+            {%endif%}
+            <div class="pt-2 d-flex justify-content-center">
+              <a
+                href="{{ nextEvent.url }}"
+                class="btn-lg btn-secondary btn text-uppercase"
+                >View More</a
+              >
+              {% if nextEvent.url contains "southern-growers" %}
+              <a
+                href="/assets/2020-SWG-Flights.pdf"
+                class="btn-lg btn-dark btn text-uppercase ml-1"
+                >2020 SWG Pairings</a
+              >
+              {%endif%}
             </div>
-            {% endfor %}
+          </div>
         </div>
-        {% assign pastEventsSize = pastEventsArr | size %} {% if pastEventsSize
-        > 0 %}
-        <p class="lead m-0">Past Events</p>
-        <div class="row">
-            {% for event in pastEventsArr %} {% if event.show %}
-            <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-                <div class="card h-100">
-                    {%-capture image-%}{{ event.image | split: "/" | last
-                    }}{%-endcapture-%} {% include img_srcset.html
-                    class="card-img-top" style="height:250px" alt=event.title
-                    filename=image %}
-                    <div
-                        class="card-body text-center d-flex flex-column justify-content-between"
-                    >
-                        <h5 class="card-title text-secondary">
-                            {{ event.title }}
-                        </h5>
-                        <div>
-                            {% if event.location %}
-                            <p class="text-muted my-1">{{ event.location }}</p>
-                            {%endif%} {% if event.address %}
-                            <small class="d-block">{{ event.address }}</small>
-                            {% endif %}
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <a
-                                href="{{ event.url }}"
-                                class="btn btn-secondary text-uppercase mt-2 stretched-link"
-                                >View</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {%endif%} {% endfor %}
-        </div>
-        {% endif %}
+      </div>
     </div>
+    {% assign events = upcomingEventsArr | shift %} {% assign eventsSize =
+    events | size %} {% if eventsSize > 0 %}
+    <div class="divider my-3"></div>
+    {% endif %}
+    <div class="row py-5">
+      {% for event in events %}
+      <div class="col-sm-12 col-md-6 col-lg-4 my-2">
+        <div class="card h-100">
+          {%-capture image-%}{{ event.image | split: "/" | last
+          }}{%-endcapture-%} {% include img_srcset.html class="card-img-top"
+          style="height:250px" alt=event.title filename=image %}
+          <div
+            class="card-body text-center d-flex flex-column justify-content-between"
+          >
+            <h5 class="card-title text-secondary">
+              {{ event.title }}
+            </h5>
+            <div>
+              <div class="d-flex justify-content-center align-items-center">
+                <p class="text-muted my-1">
+                  {{ event.start_date | date: "%a, %b %d, %Y" }}
+                </p>
+                {% if event.end_date and event.end_date != "" %} &nbsp; &ndash;
+                &nbsp;
+                <p class="text-muted my-1">
+                  {{ event.end_date | date: "%a, %b %d, %Y" }}
+                </p>
+                {% endif %}
+              </div>
+              {% if event.location %}
+              <p class="text-muted my-1">{{ event.location }}</p>
+              {%endif%} {% if event.address %}
+              <small class="d-block">{{ event.address }}</small>
+              {% endif %}
+            </div>
+            <div class="d-flex justify-content-center">
+              {% if event.url contains "car-drawing" %}
+              <a href="#" class="btn disabled btn-secondary text-uppercase mt-2"
+                >Sold Out</a
+              >
+              {%else%}
+              <a
+                href="{{ event.url }}"
+                class="btn disabled btn-secondary text-uppercase mt-2 stretched-link"
+                >View</a
+              >
+              {%endif%}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% assign pastEventsSize = pastEventsArr | size %} {% if pastEventsSize > 0
+    %}
+    <p class="lead m-0">Past Events</p>
+    <div class="row">
+      {% for event in pastEventsArr %} {% if event.show %}
+      <div class="col-sm-12 col-md-6 col-lg-4 my-2">
+        <div class="card h-100">
+          {%-capture image-%}{{ event.image | split: "/" | last
+          }}{%-endcapture-%} {% include img_srcset.html class="card-img-top"
+          style="height:250px" alt=event.title filename=image %}
+          <div
+            class="card-body text-center d-flex flex-column justify-content-between"
+          >
+            <h5 class="card-title text-secondary">
+              {{ event.title }}
+            </h5>
+            <div>
+              {% if event.location %}
+              <p class="text-muted my-1">{{ event.location }}</p>
+              {%endif%} {% if event.address %}
+              <small class="d-block">{{ event.address }}</small>
+              {% endif %}
+            </div>
+            <div class="d-flex justify-content-center">
+              <a
+                href="{{ event.url }}"
+                class="btn btn-secondary text-uppercase mt-2 stretched-link"
+                >View</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {%endif%} {% endfor %}
+    </div>
+    {% endif %}
+  </div>
 </section>
 {%- comment -%}
 <section class="py-5 bg-primary">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="h4 text-center text-light">
-                    Want to volunteer for future events?
-                </h2>
-                <div
-                    class="d-flex flex-sm-row flex-column justify-content-center py-3"
-                >
-                    <a
-                        href="{{ page.volunteerLink }}"
-                        target="_blank"
-                        rel="noopener"
-                        class="shadow btn btn-secondary btn-lg text-uppercase"
-                        >Sign Up</a
-                    >
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h4 text-center text-light">
+          Want to volunteer for future events?
+        </h2>
+        <div class="d-flex flex-sm-row flex-column justify-content-center py-3">
+          <a
+            href="{{ page.volunteerLink }}"
+            target="_blank"
+            rel="noopener"
+            class="shadow btn btn-secondary btn-lg text-uppercase"
+            >Sign Up</a
+          >
         </div>
+      </div>
     </div>
+  </div>
 </section>
 {%- endcomment -%}
