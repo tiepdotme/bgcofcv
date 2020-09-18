@@ -9,7 +9,7 @@ city: "Coachella, CA"
 zip: 92236
 unitDirector: Juanita Godwin
 isSchoolHours: true
-schoolHours: "2:00pm - 7:00pm"
+schoolHours: "7:30am - 5:30pm"
 summerHours: "7:30am - 5:30pm"
 image: assets/images/coachella-club.jpg
 calendar: /assets/images/coachella-january-2020-calendar.pdf

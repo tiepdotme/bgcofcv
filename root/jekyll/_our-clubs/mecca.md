@@ -9,7 +9,7 @@ city: "Mecca, CA"
 zip: 92254
 unitDirector: Ray Amador
 isSchoolHours: true
-schoolHours: "2:00pm - 7:00pm"
+schoolHours: "7:30am - 5:30pm"
 summerHours: "7:30am - 5:30pm"
 image: assets/images/mecca-club.jpg
 calendar: /assets/images/october-calendar-2019-mecca.pdf
