@@ -161,22 +161,35 @@ permalink: index.html
                 <div class="card-deck">
                     <div class="card">
                         {% capture nowUnix %} {{site.time | date: '%s' }}{% endcapture %} 
-                        {% assign upcomingEventsArr = "" | split: ',' %} 
+                        {% assign upcomingEventsArr = "" | split: ',' %}
+                        {% assign currentEventArr = "" | split: ',' %} 
                         {% assign sorted = site.events | sort: 'start_date' %}
                         {% for event in sorted %} 
                             {% capture eventDate %} {{event.start_date | date: '%s' }}{% endcapture %} 
+                            {% capture endDate %} {{event.end_date | date: '%s' }}{% endcapture %} 
                             {% if nowUnix < eventDate %} 
                                 {% assign upcomingEventsArr = upcomingEventsArr | push: event %} 
-                            {% endif %} 
+                            {% endif %}
+                            {% if nowUnix > eventDate and nowUnix < endDate%} 
+                                {% assign currentEventArr = currentEventArr | push: event %} 
+                            {% endif %}
                         {% endfor %} 
                         {% assign nextEvent = upcomingEventsArr | first %}
+                        {% assign currentEvent = currentEventArr | first %}
                         <div class="d-flex justify-content-center align-content-center py-3">
                             <i class="display-4 text-primary fas fa-calendar-alt"></i>
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between">
+                        {% if currentEvent == nil%}
                             <h5 class="card-title text-center">Upcoming Events</h5>
                             <div class="card-text text-center">{{nextEvent.title}}</div>
                             <a href="{{nextEvent.url | absolute_url}}" class="p-0 btn btn-link stretched-link">View Details</a>
+                        {% else %}
+                          <h5 class="card-title text-center">Current Event</h5>
+                            <div class="card-text text-center">{{currentEvent.title}}</div>
+                            <a href="{{currentEvent.url | absolute_url}}" class="p-0 btn btn-link stretched-link">View Details</a>
+                        {%endif%}
+                           
                         </div>
                     </div>
                     <div class="card">

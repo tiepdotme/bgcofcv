@@ -35,8 +35,8 @@ permalink: events.html
     <div class="row py-5">
       {% capture nowUnix %} {{ site.time | date: "%s" }}{% endcapture %} {%
       assign upcomingEventsArr = "" | split:',' %} {% assign pastEventsArr = ""
-      | split: ',' %} {% assign sorted = site.events | sort: 'start_date',
-      "last" %} {% for event in sorted %} {% if event.isActive %} {% assign
+      | split: ',' %} {% assign sorted = site.events | sort: 'start_date',"last"
+      %} {% for event in sorted %} {% if event.isActive %} {% assign
       upcomingEventsArr = upcomingEventsArr | push: event %} {%else%} {% capture
       eventDate %} {{ event.start_date | date: "%s" }}{% endcapture %} {% if
       nowUnix < eventDate %} {% assign upcomingEventsArr = upcomingEventsArr |
