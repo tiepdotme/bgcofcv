@@ -1,24 +1,24 @@
 timezone: America/Los_Angeles
 developer: Brightside Tech
-developerUrl: "https://brightsidetech.io"
+developerUrl: "https://godiego.me"
 markdown: kramdown
 destination: dist
 source: root/jekyll
 include:
-    - _pages
-    - _dev_admin
+  - _pages
+  - _dev_admin
 exclude:
-    - admin
+  - admin
 plugins:
-    - jemoji
-    - jekyll-sitemap
+  - jemoji
+  - jekyll-sitemap
 future: true
 collections:
-    our-clubs:
-        output: true
-    program-categories:
-        output: true
-    events:
-        output: true
-    campaigns:
-        output: false
+  our-clubs:
+    output: true
+  program-categories:
+    output: true
+  events:
+    output: true
+  campaigns:
+    output: false

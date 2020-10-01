@@ -61,7 +61,7 @@ virtualSchedule:
         subject: "Math Tutoring with Ms. Nunez"
       - time: "02:00pm - 02:45pm"
         subject: "Teen Time with Ronnie"
-      - time: "03:00pm - 03:30pm"
+      - time: "03:00pm - 03:45pm"
         subject: "Palabra with Ronnie"
 ---
 
