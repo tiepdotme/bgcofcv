@@ -1,3 +1,3 @@
 module.exports = {
-    plugins: [require("autoprefixer")({ remove: false })]
+  plugins: [require("autoprefixer")({ remove: false })],
 };
