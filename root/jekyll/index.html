@@ -181,9 +181,14 @@ permalink: index.html
                         </div>
                         <div class="card-body d-flex flex-column justify-content-between">
                         {% if currentEvent == nil%}
+                            {%if nextEvent%}
                             <h5 class="card-title text-center">Upcoming Events</h5>
                             <div class="card-text text-center">{{nextEvent.title}}</div>
                             <a href="{{nextEvent.url | absolute_url}}" class="p-0 btn btn-link stretched-link">View Details</a>
+                            {%else%}
+                            <h5 class="card-title text-center">No Upcoming Events</h5>
+                            <a href="/events" class="p-0 btn btn-link stretched-link">View Past Events</a>
+                            {%endif%}
                         {% else %}
                           <h5 class="card-title text-center">Current Event</h5>
                             <div class="card-text text-center">{{currentEvent.title}}</div>
